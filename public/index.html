@@ -130,7 +130,7 @@
             "name": "What is USMail.AI?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "USMail.AI is an automated print-to-mail platform. You upload letters or documents; we print, insert into envelopes, apply postage, and hand off to the U.S. Postal Service. Certified Mail and Certificate of Mailing are supported."
+              "text": "USMail.AI is automated print-to-mail — period. You upload letters and documents; we print, insert into real envelopes, apply postage, and hand off to USPS. Certified Mail and Certificate of Mailing included when you need proof. No mailroom. No meters. No guesswork."
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "Do I create documents in USMail.AI or upload them?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You upload documents you already have — PDF, Word, images, multi-file packages, and recipient lists. USMail.AI handles print-to-mail production, not document authoring."
+              "text": "You upload. Always. Bring the PDFs, Word files, images, packages, and recipient lists you already have. USMail.AI is production print-to-mail — not a word processor. Upload. Print. Mail."
             }
           },
           {
@@ -146,7 +146,7 @@
             "name": "What file formats can I upload?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Common formats include PDF, Microsoft Word (DOC/DOCX), images (PNG, JPG), multi-file packages, and recipient lists (CSV/spreadsheet) for list mail. Ask for the current accepted set for your use case."
+              "text": "The formats you already use: PDF, Microsoft Word (DOC/DOCX), images (PNG, JPG), multi-file packages, and recipient lists (CSV/spreadsheet) for list mail. Mixed packages welcome. Ask us for the full accepted list for your job type."
             }
           },
           {
@@ -154,7 +154,7 @@
             "name": "Does USMail.AI support Certified Mail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. USMail.AI supports Certified Mail and Certificate of Mailing for correspondence that needs formal proof of mailing."
+              "text": "Yes — fully. Choose Certified Mail or Certificate of Mailing when formal proof matters: legal notices, compliance mail, and anything that cannot afford a weak paper trail."
             }
           },
           {
@@ -162,7 +162,7 @@
             "name": "How does AI help with mailing?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AI assists with document understanding, recipient address extraction from uploaded PDFs and letters, mailing setup guidance, and quality checks before production."
+              "text": "AI does the grunt work of setup: reading uploaded PDFs, extracting recipient addresses, guiding print options, and flagging quality issues before production. You approve. We mail. Faster path from file to USPS."
             }
           },
           {
@@ -170,7 +170,7 @@
             "name": "What is the USMail.AI MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MCP (Model Context Protocol) lets AI agents and tools call USMail.AI mailing capabilities programmatically — so automation can upload documents and submit physical mail without a manual mailroom."
+              "text": "MCP (Model Context Protocol) is how AI agents and automation call print-to-mail as a tool. Same production path as the portal — upload, setup, submit — without a human mailroom in the middle."
             }
           },
           {
@@ -178,7 +178,7 @@
             "name": "What is the mailing cutoff time?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Mail submitted by 10:00 PM Central Time is typically prepared for next business-day handoff to USPS (target window around 6:30 PM CST the next business day). Exact timing can vary by product and volume."
+              "text": "Submit by 10:00 PM Central for the next business-day production path toward USPS (target handoff around 6:30 PM CST the next business day). Miss the post office line. Hit our cutoff instead."
             }
           },
           {
@@ -186,7 +186,7 @@
             "name": "Who is USMail.AI for?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Individuals, small businesses, mid-market companies, corporations, nonprofits, professional firms, and government (city, county, utility, agency) senders who need reliable physical mail — invoices, notices, notifications, and correspondence."
+              "text": "Anyone who must send physical mail reliably: individuals and professionals, small businesses, corporations, nonprofits, firms, cities, counties, utilities, and agencies. Invoices, notices, notifications, compliance mail — from a few pieces to high volume."
             }
           }
         ]
@@ -595,77 +595,136 @@
       </div>
     </section>
 
-    <!-- FAQ (AEO) -->
-    <section id="faq" aria-labelledby="faq-title">
-      <div class="wrap narrow">
-        <div class="section-head">
+    <!-- FAQ (AEO) — banking-style accordion cards -->
+    <section id="faq" class="band faq-section" aria-labelledby="faq-title">
+      <div class="wrap faq-wrap">
+        <div class="section-head section-head-center">
           <h2 id="faq-title">Frequently asked questions</h2>
-          <p>Straight answers for search, assistants, and buyers.</p>
+          <p>Direct answers. No fluff. Built for buyers, search, and AI assistants.</p>
         </div>
         <div class="faq">
-          <details open>
-            <summary>What is USMail.AI?</summary>
-            <p>
-              An automated print-to-mail platform: you upload documents; we print, insert, postage,
-              and deliver via USPS — with Certified Mail and Certificate of Mailing options.
-            </p>
+          <details open class="faq-item">
+            <summary>
+              <span>What is USMail.AI — in one sentence?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>Automated print-to-mail.</strong> You upload letters and documents; we
+                print, insert into real envelopes, apply postage, and hand off to USPS — with
+                <strong>Certified Mail</strong> and <strong>Certificate of Mailing</strong> when
+                proof matters. No mailroom. No meters. No “we’ll get to it.”
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>Do I create documents here or upload them?</summary>
-            <p>
-              You <strong>upload</strong> documents you already have (PDF, Word, images, packages,
-              lists). USMail.AI is print-to-mail production — not a document authoring tool.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>Do I create documents here — or upload them?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>You upload. Always.</strong> Bring the PDFs, Word files, images, packages,
+                and recipient lists you already have. USMail.AI is production print-to-mail — not a
+                word processor. <strong>Upload. Print. Mail.</strong>
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>What file formats can I upload?</summary>
-            <p>
-              Common formats include PDF, Microsoft Word (DOC/DOCX), images (PNG, JPG), multi-file
-              packages, and recipient lists (CSV/spreadsheet) for list mail. Ask for the current
-              accepted set for your product.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>What formats can I upload?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                The formats you already use: <strong>PDF</strong>, <strong>Word (DOC/DOCX)</strong>,
+                <strong>images (PNG/JPG)</strong>, multi-file packages, and recipient
+                <strong>CSV / spreadsheets</strong> for list mail. Mixed packages welcome. Ask for
+                the full accepted list for your job type — we’ll be explicit.
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>Does USMail.AI support Certified Mail?</summary>
-            <p>
-              Yes — Certified Mail and Certificate of Mailing for correspondence that needs formal
-              proof of mailing.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>Do you support Certified Mail?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>Yes — fully.</strong> Choose <strong>Certified Mail</strong> or
+                <strong>Certificate of Mailing</strong> when formal proof is non-negotiable: legal
+                notices, compliance mail, anything that cannot afford a weak paper trail.
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>How does AI help?</summary>
-            <p>
-              AI assists with understanding uploaded documents, recipient address extraction, setup
-              guidance, and quality checks before production.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>How does AI actually help?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                AI does the grunt work of setup: reading uploaded PDFs, extracting recipient
+                addresses, guiding print options, and flagging quality issues
+                <strong>before</strong> production. You approve. We mail. Faster path from file to
+                USPS — not chatbot theater.
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>What is the USMail.AI MCP?</summary>
-            <p>
-              Model Context Protocol (MCP) lets AI agents and tools call print-to-mail capabilities
-              programmatically — upload and submit physical mail from automation, not only the UI.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>What is the USMail.AI MCP?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>MCP (Model Context Protocol)</strong> is how AI agents and automation call
+                print-to-mail as a tool. Same production path as the portal — upload, setup, submit
+                — without a human mailroom in the middle. Built for teams already running LLMs.
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>Who is USMail.AI for?</summary>
-            <p>
-              Individuals, small businesses, corporations, nonprofits, professional firms, and
-              government (city, county, utility, agency) senders who need reliable physical mail.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>Who is this for?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>Anyone who must send physical mail reliably:</strong> individuals and
+                professionals, small businesses, corporations, nonprofits, firms, cities, counties,
+                utilities, and agencies. Invoices, notices, notifications, compliance mail — a few
+                pieces or high volume.
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>What is the cutoff for next business-day mail?</summary>
-            <p>
-              Target path: submit by 10:00 PM Central for next business-day preparation toward USPS
-              (handoff window around 6:30 PM CST the next business day). Confirm for your volume.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>What is the cutoff for next business-day mail?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                Submit by <strong>10:00 PM Central</strong> for the next business-day production
+                path toward USPS (target handoff around <strong>6:30 PM CST</strong> the next
+                business day). Miss the post office line. Hit our cutoff instead. Confirm for your
+                volume and product.
+              </p>
+            </div>
           </details>
-          <details>
-            <summary>How do I get a demo?</summary>
-            <p>
-              Call 888-667-5322 or 316-247-5300, or email
-              <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a>.
-            </p>
+          <details class="faq-item">
+            <summary>
+              <span>How do I get a demo or talk to a human?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                Call <a href="tel:+18886675322"><strong>888-667-5322</strong></a> or
+                <a href="tel:+13162475300"><strong>316-247-5300</strong></a>, or email
+                <a href="mailto:Info@USMAIL.ai"><strong>Info@USMAIL.ai</strong></a>. Real people.
+                No ticket black hole.
+              </p>
+            </div>
           </details>
         </div>
       </div>

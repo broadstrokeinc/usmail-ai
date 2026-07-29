@@ -573,49 +573,116 @@ section {
   font-weight: 500;
 }
 
-/* FAQ */
-.faq {
-  display: grid;
-  gap: 0.65rem;
+/* FAQ — banking microsite style: card accordion + chevron */
+.faq-section {
+  padding-top: 3.25rem;
+  padding-bottom: 3.5rem;
 }
 
-.faq details {
+.faq-wrap {
+  width: min(800px, calc(100% - 2rem));
+}
+
+.section-head-center {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 36rem;
+}
+
+.faq {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-item {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 42, 99, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.faq-item:hover {
+  border-color: #b7d0f0;
+  box-shadow: 0 12px 32px rgba(0, 42, 99, 0.1);
+}
+
+.faq-item[open] {
+  border-color: #9ec0eb;
+  box-shadow: 0 14px 36px rgba(0, 61, 143, 0.12);
 }
 
 .faq summary {
   cursor: pointer;
-  font-weight: 600;
-  color: var(--ink);
   list-style: none;
-  min-height: 44px;
+  min-height: 56px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+
+.faq summary:hover {
+  background: rgba(232, 241, 251, 0.55);
+}
+
+.faq summary:focus-visible {
+  outline: 3px solid #7eb6ff;
+  outline-offset: -3px;
 }
 
 .faq summary::-webkit-details-marker {
   display: none;
 }
 
-.faq summary::after {
-  content: "+";
-  margin-left: auto;
+.faq summary span {
+  flex: 1;
+  text-align: left;
+  padding-right: 0.25rem;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
   color: var(--navy);
-  font-size: 1.25rem;
-  font-weight: 500;
+  transition: transform 0.2s ease;
 }
 
-.faq details[open] summary::after {
-  content: "–";
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
 }
 
-.faq p {
-  margin: 0.35rem 0 0.25rem;
+.faq-body {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid transparent;
+}
+
+.faq-item[open] .faq-body {
+  border-top-color: var(--line);
+  padding-top: 1rem;
+}
+
+.faq-body p {
+  margin: 0;
   color: var(--slate);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.faq-body strong {
+  color: var(--ink);
+}
+
+.faq-body a {
+  font-weight: 600;
 }
 
 /* Contact */
