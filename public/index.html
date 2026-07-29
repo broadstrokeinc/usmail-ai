@@ -6,7 +6,7 @@
   <title>USMail.AI | Coming Soon — AI-Native Mailing via USPS</title>
   <meta
     name="description"
-    content="USMail.AI is coming soon: upload PDF, Word, images &amp; more. AI sets up the job; MCP lets agents submit. We print, insert, postage, and deliver via USPS — Certified Mail available."
+    content="USMail.AI coming soon: upload PDF, Word &amp; images. AI + MCP prepare mail; we print &amp; deliver via USPS. Certified Mail. Early access open."
   />
   <meta
     name="keywords"
@@ -30,24 +30,28 @@
     property="og:description"
     content="Coming soon. Upload documents; AI + MCP prepare the job; we print and hand off to USPS. Certified Mail supported."
   />
-  <meta property="og:image" content="https://usmail.ai/logo.png" />
+  <meta property="og:image" content="https://usmail.ai/logo-og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:alt" content="USMail.AI logo" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="USMail.AI — Coming Soon" />
   <meta
     name="twitter:description"
-    content="AI + MCP mailing platform: multi-format upload, Certified Mail, USPS production. Coming soon."
+    content="AI + MCP mailing: multi-format upload, Certified Mail, USPS production. Coming soon — early access open."
   />
-  <meta name="twitter:image" content="https://usmail.ai/logo.png" />
+  <meta name="twitter:image" content="https://usmail.ai/logo-og.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="preload" as="image" href="/logo.webp" type="image/webp" />
 
   <script type="application/ld+json">
   {
@@ -60,7 +64,7 @@
         "url": "https://usmail.ai",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://usmail.ai/logo.png"
+          "url": "https://usmail.ai/logo-og.jpg"
         },
         "description": "AI-native mailing platform (coming soon). Upload letters and documents; USMail.AI prints, inserts, applies postage, and delivers via USPS. MCP-ready for agents. Serves individuals, businesses, organizations, and corporations.",
         "telephone": ["+1-888-667-5322", "+1-316-247-5300"],
@@ -210,13 +214,18 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="USMail.AI home">
-        <img
-          src="/logo.png"
-          alt="USMail.AI"
-          width="200"
-          height="51"
-          class="brand-logo"
-        />
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img
+            src="/logo-400.png"
+            alt="USMail.AI"
+            width="200"
+            height="51"
+            class="brand-logo"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
         <span class="brand-tagline">Coming soon</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -250,7 +259,7 @@
             organizations, and corporations.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Get early access</a>
+            <a class="btn btn-primary" href="#early-access">Get early access</a>
             <a class="btn btn-ghost btn-ghost-on-dark" href="#how">How it works</a>
           </div>
           <ul class="trust trust-pills" aria-label="Key capabilities">
@@ -635,27 +644,74 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- EARLY ACCESS + CONTACT -->
     <section id="contact" class="section-block section-contact" aria-labelledby="contact-title">
       <div class="wrap section-inner">
-        <div class="contact-panel">
+        <div class="contact-panel contact-panel-split">
           <div>
-            <h2 id="contact-title">Coming soon — talk to real people</h2>
+            <h2 id="contact-title">Talk to real people</h2>
             <p>
-              Get early access or a demo. Ask about Certified Mail, multi-format uploads, AI setup,
-              or MCP for agents — whether you’re an individual sender or a large organization.
+              Demo, Certified Mail, multi-format uploads, AI setup, or MCP for agents —
+              individual senders and large organizations welcome.
             </p>
             <div class="contact-actions">
               <a class="btn btn-primary" href="tel:+18886675322">Call 888-667-5322</a>
               <a class="btn btn-ghost-light" href="tel:+13162475300">316-247-5300</a>
               <a class="btn btn-ghost-light" href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a>
             </div>
+            <div class="contact-meta">
+              <p><span>Toll-free</span> <a href="tel:+18886675322">888-667-5322</a></p>
+              <p><span>Direct</span> <a href="tel:+13162475300">316-247-5300</a></p>
+              <p><span>Email</span> <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a></p>
+              <p class="contact-tagline">Upload. Print. Mail.</p>
+            </div>
           </div>
-          <div class="contact-meta">
-            <p><span>Toll-free</span> <a href="tel:+18886675322">888-667-5322</a></p>
-            <p><span>Direct</span> <a href="tel:+13162475300">316-247-5300</a></p>
-            <p><span>Email</span> <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a></p>
-            <p class="contact-tagline">Coming soon · Upload. Print. Mail.</p>
+          <div id="early-access" class="early-access">
+            <h3 id="early-access-title">Get early access</h3>
+            <p class="early-access-lead">
+              Leave your email — we’ll notify you when USMail.AI opens and can schedule a demo.
+            </p>
+            <form id="early-access-form" class="early-access-form" novalidate>
+              <label class="field">
+                <span class="field-label">Work email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  inputmode="email"
+                  placeholder="you@company.com"
+                  maxlength="200"
+                />
+              </label>
+              <label class="field">
+                <span class="field-label">Name <span class="optional">(optional)</span></span>
+                <input type="text" name="name" autocomplete="name" placeholder="Your name" maxlength="120" />
+              </label>
+              <label class="field">
+                <span class="field-label">Interest <span class="optional">(optional)</span></span>
+                <select name="interest">
+                  <option value="">Select…</option>
+                  <option value="individual">Individual / professional</option>
+                  <option value="business">Business mailing</option>
+                  <option value="mcp">AI / MCP integration</option>
+                  <option value="certified">Certified Mail</option>
+                  <option value="demo">Book a demo</option>
+                </select>
+              </label>
+              <!-- honeypot -->
+              <label class="hp" aria-hidden="true">
+                <span>Company website</span>
+                <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+              </label>
+              <button type="submit" class="btn btn-primary btn-block" id="early-access-submit">
+                Request early access
+              </button>
+              <p class="form-status" id="early-access-status" role="status" aria-live="polite"></p>
+              <p class="form-fineprint">
+                Or call <a href="tel:+18886675322">888-667-5322</a> · No spam.
+              </p>
+            </form>
           </div>
         </div>
       </div>
@@ -665,7 +721,10 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <img src="/logo.png" alt="" width="120" height="30" />
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="" width="120" height="30" decoding="async" />
+        </picture>
         <div>
           <strong>USMail.AI</strong>
           <span class="brand-tagline footer-tagline">Coming soon</span>
@@ -676,20 +735,81 @@
         <a href="#ai-mcp">AI &amp; MCP</a>
         <a href="#usps">Certified Mail</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#early-access">Early access</a>
       </nav>
       <p class="footer-copy">
-        © <span id="y"></span> USMail.AI · Coming soon ·
+        © <span id="y"></span> USMail.AI ·
         <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a>
       </p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
-  <script>
+  <script
+    src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"
+    integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM"
+    crossorigin="anonymous"
+    defer
+  ></script>
+  <script defer>
     document.getElementById('y').textContent = new Date().getFullYear()
-    if (window.lucide && typeof window.lucide.createIcons === 'function') {
-      window.lucide.createIcons()
+
+    function initIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons()
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initIcons)
+    } else {
+      initIcons()
+    }
+    // Lucide loads deferred — retry once after paint
+    window.addEventListener('load', initIcons)
+
+    const form = document.getElementById('early-access-form')
+    const statusEl = document.getElementById('early-access-status')
+    const submitBtn = document.getElementById('early-access-submit')
+    if (form && statusEl && submitBtn) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        statusEl.textContent = ''
+        statusEl.className = 'form-status'
+        const fd = new FormData(form)
+        const email = String(fd.get('email') || '').trim()
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          statusEl.textContent = 'Enter a valid email address.'
+          statusEl.classList.add('is-error')
+          return
+        }
+        submitBtn.disabled = true
+        submitBtn.textContent = 'Sending…'
+        try {
+          const res = await fetch('/api/early-access', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email,
+              name: String(fd.get('name') || '').trim(),
+              interest: String(fd.get('interest') || '').trim(),
+              company_website: String(fd.get('company_website') || ''),
+            }),
+          })
+          const data = await res.json().catch(() => ({}))
+          if (!res.ok || !data.ok) {
+            throw new Error(data.error || 'failed')
+          }
+          statusEl.textContent = 'You’re on the list. We’ll be in touch.'
+          statusEl.classList.add('is-success')
+          form.reset()
+        } catch {
+          statusEl.innerHTML =
+            'Couldn’t submit right now — email <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a> or call 888-667-5322.'
+          statusEl.classList.add('is-error')
+        } finally {
+          submitBtn.disabled = false
+          submitBtn.textContent = 'Request early access'
+        }
+      })
     }
   </script>
 </body>
