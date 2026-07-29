@@ -213,7 +213,7 @@ async function notifyLead(row) {
         '',
         'Thanks for joining the USMail.AI waitlist. We will notify you when access opens and can schedule a demo if you asked for one.',
         '',
-        'Questions now? Call 888-667-5322 or reply to this email.',
+        'Questions now? Call 888-667-5322 or 316-247-5300, or reply to this email.',
         '',
         '— USMail.AI',
         'https://usmail.ai',
