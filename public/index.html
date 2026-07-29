@@ -295,7 +295,9 @@
         </div>
         <ol class="steps">
           <li class="step">
-            <div class="step-num" aria-hidden="true">1</div>
+            <div class="step-icon" aria-hidden="true">
+              <i data-lucide="upload"></i>
+            </div>
             <div>
               <h3>Upload any supported format</h3>
               <p>
@@ -305,7 +307,9 @@
             </div>
           </li>
           <li class="step">
-            <div class="step-num" aria-hidden="true">2</div>
+            <div class="step-icon" aria-hidden="true">
+              <i data-lucide="sparkles"></i>
+            </div>
             <div>
               <h3>AI assists setup</h3>
               <p>
@@ -315,7 +319,9 @@
             </div>
           </li>
           <li class="step">
-            <div class="step-num" aria-hidden="true">3</div>
+            <div class="step-icon" aria-hidden="true">
+              <i data-lucide="badge-check"></i>
+            </div>
             <div>
               <h3>Choose mailing products</h3>
               <p>
@@ -325,7 +331,9 @@
             </div>
           </li>
           <li class="step">
-            <div class="step-num" aria-hidden="true">4</div>
+            <div class="step-icon" aria-hidden="true">
+              <i data-lucide="printer"></i>
+            </div>
             <div>
               <h3>We print, insert &amp; postage</h3>
               <p>
@@ -335,7 +343,9 @@
             </div>
           </li>
           <li class="step">
-            <div class="step-num" aria-hidden="true">5</div>
+            <div class="step-icon" aria-hidden="true">
+              <i data-lucide="truck"></i>
+            </div>
             <div>
               <h3>USPS handoff</h3>
               <p>
@@ -345,7 +355,9 @@
             </div>
           </li>
           <li class="step">
-            <div class="step-num" aria-hidden="true">6</div>
+            <div class="step-icon" aria-hidden="true">
+              <i data-lucide="map-pin"></i>
+            </div>
             <div>
               <h3>Track status</h3>
               <p>Monitor mailing status with tracking visibility through the delivery process.</p>
@@ -680,8 +692,12 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear()
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons()
+    }
   </script>
 </body>
 </html>
