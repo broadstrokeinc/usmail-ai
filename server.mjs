@@ -236,6 +236,29 @@ const server = http.createServer(async (req, res) => {
     '/how-it-works': '/how-it-works.html',
     '/industries': '/industries.html',
   }
+
+  // Canonical clean URLs only — 301 bare .html away from duplicate surface
+  const HTML_TO_CLEAN = {
+    '/index.html': '/',
+    '/privacy.html': '/privacy',
+    '/certified-mail.html': '/certified-mail',
+    '/mcp.html': '/mcp',
+    '/how-it-works.html': '/how-it-works',
+    '/industries.html': '/industries',
+  }
+  if (HTML_TO_CLEAN[urlPath]) {
+    return send(
+      res,
+      301,
+      '',
+      {
+        Location: HTML_TO_CLEAN[urlPath],
+        'Cache-Control': 'public, max-age=86400',
+      },
+      req,
+    )
+  }
+
   let rel = CLEAN[urlPath] || urlPath
 
   const filePath = path.normalize(path.join(publicDir, rel))

@@ -31,6 +31,12 @@
     primaryNav.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => setOpen(false))
     })
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false)
+        navToggle.focus()
+      }
+    })
   }
 
   // Mark active nav link

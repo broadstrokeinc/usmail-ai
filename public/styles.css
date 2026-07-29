@@ -99,10 +99,18 @@ a {
 .brand:focus-visible,
 .contact-meta a:focus-visible,
 .faq-body a:focus-visible,
-.form-fineprint a:focus-visible {
+.form-fineprint a:focus-visible,
+.breadcrumb a:focus-visible,
+.related-card:focus-visible,
+.industry-card:focus-visible,
+.contact-channel:focus-visible {
   outline: 3px solid #7eb6ff;
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+.legal-page {
+  padding-bottom: 0;
 }
 
 /* Header / brand — max 5 nav links; no overlap */
