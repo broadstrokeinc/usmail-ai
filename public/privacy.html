@@ -9,48 +9,37 @@
     content="USMail.AI privacy policy: how we handle early-access emails and contact information."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://usmail.ai/privacy.html" />
+  <link rel="canonical" href="https://usmail.ai/privacy" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
-  <style>
-    .legal {
-      max-width: 42rem;
-      margin: 0 auto;
-      padding: 2.5rem 1rem 4rem;
-    }
-    .legal h1 {
-      margin: 0 0 0.5rem;
-      font-size: 1.75rem;
-      color: var(--ink);
-    }
-    .legal .meta {
-      color: var(--slate);
-      font-size: 0.9rem;
-      margin-bottom: 1.75rem;
-    }
-    .legal h2 {
-      margin: 1.75rem 0 0.5rem;
-      font-size: 1.1rem;
-    }
-    .legal p,
-    .legal li {
-      color: var(--slate);
-      line-height: 1.6;
-    }
-    .legal ul {
-      padding-left: 1.2rem;
-    }
-    .legal a.back {
-      display: inline-block;
-      margin-bottom: 1.25rem;
-      font-weight: 600;
-    }
-  </style>
 </head>
-<body>
+<body class="legal-page">
   <a class="skip-link" href="#main">Skip to content</a>
-  <main id="main" class="legal">
-    <a class="back" href="/">← USMail.AI</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="USMail.AI home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.AI" width="200" height="51" class="brand-logo" decoding="async" />
+        </picture>
+        <span class="brand-tagline">Coming soon</span>
+      </a>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-nav-cta" href="/">Home</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="wrap legal">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+        <li><span aria-current="page">Privacy</span></li>
+      </ol>
+    </nav>
     <h1>Privacy Policy</h1>
     <p class="meta">Last updated: July 29, 2026 · Coming soon product site</p>
 
@@ -102,5 +91,15 @@
       <a href="tel:+13162475300">316-247-5300</a>
     </p>
   </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-copy">
+        © <span id="y"></span> USMail.AI ·
+        <a href="/">Home</a> ·
+        <a href="/privacy">Privacy</a>
+      </p>
+    </div>
+  </footer>
+  <script src="/js/site.js" defer></script>
 </body>
 </html>

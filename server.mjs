@@ -228,9 +228,15 @@ const server = http.createServer(async (req, res) => {
     return send(res, 405, 'Method not allowed', {}, req)
   }
 
-  let rel = urlPath === '/' ? '/index.html' : urlPath
-  // Clean privacy URL
-  if (rel === '/privacy') rel = '/privacy.html'
+  const CLEAN = {
+    '/': '/index.html',
+    '/privacy': '/privacy.html',
+    '/certified-mail': '/certified-mail.html',
+    '/mcp': '/mcp.html',
+    '/how-it-works': '/how-it-works.html',
+    '/industries': '/industries.html',
+  }
+  let rel = CLEAN[urlPath] || urlPath
 
   const filePath = path.normalize(path.join(publicDir, rel))
   if (!filePath.startsWith(publicDir)) {

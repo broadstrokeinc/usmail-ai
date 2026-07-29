@@ -222,7 +222,7 @@
 
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="USMail.AI home">
+      <a class="brand" href="/" aria-label="USMail.AI home">
         <picture>
           <source srcset="/logo.webp" type="image/webp" />
           <img
@@ -249,11 +249,11 @@
         Menu
       </button>
       <nav class="nav-links" id="primary-nav" aria-label="Primary">
-        <a href="#how">How it works</a>
-        <a href="#ai-mcp">AI &amp; MCP</a>
-        <a href="#faq">FAQ</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/certified-mail">Certified Mail</a>
+        <a href="/mcp">MCP</a>
+        <a href="/industries">Industries</a>
         <a href="#early-access">Early access</a>
-        <a href="#contact">Contact</a>
       </nav>
       <div class="nav-cta">
         <a class="btn btn-primary btn-nav-cta" href="tel:+18886675322">Call us</a>
@@ -325,7 +325,7 @@
         <div class="section-head">
           <p class="section-label">Workflow</p>
           <h2 id="how-title">How it works</h2>
-          <p>Six steps. You own the file. We own production.</p>
+          <p>Six steps. You own the file. We own production. <a href="/how-it-works">Full page →</a></p>
         </div>
         <ol class="steps">
           <li class="step">
@@ -440,7 +440,8 @@
               <li>Built for LLM-native teams</li>
             </ul>
             <p class="panel-cta">
-              <a class="btn btn-primary" href="#early-access" data-interest="mcp">Join MCP waitlist</a>
+              <a class="btn btn-primary" href="/mcp">Learn about MCP</a>
+              <a class="btn btn-ghost" href="#early-access" data-interest="mcp">Waitlist</a>
             </p>
           </article>
         </div>
@@ -458,7 +459,7 @@
         <div class="benefit-grid benefit-grid-4">
           <article class="benefit-card highlight">
             <h3><i data-lucide="badge-check" aria-hidden="true"></i> Certified Mail</h3>
-            <p>Delivery confirmation for formal notices.</p>
+            <p>Delivery confirmation for formal notices. <a href="/certified-mail">Details →</a></p>
           </article>
           <article class="benefit-card highlight">
             <h3><i data-lucide="file-check-2" aria-hidden="true"></i> Certificate of Mailing</h3>
@@ -797,10 +798,10 @@
         </div>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#how">How it works</a>
-        <a href="#ai-mcp">AI &amp; MCP</a>
-        <a href="#usps">Certified Mail</a>
-        <a href="#faq">FAQ</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/certified-mail">Certified Mail</a>
+        <a href="/mcp">MCP</a>
+        <a href="/industries">Industries</a>
         <a href="#early-access">Early access</a>
         <a href="/privacy">Privacy</a>
       </nav>
@@ -822,117 +823,6 @@
     crossorigin="anonymous"
     defer
   ></script>
-  <script defer>
-    document.getElementById('y').textContent = new Date().getFullYear()
-
-    function initIcons() {
-      if (window.lucide && typeof window.lucide.createIcons === 'function') {
-        window.lucide.createIcons()
-      }
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initIcons)
-    } else {
-      initIcons()
-    }
-    window.addEventListener('load', initIcons)
-
-    // Mobile nav
-    const navToggle = document.getElementById('nav-toggle')
-    const primaryNav = document.getElementById('primary-nav')
-    if (navToggle && primaryNav) {
-      const setOpen = (open) => {
-        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false')
-        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
-        primaryNav.classList.toggle('is-open', open)
-        document.body.classList.toggle('nav-open', open)
-      }
-      navToggle.addEventListener('click', () => {
-        setOpen(navToggle.getAttribute('aria-expanded') !== 'true')
-      })
-      primaryNav.querySelectorAll('a').forEach((a) => {
-        a.addEventListener('click', () => setOpen(false))
-      })
-    }
-
-    // Preselect interest from ?interest= or data-interest links
-    const params = new URLSearchParams(window.location.search)
-    const interestSelect = document.querySelector('#early-access-form select[name="interest"]')
-    const allowed = new Set(['individual', 'business', 'mcp', 'certified', 'demo'])
-    function setInterest(v) {
-      if (!interestSelect || !allowed.has(v)) return
-      interestSelect.value = v
-    }
-    setInterest((params.get('interest') || '').toLowerCase())
-    document.querySelectorAll('[data-interest]').forEach((el) => {
-      el.addEventListener('click', () => setInterest(el.getAttribute('data-interest') || ''))
-    })
-
-    // UTM capture
-    ;['utm_source', 'utm_medium', 'utm_campaign'].forEach((k) => {
-      const el = document.getElementById(k)
-      if (el && params.get(k)) el.value = params.get(k)
-    })
-
-    const form = document.getElementById('early-access-form')
-    const statusEl = document.getElementById('early-access-status')
-    const submitBtn = document.getElementById('early-access-submit')
-    if (form && statusEl && submitBtn) {
-      const emailInput = form.querySelector('input[name="email"]')
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault()
-        statusEl.textContent = ''
-        statusEl.className = 'form-status'
-        if (emailInput) {
-          emailInput.removeAttribute('aria-invalid')
-          emailInput.removeAttribute('aria-describedby')
-        }
-        const fd = new FormData(form)
-        const email = String(fd.get('email') || '').trim()
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          statusEl.textContent = 'Enter a valid email address.'
-          statusEl.classList.add('is-error')
-          if (emailInput) {
-            emailInput.setAttribute('aria-invalid', 'true')
-            emailInput.setAttribute('aria-describedby', 'early-access-status')
-            emailInput.focus()
-          }
-          return
-        }
-        submitBtn.disabled = true
-        submitBtn.textContent = 'Sending…'
-        try {
-          const res = await fetch('/api/early-access', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email,
-              name: String(fd.get('name') || '').trim(),
-              interest: String(fd.get('interest') || '').trim(),
-              company_website: String(fd.get('company_website') || ''),
-              utm_source: String(fd.get('utm_source') || '').trim(),
-              utm_medium: String(fd.get('utm_medium') || '').trim(),
-              utm_campaign: String(fd.get('utm_campaign') || '').trim(),
-            }),
-          })
-          const data = await res.json().catch(() => ({}))
-          if (!res.ok || !data.ok) {
-            throw new Error(data.error || 'failed')
-          }
-          statusEl.textContent = 'You’re on the list. We’ll be in touch.'
-          statusEl.classList.add('is-success')
-          form.reset()
-          setInterest((params.get('interest') || '').toLowerCase())
-        } catch {
-          statusEl.innerHTML =
-            'Couldn’t submit — email <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a> or call us.'
-          statusEl.classList.add('is-error')
-        } finally {
-          submitBtn.disabled = false
-          submitBtn.textContent = 'Join waitlist'
-        }
-      })
-    }
-  </script>
+  <script src="/js/site.js" defer></script>
 </body>
 </html>
