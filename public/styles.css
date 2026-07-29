@@ -256,13 +256,15 @@ a {
   border-radius: 14px;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
   box-shadow: 0 6px 18px rgba(0, 42, 99, 0.04);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .explore-card:hover {
   border-color: #9ec0eb;
   box-shadow: 0 12px 28px rgba(0, 61, 143, 0.1);
+  transform: translateY(-1px);
 }
 
 .explore-card:focus-visible {
@@ -275,10 +277,26 @@ a {
   font-size: 1rem;
 }
 
-.explore-card span {
+.explore-card > span:not(.more) {
   color: var(--slate);
   font-size: 0.9rem;
   line-height: 1.4;
+  flex: 1;
+}
+
+.explore-card .more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.explore-card .more::after {
+  content: "→";
+  font-weight: 800;
 }
 
 /* Hero page links — only on dark home hero */

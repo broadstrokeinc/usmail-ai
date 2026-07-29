@@ -12,7 +12,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#003d8f" />
   <meta name="geo.region" content="US" />
-  <link rel="canonical" href="https://usmail.ai/" />
+  <link rel="canonical" href="https://www.usmail.ai/" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -20,13 +20,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="USMail.AI" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:url" content="https://usmail.ai/" />
+  <meta property="og:url" content="https://www.usmail.ai/" />
   <meta property="og:title" content="USMail.AI — Coming Soon | AI-Native Mailing" />
   <meta
     property="og:description"
     content="Coming soon. Upload documents; AI + MCP prepare the job; we print and hand off to USPS. Certified Mail supported."
   />
-  <meta property="og:image" content="https://usmail.ai/logo-og.jpg" />
+  <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1010" />
   <meta property="og:image:height" content="256" />
@@ -38,7 +38,7 @@
     name="twitter:description"
     content="AI + MCP mailing: multi-format upload, Certified Mail, USPS production. Coming soon — early access open."
   />
-  <meta name="twitter:image" content="https://usmail.ai/logo-og.jpg" />
+  <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,12 +57,13 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://usmail.ai/#organization",
+        "@id": "https://www.usmail.ai/#organization",
         "name": "USMail.AI",
-        "url": "https://usmail.ai",
+        "url": "https://www.usmail.ai",
+        "sameAs": ["https://usmail.ai", "https://www.usmail.ai"],
         "logo": {
           "@type": "ImageObject",
-          "url": "https://usmail.ai/logo-square.webp",
+          "url": "https://www.usmail.ai/logo-square.webp",
           "width": 256,
           "height": 256
         },
@@ -109,22 +110,22 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://usmail.ai/#website",
-        "url": "https://usmail.ai",
+        "@id": "https://www.usmail.ai/#website",
+        "url": "https://www.usmail.ai",
         "name": "USMail.AI",
         "description": "Coming soon: AI + MCP mailing. Upload documents; we handle print production and USPS delivery.",
-        "publisher": { "@id": "https://usmail.ai/#organization" },
+        "publisher": { "@id": "https://www.usmail.ai/#organization" },
         "inLanguage": "en-US"
       },
       {
         "@type": "SoftwareApplication",
-        "@id": "https://usmail.ai/#app",
+        "@id": "https://www.usmail.ai/#app",
         "name": "USMail.AI",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "offers": {
           "@type": "Offer",
-          "url": "https://usmail.ai/#early-access",
+          "url": "https://www.usmail.ai/#early-access",
           "availability": "https://schema.org/PreOrder",
           "price": "0",
           "priceCurrency": "USD",
@@ -139,20 +140,20 @@
           "Automatic insert, address, postage, and USPS handoff",
           "Mailing status with USPS tracking on Priority Mail and Certified Mail"
         ],
-        "provider": { "@id": "https://usmail.ai/#organization" }
+        "provider": { "@id": "https://www.usmail.ai/#organization" }
       },
       {
         "@type": "Service",
-        "@id": "https://usmail.ai/#mailing-service",
+        "@id": "https://www.usmail.ai/#mailing-service",
         "name": "AI-assisted mail production",
         "serviceType": "Document print production with USPS delivery",
-        "provider": { "@id": "https://usmail.ai/#organization" },
+        "provider": { "@id": "https://www.usmail.ai/#organization" },
         "areaServed": { "@type": "Country", "name": "United States" },
         "description": "Upload documents online; AI helps prepare the job; USMail.AI prints, inserts into envelopes, applies postage, and hands off to the U.S. Postal Service. Individuals, businesses, organizations, and corporations."
       },
       {
         "@type": "FAQPage",
-        "@id": "https://usmail.ai/#faq",
+        "@id": "https://www.usmail.ai/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -359,18 +360,22 @@
           <a class="explore-card" href="/how-it-works">
             <strong>How it works</strong>
             <span>Six steps from upload to USPS handoff.</span>
+            <span class="more">Open</span>
           </a>
           <a class="explore-card" href="/certified-mail">
             <strong>Certified Mail</strong>
             <span>Formal proof without a second vendor.</span>
+            <span class="more">Open</span>
           </a>
           <a class="explore-card" href="/docs/mcp">
             <strong>MCP documentation</strong>
             <span>Tools, account + meter, roadmap — for humans and AI.</span>
+            <span class="more">Open</span>
           </a>
           <a class="explore-card" href="/industries">
             <strong>Industries</strong>
-            <span>Legal, ops, government, AI teams, and more.</span>
+            <span>Credit repair, banks, cities/counties, storage, and more.</span>
+            <span class="more">Open</span>
           </a>
         </div>
       </div>

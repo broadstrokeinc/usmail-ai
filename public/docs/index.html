@@ -10,15 +10,15 @@
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#003d8f" />
-  <link rel="canonical" href="https://usmail.ai/docs" />
+  <link rel="canonical" href="https://www.usmail.ai/docs" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="USMail.AI" />
-  <meta property="og:url" content="https://usmail.ai/docs" />
+  <meta property="og:url" content="https://www.usmail.ai/docs" />
   <meta property="og:title" content="Documentation | USMail.AI" />
   <meta property="og:description" content="MCP docs and product reference for USMail.AI. Coming soon." />
-  <meta property="og:image" content="https://usmail.ai/logo-og.jpg" />
+  <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -26,16 +26,42 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "USMail.AI Documentation",
-    "url": "https://usmail.ai/docs",
-    "description": "Documentation hub for USMail.AI MCP and product reference.",
-    "isPartOf": { "@id": "https://usmail.ai/#website" },
-    "hasPart": [
-      { "@type": "WebPage", "name": "MCP overview", "url": "https://usmail.ai/docs/mcp" },
-      { "@type": "WebPage", "name": "MCP getting started", "url": "https://usmail.ai/docs/mcp/getting-started" },
-      { "@type": "WebPage", "name": "Auth and billing", "url": "https://usmail.ai/docs/mcp/auth-and-billing" },
-      { "@type": "WebPage", "name": "MCP tools", "url": "https://usmail.ai/docs/mcp/tools" }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.usmail.ai/docs#webpage",
+        "name": "USMail.AI Documentation",
+        "url": "https://www.usmail.ai/docs",
+        "description": "Documentation hub for USMail.AI MCP and product reference. Coming soon product; account + prepaid meter at open.",
+        "isPartOf": { "@id": "https://www.usmail.ai/#website" },
+        "hasPart": [
+          { "@type": "WebPage", "name": "MCP overview", "url": "https://www.usmail.ai/docs/mcp" },
+          { "@type": "WebPage", "name": "MCP getting started", "url": "https://www.usmail.ai/docs/mcp/getting-started" },
+          { "@type": "WebPage", "name": "Auth and billing", "url": "https://www.usmail.ai/docs/mcp/auth-and-billing" },
+          { "@type": "WebPage", "name": "MCP tools", "url": "https://www.usmail.ai/docs/mcp/tools" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where is USMail.AI MCP documentation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start at https://www.usmail.ai/docs/mcp for overview, getting started (account + prepaid meter), auth and billing, and tools reference. Product is coming soon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is USMail.AI documentation for a live product?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "USMail.AI is coming soon. Docs describe the intended product for early access, search, and AI indexing. Billing at open is account + prepaid meter; API keys planned later."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
