@@ -224,57 +224,70 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
+    <!-- HERO — full-bleed section -->
+    <section class="hero section-block" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">20+ years automated mail · AI + MCP</p>
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <i data-lucide="sparkles" class="eyebrow-icon" aria-hidden="true"></i>
+            AI + MCP · 20+ years automated mail
+          </p>
           <h1>Automated <span>print-to-mail</span></h1>
           <p class="lead-kicker">Upload. Print. Mail.</p>
           <p class="lead">
-            Upload the documents you already have. We print, insert, apply postage, and deliver
-            through the U.S. Postal Service — including <strong>Certified Mail</strong> and
-            <strong>Certificate of Mailing</strong>. For individuals, businesses, organizations,
-            and corporations. AI assists setup; agents can run the same path via
-            <strong>MCP</strong>.
+            The AI- and MCP-native print-to-mail platform. Upload the documents you already have —
+            we print, insert, apply postage, and deliver through USPS. Built for individuals,
+            businesses, organizations, and corporations. <strong>Certified Mail</strong> and
+            <strong>Certificate of Mailing</strong> when proof matters.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Request a demonstration</a>
-            <a class="btn btn-ghost" href="#how">See how it works</a>
+            <a class="btn btn-ghost btn-ghost-on-dark" href="#how">See how it works</a>
           </div>
-          <ul class="trust" aria-label="Key capabilities">
-            <li><strong>Upload</strong> PDF, Word, images &amp; multi-file packages</li>
-            <li><strong>Certified</strong> &amp; Certificate of Mailing</li>
-            <li><strong>AI + MCP</strong> for people and agents</li>
-            <li><strong>In by 10:00 PM CST</strong> → next business-day mail path</li>
+          <ul class="trust trust-pills" aria-label="Key capabilities">
+            <li><i data-lucide="bot" aria-hidden="true"></i> AI + MCP for people &amp; agents</li>
+            <li><i data-lucide="file-up" aria-hidden="true"></i> Multi-format upload</li>
+            <li><i data-lucide="badge-check" aria-hidden="true"></i> Certified Mail ready</li>
+            <li><i data-lucide="clock" aria-hidden="true"></i> In by 10:00 PM CST</li>
           </ul>
         </div>
 
         <aside class="hero-card" aria-labelledby="usp-card-title">
           <h2 id="usp-card-title" class="visually-hidden">Why USMail.AI</h2>
-          <img src="/logo.png" alt="" width="240" height="61" class="hero-card-logo" />
-          <p class="tagline-text">Upload. Print. Mail.</p>
-          <div class="stripe" aria-hidden="true"></div>
+          <div class="hero-card-top">
+            <img src="/logo.png" alt="" width="200" height="51" class="hero-card-logo" />
+            <p class="tagline-text">Upload. Print. Mail.</p>
+            <div class="stripe" aria-hidden="true"></div>
+          </div>
           <ul class="usp-list">
             <li>
-              <span class="usp-kicker">USP</span>
-              <strong>Upload → production mail</strong>
-              <span>You supply the files. We print, insert, postage, and mail.</span>
+              <div class="usp-icon" aria-hidden="true"><i data-lucide="upload"></i></div>
+              <div>
+                <strong>Upload → production mail</strong>
+                <span>You supply the files. We print, insert, postage, and mail.</span>
+              </div>
             </li>
             <li>
-              <span class="usp-kicker">USP</span>
-              <strong>AI that reads mail, not just chat</strong>
-              <span>Address extraction, setup guidance, and quality checks on real PDFs.</span>
+              <div class="usp-icon" aria-hidden="true"><i data-lucide="sparkles"></i></div>
+              <div>
+                <strong>AI that reads mail, not just chat</strong>
+                <span>Addresses, setup, and quality checks on real PDFs.</span>
+              </div>
             </li>
             <li>
-              <span class="usp-kicker">USP</span>
-              <strong>MCP-native automation</strong>
-              <span>Agents submit print-to-mail jobs via Model Context Protocol.</span>
+              <div class="usp-icon" aria-hidden="true"><i data-lucide="cpu"></i></div>
+              <div>
+                <strong>MCP-native automation</strong>
+                <span>Agents submit print-to-mail via Model Context Protocol.</span>
+              </div>
             </li>
             <li>
-              <span class="usp-kicker">USP</span>
-              <strong>USPS-grade options</strong>
-              <span>Certified Mail and Certificate of Mailing when proof matters.</span>
+              <div class="usp-icon" aria-hidden="true"><i data-lucide="shield-check"></i></div>
+              <div>
+                <strong>USPS-grade options</strong>
+                <span>Certified Mail &amp; Certificate of Mailing when proof matters.</span>
+              </div>
             </li>
           </ul>
         </aside>
@@ -282,22 +295,24 @@
     </section>
 
     <!-- PROBLEM -->
-    <section class="band" id="problem" aria-labelledby="problem-title">
-      <div class="wrap narrow">
+    <section class="section-block band" id="problem" aria-labelledby="problem-title">
+      <div class="wrap narrow section-inner">
+        <p class="section-label">The shift</p>
         <h2 id="problem-title">Printing and mailing shouldn’t be your bottleneck</h2>
-        <p>
-          Whether you’re an individual sender, a small business, a large corporation, or a public
-          agency, physical mail still means print, fold, stuff, meter, and get it to USPS — or wait
-          on a vendor that only takes one file type and can’t connect to AI tools. USMail.AI is
-          automated print-to-mail: <em>upload → produce → track</em>.
+        <p class="section-lead">
+          Whether you’re an individual, a small business, a corporation, or a public agency,
+          physical mail still means print, fold, stuff, meter, and race the post office — or wait
+          on a vendor that only takes one file type and can’t talk to AI. USMail.AI is
+          <strong>automated print-to-mail</strong>: <em>upload → produce → track</em>.
         </p>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" aria-labelledby="how-title">
-      <div class="wrap">
+    <section class="section-block" id="how" aria-labelledby="how-title">
+      <div class="wrap section-inner">
         <div class="section-head">
+          <p class="section-label">Workflow</p>
           <h2 id="how-title">How it works</h2>
           <p>You upload documents. We handle production and USPS delivery.</p>
         </div>
@@ -375,38 +390,45 @@
       </div>
     </section>
 
-    <!-- FORMATS -->
-    <section id="formats" class="band" aria-labelledby="formats-title">
-      <div class="wrap">
+    <!-- FORMATS — icon cards for pop -->
+    <section id="formats" class="section-block band" aria-labelledby="formats-title">
+      <div class="wrap section-inner">
         <div class="section-head">
+          <p class="section-label">Formats</p>
           <h2 id="formats-title">Upload the formats you already use</h2>
           <p>
             Print-to-mail starts with your files — not a rebuild into one rigid PDF. Multi-format
-            packages are supported so production can normalize them into mail-ready pieces.
+            packages normalize into mail-ready pieces.
           </p>
         </div>
         <div class="format-grid" role="list">
           <div class="format-card" role="listitem">
+            <div class="format-icon format-pdf" aria-hidden="true"><i data-lucide="file-text"></i></div>
             <strong>PDF</strong>
             <span>Letters, statements, notices, multi-page packages</span>
           </div>
           <div class="format-card" role="listitem">
+            <div class="format-icon format-word" aria-hidden="true"><i data-lucide="file-type"></i></div>
             <strong>Word</strong>
             <span>DOC / DOCX correspondence and exports</span>
           </div>
           <div class="format-card" role="listitem">
+            <div class="format-icon format-img" aria-hidden="true"><i data-lucide="image"></i></div>
             <strong>Images</strong>
             <span>PNG, JPG scans and signed pages</span>
           </div>
           <div class="format-card" role="listitem">
+            <div class="format-icon format-multi" aria-hidden="true"><i data-lucide="files"></i></div>
             <strong>Multi-file</strong>
             <span>Letter plus inserts / supporting documents</span>
           </div>
           <div class="format-card" role="listitem">
+            <div class="format-icon format-list" aria-hidden="true"><i data-lucide="sheet"></i></div>
             <strong>Lists</strong>
             <span>Recipient CSV / spreadsheet for list mail</span>
           </div>
           <div class="format-card" role="listitem">
+            <div class="format-icon format-pkg" aria-hidden="true"><i data-lucide="package"></i></div>
             <strong>Packages</strong>
             <span>Mixed formats in one mailing workflow</span>
           </div>
@@ -419,17 +441,19 @@
     </section>
 
     <!-- AI + MCP -->
-    <section id="ai-mcp" aria-labelledby="ai-title">
-      <div class="wrap">
+    <section class="section-block section-ai" id="ai-mcp" aria-labelledby="ai-title">
+      <div class="wrap section-inner">
         <div class="section-head">
+          <p class="section-label section-label-light">Revolutionary stack</p>
           <h2 id="ai-title">AI enablement &amp; MCP</h2>
           <p>
-            Built for people and agents — guided setup in the product, and machine-callable tools
-            via Model Context Protocol.
+            Not a chat widget bolted onto mail. Built for people <em>and</em> agents — guided setup
+            in the product, machine-callable tools via Model Context Protocol.
           </p>
         </div>
         <div class="two-col">
           <article class="panel">
+            <div class="panel-icon" aria-hidden="true"><i data-lucide="sparkles"></i></div>
             <h3>AI in the mailing workflow</h3>
             <ul class="check-list">
               <li>Understand uploaded letter PDFs and multi-page packages</li>
@@ -440,11 +464,11 @@
             </ul>
           </article>
           <article class="panel panel-accent">
+            <div class="panel-icon panel-icon-on-dark" aria-hidden="true"><i data-lucide="cpu"></i></div>
             <h3>MCP for agents &amp; systems</h3>
             <p>
-              <strong>Model Context Protocol (MCP)</strong> exposes print-to-mail capabilities to AI
-              agents, internal bots, and automation platforms — so “mail this file” is a tool call,
-              not a separate project.
+              <strong>Model Context Protocol (MCP)</strong> exposes print-to-mail to AI agents,
+              bots, and automation — “mail this file” is a tool call, not a separate project.
             </p>
             <ul class="check-list">
               <li>Agent-driven upload, setup, and submission</li>
@@ -461,39 +485,40 @@
     </section>
 
     <!-- CERTIFIED / USPS -->
-    <section id="usps" class="band" aria-labelledby="usps-title">
-      <div class="wrap">
+    <section id="usps" class="section-block band" aria-labelledby="usps-title">
+      <div class="wrap section-inner">
         <div class="section-head">
+          <p class="section-label">USPS products</p>
           <h2 id="usps-title">When proof of mailing matters</h2>
           <p>USPS options for notices, legal correspondence, and regulated communications.</p>
         </div>
-        <div class="benefit-grid">
+        <div class="benefit-grid benefit-grid-4">
           <article class="benefit-card highlight">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="badge-check"></i></div>
             <h3>Certified Mail</h3>
             <p>
-              Use USPS Certified Mail when you need delivery confirmation and a stronger chain of
-              custody for formal notices.
+              Delivery confirmation and a stronger chain of custody for formal notices.
             </p>
           </article>
           <article class="benefit-card highlight">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="file-check-2"></i></div>
             <h3>Certificate of Mailing</h3>
             <p>
-              Evidence that an item was presented to USPS for mailing — useful for compliance and
-              audit trails without a full Certified workflow.
+              Proof the item was presented to USPS — compliance trails without full Certified.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="printer"></i></div>
             <h3>Production quality</h3>
             <p>
-              Black &amp; white or color, single- or double-sided print, professional insert and
-              addressing before postage.
+              B&amp;W or color, simplex or duplex, professional insert and addressing.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="timer"></i></div>
             <h3>Next-day mail path</h3>
             <p>
-              Submit by <strong>10:00 PM Central</strong> for the next business-day production path
-              toward USPS (target ~6:30 PM CST handoff window).
+              In by <strong>10:00 PM Central</strong> for next business-day USPS path.
             </p>
           </article>
         </div>
@@ -501,66 +526,68 @@
     </section>
 
     <!-- BENEFITS / USPs -->
-    <section id="benefits" aria-labelledby="benefits-title">
-      <div class="wrap">
+    <section class="section-block" id="benefits" aria-labelledby="benefits-title">
+      <div class="wrap section-inner">
         <div class="section-head">
+          <p class="section-label">Why USMail.AI</p>
           <h2 id="benefits-title">Key benefits &amp; unique selling points</h2>
-          <p>Why USMail.AI is more than a print shop.</p>
+          <p>Revolutionary print-to-mail — not another print shop brochure.</p>
         </div>
         <div class="benefit-grid">
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="zap"></i></div>
             <h3>True print-to-mail</h3>
             <p>
-              Upload documents and we handle print, insert, postage, and USPS — no mailroom stack
-              required on your side.
+              Upload documents; we print, insert, postage, and USPS — no mailroom stack on your side.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="layers"></i></div>
             <h3>Multi-format by design</h3>
             <p>
-              Upload the documents you already produce — not only one perfect PDF. Packages and
-              mixed formats are first-class.
+              PDF, Word, images, packages, lists — not only one perfect file type.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="bot"></i></div>
             <h3>AI + MCP stack</h3>
             <p>
-              Human-friendly AI setup and machine-friendly MCP tools — one production backend for
-              both.
+              Human-friendly AI setup and machine-friendly MCP tools — one production backend.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="shield-check"></i></div>
             <h3>Certified-ready</h3>
             <p>
-              Certified Mail and Certificate of Mailing when compliance and proof of mailing are
-              non-negotiable.
+              Certified Mail and Certificate of Mailing when proof is non-negotiable.
             </p>
           </article>
           <article class="benefit-card">
-            <h3>Consistent professional quality</h3>
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="award"></i></div>
+            <h3>Consistent quality</h3>
             <p>
-              Production print and insert standards on every piece — not whoever is near a desktop
-              printer that day.
+              Production print and insert standards on every piece — not a desktop printer lottery.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="radar"></i></div>
             <h3>Visibility &amp; tracking</h3>
             <p>
-              Status and tracking so individuals, ops, finance, and compliance can see what was
-              mailed.
+              Status so individuals, ops, finance, and compliance see what was mailed.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="factory"></i></div>
             <h3>20+ years automated mail</h3>
             <p>
-              Built on decades of high-volume automated mail operations — not a prototype mail API.
+              High-volume ops pedigree — not a prototype mail API.
             </p>
           </article>
           <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true"><i data-lucide="phone"></i></div>
             <h3>Real people on the phone</h3>
             <p>
-              Talk to humans at 888-667-5322 or 316-247-5300 — not only a chatbot for production
-              issues.
+              888-667-5322 or 316-247-5300 — humans when production matters.
             </p>
           </article>
         </div>
@@ -568,9 +595,10 @@
     </section>
 
     <!-- WHO -->
-    <section id="who" class="band" aria-labelledby="who-title">
-      <div class="wrap">
+    <section id="who" class="section-block band" aria-labelledby="who-title">
+      <div class="wrap section-inner">
         <div class="section-head">
+          <p class="section-label">Audience</p>
           <h2 id="who-title">Who it’s for</h2>
           <p>
             Individuals, businesses, organizations, and corporations that need reliable physical
@@ -593,9 +621,10 @@
     </section>
 
     <!-- FAQ (AEO) — banking-style accordion cards -->
-    <section id="faq" class="band faq-section" aria-labelledby="faq-title">
-      <div class="wrap faq-wrap">
+    <section id="faq" class="section-block band faq-section" aria-labelledby="faq-title">
+      <div class="wrap faq-wrap section-inner">
         <div class="section-head section-head-center">
+          <p class="section-label">FAQ</p>
           <h2 id="faq-title">Frequently asked questions</h2>
           <p>Direct answers. No fluff. Built for buyers, search, and AI assistants.</p>
         </div>
@@ -728,8 +757,8 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
+    <section id="contact" class="section-block section-contact" aria-labelledby="contact-title">
+      <div class="wrap section-inner">
         <div class="contact-panel">
           <div>
             <h2 id="contact-title">Talk to real people</h2>
