@@ -1940,31 +1940,60 @@ a {
 }
 
 .related-card {
-  display: block;
-  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem 1.05rem;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 42, 99, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .related-card:hover {
   border-color: #9ec0eb;
+  box-shadow: 0 10px 24px rgba(0, 61, 143, 0.1);
+  transform: translateY(-1px);
+}
+
+.related-card:hover .more {
+  color: var(--navy-deep);
+  gap: 0.35rem;
 }
 
 .related-card strong {
   display: block;
-  margin-bottom: 0.25rem;
+  margin: 0;
   color: var(--navy);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
-.related-card span {
+.related-card > span:not(.more) {
   color: var(--slate);
   font-size: 0.88rem;
   line-height: 1.4;
+  flex: 1;
+}
+
+.related-card .more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  transition: gap 0.15s ease, color 0.15s ease;
+}
+
+.related-card .more::after {
+  content: "→";
+  font-weight: 800;
+  line-height: 1;
 }
 
 /* Dark CTA band — white text only here (and .btn-ghost-light) */
