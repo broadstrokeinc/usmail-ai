@@ -162,16 +162,11 @@ const server = http.createServer(async (req, res) => {
 
   fs.readFile(filePath, (err, data) => {
     if (err) {
-      if (urlPath !== '/' && !path.extname(urlPath)) {
-        return fs.readFile(path.join(publicDir, 'index.html'), (e2, html) => {
-          if (e2) return send(res, 404, 'Not found')
-          send(res, 200, html, {
-            'Content-Type': MIME['.html'],
-            'Cache-Control': 'no-cache',
-          })
-        })
-      }
-      return send(res, 404, 'Not found')
+      // Hard 404 — do not soft-serve homepage for unknown paths (SEO hygiene)
+      return send(res, 404, 'Not found', {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'no-store',
+      })
     }
     const ext = path.extname(filePath).toLowerCase()
     const immutable = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.ico', '.js', '.css'].includes(ext)

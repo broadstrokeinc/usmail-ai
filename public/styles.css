@@ -22,6 +22,20 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font);
@@ -77,6 +91,17 @@ a {
 
 .skip-link:focus {
   left: 0;
+}
+
+.nav-links a:focus-visible,
+.footer-nav a:focus-visible,
+.brand:focus-visible,
+.contact-meta a:focus-visible,
+.faq-body a:focus-visible,
+.form-fineprint a:focus-visible {
+  outline: 3px solid #7eb6ff;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Header / brand — max 5 nav links; no overlap */
@@ -335,7 +360,7 @@ a {
 }
 
 .hero h1 span {
-  color: #fff;
+  color: #cfe3ff;
 }
 
 .lead-kicker {
@@ -964,8 +989,13 @@ a {
 
 .form-fineprint {
   margin: 0;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.early-access-form input[aria-invalid="true"] {
+  border-color: #ff8a8a;
+  box-shadow: 0 0 0 2px rgba(255, 138, 138, 0.35);
 }
 
 .form-fineprint a {
@@ -1100,9 +1130,13 @@ a {
   }
 
   .contact-panel {
-    grid-template-columns: 1.35fr 0.65fr;
-    align-items: center;
     padding: 2rem 2.15rem;
+  }
+
+  /* Equal columns for contact + form (do not use 1.35/0.65 — crushes early access) */
+  .contact-panel.contact-panel-split {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
 
   .footer-inner {

@@ -101,6 +101,7 @@
         "operatingSystem": "Web",
         "offers": {
           "@type": "Offer",
+          "url": "https://usmail.ai/#early-access",
           "availability": "https://schema.org/PreOrder",
           "price": "0",
           "priceCurrency": "USD",
@@ -188,18 +189,26 @@
           },
           {
             "@type": "Question",
-            "name": "What is the mailing cutoff time?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Submit by 10:00 PM Central for the next business-day production path toward USPS (target handoff around 6:30 PM CST the next business day)."
-            }
-          },
-          {
-            "@type": "Question",
             "name": "Who is USMail.AI for?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Anyone who must send physical mail reliably: individuals and professionals, small businesses, corporations, nonprofits, firms, cities, counties, utilities, agencies, and AI/MCP teams. Invoices, notices, compliance mail — few pieces to high volume."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the cutoff for next business-day mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Submit by 10:00 PM Central (CT) for the next business-day production path toward USPS (target handoff around 6:30 PM Central the next business day). Confirm for your volume and product."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get a demo or talk to a human?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Call 888-667-5322 or 316-247-5300, or email Info@USMAIL.ai. Real people. Or request early access on the site."
             }
           }
         ]
@@ -230,9 +239,9 @@
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#how">How it works</a>
-        <a href="#benefits">Benefits</a>
         <a href="#ai-mcp">AI &amp; MCP</a>
         <a href="#faq">FAQ</a>
+        <a href="#early-access">Early access</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-cta">
@@ -251,10 +260,10 @@
             <i data-lucide="sparkles" class="eyebrow-icon" aria-hidden="true"></i>
             Coming soon · AI + MCP
           </p>
-          <h1>Automated <span>print-to-mail</span></h1>
+          <h1>USMail.AI — automated <span>print-to-mail</span></h1>
           <p class="lead-kicker">Upload. Print. Mail.</p>
           <p class="lead">
-            Upload your documents. AI helps set up the job; MCP lets agents submit.
+            Upload your documents. AI helps set up the job; MCP lets agents submit the same path.
             We print, insert, postage, and deliver via USPS — for individuals, businesses,
             organizations, and corporations.
           </p>
@@ -265,7 +274,7 @@
           <ul class="trust trust-pills" aria-label="Key capabilities">
             <li><i data-lucide="bot" aria-hidden="true"></i> AI + MCP</li>
             <li><i data-lucide="badge-check" aria-hidden="true"></i> Certified Mail</li>
-            <li><i data-lucide="clock" aria-hidden="true"></i> 10:00 PM CST cutoff</li>
+            <li><i data-lucide="clock" aria-hidden="true"></i> 10:00 PM CT cutoff</li>
           </ul>
         </div>
 
@@ -326,7 +335,7 @@
           </li>
           <li class="step">
             <h3><i data-lucide="truck" aria-hidden="true"></i> USPS handoff</h3>
-            <p>In by <strong>10:00 PM CST</strong> for next business-day mail path.</p>
+            <p>In by <strong>10:00 PM CT</strong> for next business-day mail path.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="map-pin" aria-hidden="true"></i> Track status</h3>
@@ -440,7 +449,7 @@
           </article>
           <article class="benefit-card">
             <h3><i data-lucide="timer" aria-hidden="true"></i> Next-day path</h3>
-            <p>In by <strong>10:00 PM CT</strong> for next business day.</p>
+            <p>In by <strong>10:00 PM Central (CT)</strong> for next business day.</p>
           </article>
         </div>
       </div>
@@ -619,10 +628,10 @@
             </summary>
             <div class="faq-body">
               <p>
-                Submit by <strong>10:00 PM Central</strong> for the next business-day production
-                path toward USPS (target handoff around <strong>6:30 PM CST</strong> the next
-                business day). Miss the post office line. Hit our cutoff instead. Confirm for your
-                volume and product.
+                Submit by <strong>10:00 PM Central (CT)</strong> for the next business-day
+                production path toward USPS (target handoff around
+                <strong>6:30 PM Central</strong> the next business day). Miss the post office line.
+                Hit our cutoff instead. Confirm for your volume and product.
               </p>
             </div>
           </details>
@@ -709,7 +718,8 @@
               </button>
               <p class="form-status" id="early-access-status" role="status" aria-live="polite"></p>
               <p class="form-fineprint">
-                Or call <a href="tel:+18886675322">888-667-5322</a> · No spam.
+                Or call <a href="tel:+18886675322">888-667-5322</a> · No spam ·
+                <a href="/privacy.html">Privacy</a>
               </p>
             </form>
           </div>
@@ -770,15 +780,26 @@
     const statusEl = document.getElementById('early-access-status')
     const submitBtn = document.getElementById('early-access-submit')
     if (form && statusEl && submitBtn) {
+      const emailInput = form.querySelector('input[name="email"]')
       form.addEventListener('submit', async (e) => {
         e.preventDefault()
         statusEl.textContent = ''
         statusEl.className = 'form-status'
+        if (emailInput) {
+          emailInput.removeAttribute('aria-invalid')
+          emailInput.removeAttribute('aria-describedby')
+        }
         const fd = new FormData(form)
         const email = String(fd.get('email') || '').trim()
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          statusEl.id = 'early-access-status'
           statusEl.textContent = 'Enter a valid email address.'
           statusEl.classList.add('is-error')
+          if (emailInput) {
+            emailInput.setAttribute('aria-invalid', 'true')
+            emailInput.setAttribute('aria-describedby', 'early-access-status')
+            emailInput.focus()
+          }
           return
         }
         submitBtn.disabled = true
