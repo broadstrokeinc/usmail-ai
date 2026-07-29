@@ -281,7 +281,7 @@ a {
   line-height: 1.4;
 }
 
-/* Hero page links — obvious paths to subpages */
+/* Hero page links — only on dark home hero */
 .hero-explore {
   display: flex;
   flex-wrap: wrap;
@@ -290,7 +290,7 @@ a {
   padding: 0;
 }
 
-.hero-explore a {
+.hero .hero-explore a {
   display: inline-flex;
   align-items: center;
   min-height: 36px;
@@ -304,9 +304,10 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.hero-explore a:hover {
+.hero .hero-explore a:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
 }
 
 .hero-explore a:focus-visible {
@@ -325,6 +326,7 @@ a {
   border-radius: 14px;
   background: var(--sky);
   border: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .mid-cta-copy {
@@ -336,6 +338,12 @@ a {
 
 .mid-cta-copy strong {
   color: var(--ink);
+}
+
+.mid-cta .btn-ghost {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--line);
 }
 
 .mid-cta-actions {
@@ -436,15 +444,16 @@ a {
   border-color: var(--line);
 }
 
+/* Only for dark surfaces — prefer scoping under .page-cta / .panel-accent */
 .btn-ghost-light {
   background: transparent;
-  color: white;
-  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .btn-ghost-light:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* —— Section-based layout (mobile-first: tight first) —— */
@@ -528,6 +537,7 @@ a {
   align-items: start;
 }
 
+/* Eyebrow — default = light surfaces (readable gray/navy) */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -536,9 +546,9 @@ a {
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #d6e8ff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--navy);
+  background: rgba(0, 61, 143, 0.08);
+  border: 1px solid rgba(0, 61, 143, 0.16);
   border-radius: 999px;
   padding: 0.4rem 0.85rem;
   margin: 0 0 1rem;
@@ -547,6 +557,19 @@ a {
 .eyebrow-icon {
   width: 14px;
   height: 14px;
+  color: var(--navy);
+}
+
+/* —— Home dark hero: light text ONLY inside .hero —— */
+.hero .eyebrow {
+  color: #d6e8ff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero .eyebrow-icon,
+.hero .eyebrow svg {
+  color: #d6e8ff;
 }
 
 .hero h1 {
@@ -562,7 +585,7 @@ a {
   color: #cfe3ff;
 }
 
-.lead-kicker {
+.hero .lead-kicker {
   margin: 0 0 0.65rem;
   font-size: clamp(1.2rem, 2.6vw, 1.45rem);
   font-weight: 700;
@@ -570,7 +593,6 @@ a {
   color: #b8d4ff;
 }
 
-/* Home dark hero only — do not leak light text onto interior pages */
 .hero .lead {
   margin: 0 0 1.35rem;
   font-size: 1.05rem;
@@ -580,6 +602,10 @@ a {
 
 .hero .lead strong {
   color: #fff;
+}
+
+.hero a:not(.btn) {
+  color: #cfe3ff;
 }
 
 .hero-actions {
@@ -612,15 +638,16 @@ a {
   gap: 0.5rem;
 }
 
+/* Trust pills default for light areas */
 .trust-pills li {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #e8f0fa;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--slate);
+  background: rgba(0, 61, 143, 0.06);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.4rem 0.75rem;
 }
@@ -628,6 +655,19 @@ a {
 .trust-pills li svg {
   width: 15px;
   height: 15px;
+  color: var(--navy);
+  opacity: 1;
+}
+
+/* Dark home hero pills */
+.hero .trust-pills li {
+  color: #e8f0fa;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.hero .trust-pills li svg {
+  color: #e8f0fa;
   opacity: 0.9;
 }
 
@@ -1558,6 +1598,7 @@ a {
   padding: 1.75rem 0 2rem;
   background: linear-gradient(180deg, #e8f0fa 0%, #f7fafc 72%);
   border-bottom: 1px solid var(--line);
+  color: var(--ink); /* never inherit light/white body text */
 }
 
 .page-hero-inner {
@@ -1573,6 +1614,12 @@ a {
   font-weight: 750;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--navy);
+  background: rgba(0, 61, 143, 0.08);
+  border: 1px solid rgba(0, 61, 143, 0.16);
+}
+
+.page-hero .eyebrow svg {
   color: var(--navy);
 }
 
@@ -1597,14 +1644,32 @@ a {
   font-weight: 700;
 }
 
+.page-hero a:not(.btn) {
+  color: var(--navy);
+  font-weight: 600;
+}
+
 .page-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
 }
 
+/* Ghost buttons on light page heroes — navy, not white */
+.page-hero .btn-ghost {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--line);
+}
+
+.page-hero .btn-ghost:hover {
+  background: var(--sky);
+  color: var(--navy-deep);
+}
+
 .page-section {
   padding: 2.25rem 0;
+  color: var(--ink);
 }
 
 .page-section.band {
@@ -1626,8 +1691,13 @@ a {
   font-size: 1.02rem;
 }
 
+.page-section a:not(.btn) {
+  color: var(--navy);
+}
+
 .prose {
   max-width: 40rem;
+  color: var(--slate);
 }
 
 .prose p {
@@ -1642,6 +1712,11 @@ a {
 
 .prose strong {
   color: var(--ink);
+}
+
+.prose a {
+  color: var(--navy);
+  font-weight: 600;
 }
 
 .feature-points {
@@ -1846,6 +1921,7 @@ a {
   line-height: 1.4;
 }
 
+/* Dark CTA band — white text only here (and .btn-ghost-light) */
 .page-cta {
   margin: 0.5rem 0 0;
   padding: 1.35rem 1.25rem;
@@ -1872,7 +1948,7 @@ a {
 
 .page-cta p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.45;
 }
@@ -1881,6 +1957,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+/* Secondary CTA on dark band: light outline (only inside .page-cta) */
+.page-cta .btn-ghost-light {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.page-cta .btn-ghost-light:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .page-faq {
@@ -1924,6 +2011,15 @@ a {
   color: var(--slate);
   font-size: 0.95rem;
   line-height: 1.55;
+}
+
+.page-faq .faq-a strong {
+  color: var(--ink);
+}
+
+.page-faq .faq-a a {
+  color: var(--navy);
+  font-weight: 600;
 }
 
 .nav-links a.is-active,
