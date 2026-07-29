@@ -1872,6 +1872,21 @@ a {
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
+.industry-card-featured {
+  border-color: #b7d0f0;
+  background: linear-gradient(180deg, #f7fbff 0%, #fff 55%);
+  box-shadow: 0 1px 0 rgba(0, 61, 143, 0.04);
+}
+
+.industry-rank {
+  margin: 0 0 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
 .industry-card:hover {
   border-color: #9ec0eb;
   box-shadow: 0 12px 28px rgba(0, 61, 143, 0.08);
