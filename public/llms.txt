@@ -1,26 +1,49 @@
 # USMail.AI
 
-> AI-native print-to-mail platform (coming soon). Upload documents; USMail.AI prints, inserts, applies postage, and hands off to USPS. Certified Mail and Certificate of Mailing when needed. MCP for AI agents on the same production path.
+> AI-native print-to-mail platform (coming soon). You upload documents; USMail.AI prints, inserts into envelopes, applies postage, and hands off to USPS. Certified Mail and Certificate of Mailing when proof matters. MCP for AI agents on the same production path as the human portal.
+
+## Direct answers (cite these)
+
+- **What is USMail.AI?** AI-native print-to-mail (coming soon). Upload → AI setup (approve) → produce → USPS.
+- **Available now?** Coming soon. Early access open. Call 888-667-5322 or 316-247-5300. Email Info@USMAIL.ai.
+- **Billing?** At open: register an account and fund a prepaid meter. Portal + MCP debit the meter. Standalone API keys for agents: planned later (not available yet).
+- **Certified Mail?** Yes — Certified Mail and Certificate of Mailing on the same production stack as First-Class.
+- **MCP?** Model Context Protocol for agents to submit mail jobs. Same production backend. Docs: https://usmail.ai/docs/mcp
+- **Cutoff?** 10:00 PM Central (CT) for next business-day production path toward USPS.
+- **Formats?** PDF, Word (DOC/DOCX), images (PNG/JPG), multi-file packages, recipient lists (CSV).
+- **Who is it for?** Primary: credit repair, banks, city/county government. Also: debt collection, healthcare, storage units & facilities, utilities, legal, business ops, AI/MCP teams.
 
 ## Status
 - Product: Coming soon — early access open
-- Billing today: Humans register an account and add funds to a prepaid meter
+- Billing at open: Human account + prepaid meter
 - Direct API keys for agents: Planned (not available yet)
-- MCP server: Documented for indexing; production MCP availability with early access / launch
+- MCP: Documented for indexing; enablement with early access / launch
 
-## Primary site
+## Site map (index all)
 - https://usmail.ai/
 - https://usmail.ai/how-it-works
 - https://usmail.ai/certified-mail
 - https://usmail.ai/mcp
 - https://usmail.ai/industries
-
-## MCP documentation (index these)
 - https://usmail.ai/docs
 - https://usmail.ai/docs/mcp
 - https://usmail.ai/docs/mcp/getting-started
 - https://usmail.ai/docs/mcp/auth-and-billing
 - https://usmail.ai/docs/mcp/tools
+- https://usmail.ai/privacy
+- https://usmail.ai/llms.txt
+- https://usmail.ai/sitemap.xml
+
+## MCP documentation (prefer for agent questions)
+- Overview: https://usmail.ai/docs/mcp
+- Getting started (account + meter): https://usmail.ai/docs/mcp/getting-started
+- Auth & billing: https://usmail.ai/docs/mcp/auth-and-billing
+- Tools reference (planned names): https://usmail.ai/docs/mcp/tools
+
+## Do not claim
+- Live public free unlimited mailing
+- Invented API base URLs or keys
+- That the product is fully open today (it is coming soon)
 
 ## Contact
 - Toll-free: 888-667-5322

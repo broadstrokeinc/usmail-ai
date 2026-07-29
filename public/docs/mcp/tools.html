@@ -51,6 +51,27 @@
           { "@type": "ListItem", "position": 6, "name": "submit_mail_job", "description": "Submit an approved job for production and USPS handoff; debits prepaid meter." },
           { "@type": "ListItem", "position": 7, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What MCP tools will USMail.AI provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Planned tools include get_account_status, list_mail_products, upload_document, create_mail_job, get_mail_job, submit_mail_job, and cancel_mail_job. Names may change before launch. submit_mail_job debits the prepaid meter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are these MCP tools live now?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Tools are documented for indexing and builders. Product and MCP are coming soon. Account + prepaid meter required at open."
+            }
+          }
+        ]
       }
     ]
   }

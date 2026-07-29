@@ -66,7 +66,7 @@
           "width": 256,
           "height": 256
         },
-        "description": "AI-native mailing platform (coming soon). Upload letters and documents; USMail.AI prints, inserts, applies postage, and delivers via USPS. MCP-ready for agents. Serves individuals, businesses, organizations, and corporations.",
+        "description": "AI-native mailing platform (coming soon). Upload documents; USMail.AI prints, inserts, applies postage, and hands off to USPS. Serves credit repair, banks, city and county government, debt collection, healthcare, storage facilities, and more. Account + prepaid meter at open. MCP for agents; API keys planned later.",
         "telephone": ["+1-888-667-5322", "+1-316-247-5300"],
         "email": "Info@USMAIL.ai",
         "contactPoint": [
@@ -89,15 +89,22 @@
         "areaServed": "US",
         "audience": {
           "@type": "Audience",
-          "audienceType": "Individuals, businesses, organizations, corporations, government"
+          "audienceType": "Credit repair, banks, city and county government, debt collectors, healthcare, storage facilities, utilities, legal, businesses"
         },
         "knowsAbout": [
           "AI-assisted document mailing",
+          "print-to-mail",
           "Model Context Protocol",
           "Certified Mail",
           "Certificate of Mailing",
+          "credit repair mailing",
+          "bank customer notices",
+          "municipal and county mail",
+          "debt collection letters",
+          "self-storage lien notices",
           "Multi-format document upload",
-          "USPS letter production"
+          "USPS letter production",
+          "prepaid meter billing"
         ]
       },
       {
@@ -208,7 +215,15 @@
             "name": "Who is USMail.AI for?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Anyone who must send physical mail reliably: individuals and professionals, small businesses, corporations, nonprofits, firms, cities, counties, utilities, agencies, and AI/MCP teams. Invoices, notices, compliance mail — few pieces to high volume."
+              "text": "Primary production segments include credit repair, banks and financial services, and city and county government. Also debt collection, healthcare, storage units and facilities, utilities, legal and compliance, and AI/MCP teams. High-volume and high-trust physical mail via USPS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does billing work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At product open: register a USMail.AI account and add funds to a prepaid meter. Portal and MCP jobs debit the meter. A standalone API option for agents is planned later and is not available yet."
             }
           },
           {
@@ -291,9 +306,18 @@
           <p class="lead-kicker">Upload. Print. Mail.</p>
           <p class="lead">
             Upload your documents. AI helps set up the job; MCP lets agents submit the same path.
-            We print, insert, postage, and deliver via USPS — for individuals, businesses,
-            organizations, and corporations.
+            We print, insert, postage, and deliver via USPS — for credit repair, banks, government,
+            and other high-volume senders.
           </p>
+          <div class="aeo-answer" data-aeo="definition">
+            <p>
+              <strong>USMail.AI</strong> is an AI-native <strong>print-to-mail</strong> platform
+              (<strong>coming soon</strong>). You upload files; we print, insert, apply postage, and
+              hand off to <strong>USPS</strong>. Billing at open: <strong>account + prepaid meter</strong>.
+              <strong>Certified Mail</strong> when proof matters. <strong>MCP</strong> for agents
+              (API keys planned later).
+            </p>
+          </div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#early-access">Get early access</a>
             <a class="btn btn-ghost btn-ghost-on-dark" href="/how-it-works">How it works</a>
@@ -703,6 +727,31 @@
                 production path toward USPS (target handoff around
                 <strong>6:30 PM Central</strong> the next business day). Miss the post office line.
                 Hit our cutoff instead. Confirm for your volume and product.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>Who is USMail.AI for?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>Primary:</strong> credit repair, banks, cities &amp; counties.
+                Also debt collection, healthcare, storage facilities, utilities, legal, and AI/MCP teams.
+                <a href="/industries">Industries →</a>
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>How does billing work?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                <strong>Account + prepaid meter</strong> at product open. Portal and MCP debit the meter.
+                Standalone API keys for agents are <strong>planned later</strong>.
               </p>
             </div>
           </details>

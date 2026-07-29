@@ -50,7 +50,7 @@
       {
         "@type": "HowTo",
         "name": "How to send mail with USMail.AI",
-        "description": "Upload documents and send physical mail via USMail.AI production and USPS.",
+        "description": "Upload documents and send physical mail via USMail.AI production and USPS. Coming soon. Account + prepaid meter at open.",
         "step": [
           { "@type": "HowToStep", "position": 1, "name": "Upload", "text": "Upload PDF, Word, images, multi-file packages, or recipient lists." },
           { "@type": "HowToStep", "position": 2, "name": "AI setup", "text": "AI assists with addresses and print options; you approve." },
@@ -58,6 +58,35 @@
           { "@type": "HowToStep", "position": 4, "name": "We produce", "text": "Print, insert, address, and apply postage." },
           { "@type": "HowToStep", "position": 5, "name": "USPS handoff", "text": "Submit by 10:00 PM Central for next business-day mail path." },
           { "@type": "HowToStep", "position": 6, "name": "Track status", "text": "Job status end to end; USPS tracking on Priority and Certified." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does USMail.AI work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Six steps: (1) upload your documents, (2) AI helps set up addresses and print options, (3) pick products such as First-Class or Certified Mail, (4) USMail.AI prints, inserts, and applies postage, (5) handoff to USPS by the production cutoff, (6) track job status. Coming soon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the mail cutoff time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Submit by 10:00 PM Central (CT) for the next business-day production path toward USPS. Confirm for your volume and product."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do agents use a different process than the portal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Portal users and MCP agents use the same production path. Billing is account + prepaid meter at open; API keys for agents are planned later."
+            }
+          }
         ]
       }
     ]
@@ -106,8 +135,17 @@
           <h1>You own the file. We own production.</h1>
           <p class="lead">
             Six steps from upload to USPS. People use the portal; agents use
-            <a href="/mcp">MCP</a>. Same print path either way.
+            <a href="/docs/mcp">MCP</a>. Same print path either way.
           </p>
+          <div class="aeo-answer" data-aeo="how-it-works">
+            <p>
+              <strong>How USMail.AI works:</strong> You <strong>upload</strong> documents →
+              <strong>AI setup</strong> (you approve) → <strong>pick products</strong> (including
+              Certified when needed) → we <strong>print, insert, and postage</strong> →
+              <strong>USPS handoff</strong> (target: in by <strong>10:00 PM CT</strong>) →
+              <strong>track status</strong>. Coming soon. Account + prepaid meter at open.
+            </p>
+          </div>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="/?interest=demo#early-access">Get early access</a>
             <a class="btn btn-ghost" href="/certified-mail">Certified Mail</a>
@@ -174,11 +212,34 @@
       </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section" aria-labelledby="hiw-faq">
       <div class="wrap">
-        <div class="related-grid">
-          <a class="related-card" href="/mcp">
-            <strong>MCP</strong>
+        <h2 id="hiw-faq">FAQ</h2>
+        <div class="page-faq">
+          <details open>
+            <summary>How does USMail.AI work?</summary>
+            <p class="faq-a">
+              <strong>Upload → AI setup → products → produce → USPS → track.</strong>
+              Six steps. You own the file; we own production. Coming soon.
+            </p>
+          </details>
+          <details>
+            <summary>What is the cutoff?</summary>
+            <p class="faq-a">
+              <strong>10:00 PM Central (CT)</strong> for next business-day production path toward USPS.
+            </p>
+          </details>
+          <details>
+            <summary>Portal vs MCP?</summary>
+            <p class="faq-a">
+              <strong>Same production path.</strong> MCP docs:
+              <a href="/docs/mcp">/docs/mcp</a>. Account + meter at open; API later.
+            </p>
+          </details>
+        </div>
+        <div class="related-grid" style="margin-top: 1.5rem">
+          <a class="related-card" href="/docs/mcp">
+            <strong>MCP docs</strong>
             <span>Agents on the same six steps.</span>
           </a>
           <a class="related-card" href="/certified-mail">

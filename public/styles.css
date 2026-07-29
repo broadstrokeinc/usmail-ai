@@ -2205,7 +2205,8 @@ a {
   color: #5a6b7d !important;
 }
 
-.docs-answer {
+.docs-answer,
+.aeo-answer {
   margin: 0 0 1.25rem;
   padding: 1rem 1.1rem;
   background: #f0f6fc;
@@ -2213,11 +2214,33 @@ a {
   border-radius: 12px;
 }
 
-.docs-answer p {
+.docs-answer p,
+.aeo-answer p {
   margin: 0;
   color: var(--ink);
   font-size: 1.02rem;
   line-height: 1.6;
+}
+
+.aeo-answer strong {
+  color: var(--ink);
+}
+
+/* Home dark hero: light answer band for AEO */
+.hero .aeo-answer {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+  max-width: 38rem;
+}
+
+.hero .aeo-answer p,
+.hero .aeo-answer strong {
+  color: #fff;
+}
+
+.page-hero .aeo-answer {
+  margin-top: 0.25rem;
+  margin-bottom: 1.15rem;
 }
 
 .docs-h2-sr {
