@@ -119,10 +119,10 @@ a {
 
 .brand-tagline {
   font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--navy-deep);
+  color: var(--red);
   line-height: 1.15;
   white-space: nowrap;
   overflow: hidden;
