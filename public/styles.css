@@ -26,10 +26,7 @@ body {
   margin: 0;
   font-family: var(--font);
   color: var(--ink);
-  background:
-    radial-gradient(1200px 500px at 10% -10%, #dcecff 0%, transparent 55%),
-    radial-gradient(900px 400px at 100% 0%, #ffe8ec 0%, transparent 50%),
-    #f7fafc;
+  background: #f7fafc;
   line-height: 1.55;
   font-size: 16px;
 }
@@ -259,7 +256,7 @@ a {
 }
 
 .band {
-  background: linear-gradient(180deg, #fff 0%, #eef5fc 100%);
+  background: #eef5fc;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -338,10 +335,7 @@ a {
 }
 
 .hero h1 span {
-  background: linear-gradient(90deg, #7eb6ff 0%, #fff 55%, #ffb3c0 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #fff;
 }
 
 .lead-kicker {
@@ -570,7 +564,7 @@ a {
 
 /* AI section */
 .section-ai {
-  background: linear-gradient(180deg, #f4f8fd 0%, #e8f0fa 100%);
+  background: #e8f0fa;
 }
 
 .panel-icon {
@@ -739,7 +733,7 @@ a {
 
 .benefit-card.highlight {
   border-color: #b7d0f0;
-  background: linear-gradient(180deg, #f7fbff 0%, #fff 100%);
+  background: #f7fbff;
 }
 
 .benefit-card h3 {
