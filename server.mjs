@@ -333,6 +333,14 @@ const server = http.createServer(async (req, res) => {
     '/mcp': '/mcp.html',
     '/how-it-works': '/how-it-works.html',
     '/industries': '/industries.html',
+    '/docs': '/docs/index.html',
+    '/docs/': '/docs/index.html',
+    '/docs/mcp': '/docs/mcp/index.html',
+    '/docs/mcp/': '/docs/mcp/index.html',
+    '/docs/mcp/getting-started': '/docs/mcp/getting-started.html',
+    '/docs/mcp/auth-and-billing': '/docs/mcp/auth-and-billing.html',
+    '/docs/mcp/tools': '/docs/mcp/tools.html',
+    '/llms.txt': '/llms.txt',
   }
 
   // Canonical clean URLs only — 301 bare .html away from duplicate surface
@@ -343,6 +351,11 @@ const server = http.createServer(async (req, res) => {
     '/mcp.html': '/mcp',
     '/how-it-works.html': '/how-it-works',
     '/industries.html': '/industries',
+    '/docs/index.html': '/docs',
+    '/docs/mcp/index.html': '/docs/mcp',
+    '/docs/mcp/getting-started.html': '/docs/mcp/getting-started',
+    '/docs/mcp/auth-and-billing.html': '/docs/mcp/auth-and-billing',
+    '/docs/mcp/tools.html': '/docs/mcp/tools',
   }
   if (HTML_TO_CLEAN[urlPath]) {
     return send(
@@ -358,10 +371,31 @@ const server = http.createServer(async (req, res) => {
   }
 
   let rel = CLEAN[urlPath] || urlPath
+  // Strip trailing slash for non-root (except already mapped)
+  if (!CLEAN[urlPath] && urlPath.length > 1 && urlPath.endsWith('/')) {
+    const noSlash = urlPath.replace(/\/+$/, '')
+    if (CLEAN[noSlash]) {
+      return send(
+        res,
+        301,
+        '',
+        { Location: noSlash, 'Cache-Control': 'public, max-age=86400' },
+        req,
+      )
+    }
+  }
 
-  const filePath = path.normalize(path.join(publicDir, rel))
+  let filePath = path.normalize(path.join(publicDir, rel))
   if (!filePath.startsWith(publicDir)) {
     return send(res, 403, 'Forbidden', {}, req)
+  }
+
+  try {
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+      filePath = path.join(filePath, 'index.html')
+    }
+  } catch {
+    /* fall through to readFile 404 */
   }
 
   fs.readFile(filePath, (err, data) => {
@@ -385,7 +419,9 @@ const server = http.createServer(async (req, res) => {
       200,
       req.method === 'HEAD' ? '' : data,
       {
-        'Content-Type': MIME[ext] || 'application/octet-stream',
+        'Content-Type':
+          MIME[ext] ||
+          (ext === '.txt' ? 'text/plain; charset=utf-8' : 'application/octet-stream'),
         'Cache-Control':
           ext === '.html'
             ? 'no-cache'

@@ -1,0 +1,29 @@
+# USMail.AI
+
+> AI-native print-to-mail platform (coming soon). Upload documents; USMail.AI prints, inserts, applies postage, and hands off to USPS. Certified Mail and Certificate of Mailing when needed. MCP for AI agents on the same production path.
+
+## Status
+- Product: Coming soon — early access open
+- Billing today: Humans register an account and add funds to a prepaid meter
+- Direct API keys for agents: Planned (not available yet)
+- MCP server: Documented for indexing; production MCP availability with early access / launch
+
+## Primary site
+- https://usmail.ai/
+- https://usmail.ai/how-it-works
+- https://usmail.ai/certified-mail
+- https://usmail.ai/mcp
+- https://usmail.ai/industries
+
+## MCP documentation (index these)
+- https://usmail.ai/docs
+- https://usmail.ai/docs/mcp
+- https://usmail.ai/docs/mcp/getting-started
+- https://usmail.ai/docs/mcp/auth-and-billing
+- https://usmail.ai/docs/mcp/tools
+
+## Contact
+- Toll-free: 888-667-5322
+- Direct: 316-247-5300
+- Email: Info@USMAIL.ai
+- Early access: https://usmail.ai/?interest=mcp#early-access

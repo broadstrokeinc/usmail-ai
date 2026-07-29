@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auth &amp; Billing | USMail.AI MCP Docs — Account + Prepaid Meter</title>
+  <meta
+    name="description"
+    content="USMail.AI MCP auth and billing: register an account, fund a prepaid meter. Direct API keys for AI agents planned later. Coming soon."
+  />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://usmail.ai/docs/mcp/auth-and-billing" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta property="og:title" content="Auth &amp; Billing | USMail.AI MCP" />
+  <meta property="og:url" content="https://usmail.ai/docs/mcp/auth-and-billing" />
+  <meta property="og:description" content="Account + prepaid meter now. API option for agents later." />
+  <meta property="og:image" content="https://usmail.ai/logo-og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Docs", "item": "https://usmail.ai/docs" },
+          { "@type": "ListItem", "position": 2, "name": "MCP", "item": "https://usmail.ai/docs/mcp" },
+          { "@type": "ListItem", "position": 3, "name": "Auth and billing", "item": "https://usmail.ai/docs/mcp/auth-and-billing" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "USMail.AI MCP authentication and billing",
+        "url": "https://usmail.ai/docs/mcp/auth-and-billing",
+        "dateModified": "2026-07-29",
+        "description": "Human account registration and prepaid meter funding for USMail.AI. API keys for agents planned later."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I authenticate to USMail.AI MCP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Access is tied to a registered USMail.AI account. When MCP is enabled, the account holder connects an MCP client with credentials or session details we provide. There is no anonymous public MCP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does USMail.AI billing work for agents?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For now, a human adds funds to a prepaid meter on the account. Portal and MCP jobs debit that meter. A dedicated API option for AI/MCP billing is planned for the future and is not available yet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get an API key without a human meter?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not yet. The current model is account + prepaid meter. Standalone API keys are on the roadmap."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="docs-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="USMail.AI home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.AI" width="200" height="51" class="brand-logo" decoding="async" />
+        </picture>
+        <span class="brand-tagline">Docs</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span> Menu
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="/docs">Docs</a>
+        <a href="/docs/mcp">MCP</a>
+        <a href="/docs/mcp/auth-and-billing" aria-current="page">Auth</a>
+        <a href="/?interest=mcp#early-access">Early access</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-nav-cta" href="/?interest=mcp#early-access">Early access</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="docs-main">
+    <div class="wrap docs-shell">
+      <aside class="docs-nav" aria-label="Docs">
+        <p class="docs-nav-label">Documentation</p>
+        <ul>
+          <li><a href="/docs">Overview</a></li>
+          <li><a href="/docs/mcp">MCP</a></li>
+          <li><a href="/docs/mcp/getting-started">Getting started</a></li>
+          <li><a href="/docs/mcp/auth-and-billing" aria-current="page">Auth &amp; billing</a></li>
+          <li><a href="/docs/mcp/tools">Tools reference</a></li>
+        </ul>
+      </aside>
+
+      <article class="docs-article">
+        <nav aria-label="Breadcrumb" class="docs-breadcrumb">
+          <a href="/docs">Docs</a> <span aria-hidden="true">/</span>
+          <a href="/docs/mcp">MCP</a> <span aria-hidden="true">/</span>
+          <span>Auth &amp; billing</span>
+        </nav>
+
+        <p class="eyebrow"><i data-lucide="wallet" aria-hidden="true"></i> Coming soon</p>
+        <h1>Authentication &amp; billing</h1>
+
+        <section class="docs-answer" aria-label="Direct answer">
+          <p>
+            <strong>Today’s model (at product open):</strong> a <strong>human registers an account</strong>
+            and <strong>adds funds to a prepaid meter</strong>. Portal use and MCP use (when enabled)
+            both charge that meter. <strong>There is no free anonymous MCP.</strong>
+            A future <strong>API option</strong> for AI/MCP (e.g. API keys / programmatic credentials)
+            is planned; it is <strong>not available yet</strong> and must not be assumed by crawlers.
+          </p>
+        </section>
+
+        <h2>Account (human)</h2>
+        <ul class="docs-prose">
+          <li>Registration creates an organization or user account on USMail.AI.</li>
+          <li>Account owners manage users, meter funding, and (when available) MCP enablement.</li>
+          <li>Contact and identity verification requirements will be described at signup.</li>
+        </ul>
+
+        <h2>Prepaid meter</h2>
+        <ul class="docs-prose">
+          <li>Balance is funded in advance (payment methods at launch).</li>
+          <li>Mail production costs (postage, product options such as Certified, production fees as quoted) debit the meter.</li>
+          <li>Insufficient balance: jobs should fail or block before production — agents must not assume silent overdraft.</li>
+          <li>Meter is shared across portal and MCP for that account.</li>
+        </ul>
+
+        <h2>MCP authentication (intended)</h2>
+        <p class="docs-prose">
+          When MCP ships for an account, connection will use credentials or configuration
+          issued to that account (exact mechanism: documented with access — e.g. token, OAuth, or client config file).
+          <strong>Do not invent public API keys or base URLs from this page.</strong>
+        </p>
+
+        <h2>Roadmap: API for AI / MCP</h2>
+        <table class="docs-table">
+          <thead>
+            <tr><th>Phase</th><th>Auth</th><th>Billing</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Now (at open)</strong></td>
+              <td>Human account; MCP tied to account</td>
+              <td>Prepaid meter funded by human</td>
+            </tr>
+            <tr>
+              <td><strong>Later (planned)</strong></td>
+              <td>API keys / programmatic credentials for agents</td>
+              <td>API-oriented billing options (details TBD)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="docs-prose docs-muted">
+          This page will be updated when API keys ship. Until then, treat “account + meter” as the only supported model.
+        </p>
+
+        <h2>Security notes for agents</h2>
+        <ul class="docs-prose">
+          <li>Never put meter funding credentials in prompts or public repos.</li>
+          <li>Prefer human approval gates for high-cost or Certified jobs.</li>
+          <li>Respect privacy: recipient data is production mail data — handle under your org policies.</li>
+        </ul>
+
+        <div class="docs-next">
+          <a href="/docs/mcp/getting-started">← Getting started</a>
+          <a href="/docs/mcp/tools">Tools reference →</a>
+        </div>
+
+        <div class="page-cta docs-cta">
+          <div>
+            <h2>Questions about billing?</h2>
+            <p>Talk to us before launch — volume and meter setup.</p>
+          </div>
+          <div class="page-cta-actions">
+            <a class="btn btn-primary" href="/?interest=mcp#early-access">Early access</a>
+            <a class="btn btn-ghost-light" href="tel:+18886675322">888-667-5322</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/docs">Docs</a>
+        <a href="/docs/mcp">MCP docs</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+      <p class="footer-copy">© <span id="y"></span> USMail.AI</p>
+    </div>
+  </footer>
+  <div class="mobile-dock" role="navigation" aria-label="Quick actions">
+    <a class="btn btn-primary" href="/?interest=mcp#early-access">Early access</a>
+    <a class="btn btn-ghost" href="tel:+18886675322">Call</a>
+  </div>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

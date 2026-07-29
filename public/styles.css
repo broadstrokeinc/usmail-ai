@@ -2053,6 +2053,294 @@ a {
   font-weight: 600;
 }
 
+/* —— Documentation layout (AI-indexable prose) —— */
+.docs-body {
+  background: #f7fafc;
+}
+
+.docs-main {
+  padding: 1.25rem 0 3rem;
+}
+
+.docs-shell {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .docs-shell {
+    grid-template-columns: 13.5rem minmax(0, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+.docs-nav {
+  font-size: 0.9rem;
+}
+
+.docs-nav-label {
+  margin: 0.85rem 0 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.docs-nav-label:first-child {
+  margin-top: 0;
+}
+
+.docs-nav ul {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.docs-nav a {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  color: var(--slate);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.docs-nav a:hover {
+  color: var(--navy);
+  background: rgba(0, 61, 143, 0.06);
+}
+
+.docs-nav a[aria-current="page"] {
+  color: var(--navy);
+  font-weight: 700;
+  background: rgba(0, 61, 143, 0.08);
+}
+
+.docs-article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.35rem 1.25rem 1.75rem;
+  max-width: 48rem;
+}
+
+@media (min-width: 640px) {
+  .docs-article {
+    padding: 1.75rem 2rem 2.25rem;
+  }
+}
+
+.docs-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+.docs-breadcrumb a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.docs-article h1 {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.55rem, 3.5vw, 2rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.docs-article h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.docs-article h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.02rem;
+}
+
+.docs-lead,
+.docs-prose {
+  color: var(--slate);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.docs-prose {
+  margin: 0.5rem 0;
+}
+
+.docs-prose a,
+.docs-article a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.docs-muted {
+  font-size: 0.92rem !important;
+  color: #5a6b7d !important;
+}
+
+.docs-answer {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.1rem;
+  background: #f0f6fc;
+  border: 1px solid #d0e2f5;
+  border-radius: 12px;
+}
+
+.docs-answer p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.docs-h2-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.docs-callout {
+  margin: 1rem 0 1.25rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #f0d78c;
+  background: #fffbeb;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.docs-callout-info {
+  border-color: #b7d0f0;
+  background: #f5f9ff;
+}
+
+.docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.docs-table th,
+.docs-table td {
+  text-align: left;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.docs-table th {
+  background: #f0f5fa;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.docs-badge {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.docs-badge-yes {
+  background: #e6f6ec;
+  color: #0d6b32;
+}
+
+.docs-badge-soon {
+  background: #e8f0fa;
+  color: var(--navy);
+}
+
+.docs-badge-later {
+  background: #f1f3f5;
+  color: #5a6b7d;
+}
+
+.docs-code {
+  margin: 0.75rem 0;
+  padding: 1rem 1.1rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.docs-tool {
+  margin: 0 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.docs-tool h3 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.98rem;
+  color: var(--navy-deep);
+}
+
+.docs-tool p {
+  margin: 0.35rem 0 0;
+  color: var(--slate);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.docs-tool code {
+  font-size: 0.88em;
+  background: rgba(0, 61, 143, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.docs-next {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  font-weight: 700;
+}
+
+.docs-next a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.docs-cta {
+  margin-top: 1.5rem;
+}
+
+.docs-faq {
+  max-width: none;
+}
+
+.docs-article .steps {
+  margin-top: 0.75rem;
+}
+
 .nav-links a.is-active,
 .nav-links a[aria-current="page"] {
   color: var(--navy);

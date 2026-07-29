@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MCP Tools Reference | USMail.AI — Print-to-Mail Tools for Agents</title>
+  <meta
+    name="description"
+    content="USMail.AI MCP tools reference (planned): create mail jobs, upload documents, check status, meter balance. Account + prepaid meter required. Coming soon. Not a live API."
+  />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://usmail.ai/docs/mcp/tools" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta property="og:title" content="MCP Tools Reference | USMail.AI" />
+  <meta property="og:url" content="https://usmail.ai/docs/mcp/tools" />
+  <meta property="og:description" content="Planned MCP tools for print-to-mail. Coming soon. Account + meter." />
+  <meta property="og:image" content="https://usmail.ai/logo-og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Docs", "item": "https://usmail.ai/docs" },
+          { "@type": "ListItem", "position": 2, "name": "MCP", "item": "https://usmail.ai/docs/mcp" },
+          { "@type": "ListItem", "position": 3, "name": "Tools", "item": "https://usmail.ai/docs/mcp/tools" }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "USMail.AI MCP tools reference",
+        "url": "https://usmail.ai/docs/mcp/tools",
+        "dateModified": "2026-07-29",
+        "description": "Planned Model Context Protocol tools for USMail.AI print-to-mail: job create, upload, status, meter. Coming soon. Names may change before launch.",
+        "about": "MCP tools for physical mail production"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Planned USMail.AI MCP tools",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "get_account_status", "description": "Return account and prepaid meter summary for the authenticated account." },
+          { "@type": "ListItem", "position": 2, "name": "list_mail_products", "description": "List available mail products (e.g. First-Class, Certified Mail, Certificate of Mailing)." },
+          { "@type": "ListItem", "position": 3, "name": "upload_document", "description": "Upload a document or package for a mailing job." },
+          { "@type": "ListItem", "position": 4, "name": "create_mail_job", "description": "Create a print-to-mail job with recipients, products, and options." },
+          { "@type": "ListItem", "position": 5, "name": "get_mail_job", "description": "Get job status, cost estimate, and tracking identifiers when available." },
+          { "@type": "ListItem", "position": 6, "name": "submit_mail_job", "description": "Submit an approved job for production and USPS handoff; debits prepaid meter." },
+          { "@type": "ListItem", "position": 7, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="docs-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="USMail.AI home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.AI" width="200" height="51" class="brand-logo" decoding="async" />
+        </picture>
+        <span class="brand-tagline">Docs</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span> Menu
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="/docs">Docs</a>
+        <a href="/docs/mcp">MCP</a>
+        <a href="/docs/mcp/tools" aria-current="page">Tools</a>
+        <a href="/?interest=mcp#early-access">Early access</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-nav-cta" href="/?interest=mcp#early-access">Early access</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="docs-main">
+    <div class="wrap docs-shell">
+      <aside class="docs-nav" aria-label="Docs">
+        <p class="docs-nav-label">Documentation</p>
+        <ul>
+          <li><a href="/docs">Overview</a></li>
+          <li><a href="/docs/mcp">MCP</a></li>
+          <li><a href="/docs/mcp/getting-started">Getting started</a></li>
+          <li><a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a></li>
+          <li><a href="/docs/mcp/tools" aria-current="page">Tools reference</a></li>
+        </ul>
+      </aside>
+
+      <article class="docs-article">
+        <nav aria-label="Breadcrumb" class="docs-breadcrumb">
+          <a href="/docs">Docs</a> <span aria-hidden="true">/</span>
+          <a href="/docs/mcp">MCP</a> <span aria-hidden="true">/</span>
+          <span>Tools</span>
+        </nav>
+
+        <p class="eyebrow"><i data-lucide="wrench" aria-hidden="true"></i> Planned · Coming soon</p>
+        <h1>MCP tools reference</h1>
+
+        <section class="docs-answer" aria-label="Direct answer">
+          <p>
+            <strong>USMail.AI MCP tools</strong> (planned) let an agent manage
+            <strong>print-to-mail jobs</strong> under an authenticated account with a
+            <strong>funded prepaid meter</strong>. Tool names below are the intended surface for
+            AI indexing and builders. <strong>Names, parameters, and availability may change</strong>
+            before launch. This is <strong>not</strong> a live OpenAPI or callable endpoint list.
+          </p>
+        </section>
+
+        <div class="docs-callout">
+          <strong>Billing:</strong> <code>submit_mail_job</code> (and any production-charging tool)
+          requires sufficient <strong>meter</strong> balance. See
+          <a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a>.
+        </div>
+
+        <h2 id="tools">Planned tools</h2>
+
+        <div class="docs-tool" id="get_account_status">
+          <h3><code>get_account_status</code></h3>
+          <p>Return account identity summary and prepaid meter balance / status for the authenticated session.</p>
+          <p class="docs-muted"><strong>Returns (intended):</strong> account id, meter balance, currency, MCP enabled flag.</p>
+        </div>
+
+        <div class="docs-tool" id="list_mail_products">
+          <h3><code>list_mail_products</code></h3>
+          <p>List mail products available to the account (e.g. First-Class, Certified Mail, Certificate of Mailing, options).</p>
+          <p class="docs-muted"><strong>Returns (intended):</strong> product codes, display names, short descriptions.</p>
+        </div>
+
+        <div class="docs-tool" id="upload_document">
+          <h3><code>upload_document</code></h3>
+          <p>Upload a document or multi-file package for mailing (PDF, Word, images, lists as supported).</p>
+          <p class="docs-muted"><strong>Inputs (intended):</strong> file content or reference, filename, content type, optional job id.</p>
+          <p class="docs-muted"><strong>Returns (intended):</strong> document id for use in <code>create_mail_job</code>.</p>
+        </div>
+
+        <div class="docs-tool" id="create_mail_job">
+          <h3><code>create_mail_job</code></h3>
+          <p>Create a mailing job: documents, recipients or list, print options, product selection.</p>
+          <p class="docs-muted"><strong>Inputs (intended):</strong> document ids, recipients or list id, products (e.g. certified), color/duplex options, approval flags.</p>
+          <p class="docs-muted"><strong>Returns (intended):</strong> job id, draft status, cost estimate when available.</p>
+        </div>
+
+        <div class="docs-tool" id="get_mail_job">
+          <h3><code>get_mail_job</code></h3>
+          <p>Fetch job status, costs, production state, and tracking identifiers when available.</p>
+          <p class="docs-muted"><strong>Inputs (intended):</strong> job id.</p>
+          <p class="docs-muted"><strong>Returns (intended):</strong> status enum, timestamps, USPS tracking when product supports it, errors.</p>
+        </div>
+
+        <div class="docs-tool" id="submit_mail_job">
+          <h3><code>submit_mail_job</code></h3>
+          <p>Submit an approved job for production and USPS handoff. <strong>Debits the prepaid meter</strong>.</p>
+          <p class="docs-muted"><strong>Inputs (intended):</strong> job id, optional confirmation token if required by policy.</p>
+          <p class="docs-muted"><strong>Fails when:</strong> insufficient meter, validation errors, missing approval.</p>
+        </div>
+
+        <div class="docs-tool" id="cancel_mail_job">
+          <h3><code>cancel_mail_job</code></h3>
+          <p>Cancel a job if still cancelable (before irreversible production steps).</p>
+          <p class="docs-muted"><strong>Inputs (intended):</strong> job id.</p>
+        </div>
+
+        <h2 id="errors">Error handling (intended)</h2>
+        <ul class="docs-prose">
+          <li><code>unauthenticated</code> — no valid account session / credentials</li>
+          <li><code>insufficient_meter</code> — fund the prepaid meter</li>
+          <li><code>validation_error</code> — address, file, or product rules</li>
+          <li><code>not_cancelable</code> — job already in production</li>
+          <li><code>not_available</code> — MCP or product not enabled for account</li>
+        </ul>
+
+        <h2 id="example">Illustrative tool sequence</h2>
+        <pre class="docs-code" tabindex="0">1. get_account_status          → confirm meter balance
+2. list_mail_products          → choose Certified if needed
+3. upload_document             → notice.pdf
+4. create_mail_job             → draft + estimate
+5. submit_mail_job             → produce (debits meter)
+6. get_mail_job                → status / tracking</pre>
+        <p class="docs-prose docs-muted">
+          Sequence is conceptual for agents and docs indexing. Final schemas ship with the live MCP package.
+        </p>
+
+        <h2 id="not-included">Not in this reference</h2>
+        <ul class="docs-prose">
+          <li>Live base URL or SSE/stdio install strings (issued with access)</li>
+          <li>Standalone REST OpenAPI (API option planned later)</li>
+          <li>Guaranteed tool name freeze before GA</li>
+        </ul>
+
+        <div class="docs-next">
+          <a href="/docs/mcp">← MCP overview</a>
+          <a href="/docs/mcp/getting-started">Getting started →</a>
+        </div>
+
+        <div class="page-cta docs-cta">
+          <div>
+            <h2>Build against the real surface</h2>
+            <p>Early access gets connection details when MCP is enabled for your account.</p>
+          </div>
+          <div class="page-cta-actions">
+            <a class="btn btn-primary" href="/?interest=mcp#early-access">Join waitlist</a>
+            <a class="btn btn-ghost-light" href="tel:+18886675322">888-667-5322</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/docs">Docs</a>
+        <a href="/docs/mcp/tools">Tools</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+      <p class="footer-copy">© <span id="y"></span> USMail.AI</p>
+    </div>
+  </footer>
+  <div class="mobile-dock" role="navigation" aria-label="Quick actions">
+    <a class="btn btn-primary" href="/?interest=mcp#early-access">Early access</a>
+    <a class="btn btn-ghost" href="tel:+18886675322">Call</a>
+  </div>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

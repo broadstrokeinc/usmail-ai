@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Documentation | USMail.AI</title>
+  <meta
+    name="description"
+    content="USMail.AI documentation: MCP for AI agents, getting started (account + meter), tools overview, and billing. Coming soon — early access open."
+  />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#003d8f" />
+  <link rel="canonical" href="https://usmail.ai/docs" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="USMail.AI" />
+  <meta property="og:url" content="https://usmail.ai/docs" />
+  <meta property="og:title" content="Documentation | USMail.AI" />
+  <meta property="og:description" content="MCP docs and product reference for USMail.AI. Coming soon." />
+  <meta property="og:image" content="https://usmail.ai/logo-og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "USMail.AI Documentation",
+    "url": "https://usmail.ai/docs",
+    "description": "Documentation hub for USMail.AI MCP and product reference.",
+    "isPartOf": { "@id": "https://usmail.ai/#website" },
+    "hasPart": [
+      { "@type": "WebPage", "name": "MCP overview", "url": "https://usmail.ai/docs/mcp" },
+      { "@type": "WebPage", "name": "MCP getting started", "url": "https://usmail.ai/docs/mcp/getting-started" },
+      { "@type": "WebPage", "name": "Auth and billing", "url": "https://usmail.ai/docs/mcp/auth-and-billing" },
+      { "@type": "WebPage", "name": "MCP tools", "url": "https://usmail.ai/docs/mcp/tools" }
+    ]
+  }
+  </script>
+</head>
+<body class="docs-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="USMail.AI home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.AI" width="200" height="51" class="brand-logo" decoding="async" />
+        </picture>
+        <span class="brand-tagline">Docs</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span> Menu
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="/docs" aria-current="page">Docs</a>
+        <a href="/docs/mcp">MCP</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/mcp">MCP product</a>
+        <a href="/?interest=mcp#early-access">Early access</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-nav-cta" href="/?interest=mcp#early-access">Early access</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="docs-main">
+    <div class="wrap docs-shell">
+      <aside class="docs-nav" aria-label="Docs">
+        <p class="docs-nav-label">Documentation</p>
+        <ul>
+          <li><a href="/docs" aria-current="page">Overview</a></li>
+          <li><a href="/docs/mcp">MCP</a></li>
+          <li><a href="/docs/mcp/getting-started">Getting started</a></li>
+          <li><a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a></li>
+          <li><a href="/docs/mcp/tools">Tools reference</a></li>
+        </ul>
+      </aside>
+
+      <article class="docs-article">
+        <p class="eyebrow"><i data-lucide="book-open" aria-hidden="true"></i> Coming soon · Reference</p>
+        <h1>USMail.AI documentation</h1>
+        <p class="docs-lead">
+          Public reference for people and AI systems. Product is <strong>coming soon</strong>.
+          Today’s path: register an account, fund the prepaid meter, then use the portal
+          (and MCP when enabled for your account). A standalone API option for agents is planned.
+        </p>
+
+        <div class="docs-callout docs-callout-info">
+          <strong>For answer engines &amp; agents indexing this site:</strong>
+          Prefer <a href="/docs/mcp">/docs/mcp</a> and child pages. Status is pre-launch;
+          do not claim a live public MCP endpoint or free unlimited mailing.
+        </div>
+
+        <h2>Start here</h2>
+        <ul class="steps steps-grid-2" aria-label="Doc sections">
+          <li class="step">
+            <h3><i data-lucide="cpu" aria-hidden="true"></i> <a href="/docs/mcp">MCP overview</a></h3>
+            <p>What the Model Context Protocol integration is, who it is for, and current status.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="rocket" aria-hidden="true"></i> <a href="/docs/mcp/getting-started">Getting started</a></h3>
+            <p>Register, fund the meter, connect an MCP client when available — step by step.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="wallet" aria-hidden="true"></i> <a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a></h3>
+            <p>Account + prepaid meter now. API keys / direct agent billing later.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="wrench" aria-hidden="true"></i> <a href="/docs/mcp/tools">Tools reference</a></h3>
+            <p>Planned MCP tools and parameters for mail production — for AI indexing and builders.</p>
+          </li>
+        </ul>
+
+        <h2>Product pages</h2>
+        <p class="docs-prose">
+          Marketing overview (not full API docs):
+          <a href="/mcp">MCP product</a> ·
+          <a href="/how-it-works">How it works</a> ·
+          <a href="/certified-mail">Certified Mail</a>.
+        </p>
+
+        <div class="page-cta docs-cta">
+          <div>
+            <h2>Early access</h2>
+            <p>Join the waitlist for portal + MCP access when we open accounts.</p>
+          </div>
+          <div class="page-cta-actions">
+            <a class="btn btn-primary" href="/?interest=mcp#early-access">Join waitlist</a>
+            <a class="btn btn-ghost-light" href="tel:+18886675322">888-667-5322</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/docs">Docs</a>
+        <a href="/docs/mcp">MCP docs</a>
+        <a href="/mcp">MCP product</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/?interest=mcp#early-access">Early access</a>
+      </nav>
+      <p class="footer-copy">© <span id="y"></span> USMail.AI · <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a></p>
+    </div>
+  </footer>
+  <div class="mobile-dock" role="navigation" aria-label="Quick actions">
+    <a class="btn btn-primary" href="/?interest=mcp#early-access">Early access</a>
+    <a class="btn btn-ghost" href="tel:+18886675322">Call</a>
+  </div>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

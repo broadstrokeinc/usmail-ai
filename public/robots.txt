@@ -33,4 +33,7 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+# AI / LLM crawl map
+# https://usmail.ai/llms.txt
+
 Sitemap: https://usmail.ai/sitemap.xml
