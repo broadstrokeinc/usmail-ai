@@ -43,6 +43,7 @@ body {
   background: #f7fafc;
   line-height: 1.55;
   font-size: 16px;
+  padding-bottom: 5.25rem; /* space for mobile dock */
 }
 
 img {
@@ -155,6 +156,37 @@ a {
   max-width: 100%;
 }
 
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  margin-right: 0.35rem;
+  min-height: 44px;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid #7eb6ff;
+  outline-offset: 2px;
+}
+
+.nav-toggle-bars {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 5px 0 currentColor, 0 -5px 0 currentColor;
+}
+
 .nav-links {
   display: none;
   align-items: center;
@@ -164,6 +196,33 @@ a {
   min-width: 0;
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+/* Mobile dropdown when open */
+.nav-links.is-open {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0.5rem 1rem 0.85rem;
+  background: rgba(247, 250, 252, 0.98);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(0, 42, 99, 0.1);
+  z-index: 50;
+}
+
+.nav-links.is-open a {
+  padding: 0.85rem 0.35rem;
+  border-bottom: 1px solid var(--line);
+  white-space: normal;
+}
+
+.nav-links.is-open a:last-child {
+  border-bottom: 0;
 }
 
 .nav-links a {
@@ -184,9 +243,88 @@ a {
 }
 
 .btn-nav-cta {
-  min-height: 40px;
-  padding: 0.45rem 0.95rem;
-  font-size: 0.88rem;
+  min-height: 48px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.site-header .wrap.nav {
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Mid-page conversion strip */
+.mid-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.15rem 1.2rem;
+  border-radius: 14px;
+  background: var(--sky);
+  border: 1px solid var(--line);
+}
+
+.mid-cta-copy {
+  margin: 0;
+  color: var(--slate);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.mid-cta-copy strong {
+  color: var(--ink);
+}
+
+.mid-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+@media (min-width: 640px) {
+  .mid-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Sticky mobile dock */
+.mobile-dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 45;
+  display: flex;
+  gap: 0.55rem;
+  padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom, 0));
+  background: rgba(247, 250, 252, 0.96);
+  border-top: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.mobile-dock .btn {
+  flex: 1;
+  min-height: 48px;
+}
+
+.mobile-dock .btn-ghost {
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--navy);
+}
+
+@media (min-width: 900px) {
+  .mobile-dock {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
 }
 
 /* Buttons */
@@ -961,10 +1099,28 @@ a {
 
 .hp {
   position: absolute;
-  left: -10000px;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.early-access-form {
+  position: relative;
+}
+
+.contact-panel .contact-tagline {
+  margin: 0.85rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .form-status {
@@ -1151,8 +1307,35 @@ a {
 
 /* Full nav only when width is comfortable — 5 items + logo + CTA */
 @media (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+
   .nav-links {
     display: flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .nav-links a,
+  .nav-links.is-open a {
+    padding: 0.35rem 0;
+    border-bottom: 0;
+    white-space: nowrap;
   }
 
   .brand {
