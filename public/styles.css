@@ -417,32 +417,21 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: calc(var(--radius) + 6px);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-  padding: 1.35rem 1.35rem 1.15rem;
+  padding: 1.25rem 1.25rem 1.1rem;
   color: var(--ink);
 }
 
-.hero-card-top {
-  margin-bottom: 0.25rem;
-}
-
-.hero-card-logo {
-  height: 44px;
-  width: auto;
-  margin: 0 auto 0.5rem;
-}
-
-.tagline-text {
-  text-align: center;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--navy-deep);
+.hero-card-title {
   margin: 0 0 0.65rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--navy-deep);
+  text-align: center;
 }
 
 .stripe {
-  height: 7px;
+  height: 6px;
   border-radius: 999px;
   background: repeating-linear-gradient(
     90deg,
@@ -457,50 +446,46 @@ a {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.75rem;
+  gap: 0.55rem;
 }
 
-.usp-list li {
+.usp-list-tight li {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.7rem;
-  align-items: start;
-  padding-bottom: 0.7rem;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.55rem 0;
   border-bottom: 1px solid var(--line);
 }
 
-.usp-list li:last-child {
+.usp-list-tight li:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
 
 .usp-icon {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 10px;
   background: var(--sky);
   color: var(--navy);
   display: grid;
   place-items: center;
   border: 1px solid #c5dbf5;
+  flex-shrink: 0;
 }
 
 .usp-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 }
 
-.usp-list strong {
+.usp-list-tight strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--ink);
-  margin-bottom: 0.15rem;
-}
-
-.usp-list span {
-  font-size: 0.86rem;
-  color: var(--slate);
-  line-height: 1.45;
+  line-height: 1.3;
 }
 
 /* Format icon cards */
