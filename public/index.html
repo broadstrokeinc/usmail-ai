@@ -675,71 +675,106 @@
     </section>
 
     <!-- EARLY ACCESS + CONTACT -->
-    <section id="contact" class="section-block section-contact" aria-labelledby="contact-title">
+    <section id="contact" class="section-block contact-section" aria-labelledby="contact-title">
       <div class="wrap section-inner">
-        <div class="contact-panel contact-panel-split">
-          <div>
-            <h2 id="contact-title">Talk to real people</h2>
-            <p>
-              Demo, Certified Mail, multi-format uploads, AI setup, or MCP for agents —
-              individual senders and large organizations welcome.
+        <div class="contact-shell">
+          <div class="contact-intro">
+            <p class="section-label">Contact</p>
+            <h2 id="contact-title">Get early access</h2>
+            <p class="contact-intro-lead">
+              Join the list for launch updates — or call. Real people pick up.
             </p>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="tel:+18886675322">Call 888-667-5322</a>
-              <a class="btn btn-ghost-light" href="tel:+13162475300">316-247-5300</a>
-              <a class="btn btn-ghost-light" href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a>
-            </div>
-            <p class="contact-tagline">Upload. Print. Mail.</p>
+            <ul class="contact-channels">
+              <li>
+                <a class="contact-channel" href="tel:+18886675322">
+                  <i data-lucide="phone" aria-hidden="true"></i>
+                  <span>
+                    <strong>888-667-5322</strong>
+                    <em>Toll-free</em>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="contact-channel" href="tel:+13162475300">
+                  <i data-lucide="phone-call" aria-hidden="true"></i>
+                  <span>
+                    <strong>316-247-5300</strong>
+                    <em>Direct</em>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="contact-channel" href="mailto:Info@USMAIL.ai">
+                  <i data-lucide="mail" aria-hidden="true"></i>
+                  <span>
+                    <strong>Info@USMAIL.ai</strong>
+                    <em>Email</em>
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div id="early-access" class="early-access">
-            <h3 id="early-access-title">Get early access</h3>
-            <p class="early-access-lead">
-              Leave your email — we’ll notify you when USMail.AI opens and can schedule a demo.
-            </p>
-            <form id="early-access-form" class="early-access-form" novalidate>
-              <label class="field">
-                <span class="field-label">Work email</span>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  autocomplete="email"
-                  inputmode="email"
-                  placeholder="you@company.com"
-                  maxlength="200"
-                />
-              </label>
-              <label class="field">
-                <span class="field-label">Name <span class="optional">(optional)</span></span>
-                <input type="text" name="name" autocomplete="name" placeholder="Your name" maxlength="120" />
-              </label>
-              <label class="field">
-                <span class="field-label">Interest <span class="optional">(optional)</span></span>
+
+          <div id="early-access" class="form-card" aria-labelledby="early-access-title">
+            <div class="form-card-head">
+              <h3 id="early-access-title">Request access</h3>
+              <p>We’ll email you when the platform opens.</p>
+            </div>
+            <form id="early-access-form" class="access-form" novalidate>
+              <div class="access-form-row">
+                <label class="access-field">
+                  <span class="access-label">Work email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                    placeholder="you@company.com"
+                    maxlength="200"
+                  />
+                </label>
+                <label class="access-field">
+                  <span class="access-label">Name <span class="opt">optional</span></span>
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Jane Smith"
+                    maxlength="120"
+                  />
+                </label>
+              </div>
+              <label class="access-field">
+                <span class="access-label">I’m interested in <span class="opt">optional</span></span>
                 <select name="interest">
-                  <option value="">Select…</option>
-                  <option value="individual">Individual / professional</option>
+                  <option value="">Choose one…</option>
+                  <option value="demo">Demo / early access</option>
                   <option value="business">Business mailing</option>
-                  <option value="mcp">AI / MCP integration</option>
                   <option value="certified">Certified Mail</option>
-                  <option value="demo">Book a demo</option>
+                  <option value="mcp">AI / MCP</option>
+                  <option value="individual">Individual / professional</option>
                 </select>
               </label>
-              <!-- honeypot -->
               <div class="hp" aria-hidden="true">
-                <label>
-                  Company website
-                  <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
-                </label>
+                <label for="company_website">Leave blank</label>
+                <input
+                  id="company_website"
+                  type="text"
+                  name="company_website"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
               </div>
               <input type="hidden" name="utm_source" id="utm_source" value="" />
               <input type="hidden" name="utm_medium" id="utm_medium" value="" />
               <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
-              <button type="submit" class="btn btn-primary btn-block" id="early-access-submit">
-                Request early access
+              <button type="submit" class="btn btn-primary access-submit" id="early-access-submit">
+                Join waitlist
               </button>
               <p class="form-status" id="early-access-status" role="status" aria-live="polite"></p>
-              <p class="form-fineprint">
-                Or call <a href="tel:+18886675322">888-667-5322</a> · No spam ·
+              <p class="access-fine">
+                No spam.
                 <a href="/privacy">Privacy</a>
               </p>
             </form>
@@ -890,11 +925,11 @@
           setInterest((params.get('interest') || '').toLowerCase())
         } catch {
           statusEl.innerHTML =
-            'Couldn’t submit right now — email <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a> or call 888-667-5322.'
+            'Couldn’t submit — email <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a> or call us.'
           statusEl.classList.add('is-error')
         } finally {
           submitBtn.disabled = false
-          submitBtn.textContent = 'Request early access'
+          submitBtn.textContent = 'Join waitlist'
         }
       })
     }
