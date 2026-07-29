@@ -9,13 +9,20 @@
 ## Growth strategist — executive summary
 
 ### Positioning
-**Category:** AI-enabled online print-and-mail (not “generic print shop”).  
+**Category:** Automated print-to-mail (not “generic print shop”).  
+**Primary taglines (live on site):**
+- H1: **Automated print-to-mail**
+- Kicker: **Upload. Print. Mail.**
+- Header/footer under logo: **Automated print-to-mail**
+- **Retired as lead message:** “Smarter Presort. Stronger Delivery.” (legacy logo art; too jargon-heavy for broad market)
+
 **UVP hierarchy:**
-1. From-desk production mail (no mailroom stack)
-2. Multi-format upload (real business files)
+1. Upload documents → we print / insert / postage / mail
+2. Multi-format upload (real files — not document authoring)
 3. AI setup + **MCP for agents**
 4. USPS Certified / Certificate of Mailing
 5. 20+ years automated mail ops + human support
+6. Individuals → corporations (not office-only)
 
 ### Messaging (3-second scan)
 - H1 answers *what*: physical mail from your desk, AI + USPS  
