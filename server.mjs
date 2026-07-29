@@ -140,6 +140,91 @@ function sanitizeLine(s, max = 500) {
     .slice(0, max)
 }
 
+const RESEND_API_KEY = (process.env.RESEND_API_KEY || '').trim()
+const LEAD_NOTIFY_TO = (process.env.LEAD_NOTIFY_TO || 'Info@USMAIL.ai')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean)
+const LEAD_FROM =
+  (process.env.LEAD_FROM || 'USMail.AI <onboarding@resend.dev>').trim()
+const LEAD_ACK = (process.env.LEAD_ACK || '1') !== '0'
+
+async function resendSend({ to, subject, text, replyTo }) {
+  if (!RESEND_API_KEY) {
+    console.warn('[resend] RESEND_API_KEY not set — skip send')
+    return { skipped: true }
+  }
+  const body = {
+    from: LEAD_FROM,
+    to: Array.isArray(to) ? to : [to],
+    subject,
+    text,
+  }
+  if (replyTo) body.reply_to = replyTo
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+  const payload = await res.text()
+  if (!res.ok) {
+    console.error('[resend] send failed', res.status, payload)
+    return { ok: false, status: res.status, payload }
+  }
+  return { ok: true, payload }
+}
+
+async function notifyLead(row) {
+  const interest = row.interest || 'general'
+  const utmLine = row.utm
+    ? `UTM: source=${row.utm.source || '-'} medium=${row.utm.medium || '-'} campaign=${row.utm.campaign || '-'}`
+    : 'UTM: —'
+  const text = [
+    'New USMail.AI early-access request',
+    '',
+    `Email: ${row.email}`,
+    `Name: ${row.name || '—'}`,
+    `Interest: ${interest}`,
+    `When: ${row.at}`,
+    utmLine,
+    `IP: ${row.ip || '—'}`,
+    '',
+    'Reply to this message to contact the lead (Reply-To set).',
+  ].join('\n')
+
+  const alert = await resendSend({
+    to: LEAD_NOTIFY_TO,
+    subject: `[USMail.AI] Waitlist · ${interest} · ${row.email}`,
+    text,
+    replyTo: row.email,
+  })
+
+  let ack = null
+  if (LEAD_ACK) {
+    ack = await resendSend({
+      to: row.email,
+      subject: 'We received your USMail.AI early-access request',
+      text: [
+        row.name ? `Hi ${row.name},` : 'Hi,',
+        '',
+        'Thanks for joining the USMail.AI waitlist. We will notify you when access opens and can schedule a demo if you asked for one.',
+        '',
+        'Questions now? Call 888-667-5322 or reply to this email.',
+        '',
+        '— USMail.AI',
+        'https://usmail.ai',
+      ].join('\n'),
+      replyTo: LEAD_NOTIFY_TO[0] || 'Info@USMAIL.ai',
+    })
+  }
+
+  return { alert, ack }
+}
+
 async function handleEarlyAccess(req, res) {
   if (req.method === 'OPTIONS') {
     return send(
@@ -203,6 +288,19 @@ async function handleEarlyAccess(req, res) {
     }
     fs.appendFileSync(leadsFile, `${JSON.stringify(row)}\n`, 'utf8')
     console.log('[early-access]', row.email, row.interest || '-')
+
+    // Fire-and-continue: do not fail the form if mail provider is down
+    try {
+      const mail = await notifyLead(row)
+      console.log(
+        '[early-access] mail',
+        mail.alert?.ok || mail.alert?.skipped ? 'alert-ok' : 'alert-fail',
+        mail.ack?.ok || mail.ack?.skipped || !LEAD_ACK ? 'ack-ok' : 'ack-fail',
+      )
+    } catch (mailErr) {
+      console.error('[early-access] mail error', mailErr)
+    }
+
     return sendJson(res, 200, { ok: true }, req)
   } catch (err) {
     if (err && err.message === 'payload_too_large') {
