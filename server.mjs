@@ -216,7 +216,7 @@ async function notifyLead(row) {
         'Questions now? Call 888-667-5322 or 316-247-5300, or reply to this email.',
         '',
         '— USMail.AI',
-        'https://usmail.ai',
+        'https://www.usmail.ai',
       ].join('\n'),
       replyTo: LEAD_NOTIFY_TO[0] || 'Info@USMAIL.ai',
     })
@@ -313,6 +313,22 @@ async function handleEarlyAccess(req, res) {
 
 const server = http.createServer(async (req, res) => {
   const urlPath = decodeURIComponent((req.url || '/').split('?')[0])
+  const host = requestHost(req)
+
+  // Prefer www as the indexable host (apex is often a registrar 301)
+  if (host === CANONICAL_HOST) {
+    const qs = (req.url || '/').includes('?') ? '?' + (req.url || '').split('?')[1] : ''
+    return send(
+      res,
+      301,
+      '',
+      {
+        Location: `https://www.${CANONICAL_HOST}${urlPath === '/' ? '/' : urlPath}${qs}`,
+        'Cache-Control': 'public, max-age=3600',
+      },
+      req,
+    )
+  }
 
   if (urlPath === '/health' || urlPath === '/healthz') {
     return sendJson(res, 200, { ok: true, service: 'usmail-ai' }, req)
