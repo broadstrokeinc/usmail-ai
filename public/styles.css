@@ -1164,8 +1164,57 @@ a.btn-primary:visited {
 
 .section-head-center {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-inline: auto;
   max-width: 36rem;
+  width: 100%;
+}
+
+/* Label is inline-block — force center under centered heads */
+.section-head-center .section-label {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-head-center h2,
+.section-head-center p {
+  text-align: center;
+}
+
+/* Pillars / centered band content: cards align with centered head */
+#pillars .benefit-grid-3,
+#how .steps-grid-3,
+#trust .section-head-center {
+  text-align: center;
+}
+
+#pillars .benefit-card {
+  text-align: center;
+}
+
+#pillars .benefit-card h3 {
+  justify-content: center;
+}
+
+#pillars .benefit-card p {
+  padding-left: 0;
+  text-align: center;
+}
+
+#how .step {
+  text-align: center;
+}
+
+#how .step h3 {
+  justify-content: center;
+}
+
+#how .step p {
+  padding-left: 0;
+  text-align: center;
 }
 
 .faq {
