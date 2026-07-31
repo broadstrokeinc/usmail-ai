@@ -197,6 +197,14 @@
               "@type": "Answer",
               "text": "Submit by 10:00 PM Central (CT) for the next business-day production path toward USPS. Confirm for your volume and product."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "How does billing work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At product open: account plus prepaid meter. Portal and MCP debit the meter. See MCP docs for details."
+            }
           }
 ]
       }
@@ -243,7 +251,7 @@
         <a href="#early-access">Early access</a>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-primary btn-nav-cta" href="#early-access">Get early access</a>
+        <a class="btn btn-primary btn-nav-cta" href="#early-access">Early access</a>
       </div>
     </div>
   </header>
@@ -261,16 +269,21 @@
           <h1>Upload. We print and mail via <span>USPS</span>.</h1>
           <p class="lead-kicker">Upload. Print. Mail.</p>
           <p class="lead">
-            Upload the files you already have. We print, insert, postage, and hand off to USPS —
-            no mailroom on your side.
+            Upload the PDFs and packages you already use. We print, stuff, postage, and hand off to
+            USPS — Certified when you need proof.
+          </p>
+          <p class="lead-icp">
+            Built for credit repair, banks, and government mail ops — platform opening soon.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#early-access">Get early access</a>
-            <a class="btn btn-ghost btn-ghost-on-dark" href="/how-it-works">How it works</a>
+            <a class="btn btn-primary" href="#early-access">Early access</a>
+            <a class="btn btn-ghost btn-ghost-on-dark btn-secondary-link" href="/how-it-works"
+              >How it works</a
+            >
           </div>
           <ul class="trust trust-pills" aria-label="Highlights">
             <li><i data-lucide="badge-check" aria-hidden="true"></i> Certified Mail</li>
-            <li><i data-lucide="bot" aria-hidden="true"></i> AI setup · MCP for agents</li>
+            <li><i data-lucide="sparkles" aria-hidden="true"></i> AI setup you approve</li>
             <li><i data-lucide="clock" aria-hidden="true"></i> 10:00 PM CT cutoff</li>
           </ul>
         </div>
@@ -301,10 +314,10 @@
             </p>
           </article>
           <article class="benefit-card">
-            <h3><i data-lucide="bot" aria-hidden="true"></i> People and agents</h3>
+            <h3><i data-lucide="sparkles" aria-hidden="true"></i> AI setup, you approve</h3>
             <p>
-              AI helps set up jobs in the portal. MCP is the same path for agents.
-              <a href="/docs/mcp">MCP docs →</a>
+              AI proposes addresses and print options. Agents can use the same path via
+              <a href="/docs/mcp">MCP</a>.
             </p>
           </article>
         </div>
@@ -423,6 +436,19 @@
               </p>
             </div>
           </details>
+          <details class="faq-item">
+            <summary>
+              <span>How does billing work?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-body">
+              <p>
+                At product open: <strong>account + prepaid meter</strong>. Portal and MCP debit the
+                meter.
+                <a href="/docs/mcp">MCP / billing details →</a>
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -433,9 +459,9 @@
         <div class="contact-shell">
           <div class="contact-intro">
             <p class="section-label">Early access</p>
-            <h2 id="contact-title">Get on the list</h2>
+            <h2 id="contact-title">Early access</h2>
             <p class="contact-intro-lead">
-              Platform opening soon. Live mail ops team available now if you need to talk.
+              Platform opening soon. Live mail ops available now if you need to talk.
             </p>
             <ul class="contact-channels">
               <li>
@@ -464,7 +490,7 @@
 
           <div id="early-access" class="form-card" aria-labelledby="early-access-title">
             <div class="form-card-head">
-              <h3 id="early-access-title">Request access</h3>
+              <h3 id="early-access-title">Join early access</h3>
               <p>We’ll email you when the platform opens. Demo requests welcome.</p>
             </div>
             <form id="early-access-form" class="access-form" novalidate>
@@ -522,7 +548,7 @@
               <input type="hidden" name="utm_medium" id="utm_medium" value="" />
               <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
               <button type="submit" class="btn btn-primary access-submit" id="early-access-submit">
-                Join waitlist
+                Early access
               </button>
               <p class="form-status" id="early-access-status" role="status" aria-live="polite"></p>
               <p class="access-fine">

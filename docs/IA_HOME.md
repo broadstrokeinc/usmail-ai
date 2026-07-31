@@ -6,12 +6,20 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | Coming soon · H1 upload→USPS · one lead · Early access + How it works · 3 chips |
-| 2 | Pillars | Production · Proof (Certified) · People + agents (MCP) — links out |
+| 1 | Hero | Coming soon · H1 upload→USPS · lead + **ICP line** · Early access + How it works · chips (Certified, AI setup, cutoff — **not MCP co-headline**) |
+| 2 | Pillars | Production · Proof (Certified) · **AI setup, you approve** (MCP as body link only) |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
 | 4 | Trust | Ops heritage + primary verticals + `/industries` |
-| 5 | FAQ | **5** questions only (all closed by default) |
+| 5 | FAQ | **6** questions max (incl. billing → docs); all closed |
 | 6 | Early access | Form + one primary phone + email; 316 as secondary line |
+
+## Subagent follow-ups (implemented)
+
+- ICP/ops line in first viewport (growth)
+- MCP demoted from hero chips + pillar title (growth)
+- Primary CTA label unified: **Early access** (IA)
+- Focus-visible + 44px targets (a11y)
+- Pillars 3-col only (UI)
 
 ## Moved off home
 

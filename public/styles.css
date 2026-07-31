@@ -97,10 +97,22 @@ a {
   left: 0;
 }
 
+/* Keyboard focus: only hide outline for mouse users */
 *:focus {
   outline: none;
 }
 
+*:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+.btn:focus-visible,
 .nav-links a:focus-visible,
 .footer-nav a:focus-visible,
 .brand:focus-visible,
@@ -111,8 +123,9 @@ a {
 .related-card:focus-visible,
 .industry-card:focus-visible,
 .contact-channel:focus-visible,
-.btn:focus-visible,
-.explore-card:focus-visible {
+.explore-card:focus-visible,
+.text-link:focus-visible,
+.mobile-dock a:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
   border-radius: var(--radius-control);
@@ -234,7 +247,7 @@ a {
 }
 
 .btn-nav-cta {
-  min-height: 48px;
+  min-height: 44px;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
@@ -323,8 +336,8 @@ a {
 .hero .hero-explore a {
   display: inline-flex;
   align-items: center;
-  min-height: 36px;
-  padding: 0.35rem 0.75rem;
+  min-height: 44px;
+  padding: 0.4rem 0.85rem;
   border-radius: 999px;
   font-size: 0.82rem;
   font-weight: 650;
@@ -466,9 +479,28 @@ a {
 }
 
 .btn-sm {
-  min-height: 40px;
-  padding: 0.45rem 0.95rem;
+  min-height: 44px;
+  padding: 0.5rem 0.95rem;
   font-size: 0.88rem;
+}
+
+.btn-nav-cta {
+  min-height: 44px;
+}
+
+.btn-secondary-link {
+  /* Secondary hero action — not equal weight to primary */
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.hero .lead-icp {
+  margin: -0.35rem 0 1.15rem;
+  max-width: 36rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(191, 219, 254, 0.95);
+  line-height: 1.45;
 }
 
 /* Use a.btn-primary so link color rules (docs-article a, global a) never win */
