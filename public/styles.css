@@ -613,15 +613,23 @@ a.btn-primary:visited {
   max-width: 36rem;
 }
 
-.benefit-grid-3 {
+/* Standalone 3-up grid — do NOT combine with .benefit-grid (that forces 4-col at 980px) */
+.benefit-grid-3,
+.pillars-grid {
   display: grid;
   gap: 0.85rem;
   grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: stretch;
 }
 
 @media (min-width: 720px) {
-  .benefit-grid-3 {
-    grid-template-columns: repeat(3, 1fr);
+  .benefit-grid-3,
+  .pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1163,58 +1171,131 @@ a.btn-primary:visited {
 }
 
 .section-head-center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-inline: auto;
+  display: block;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   max-width: 36rem;
-  width: 100%;
+  width: auto; /* allow max-width + auto margins to center the block */
 }
 
-/* Label is inline-block — force center under centered heads */
 .section-head-center .section-label {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .section-head-center h2,
 .section-head-center p {
-  text-align: center;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Pillars / centered band content: cards align with centered head */
-#pillars .benefit-grid-3,
-#how .steps-grid-3,
-#trust .section-head-center {
+/* —— Home pillars: entire block dead-center —— */
+#pillars .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pillars .section-head {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 36rem;
+  width: 100%;
+}
+
+#pillars .pillars-grid,
+#pillars .benefit-grid-3 {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #pillars .benefit-card {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #pillars .benefit-card h3 {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 #pillars .benefit-card p {
-  padding-left: 0;
-  text-align: center;
+  padding-left: 0 !important;
+  text-align: center !important;
+  max-width: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* How-it-works teaser steps — same center treatment */
+#how .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#how .section-head {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#how .steps {
+  width: 100%;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #how .step {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #how .step h3 {
   justify-content: center;
+  width: 100%;
 }
 
 #how .step p {
-  padding-left: 0;
+  padding-left: 0 !important;
+  text-align: center !important;
+}
+
+#how .section-more {
+  width: 100%;
   text-align: center;
+}
+
+/* Media queries must never force .benefit-grid-3 / .pillars-grid into 4 columns */
+@media (min-width: 720px) {
+  .benefit-grid-3,
+  .pillars-grid,
+  #pillars .pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 980px) {
+  .benefit-grid-3,
+  .pillars-grid,
+  #pillars .pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
 }
 
 .faq {
