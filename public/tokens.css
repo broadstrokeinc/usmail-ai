@@ -1,0 +1,58 @@
+/**
+ * USMail.AI design tokens — parity with postalocity-ai product UI.
+ * SSOT map: postalocity-ai/tailwind.config.ts + src/index.css
+ * Do not invent parallel brand colors on marketing pages.
+ */
+:root {
+  /* App postal.* */
+  --postal-primary: #1a2b63;
+  --postal-dark: #142352;
+  --postal-deeper: #0e1a3d;
+  --postal-light: #e8ecf5;
+  --postal-accent: #2563eb;
+  --postal-accent-light: #93c5fd;
+  --postal-surface: #0f172a;
+  --postal-surface-light: #1e293b;
+  --postal-border: #e2e8f0;
+
+  /* Surfaces & type */
+  --page-bg: #f8fafc; /* slate-50 */
+  --ink: #0f172a; /* slate-900 */
+  --muted: #64748b; /* slate-500 */
+  --muted-strong: #475569; /* slate-600 */
+  --white: #ffffff;
+  --flag-red: #e11d2e;
+
+  /* Geometry */
+  --radius-control: 12px; /* rounded-xl */
+  --radius-card: 16px; /* rounded-2xl */
+  --radius-pill: 999px;
+  --radius: var(--radius-card);
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.1);
+  --shadow-btn: 0 10px 24px rgba(26, 43, 99, 0.25);
+  --shadow: var(--shadow-lg);
+
+  /* Focus (app outline-postal-primary) */
+  --focus-ring: #2563eb;
+  --focus-ring-soft: rgba(37, 99, 235, 0.35);
+
+  /* Fonts */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* Gradients — app postal-btn */
+  --grad-primary: linear-gradient(90deg, var(--postal-primary) 0%, var(--postal-accent) 100%);
+  --grad-hero: linear-gradient(155deg, var(--postal-surface) 0%, var(--postal-deeper) 42%, var(--postal-primary) 100%);
+
+  /* Legacy aliases used across styles.css (keep names stable) */
+  --navy: var(--postal-primary);
+  --navy-deep: var(--postal-dark);
+  --sky: var(--postal-light);
+  --line: var(--postal-border);
+  --slate: var(--muted);
+  --red: var(--flag-red);
+}
