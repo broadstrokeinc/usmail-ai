@@ -589,6 +589,68 @@ a {
   align-items: start;
 }
 
+/* Clean home hero: single column, product-app calm */
+.hero-grid-single {
+  max-width: 42rem;
+  margin-inline: auto;
+  justify-items: start;
+}
+
+.hero-copy-centered {
+  width: 100%;
+}
+
+.hero-copy-centered .lead {
+  max-width: 36rem;
+}
+
+.benefit-grid-3 {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .benefit-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.section-more {
+  margin: 1.25rem 0 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.text-link {
+  color: var(--postal-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-secondary-line {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.contact-secondary-line a {
+  color: var(--muted-strong);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-secondary-line a:hover {
+  color: var(--postal-primary);
+  text-decoration: underline;
+}
+
 /* Eyebrow — default = light surfaces (readable gray/navy) */
 .eyebrow {
   display: inline-flex;
