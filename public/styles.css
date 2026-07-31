@@ -471,16 +471,25 @@ a {
   font-size: 0.88rem;
 }
 
-.btn-primary {
+/* Use a.btn-primary so link color rules (docs-article a, global a) never win */
+.btn-primary,
+a.btn-primary {
   background: var(--grad-primary);
-  color: var(--white);
+  color: #fff;
   border-color: transparent;
   box-shadow: none;
+  text-decoration: none;
 }
 
-.btn-primary:hover {
-  color: var(--white);
+.btn-primary:hover,
+a.btn-primary:hover,
+.btn-primary:focus-visible,
+a.btn-primary:focus-visible,
+.btn-primary:visited,
+a.btn-primary:visited {
+  color: #fff;
   box-shadow: var(--shadow-btn);
+  text-decoration: none;
 }
 
 .btn-ghost {
@@ -1096,13 +1105,19 @@ a {
   align-items: center;
 }
 
-.panel-accent .btn-primary {
+/* Inverted primary on dark accent panels only */
+.panel-accent .btn-primary,
+.panel-accent a.btn-primary {
   background: var(--white);
   color: var(--postal-primary);
   box-shadow: none;
 }
 
-.panel-accent .btn-primary:hover {
+.panel-accent .btn-primary:hover,
+.panel-accent a.btn-primary:hover,
+.panel-accent .btn-primary:visited,
+.panel-accent a.btn-primary:visited {
+  color: var(--postal-primary);
   box-shadow: var(--shadow-md);
 }
 
@@ -2176,13 +2191,44 @@ a {
   gap: 0.5rem;
 }
 
+/* Primary on dark CTA band — always white label (docs a {} was painting it navy) */
+.page-cta .btn-primary,
+.page-cta a.btn-primary,
+.docs-cta .btn-primary,
+.docs-cta a.btn-primary,
+.docs-article a.btn-primary,
+.docs-prose a.btn-primary {
+  background: var(--grad-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+.page-cta .btn-primary:hover,
+.page-cta a.btn-primary:hover,
+.page-cta .btn-primary:visited,
+.page-cta a.btn-primary:visited,
+.docs-cta .btn-primary:hover,
+.docs-cta a.btn-primary:hover,
+.docs-cta .btn-primary:visited,
+.docs-cta a.btn-primary:visited,
+.docs-article a.btn-primary:hover,
+.docs-article a.btn-primary:visited,
+.docs-prose a.btn-primary:hover,
+.docs-prose a.btn-primary:visited {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: var(--shadow-btn);
+}
+
 /* Secondary CTA on dark band: light outline (only inside .page-cta) */
-.page-cta .btn-ghost-light {
+.page-cta .btn-ghost-light,
+.docs-cta .btn-ghost-light {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.45);
 }
 
-.page-cta .btn-ghost-light:hover {
+.page-cta .btn-ghost-light:hover,
+.docs-cta .btn-ghost-light:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.12);
 }
@@ -2369,6 +2415,18 @@ a {
 .docs-article a {
   color: var(--navy);
   font-weight: 600;
+}
+
+/* Buttons are not body links — never inherit navy text onto filled primaries */
+.docs-prose a.btn,
+.docs-article a.btn {
+  font-weight: 600;
+}
+
+.docs-prose a.btn-primary,
+.docs-article a.btn-primary {
+  color: #fff;
+  background: var(--grad-primary);
 }
 
 .docs-muted {
