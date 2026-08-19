@@ -960,6 +960,23 @@ a.btn-primary:visited {
   font-weight: 700;
 }
 
+.format-title svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-shrink: 0;
+  stroke-width: 2;
+}
+
+.format-grid.format-grid-2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .format-grid.format-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .format-card span {
   color: var(--slate);
   font-size: 0.85rem;
@@ -2009,6 +2026,10 @@ a.btn-primary:visited {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .format-grid.format-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .benefit-grid,
   .benefit-grid-4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2263,6 +2284,29 @@ a.btn-primary:visited {
 }
 
 .prose a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.prose ul,
+.plain-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--slate);
+  line-height: 1.65;
+}
+
+.prose li,
+.plain-list li {
+  margin: 0 0 0.4rem;
+}
+
+.prose li:last-child,
+.plain-list li:last-child {
+  margin-bottom: 0;
+}
+
+.plain-list a {
   color: var(--navy);
   font-weight: 600;
 }
