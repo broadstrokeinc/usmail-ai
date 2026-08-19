@@ -6,10 +6,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <title>Security | USMail.ai — Pre-launch overview</title>
+  <title>Security | USMail.ai</title>
   <meta
     name="description"
-    content="USMail.ai security overview for the live platform. We do not invent SOC 2 or compliance seals. Operated by Broadstroke, Inc."
+    content="How USMail.ai protects accounts, jobs, and recipient data on www.usmail.ai and app.usmail.ai. No invented SOC 2 or HIPAA seals. Operated by Broadstroke, Inc."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1a2b63" />
@@ -20,11 +20,11 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/security" />
   <meta property="og:title" content="Security | USMail.ai" />
-  <meta property="og:description" content="Security overview. No fake compliance badges." />
+  <meta property="og:description" content="How USMail.ai protects accounts, jobs, and recipient data. No fake compliance badges." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Security | USMail.ai" />
-  <meta name="twitter:description" content="Security overview. No fake compliance badges." />
+  <meta name="twitter:description" content="How USMail.ai protects accounts, jobs, and recipient data. No fake compliance badges." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
   <link rel="stylesheet" href="/styles.css?v=20260731quiet" />
@@ -37,7 +37,8 @@
     "@type": "WebPage",
     "name": "Security | USMail.ai",
     "url": "https://www.usmail.ai/security",
-    "description": "Pre-launch security overview for USMail.ai. No invented SOC 2 or compliance seals.",
+    "description": "How USMail.ai protects accounts, jobs, and recipient data. No invented SOC 2 or compliance seals.",
+    "dateModified": "2026-08-19",
     "isPartOf": { "@id": "https://www.usmail.ai/#website" }
   }
   </script>
@@ -90,37 +91,52 @@
         <div class="page-hero-inner">
           <p class="eyebrow">Trust</p>
           <h1>Security overview</h1>
-          <p class="lead">Last updated: July 31, 2026 · Security status</p>
+          <p class="lead">Last updated: August 19, 2026 · www.usmail.ai and app.usmail.ai</p>
         </div>
       </div>
     </header>
     <div class="wrap legal-layout">
 
+    <p>
+      <strong>Broadstroke, Inc.</strong> operates USMail.ai. Production mail runs through
+      <a href="https://app.usmail.ai/">app.usmail.ai</a>. This marketing site is
+      <a href="https://www.usmail.ai/">www.usmail.ai</a>. No compliance seals we have not earned.
+    </p>
 
-    <p>No compliance seals we haven’t earned. What’s true today vs planned.</p>
-
-    <h2>Today (this website + early access)</h2>
+    <h2>Live today</h2>
     <ul class="status-list">
-      <li><span class="chip chip-live">Today</span><div>HTTPS with HSTS; security headers (CSP, X-Content-Type-Options, frame protections).</div></li>
-      <li><span class="chip chip-live">Today</span><div>Early-access form: email (required), optional name/interest; honeypot anti-spam; stored for launch contact only.</div></li>
-      <li><span class="chip chip-live">Today</span><div>No self-serve document upload for production mailing on this Site yet.</div></li>
-      <li><span class="chip chip-live">Today</span><div>Phone and email to Broadstroke / mail ops staffed for human conversations.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Account authentication and a prepaid meter. Jobs do not produce until you fund the meter and approve the job.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Human <strong>approval before production</strong>. You review on-screen proofs. We do not routinely screen your content.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Card numbers are handled by the payment gateway. USMail never stores card numbers.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Job files and recipient lists are used only to produce your mail. They remain your property. Data is purged after the window you select or our stated purge period.</div></li>
+      <li><span class="chip chip-live">Live</span><div>HTTPS on www and the app. This site sends HSTS, CSP, X-Content-Type-Options, and frame protections. The app is not embedded here — it refuses framing.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Password-protected accounts. We will never ask for your password in an unsolicited call or email. Sign out when you finish, especially on a shared computer.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Upload through the app, not email. Restrict portal access to people who should send mail. Remove access when someone leaves.</div></li>
+      <li><span class="chip chip-live">Live</span><div>MCP is account-tied and billed on the same meter. No anonymous mailing. Standalone public API keys are not available yet.</div></li>
+      <li><span class="chip chip-live">Live</span><div>Mail ops by phone and email —
+        <a href="tel:+18886675322">888-667-5322</a> /
+        <a href="tel:+13162475300">316-247-5300</a> /
+        <a href="mailto:info@usmail.ai">info@usmail.ai</a>.</div></li>
     </ul>
 
-    <h2>At platform open (planned)</h2>
-    <ul class="status-list">
-      <li><span class="chip chip-planned">Planned</span><div>Account authentication and prepaid meter funding before jobs produce.</div></li>
-      <li><span class="chip chip-planned">Planned</span><div>Human <strong>approval before production</strong> on the AI-assisted setup path.</div></li>
-      <li><span class="chip chip-planned">Planned</span><div>Transport encryption for portal traffic; access controls for production systems.</div></li>
-      <li><span class="chip chip-planned">Planned</span><div>Document and recipient data handled in the production environment used by the Postalocity stack — details available under NDA / security questionnaire for qualified buyers.</div></li>
-      <li><span class="chip chip-planned">Planned</span><div>MCP for agents: account-tied access; no anonymous free mailing; standalone public API keys planned later.</div></li>
-    </ul>
+    <h2>How we handle your data</h2>
+    <p>
+      We act as a conduit for print and mail. Lists and documents are processed to produce the
+      job you approved — not for other marketing. We may disclose information to USPS or law
+      enforcement when required or as described in the
+      <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Use</a>.
+    </p>
+    <p>
+      Production uses the Postalocity print-to-mail stack operated by Broadstroke. Deeper
+      environment detail is available under NDA / security questionnaire for qualified buyers.
+    </p>
 
     <h2>What we will not claim</h2>
     <ul class="status-list">
       <li><span class="chip chip-not">Not claimed</span><div>Live SOC 2 Type II (or other) certification for USMail.ai unless we publish a real report.</div></li>
       <li><span class="chip chip-not">Not claimed</span><div>HIPAA BAA availability until a signed program exists and is offered in writing.</div></li>
-      <li><span class="chip chip-not">Not claimed</span><div>That self-serve mail production is live today.</div></li>
+      <li><span class="chip chip-not">Not claimed</span><div>That we read every mail piece, or that approving a job means we endorse the content.</div></li>
+      <li><span class="chip chip-not">Not claimed</span><div>That USMail.ai is the U.S. Postal Service, or that we control USPS delivery after handoff.</div></li>
     </ul>
 
     <h2>Request a security conversation</h2>
@@ -130,12 +146,6 @@
       <a href="tel:+13162475300">316-247-5300</a>, or email
       <a href="mailto:info@usmail.ai">info@usmail.ai</a>.
       Ask for mail ops / security questionnaire support.
-    </p>
-    <p>
-      Related:
-      <a href="/privacy">Privacy</a> ·
-      <a href="/terms">Terms</a> ·
-      <a href="/about">About</a>
     </p>
     <nav class="legal-suite-nav" aria-label="Related">
       <span>Related:</span>
