@@ -1,6 +1,8 @@
-# USMail.AI microsite
+# USMail.ai microsite
 
-Public microsite for **USMail.AI** — simplified from-your-desk physical mailing.
+Public microsite for **USMail.ai** — nationwide AI print-to-mail (its own site, not the template generator).
+
+Agent rules (voice, AEO, IA, do-not-claim): [`AGENTS.md`](AGENTS.md).
 
 ## Design
 

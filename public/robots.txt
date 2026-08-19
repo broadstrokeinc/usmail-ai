@@ -33,6 +33,15 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
 # AI / LLM crawl map
 # https://www.usmail.ai/llms.txt
 

@@ -1,4 +1,4 @@
-/* Shared USMail.AI site behavior */
+/* Shared USMail.ai site behavior */
 ;(function () {
   const y = document.getElementById('y')
   if (y) y.textContent = String(new Date().getFullYear())
@@ -46,7 +46,9 @@
       const href = a.getAttribute('href') || ''
       if (!href.startsWith('/') || href.startsWith('/#')) return
       const clean = href.split('?')[0].replace(/\/$/, '') || '/'
-      if (clean === path || (path === '/' && clean === '')) {
+      const industriesChild =
+        clean === '/industries' && path.startsWith('/industries/')
+      if (clean === path || (path === '/' && clean === '') || industriesChild) {
         a.setAttribute('aria-current', 'page')
         a.classList.add('is-active')
       }
@@ -58,10 +60,34 @@
   // Early-access form (home only)
   const params = new URLSearchParams(window.location.search)
   const interestSelect = document.querySelector('#early-access-form select[name="interest"]')
-  const allowed = new Set(['individual', 'business', 'mcp', 'certified', 'demo'])
+  // Must match <select name="interest"> option values on home (+ aliases for deep links)
+  const allowed = new Set([
+    'credit-repair',
+    'banks',
+    'government',
+    'debt-collection',
+    'healthcare',
+    'storage',
+    'utilities',
+    'certified',
+    'mcp',
+    'business',
+    'demo',
+  ])
+  const interestAliases = {
+    individual: 'business',
+    bank: 'banks',
+    gov: 'government',
+    'city-county': 'government',
+    ai: 'mcp',
+    agent: 'mcp',
+  }
   function setInterest(v) {
-    if (!interestSelect || !allowed.has(v)) return
-    interestSelect.value = v
+    if (!interestSelect || !v) return
+    const raw = String(v).toLowerCase().trim()
+    const key = interestAliases[raw] || raw
+    if (!allowed.has(key)) return
+    interestSelect.value = key
   }
   setInterest((params.get('interest') || '').toLowerCase())
   document.querySelectorAll('[data-interest]').forEach((el) => {

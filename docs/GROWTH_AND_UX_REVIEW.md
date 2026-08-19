@@ -1,4 +1,4 @@
-# USMail.AI microsite — Growth + UI/UX review
+# USMail.ai microsite — Growth + UI/UX review
 
 **Date:** 2026-07-29  
 **URL:** https://usmail-ai-production.up.railway.app  
@@ -38,7 +38,7 @@
 | Action | Sticky phone CTA + contact panel (call / email) |
 
 ### Channel recommendations (next)
-1. **AEO:** FAQ + JSON-LD already answer “What is USMail.AI / Certified / MCP?” for AI answers  
+1. **AEO:** FAQ + JSON-LD already answer “What is USMail.ai / Certified / MCP?” for AI answers  
 2. **SEO:** Title/description/keywords/sitemap/robots + canonical usmail.ai  
 3. **Sales enablement:** Demo CTA → calendar or CRM form (not only tel:)  
 4. **Partnerships:** Utility/muni associations; AI agent marketplaces (MCP)  

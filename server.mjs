@@ -77,6 +77,8 @@ const SECURITY = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Cross-Origin-Opener-Policy': 'same-origin',
+  // HTTPS only on production hosts (Railway / custom domains terminate TLS)
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
   // Allow self + Google Fonts + Lucide CDN (icons only)
   'Content-Security-Policy': [
     "default-src 'self'",
@@ -90,6 +92,32 @@ const SECURITY = {
     "form-action 'self' mailto:",
   ].join('; '),
 }
+
+const NOT_FOUND_HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Page not found | USMail.ai</title>
+  <link rel="stylesheet" href="/tokens.css?v=20260731ux2" />
+  <link rel="stylesheet" href="/styles.css?v=20260731ux2" />
+</head>
+<body>
+  <main class="wrap" style="padding:4rem 1.25rem;max-width:40rem">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p class="lead">That URL is not on USMail.ai. Try the home page or docs.</p>
+    <p style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem">
+      <a class="btn btn-primary" href="/">Home</a>
+      <a class="btn btn-ghost" href="/docs">Docs</a>
+      <a class="btn btn-ghost" href="/how-it-works">How it works</a>
+      <a class="btn btn-ghost" href="/docs/mcp">MCP docs</a>
+    </p>
+  </main>
+</body>
+</html>
+`
 
 function send(res, status, body, headers = {}, req = null) {
   const payload = body == null ? '' : body
@@ -146,7 +174,7 @@ const LEAD_NOTIFY_TO = (process.env.LEAD_NOTIFY_TO || 'Info@USMAIL.ai')
   .map((s) => s.trim())
   .filter(Boolean)
 const LEAD_FROM =
-  (process.env.LEAD_FROM || 'USMail.AI <onboarding@resend.dev>').trim()
+  (process.env.LEAD_FROM || 'USMail.ai <onboarding@resend.dev>').trim()
 const LEAD_ACK = (process.env.LEAD_ACK || '1') !== '0'
 
 async function resendSend({ to, subject, text, replyTo }) {
@@ -184,7 +212,7 @@ async function notifyLead(row) {
     ? `UTM: source=${row.utm.source || '-'} medium=${row.utm.medium || '-'} campaign=${row.utm.campaign || '-'}`
     : 'UTM: —'
   const text = [
-    'New USMail.AI early-access request',
+    'New USMail.ai early-access request',
     '',
     `Email: ${row.email}`,
     `Name: ${row.name || '—'}`,
@@ -198,7 +226,7 @@ async function notifyLead(row) {
 
   const alert = await resendSend({
     to: LEAD_NOTIFY_TO,
-    subject: `[USMail.AI] Waitlist · ${interest} · ${row.email}`,
+    subject: `[USMail.ai] Get started · ${interest} · ${row.email}`,
     text,
     replyTo: row.email,
   })
@@ -207,15 +235,15 @@ async function notifyLead(row) {
   if (LEAD_ACK) {
     ack = await resendSend({
       to: row.email,
-      subject: 'We received your USMail.AI early-access request',
+      subject: 'We received your USMail.ai early-access request',
       text: [
         row.name ? `Hi ${row.name},` : 'Hi,',
         '',
-        'Thanks for joining the USMail.AI waitlist. We will notify you when access opens and can schedule a demo if you asked for one.',
+        'Thanks for getting started with USMail.ai. We will follow up about your account and can schedule a demo if you asked for one.',
         '',
         'Questions now? Call 888-667-5322 or 316-247-5300, or reply to this email.',
         '',
-        '— USMail.AI',
+        '— USMail.ai',
         'https://www.usmail.ai',
       ].join('\n'),
       replyTo: LEAD_NOTIFY_TO[0] || 'Info@USMAIL.ai',
@@ -342,13 +370,38 @@ const server = http.createServer(async (req, res) => {
     return send(res, 405, 'Method not allowed', {}, req)
   }
 
+  const ALIAS = {
+    '/online-certified-mail': '/certified-mail',
+    '/online-certified-mail/': '/certified-mail',
+  }
+  if (ALIAS[urlPath]) {
+    return send(
+      res,
+      301,
+      '',
+      { Location: ALIAS[urlPath], 'Cache-Control': 'public, max-age=86400' },
+      req,
+    )
+  }
+
   const CLEAN = {
     '/': '/index.html',
     '/privacy': '/privacy.html',
+    '/about': '/about.html',
+    '/terms': '/terms.html',
+    '/security': '/security.html',
     '/certified-mail': '/certified-mail.html',
+    '/print-and-mail': '/print-and-mail.html',
+    '/ai-print-to-mail': '/ai-print-to-mail.html',
+    '/statements-invoices': '/statements-invoices.html',
+    '/mailroom': '/mailroom.html',
+    '/address-verification': '/address-verification.html',
     '/mcp': '/mcp.html',
     '/how-it-works': '/how-it-works.html',
     '/industries': '/industries.html',
+    '/industries/credit-repair': '/industries/credit-repair.html',
+    '/industries/banks': '/industries/banks.html',
+    '/industries/government': '/industries/government.html',
     '/docs': '/docs/index.html',
     '/docs/': '/docs/index.html',
     '/docs/mcp': '/docs/mcp/index.html',
@@ -363,10 +416,22 @@ const server = http.createServer(async (req, res) => {
   const HTML_TO_CLEAN = {
     '/index.html': '/',
     '/privacy.html': '/privacy',
+    '/about.html': '/about',
+    '/terms.html': '/terms',
+    '/security.html': '/security',
     '/certified-mail.html': '/certified-mail',
+    '/print-and-mail.html': '/print-and-mail',
+    '/ai-print-to-mail.html': '/ai-print-to-mail',
+    '/online-certified-mail.html': '/certified-mail',
+    '/statements-invoices.html': '/statements-invoices',
+    '/mailroom.html': '/mailroom',
+    '/address-verification.html': '/address-verification',
     '/mcp.html': '/mcp',
     '/how-it-works.html': '/how-it-works',
     '/industries.html': '/industries',
+    '/industries/credit-repair.html': '/industries/credit-repair',
+    '/industries/banks.html': '/industries/banks',
+    '/industries/government.html': '/industries/government',
     '/docs/index.html': '/docs',
     '/docs/mcp/index.html': '/docs/mcp',
     '/docs/mcp/getting-started.html': '/docs/mcp/getting-started',
@@ -417,12 +482,17 @@ const server = http.createServer(async (req, res) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       // Hard 404 — do not soft-serve homepage for unknown paths (SEO hygiene)
+      const wantsHtml =
+        req.method === 'GET' &&
+        String(req.headers.accept || '').includes('text/html')
       return send(
         res,
         404,
-        'Not found',
+        req.method === 'HEAD' ? '' : wantsHtml ? NOT_FOUND_HTML : 'Not found',
         {
-          'Content-Type': 'text/plain; charset=utf-8',
+          'Content-Type': wantsHtml
+            ? 'text/html; charset=utf-8'
+            : 'text/plain; charset=utf-8',
           'Cache-Control': 'no-store',
         },
         req,
@@ -440,7 +510,7 @@ const server = http.createServer(async (req, res) => {
           (ext === '.txt' ? 'text/plain; charset=utf-8' : 'application/octet-stream'),
         'Cache-Control':
           ext === '.html'
-            ? 'no-cache'
+            ? 'public, max-age=0, must-revalidate'
             : immutable
               ? 'public, max-age=604800, immutable'
               : 'public, max-age=86400',
@@ -451,5 +521,5 @@ const server = http.createServer(async (req, res) => {
 })
 
 server.listen(port, '0.0.0.0', () => {
-  console.log(`USMail.AI listening on http://0.0.0.0:${port}`)
+  console.log(`USMail.ai listening on http://0.0.0.0:${port}`)
 })

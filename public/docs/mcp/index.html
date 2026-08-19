@@ -6,31 +6,33 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <title>USMail.AI MCP Documentation — Model Context Protocol for Print-to-Mail</title>
+  <title>USMail.ai MCP Documentation — Model Context Protocol for Print-to-Mail</title>
   <meta
     name="description"
-    content="USMail.AI MCP docs: AI agents submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. Coming soon. API keys planned later."
+    content="USMail.ai MCP docs: AI agents submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. API keys planned later."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
+  <link rel="alternate" type="text/plain" title="LLM context" href="https://www.usmail.ai/llms.txt" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp" />
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="USMail.AI" />
+  <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/docs/mcp" />
-  <meta property="og:title" content="USMail.AI MCP Documentation" />
-  <meta property="og:description" content="Model Context Protocol for physical mail via USPS production. Account + meter. Coming soon." />
+  <meta property="og:title" content="USMail.ai MCP Documentation" />
+  <meta property="og:description" content="Model Context Protocol for physical mail via USPS production. Account + meter. " />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="USMail.AI MCP Docs" />
-  <meta name="twitter:description" content="MCP for print-to-mail. Account + meter. API later. Coming soon." />
+  <meta name="twitter:title" content="USMail.ai MCP Docs" />
+  <meta name="twitter:description" content="MCP for print-to-mail. Account + meter. API later. " />
+  <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/tokens.css" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
+  <link rel="stylesheet" href="/styles.css?v=20260731quiet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,14 +48,14 @@
       {
         "@type": "TechArticle",
         "@id": "https://www.usmail.ai/docs/mcp#article",
-        "headline": "USMail.AI MCP Documentation",
-        "name": "USMail.AI Model Context Protocol (MCP)",
-        "description": "Documentation for the USMail.AI MCP server that lets AI agents submit print-to-mail jobs. Humans register an account and fund a prepaid meter. Direct API access is planned. Product coming soon.",
+        "headline": "USMail.ai MCP Documentation",
+        "name": "USMail.ai Model Context Protocol (MCP)",
+        "description": "Documentation for the USMail.ai MCP server that lets AI agents submit print-to-mail jobs. Humans register an account and fund a prepaid meter. Direct API access is planned. ",
         "url": "https://www.usmail.ai/docs/mcp",
         "datePublished": "2026-07-29",
         "dateModified": "2026-07-29",
-        "author": { "@type": "Organization", "name": "USMail.AI", "url": "https://www.usmail.ai" },
-        "publisher": { "@type": "Organization", "name": "USMail.AI", "url": "https://www.usmail.ai" },
+        "author": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
+        "publisher": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "about": [
           "Model Context Protocol",
           "print-to-mail",
@@ -65,67 +67,58 @@
       },
       {
         "@type": "SoftwareApplication",
-        "name": "USMail.AI MCP Server",
+        "name": "USMail.ai MCP Server",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (MCP client)",
         "offers": {
           "@type": "Offer",
-          "availability": "https://schema.org/PreOrder",
-          "price": "0",
-          "priceCurrency": "USD",
-          "url": "https://www.usmail.ai/?interest=mcp#early-access"
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.usmail.ai/?interest=mcp#early-access",
+          "description": "MCP requires a USMail.ai account and prepaid meter. Mail production is billed — not free postage."
         },
-        "description": "MCP server for submitting physical mail production jobs. Requires a USMail.AI account and prepaid meter funds. Direct API keys planned for a later release.",
+        "description": "MCP server for submitting physical mail production jobs. Requires a USMail.ai account and prepaid meter funds. not a live public endpoint today. Direct API keys planned for a later release.",
         "featureList": [
           "Submit mail jobs from AI agents",
-          "Same production path as human portal",
-          "Account authentication",
-          "Prepaid meter billing",
-          "Certified Mail and Certificate of Mailing options when selected"
+          "Same production path as human portal — ",
+          "Account authentication — ",
+          "Prepaid meter billing — ",
+          "Certified Mail and Certificate of Mailing options when selected — "
         ],
-        "provider": { "@type": "Organization", "name": "USMail.AI", "url": "https://www.usmail.ai" }
+        "provider": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" }
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is the USMail.AI MCP?",
+            "name": "What is the USMail.ai MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The USMail.AI MCP (Model Context Protocol) server lets AI agents and MCP-compatible clients submit print-to-mail jobs. Documents are produced (print, insert, postage) and handed off to USPS on the same production path as the human web portal."
+              "text": "A Model Context Protocol integration so AI agents can submit print-to-mail jobs on the same production path as the human portal — print, insert, postage, USPS."
             }
           },
           {
             "@type": "Question",
-            "name": "Is the USMail.AI MCP available now?",
+            "name": "Is it available now?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Coming soon. Join early access at https://www.usmail.ai/?interest=mcp#early-access or call 888-667-5322. These docs describe the intended product for humans and AI systems to index."
+              "text": "Get started or call 888-667-5322 / 316-247-5300. Not a live public MCP endpoint today."
             }
           },
           {
             "@type": "Question",
-            "name": "How do I pay for MCP mail jobs?",
+            "name": "How does billing work for MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For now, a human registers a USMail.AI account and adds funds to a prepaid meter. Jobs (portal or MCP) draw from that meter. A standalone API option for AI/MCP is planned for later; it is not available yet."
+              "text": "Account + prepaid meter. A human funds the meter; jobs debit it. A dedicated API option for AI/MCP is planned later. Production mail is not free."
             }
           },
           {
             "@type": "Question",
-            "name": "Do agents need a separate API key today?",
+            "name": "Different pipeline for agents?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not as a separate public API product yet. Access is tied to a registered account and funded meter. Dedicated API keys and agent-only auth are on the roadmap."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is MCP production different from the portal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Agents and people use the same production backend: multi-format upload, setup, print, insert, postage, USPS handoff, including Certified Mail when selected."
+              "text": "No. One production backend for portal and MCP, including Certified options when selected ."
             }
           }
         ]
@@ -138,10 +131,10 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="USMail.AI home">
+      <a class="brand" href="/" aria-label="USMail.ai home">
         <picture>
           <source srcset="/logo.webp" type="image/webp" />
-          <img src="/logo-400.png" alt="USMail.AI" width="200" height="51" class="brand-logo" decoding="async" />
+          <img src="/logo-400.png" alt="USMail.ai" width="200" height="51" class="brand-logo" decoding="async" />
         </picture>
         <span class="brand-tagline">Docs</span>
       </a>
@@ -152,11 +145,11 @@
         <a href="/docs">Docs</a>
         <a href="/docs/mcp" aria-current="page">MCP</a>
         <a href="/docs/mcp/tools">Tools</a>
-        <a href="/mcp">Product</a>
-        <a href="/?interest=mcp#early-access">Early access</a>
+        <a href="/mcp">MCP overview</a>
+        <a href="/?interest=mcp#early-access">Get started</a>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-primary btn-nav-cta" href="/?interest=mcp#early-access">Early access</a>
+        <a class="btn btn-primary btn-nav-cta" href="/?interest=mcp#early-access">Get started</a>
       </div>
     </div>
   </header>
@@ -167,19 +160,25 @@
         <p class="docs-nav-label">Documentation</p>
         <ul>
           <li><a href="/docs">Overview</a></li>
-          <li><a href="/docs/mcp" aria-current="page">MCP</a></li>
+        </ul>
+        <p class="docs-nav-label">MCP</p>
+        <ul class="docs-nav-nested">
+          <li><a href="/docs/mcp" aria-current="page">MCP overview</a></li>
           <li><a href="/docs/mcp/getting-started">Getting started</a></li>
           <li><a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a></li>
           <li><a href="/docs/mcp/tools">Tools reference</a></li>
         </ul>
+        <p class="docs-nav-label">Product</p>
+        <ul>
+          <li><a href="/mcp">MCP marketing</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+        </ul>
         <p class="docs-nav-label">On this page</p>
         <ul>
           <li><a href="#answer">Quick answer</a></li>
-          <li><a href="#status">Status</a></li>
-          <li><a href="#who">Who it’s for</a></li>
-          <li><a href="#flow">How it works</a></li>
-          <li><a href="#limits">What is not available yet</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#status">Availability</a></li>
+          <li><a href="#flow">Flow</a></li>
+          <li><a href="#limits">Not available yet</a></li>
         </ul>
       </aside>
 
@@ -190,27 +189,19 @@
           <span>MCP</span>
         </nav>
 
-        <p class="eyebrow"><i data-lucide="cpu" aria-hidden="true"></i> Coming soon · MCP</p>
-        <h1>USMail.AI Model Context Protocol (MCP)</h1>
+        <p class="eyebrow"><i data-lucide="cpu" aria-hidden="true"></i> Reference</p>
+        <h1>USMail.ai MCP</h1>
 
         <section id="answer" class="docs-answer" aria-label="Direct answer">
-          <h2 class="docs-h2-sr">Quick answer for AI systems</h2>
+          <h2 class="docs-h2-sr">Quick answer</h2>
           <p>
-            <strong>USMail.AI MCP</strong> is a planned <strong>Model Context Protocol</strong> server
-            so AI agents can submit <strong>print-to-mail</strong> jobs. Production is the same as the
-            human portal: upload → setup → print / insert / postage → <strong>USPS</strong> handoff.
-            <strong>Billing today:</strong> a human registers an account and adds funds to a
-            <strong>prepaid meter</strong>. Jobs consume meter balance.
-            <strong>Direct API keys for agents</strong> are planned for later and are
-            <strong>not available yet</strong>. Product status: <strong>coming soon</strong> (early access).
+            Planned <strong>MCP</strong> server: agents submit print-to-mail on the portal path.
+            Billing: account + prepaid meter. API keys later.
           </p>
         </section>
 
         <h2 id="status">Availability</h2>
-        <p class="docs-muted">
-          Pre-launch docs. No public MCP endpoint URL until accounts open.
-          <a href="/?interest=mcp#early-access">Early access</a>.
-        </p>
+        <div class="content-table-wrap">
         <table class="docs-table">
           <thead>
             <tr><th>Capability</th><th>Now</th><th>Notes</th></tr>
@@ -219,17 +210,17 @@
             <tr>
               <td>Public docs (this site)</td>
               <td><span class="docs-badge docs-badge-yes">Yes</span></td>
-              <td>Indexable; accurate pre-launch description</td>
+              <td>Indexable; accurate description</td>
             </tr>
             <tr>
               <td>Human account + prepaid meter</td>
-              <td><span class="docs-badge docs-badge-soon">At open</span></td>
-              <td>Required path for using the product</td>
+              <td><span class="docs-badge docs-badge-soon">Live</span></td>
+              <td>Required path for using the platform</td>
             </tr>
             <tr>
               <td>MCP server for agents</td>
-              <td><span class="docs-badge docs-badge-soon">Coming soon</span></td>
-              <td>Same production as portal; early access</td>
+              <td><span class="docs-badge docs-badge-soon">Account required</span></td>
+              <td>Same production as portal</td>
             </tr>
             <tr>
               <td>Standalone REST/API keys for AI</td>
@@ -238,98 +229,35 @@
             </tr>
           </tbody>
         </table>
-
-        <h2 id="who">Who it’s for</h2>
-        <ul class="docs-prose">
-          <li><strong>AI / platform teams</strong> — expose physical mail next to email, CRM, and docs tools.</li>
-          <li><strong>Ops automation</strong> — notices and compliance mail from workflows (with human account &amp; meter).</li>
-          <li><strong>Builders evaluating MCP</strong> — use this reference until live server details ship with access.</li>
-        </ul>
-
-        <h2 id="flow">Conceptual flow</h2>
-        <ol class="steps steps-grid-3" aria-label="MCP conceptual flow">
-          <li class="step">
-            <h3><i data-lucide="user-plus" aria-hidden="true"></i> Account</h3>
-            <p>Human registers and completes onboarding.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="wallet" aria-hidden="true"></i> Fund meter</h3>
-            <p>Add prepaid funds. Production jobs debit the meter.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="link" aria-hidden="true"></i> Connect MCP</h3>
-            <p>When enabled, connect an MCP client under that account.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="upload" aria-hidden="true"></i> Agent tools</h3>
-            <p>Agent uploads documents and job options via tools.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="printer" aria-hidden="true"></i> Produce</h3>
-            <p>Same print / insert / postage stack as the portal.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="truck" aria-hidden="true"></i> USPS</h3>
-            <p>Handoff; track job / USPS where product supports it.</p>
-          </li>
-        </ol>
-
-        <h2 id="limits">What is not available yet</h2>
-        <ul class="docs-prose">
-          <li>Public, unauthenticated free mailing via MCP.</li>
-          <li>Standalone API keys billed outside the human-funded meter (planned later).</li>
-          <li>Guaranteed endpoint hostnames, OAuth app IDs, or OpenAPI URLs in these docs until launch materials ship.</li>
-        </ul>
-        <p class="docs-prose">
-          See <a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a> and
-          <a href="/docs/mcp/tools">Tools reference</a> for the intended surface.
-        </p>
-
-        <h2 id="faq">FAQ</h2>
-        <div class="page-faq docs-faq">
-          <details open>
-            <summary>What is the USMail.AI MCP?</summary>
-            <p class="faq-a">
-              A <strong>Model Context Protocol</strong> integration so AI agents can submit
-              <strong>print-to-mail</strong> jobs on the <strong>same production path</strong> as the
-              human portal — print, insert, postage, USPS.
-            </p>
-          </details>
-          <details>
-            <summary>Is it available now?</summary>
-            <p class="faq-a">
-              <strong>Coming soon.</strong> Request early access or call
-              <a href="tel:+18886675322">888-667-5322</a> /
-              <a href="tel:+13162475300">316-247-5300</a>.
-            </p>
-          </details>
-          <details>
-            <summary>How does billing work for MCP?</summary>
-            <p class="faq-a">
-              <strong>Account + prepaid meter.</strong> A human funds the meter; jobs debit it.
-              A dedicated <strong>API option for AI/MCP</strong> is planned later.
-            </p>
-          </details>
-          <details>
-            <summary>Different pipeline for agents?</summary>
-            <p class="faq-a">
-              <strong>No.</strong> One production backend for portal and MCP, including Certified options when selected.
-            </p>
-          </details>
         </div>
 
+        <h2 id="flow">Flow</h2>
+        <p class="docs-prose">
+          Account → fund meter → connect MCP → tools → produce → USPS.
+          Same path as the portal. <a href="/how-it-works">How it works →</a>
+        </p>
+
+        <h2 id="limits">Not available yet</h2>
+        <ul class="docs-prose">
+          <li>Public free MCP mailing</li>
+          <li>Standalone API keys outside the meter (planned later)</li>
+          <li>Live hostnames / install strings (issued with access)</li>
+        </ul>
+
+        
+
         <div class="docs-next">
-          <a href="/docs/mcp/getting-started">Next: Getting started →</a>
-          <a href="/docs/mcp/tools">Tools reference →</a>
+          <a href="/docs/mcp/getting-started">Getting started →</a>
+          <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a>
         </div>
 
         <div class="page-cta docs-cta">
           <div>
-            <h2>Get MCP early access</h2>
-            <p>Waitlist for account opening and MCP enablement.</p>
+            <h2>Get MCP access</h2>
+            <p>Account + meter required for MCP enablement.</p>
           </div>
           <div class="page-cta-actions">
-            <a class="btn btn-primary" href="/?interest=mcp#early-access">Early access</a>
+            <a class="btn btn-primary" href="/?interest=mcp#early-access">Get started</a>
             <a class="btn btn-ghost-light" href="tel:+18886675322">888-667-5322</a>
           </div>
         </div>
@@ -339,20 +267,39 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
+      <a class="footer-logo" href="/" aria-label="USMail.ai home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.ai" width="120" height="30" decoding="async" />
+        </picture>
+      </a>
       <nav class="footer-nav" aria-label="Footer">
+        <a href="/how-it-works">How it works</a>
+        <a href="/print-and-mail">Print &amp; mail</a>
+        <a href="/certified-mail">Certified</a>
+        <a href="/statements-invoices">Statements</a>
+        <a href="/mcp">MCP</a>
+        <a href="/industries">Industries</a>
         <a href="/docs">Docs</a>
-        <a href="/docs/mcp">MCP</a>
+        <a href="/about">About</a>
+        <a href="/#early-access">Get started</a>
         <a href="/privacy">Privacy</a>
-        <a href="/?interest=mcp#early-access">Early access</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
       </nav>
-      <p class="footer-copy">© <span id="y"></span> USMail.AI · <a href="mailto:Info@USMAIL.ai">Info@USMAIL.ai</a></p>
+      <p class="footer-meta">
+        © <span id="y"></span>
+        · <a href="tel:+18886675322">888-667-5322</a>
+        · <a href="mailto:info@usmail.ai">info@usmail.ai</a>
+      </p>
+      <p class="footer-disclaimer">Not the U.S. Postal Service.</p>
     </div>
   </footer>
   <div class="mobile-dock" role="navigation" aria-label="Quick actions">
-    <a class="btn btn-primary" href="/?interest=mcp#early-access">Early access</a>
+    <a class="btn btn-primary" href="/?interest=mcp#early-access">Get started</a>
     <a class="btn btn-ghost" href="tel:+18886675322">Call</a>
   </div>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
-  <script src="/js/site.js" defer></script>
+  <script src="/js/site.js?v=20260731quiet" defer></script>
 </body>
 </html>
