@@ -12,6 +12,8 @@ Nationwide **AI print-to-mail** platform. Operated by **Broadstroke, Inc.** Prod
 
 Sage + operator. Short sentences. Second person. Present tense.
 
+**Lockup under the logo:** `AI print to mail` (not “made easy”, not bare “Print to mail”). Docs pages use `Docs`.
+
 - You upload. You approve. We produce.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.

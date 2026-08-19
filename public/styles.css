@@ -607,15 +607,17 @@ a.btn-primary:visited {
 }
 
 /* Hero — calm product surface (app slate-900 → navy, no flag red) */
-.hero {
-  padding: 2.25rem 0 2rem;
+.hero,
+.hero.section-block {
+  padding: 1.35rem 0 1.5rem;
   color: #e2e8f0;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .hero {
-    padding: 2.75rem 0 2.35rem;
+  .hero,
+  .hero.section-block {
+    padding: 1.75rem 0 1.85rem;
   }
 }
 
@@ -743,9 +745,9 @@ a.btn-primary:visited {
 }
 
 .hero h1 {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.5rem;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 4.2vw, 2.45rem);
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: #fff;
@@ -767,8 +769,8 @@ a.btn-primary:visited {
 
 .hero .lead {
   margin: 0 0 1rem;
-  font-size: 1.02rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.4;
   color: rgba(226, 232, 240, 0.92);
   max-width: 32rem;
 }
@@ -3873,6 +3875,16 @@ a.btn-primary:visited {
 
 .section-block {
   padding-block: var(--space-section-tight);
+}
+
+.hero.section-block {
+  padding-block: 1.35rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero.section-block {
+    padding-block: 1.75rem 1.85rem;
+  }
 }
 
 /* Docs nav nesting */
