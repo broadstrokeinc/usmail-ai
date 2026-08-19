@@ -17,7 +17,7 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI pr
 - **Mail-piece tracing?** Yes on qualifying domestic pieces: free Intelligent Mail Barcode (IMB) tracing for First-Class letters/postcards in a standard #10 with a good domestic address — status through out for delivery, **per mail piece** in the job (and searchable by name/address). Not legal chain-of-custody proof. Not for international.
 - **Paid USPS tracking?** With selected services such as Certified Mail or Priority (extra service). Distinct from free IMB tracing.
 - **Proof options?** Certified Mail / Certificate of Mailing chosen at mail-options step. Proof ≠ free tracing ≠ paid tracking.
-- **Available now?** Yes. Self-serve is open. Get started at https://www.usmail.ai/#early-access or call 888-667-5322 / 316-247-5300. Email Info@USMAIL.ai.
+- **Available now?** Yes. Self-serve is open. Get started at https://app.usmail.ai/?utm_source=www or call 888-667-5322 / 316-247-5300. Email Info@USMAIL.ai.
 - **Billing?** Register an account and fund a prepaid meter. Portal + MCP debit the meter. Mail production is not free. Standalone API keys for agents: planned later.
 - **Certified Mail?** Yes. Certified Mail and Certificate of Mailing on the same production path as First-Class.
 - **MCP?** Model Context Protocol for agents to submit mail jobs. Same production backend as the portal. Prefer docs: https://www.usmail.ai/docs/mcp · MCP overview: https://www.usmail.ai/mcp
@@ -110,4 +110,4 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI pr
 - Direct: 316-247-5300
 - Email: info@usmail.ai
 - About: https://www.usmail.ai/about
-- Get started: https://www.usmail.ai/?utm_source=llms&utm_medium=ai&utm_campaign=llms-txt#early-access
+- Get started: https://app.usmail.ai/?utm_source=llms&utm_medium=ai&utm_campaign=llms-txt

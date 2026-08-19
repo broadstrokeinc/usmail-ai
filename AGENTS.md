@@ -65,7 +65,9 @@ See `docs/IA_HOME.md`. Do not re-add dual hero dumps, 11-item FAQ, formats grid,
 
 Nav: How it works · Print & mail · Certified Mail · Industries · Get started.
 
-Primary CTA: Get started → `/#early-access`. Phone `888-667-5322`. `316` is microcopy / About only.
+Primary CTA: Get started → `https://app.usmail.ai/` (redirect, never iframe). Phone `888-667-5322`. `316` is microcopy / About only.
+
+Do not embed the product app on www. It sends `X-Frame-Options: DENY`.
 
 ## Repo map
 

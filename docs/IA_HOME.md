@@ -31,7 +31,7 @@
 
 ## CTA hierarchy (site-wide)
 
-1. **Primary:** Get early access / Get started → `/#early-access`
+1. **Primary:** Get started → `https://app.usmail.ai/`
 2. **Secondary:** How it works / docs links (ghost)
 3. **Human path:** One phone `888-667-5322` (Talk to mail ops); `316` only as microcopy
 
