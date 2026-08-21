@@ -2,13 +2,13 @@
 
 **Goal:** One job, three pillars, one primary CTA — match product-app cognitive simplicity.
 
-**Positioning:** Nationwide AI print-to-mail + online Certified Mail. Logo lockup: **AI print to mail**. Wichita only on About / footer / schema address.
+**Positioning:** Nationwide AI print-to-mail + online Certified Mail. Slogan: **Print to mail, made easy**. Landing sub: **Drop a file. We handle the rest.** Wichita only on About / footer / schema address.
 
 ## Home sections (exactly 6)
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 + one lead + Get started / How it works. No boxed cite, no chips, no “Available now” eyebrow. |
+| 1 | Hero | H1 = slogan. Lead = landing sub. Get started / How it works. No boxed cite, no chips, no “Available now” eyebrow. |
 | 2 | Pillars | Print and mail · Proof (Certified) · **AI setup, you approve** (MCP as body link only) |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
 | 4 | Trust | Nationwide + Postalocity stack + `/about` + `/address-verification` |
