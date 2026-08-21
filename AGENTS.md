@@ -12,11 +12,15 @@ Nationwide **AI print-to-mail** platform. Operated by **Broadstroke, Inc.** Prod
 
 Sage + operator. Short sentences. Second person. Present tense.
 
-**Lockup under the logo:** `AI print to mail` (docs pages use `Docs`).
+**Brand — three seats. Do not collapse them.** Docs pages use `Docs` under the logo.
 
-**Slogan (trust surfaces — hero, footer, OG, schema):** `You upload. You approve. We produce.`
+| Job | Line | This quarter |
+|-----|------|----------------|
+| Category / lockup | `AI print to mail` | Wired under the logo |
+| Comprehension | `Print to mail, made easy` | Reserved. Never H1, OG, or footer. Optional support only if a surface needs “what is this?” |
+| Trust / slogan | `You upload. You approve. We produce.` | Wired on hero, footer, OG, schema |
 
-Do not use `Print to mail, made easy` or `Drop a file. We handle the rest.` One contract. Category ≠ slogan.
+Occupancy is **trust-first** (same as the product app). Do not promote comprehension into the slogan seat. Do not delete it from the model. Do not ship two H1s.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
 - “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.
