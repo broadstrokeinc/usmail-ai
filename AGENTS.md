@@ -12,9 +12,11 @@ Nationwide **AI print-to-mail** platform. Operated by **Broadstroke, Inc.** Prod
 
 Sage + operator. Short sentences. Second person. Present tense.
 
-**Slogan:** `Print to mail, made easy` — lockup, footer, home meta, schema. Docs pages use `Docs`. Landing-only sub: `Drop a file. We handle the rest.` Category term for AEO remains **AI print to mail**.
+**Lockup under the logo:** `AI print to mail` (docs pages use `Docs`).
 
-- You upload. You approve. We produce.
+**Slogan (trust surfaces — hero, footer, OG, schema):** `You upload. You approve. We produce.`
+
+Do not use `Print to mail, made easy` or `Drop a file. We handle the rest.` One contract. Category ≠ slogan.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
 - “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.

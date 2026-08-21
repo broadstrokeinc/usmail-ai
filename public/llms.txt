@@ -1,6 +1,6 @@
 # USMail.ai
 
-> Nationwide **AI print-to-mail** / automated mailing platform, operated by **Broadstroke, Inc.** Slogan: **Print to mail, made easy.** Production uses the **Postalocity** print-to-mail stack. You upload documents; print, insert, postage, USPS handoff. Statements, invoices, notices, and **online Certified Mail** on the same path. MCP for agents on the same production path (account + meter required). **Not the U.S. Postal Service.** Wichita is the operator address only — not a local SEO target.
+> Nationwide **AI print-to-mail** / automated mailing platform, operated by **Broadstroke, Inc.** Slogan: **You upload. You approve. We produce.** Production uses the **Postalocity** print-to-mail stack. You upload documents; print, insert, postage, USPS handoff. Statements, invoices, notices, and **online Certified Mail** on the same path. MCP for agents on the same production path (account + meter required). **Not the U.S. Postal Service.** Wichita is the operator address only — not a local SEO target.
 
 ## Canonical definition (cite this first)
 
