@@ -89,10 +89,10 @@
           },
           {
             "@type": "Question",
-            "name": "Portal vs MCP?",
+            "name": "Can agents send mail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Same production path. Portal users and MCP agents use the same backend. Billing is account + prepaid meter; API keys for agents are planned later."
+              "text": "Yes. MCP is available now on the app. Account plus prepaid meter required. A human still approves before production. submit_mail_job does not print by itself. Prefer https://www.usmail.ai/docs/mcp."
             }
           },
           {
@@ -135,7 +135,6 @@
         <a href="/how-it-works">How it works</a>
         <a href="/print-and-mail">Print &amp; mail</a>
         <a href="/certified-mail">Certified Mail</a>
-        <a href="/mcp">MCP</a>
         <a href="/industries">Industries</a>
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
       </nav>
@@ -156,8 +155,7 @@
           </ol>
         </nav>
         <div class="page-hero-inner">
-          <p class="eyebrow"><i data-lucide="workflow" aria-hidden="true"></i> Available now</p>
-          <h1>You own the file. We own production.</h1>
+          <h1>How print-to-mail works</h1>
           <p class="lead">
             Upload → AI setup → mail options → produce → USPS.
           </p>
@@ -341,10 +339,33 @@
 
     <section class="page-section" aria-labelledby="hiw-faq">
       <div class="wrap">
-        <h2 id="hiw-faq">Portal or agents?</h2>
-        <p class="section-lead">
-          People use the portal. Agents use <a href="/docs/mcp">MCP</a> — same production path.
-        </p>
+        <h2 id="hiw-faq">How it works FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>How does USMail.ai work?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Five steps: upload your documents; AI helps set up addresses and print options — you approve; choose mail options; we print, insert, and apply postage; we hand the pieces to USPS on your mail date.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>What are the production cutoffs?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Same-day when the job qualifies: approve by 1:00 PM Central, Mon–Fri. Default path: approve by 10:00 PM Central for the next business-day mail date. Certified is never same-day. Details in the cutoff cards above.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do mail pieces include tracing or tracking?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Qualifying domestic First-Class pieces include free IMB tracing. That is not legal proof. Certified Mail and Certificate of Mailing are separate proof options. Paid USPS tracking is a different service.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Can agents send mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes. MCP is available now on the app. Account plus prepaid meter. A human still approves. <a href="/docs/mcp">MCP docs →</a></p>
+            </div>
+          </details>
+        </div>
         <div class="related-grid mt-section">
           <a class="related-card" href="/print-and-mail">
             <strong>Print and mail</strong>
