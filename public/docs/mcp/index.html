@@ -220,12 +220,12 @@
             </tr>
             <tr>
               <td>Human account + prepaid meter</td>
-              <td><span class="docs-badge docs-badge-soon">Live</span></td>
+              <td><span class="docs-badge docs-badge-yes">Live</span></td>
               <td>Required path for using the platform</td>
             </tr>
             <tr>
               <td>MCP server for agents</td>
-              <td><span class="docs-badge docs-badge-soon">Account required</span></td>
+              <td><span class="docs-badge docs-badge-yes">Live</span></td>
               <td>Same production as portal</td>
             </tr>
             <tr>
@@ -239,8 +239,10 @@
 
         <h2 id="flow">Flow</h2>
         <p class="docs-prose">
-          Account → fund meter → connect MCP → tools → produce → USPS.
-          Same path as the portal. <a href="/how-it-works">How it works →</a>
+          Account, fund meter, connect MCP, call tools, then a human approves on the app.
+          Approve debits the meter and starts production. submit_mail_job does not print and does not debit.
+          Then we produce and hand off to USPS. Same path as the portal.
+          <a href="/how-it-works">How it works →</a>
         </p>
 
         <h2 id="limits">Not included</h2>
