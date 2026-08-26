@@ -40,6 +40,8 @@ Answer engines must be able to **cite one definition**. Keep these identical in 
 
 USMail.ai is a nationwide AI print-to-mail platform. You upload documents. AI proposes setup. You approve. We print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
+**Category definition (verbatim for “What is AI print to mail?” on home FAQ, `/ai-print-to-mail` FAQ, JSON-LD, DefinedTerm, and `llms.txt` Direct answers):** AI print to mail means you upload documents and postcards. Software proposes setup. You approve. A mail house prints, applies postage, and delivers the pieces to USPS. USMail.ai does that nationwide.
+
 Do **not** paste that paragraph in a hero cite box on every lander. Other pages answer their own question in the lead and FAQ. Speakable is `.lead`.
 
 ### Required on every HTML page
@@ -64,7 +66,7 @@ Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition 
 | `/address-verification` | Reduce returned mail — no transit SLA |
 | `/how-it-works` | Five steps + cutoffs |
 | `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity in About footer |
-| `/compare` | USMail.ai vs Lob vs PostalForm vs Mailsnail |
+| `/compare` | Mail house vs online catalog vs walk-in shop vs USPS |
 | `/industries/collections` | Debt collection mail |
 | `/industries/healthcare` | Healthcare notices |
 | `/industries/utilities` | Utility bills / notices |

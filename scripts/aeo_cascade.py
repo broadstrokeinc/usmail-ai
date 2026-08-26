@@ -261,7 +261,7 @@ INDUSTRIES = [
             ("file-text", "Correspondence and notices", "You own the file. We own production. Not a case-management system."),
             ("badge-check", "Certified Mail / Certificate of Mailing", "Add proof options before you approve. Counsel decides what the process needs."),
             ("users", "Human approval", "Nothing produces until someone confirms the proof. No silent auto-mail."),
-            ("shield", "Not legal advice", "We print and enter mail. Your counsel decides sufficiency of proof."),
+            ("shield", "Not legal advice", "We print and deliver mail to USPS. Your counsel decides sufficiency of proof."),
         ],
         "extra_h2": "Mail house, not a postage plugin",
         "extra": "A developer mail API still needs a mail house. An agent wrapper still needs a mail house. USMail.ai is the mail house: you approve, we print, then USPS handoff.",
@@ -393,7 +393,7 @@ def industry_html(p):
       <div class="wrap">
         <h2>{p["extra_h2"]}</h2>
         <p class="section-lead">{p["extra"]}</p>
-        <p><a href="/compare">USMail.ai vs Lob vs wrappers →</a></p>
+        <p><a href="/compare">Compare →</a></p>
       </div>
     </section>
     <section class="page-section">
@@ -435,9 +435,9 @@ def write_compare():
 
     url = "/compare"
     faq = [
-        ("What is USMail.ai compared with Lob?", DEF + " Lob is a developer send-mail API. USMail.ai is a mail house with human approval."),
-        ("What is PostalForm or Mailsnail compared with USMail.ai?", "PostalForm and Mailsnail are agent wrappers over Click2Mail or Lob. USMail.ai is a mail house: upload, approve, print, postage, USPS handoff."),
-        ("Is MCP available?", "Yes, on the app. Account + prepaid meter. A human must approve. submit_mail_job does not print by itself. No public add command is published here."),
+        ("How is USMail.ai different from an online print-and-mail catalog?", "USMail.ai is a mail house. You upload. You approve. We print and deliver to USPS. Catalogs often publish unit prices. We do not. A human still approves before we print."),
+        ("How is USMail.ai different from a walk-in print shop?", "A shop is local. You often print, then mail. Here you upload one job. We print, apply postage, and deliver the pieces to USPS. Not a walk-in counter."),
+        ("How is USMail.ai different from sending Certified Mail on usps.com?", "usps.com and the counter are USPS. We are not the Postal Service. Upload documents. Add Certified Mail on the same job as First-Class. We print and deliver the pieces to USPS. Certified is never same-day."),
         ("Is USMail.ai available now?", "Yes. Get started at https://app.usmail.ai/."),
     ]
     items = [
@@ -458,7 +458,7 @@ def write_compare():
                 {
                     "@type": "WebPage",
                     "url": "https://www.usmail.ai/compare",
-                    "name": "USMail.ai vs Lob vs PostalForm vs Mailsnail",
+                    "name": "USMail.ai vs catalogs vs shops vs USPS",
                     "description": DEF,
                     "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".lead"]},
                 },
@@ -476,10 +476,10 @@ def write_compare():
     )
     html = (
         HEAD.format(
-            title="USMail.ai vs Lob vs PostalForm vs Mailsnail | Compare",
+            title="USMail.ai vs Catalogs vs Shops vs USPS | Compare",
             description="USMail.ai is a mail house. You upload. You approve. We print. Lob is a developer API. PostalForm and Mailsnail are agent wrappers. Available now.",
             url=url,
-            og_title="USMail.ai vs Lob vs PostalForm vs Mailsnail",
+            og_title="USMail.ai vs catalogs vs shops vs USPS",
             ld=ld,
         )
         + CHROME_TOP.format(utm="&utm_campaign=compare")
@@ -494,9 +494,9 @@ def write_compare():
           </ol>
         </nav>
         <div class="page-hero-inner">
-          <p class="eyebrow"><i data-lucide="git-compare" aria-hidden="true"></i> Available now</p>
-          <h1>Mail house vs API vs agent wrapper</h1>
-          <p class="lead">USMail.ai is a mail house. You upload. You approve. We print and hand off to USPS. That is not a developer API and not a wrapper over someone else’s mail house.</p>
+          <p class="eyebrow"><i data-lucide="git-compare" aria-hidden="true"></i> Compare</p>
+          <h1>Mail house vs catalog vs shop vs USPS</h1>
+          <p class="lead">USMail.ai is a mail house. You upload. You approve. We print and deliver to USPS. That is not an online catalog, not a walk-in shop, and not the Postal Service.</p>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=compare">Get started</a>
             <a class="btn btn-ghost" href="/about">About</a>
@@ -513,51 +513,57 @@ def write_compare():
               <tr>
                 <th scope="col">Question</th>
                 <th scope="col">USMail.ai</th>
-                <th scope="col">Lob</th>
-                <th scope="col">PostalForm / Mailsnail</th>
+                <th scope="col">Online catalog</th>
+                <th scope="col">Walk-in shop</th>
+                <th scope="col">USPS</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">What it is</th>
                 <td>Mail house. Upload, approve, we print.</td>
-                <td>Developer send-mail API.</td>
-                <td>Agent wrappers over Click2Mail or Lob.</td>
+                <td>Self-serve print-and-mail with public unit prices.</td>
+                <td>Local counter. You often print, then mail.</td>
+                <td>The Postal Service. Delivers the mail.</td>
               </tr>
               <tr>
                 <th scope="row">Who approves</th>
-                <td>A human on the app before production.</td>
-                <td>Your code, unless you build an approval layer.</td>
-                <td>The agent, unless the wrapper adds a human step.</td>
+                <td>A human on the app before anything prints.</td>
+                <td>You, in their checkout.</td>
+                <td>You, at the counter.</td>
+                <td>You, on usps.com or at the window.</td>
               </tr>
               <tr>
                 <th scope="row">Who prints</th>
-                <td>USMail.ai prints, then USPS handoff.</td>
-                <td>Lob’s print network.</td>
-                <td>Click2Mail or Lob — not their own mail house.</td>
-              </tr>
-              <tr>
-                <th scope="row">MCP</th>
-                <td>Available now on the app. Account + prepaid meter. <code>submit_mail_job</code> does not print by itself.</td>
-                <td>REST API. Not this product.</td>
-                <td>Agent-facing. Not USMail.ai production.</td>
+                <td>USMail.ai prints, then we deliver to USPS.</td>
+                <td>Their plant or a partner plant.</td>
+                <td>The shop, if they print.</td>
+                <td>You, unless you already have the piece.</td>
               </tr>
               <tr>
                 <th scope="row">Certified Mail</th>
-                <td>Add before you approve and pay. Same production path.</td>
-                <td>If their API exposes it.</td>
-                <td>If the wrapped vendor exposes it.</td>
+                <td>Add before you approve. Same job as First-Class. Never same-day.</td>
+                <td>If they offer it.</td>
+                <td>If they offer it, often as a separate trip.</td>
+                <td>Click-N-Ship or the counter. Small runs. You handle the piece.</td>
+              </tr>
+              <tr>
+                <th scope="row">Price list</th>
+                <td>No public unit prices. Account and prepaid meter. Production mail is not free.</td>
+                <td>Often a public catalog.</td>
+                <td>Quoted in the shop.</td>
+                <td>USPS postage and fees.</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="section-lead">We do not invent hostnames or <code>claude mcp add</code> strings here. Get started on the app.</p>
+        <p class="section-lead">Tracing on First-Class, tracking as an option, logo envelopes, and NCOA are on the USMail.ai path. <a href="/features">Features →</a></p>
       </div>
     </section>
     <section class="page-section band">
       <div class="wrap">
-        <h2>What “submit” does not do</h2>
-        <p>An agent can propose a job. A human still approves. <code>submit_mail_job</code> does not print, insert, or enter USPS by itself. Production starts after approval and a funded meter.</p>
+        <h2>What we do not claim</h2>
+        <p>We do not publish unit prices. We do not run a walk-in counter. We are not the United States Postal Service. A human still approves before we print.</p>
       </div>
     </section>
     <section class="page-section">

@@ -1,6 +1,6 @@
 # Homepage information architecture
 
-**Goal:** One job, three pillars, one primary CTA — match product-app cognitive simplicity.
+**Goal:** One job, four USPs, one primary CTA — match product-app cognitive simplicity.
 
 **Positioning:** Nationwide AI print-to-mail + online Certified Mail. Three seats: lockup **AI print to mail** · slogan **You upload. You approve. We produce.** · comprehension **Print to mail, made easy** (reserved, never H1). Wichita only on About / footer / schema address.
 
@@ -8,8 +8,8 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). One factual lead. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
-| 2 | Pillars | **You approve** first · Print and mail · Proof (Certified). No MCP on home. |
+| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names the mail house and the job. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
+| 2 | Why us | Four USPs: tracing · tracking option · logo envelope · NCOA. Approve stays in the lead and how-it-works. No MCP on home. |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
 | 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
