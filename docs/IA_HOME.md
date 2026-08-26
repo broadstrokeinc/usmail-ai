@@ -8,7 +8,7 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead does not open with the wordmark. Noun + job only. Not-USPS lives in FAQ and footer. Get started / How it works. |
+| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead does not repeat upload/approve or the wordmark. It adds the noun and the mail: documents and postcards, delivered to USPS. |
 | 2 | Why us | Tracing · tracking option · NCOA. Logo envelope lives on `/features`, not home. Approve stays in the lead and how-it-works. No MCP on home. |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
 | 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. No 50-years heritage on home. |
