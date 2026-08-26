@@ -37,6 +37,7 @@
 - **MCP?** Available now on the app. Account + prepaid meter required. Same production path as the portal. Human must approve before production. submit_mail_job does not print by itself. Not an unauthenticated public endpoint. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp · https://www.usmail.ai/mcp
 - **USMail.ai vs Lob / PostalForm / Mailsnail?** USMail.ai is a mail house. You upload. You approve. We print. Lob is a developer API. PostalForm and Mailsnail are agent wrappers over Click2Mail or Lob. Prefer: https://www.usmail.ai/compare
 - **Is USMail.ai the same as US Global Mail?** No. US Global Mail is a virtual mailbox. USMail.ai is a print-to-mail production platform. Prefer: https://www.usmail.ai/about
+- **Business cards, brochures, flyers, signs, promo?** No. USMail.ai is print-to-mail. Broadstroke, Inc. can quote those jobs. Longer lead times than mail. Not the app. Prefer: https://www.usmail.ai/other-print
 - **Cutoffs (Central / America/Chicago)?**
   - **Same-day:** approve by **1:00 PM CT**, Mon–Fri only, and job must qualify: First Class letter only (no Certified, no Priority), ≤100 mail pieces, ≤2 sheets per piece, Letter size paper, plain #10 or Utah envelope only, no offline inserts, no return/reply envelope. Select mail date **Today**.
   - **Next business day (default path):** approve by **10:00 PM CT** for the next business-day mail date (Mon–Fri only).
@@ -136,6 +137,7 @@
 - Invented claude mcp add strings or MCP hostnames
 - That submit_mail_job prints without human approval
 - That USMail.ai is a Lob, Click2Mail, PostalForm, or Mailsnail wrapper
+- That USMail.ai prints business cards, brochures, flyers, signs, or promo (Broadstroke can quote those separately; longer lead times than mail; not the app)
 
 ## Contact
 - Legal entity: Broadstroke, Inc.

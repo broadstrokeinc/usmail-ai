@@ -63,7 +63,8 @@ Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition 
 | `/mailroom` | Eliminate mailroom logistics |
 | `/address-verification` | Reduce returned mail — no transit SLA |
 | `/how-it-works` | Five steps + cutoffs |
-| `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity only in About footer |
+| `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity in About footer. Closed FAQ may point to `/other-print` |
+| `/other-print` | Deep tuck. Broadstroke quotes business cards, brochures, flyers, signs, promo. Longer lead times. Not USMail.ai. Not the app. **noindex.** Not in primary or footer nav. Do not name sibling production brands. |
 | `/compare` | USMail.ai vs Lob vs PostalForm vs Mailsnail |
 | `/industries/collections` | Debt collection mail |
 | `/industries/healthcare` | Healthcare notices |
