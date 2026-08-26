@@ -12,11 +12,6 @@ DEF = (
     "USMail.ai is not the United States Postal Service."
 )
 
-CITE = f'''          <div class="aeo-answer" data-aeo="definition">
-            <p>{DEF}</p>
-          </div>
-'''
-
 HEAD = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -380,7 +375,7 @@ def industry_html(p):
         <div class="page-hero-inner">
           <p class="eyebrow"><i data-lucide="{p["icon"]}" aria-hidden="true"></i> Available now</p>
           <h1>{p["h1"]}</h1>
-{CITE}          <p class="lead">{p["lead"]}</p>
+          <p class="lead">{p["lead"]}</p>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www{p["utm"]}">Get started</a>
             <a class="btn btn-ghost" href="tel:+18886675322">888-667-5322</a>
@@ -504,7 +499,7 @@ def write_compare():
         <div class="page-hero-inner">
           <p class="eyebrow"><i data-lucide="git-compare" aria-hidden="true"></i> Available now</p>
           <h1>Plant path vs API vs agent wrapper</h1>
-{CITE}          <p class="lead">USMail.ai prints and hands mail to USPS after you approve. That is not a developer API and not a wrapper over someone else’s plant.</p>
+          <p class="lead">USMail.ai prints and hands mail to USPS after you approve. That is not a developer API and not a wrapper over someone else’s plant.</p>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=compare">Get started</a>
             <a class="btn btn-ghost" href="/about">About</a>
@@ -594,31 +589,12 @@ def write_compare():
     print("wrote compare.html")
 
 
-def inject_cites():
-    skip = {"privacy.html", "terms.html", "security.html", "index.html"}
-    needle = '          <div class="page-hero-actions">'
-    for p in PUBLIC.rglob("*.html"):
-        if p.name in skip:
-            continue
-        t = p.read_text()
-        if 'class="page-hero-inner"' not in t:
-            continue
-        if 'class="aeo-answer"' in t:
-            continue
-        if needle not in t:
-            continue
-        t = t.replace(needle, CITE + needle, 1)
-        p.write_text(t)
-        print("cite", p.relative_to(PUBLIC))
-
-
 def main():
     write_compare()
     for p in INDUSTRIES:
         dest = PUBLIC / "industries" / f"{p['slug']}.html"
         dest.write_text(industry_html(p))
         print("wrote", dest.relative_to(PUBLIC))
-    inject_cites()
 
 
 if __name__ == "__main__":
