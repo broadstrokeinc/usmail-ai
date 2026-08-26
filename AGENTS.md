@@ -23,6 +23,7 @@ Sage + operator. Short sentences. Second person. Present tense.
 Occupancy is **trust-first** (same as the product app). Do not promote comprehension into the slogan seat. Do not delete it from the model. Do not ship two H1s.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
+- We are a **mail house**. Not a developer API. Not an agent wrapper over someone else’s mail house. Do **not** say “plant path.”
 - “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.
 
 ## AEO / SEO (critical)

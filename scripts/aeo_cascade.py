@@ -175,7 +175,7 @@ def faq_ld(url, qs):
 INDUSTRIES = [
     {
         "slug": "collections",
-        "h1": "Debt collection mail on a production plant",
+        "h1": "Debt collection mail",
         "crumb": "Collections",
         "title": "Debt Collection Mail | Notices &amp; Certified · USMail.ai",
         "og": "Debt Collection Mail | USMail.ai",
@@ -189,8 +189,8 @@ INDUSTRIES = [
             ("sheet", "List-driven runs", "CSV recipients for batch notices. Same production path as First-Class."),
             ("shield", "Not a collections CRM", "We mail files you upload. We do not skip-trace, score, or manage accounts."),
         ],
-        "extra_h2": "Plant path, not an agent wrapper",
-        "extra": "USMail.ai is the plant path: upload, approve, produce. Collection shops that bolt an agent onto Click2Mail or Lob still need a printer and a postage meter somewhere. Here the plant is the product. A human approves before anything is mailed.",
+        "extra_h2": "Mail house, not an agent wrapper",
+        "extra": "USMail.ai is a mail house. You upload. You approve. We print. Collection shops that bolt an agent onto Click2Mail or Lob still need a printer and a postage meter somewhere. Here the mail house is the product. A human approves before anything is mailed.",
         "faq": [
             ("Does USMail.ai mail collection notices?", DEF),
             ("Is this a collections CRM?", "No. Upload the files your system already makes. We print, apply postage, and hand off to USPS. We do not manage debt accounts."),
@@ -215,7 +215,7 @@ INDUSTRIES = [
             ("shield", "Not an EHR", "We do not generate charts or replace your billing system. We mail what you upload."),
         ],
         "extra_h2": "What we will not claim",
-        "extra": "We do not publish a HIPAA BAA on this page. If your process needs a signed BAA, talk to mail ops. Security details: /security. Production is USMail.ai — not a developer API wrapping someone else’s printer.",
+        "extra": "We do not publish a HIPAA BAA on this page. If your process needs a signed BAA, talk to mail ops. Security details: /security. Production is USMail.ai — not a developer API wrapping someone else’s mail house.",
         "faq": [
             ("Does USMail.ai mail healthcare statements?", DEF),
             ("Is USMail.ai an EHR or billing system?", "No. Upload files and lists. We print, apply postage, and hand off to USPS."),
@@ -225,7 +225,7 @@ INDUSTRIES = [
     },
     {
         "slug": "utilities",
-        "h1": "Utility bills and notices on a plant path",
+        "h1": "Utility bills and notices",
         "crumb": "Utilities",
         "title": "Utility Bill Print to Mail | Notices · USMail.ai",
         "og": "Utility Mail | USMail.ai",
@@ -239,7 +239,7 @@ INDUSTRIES = [
             ("badge-check", "Certified when statute wants proof", "Add Certified Mail before you approve and pay."),
             ("clock", "Cutoffs that ops can run", "1:00 PM CT same-day when eligible; 10:00 PM CT next business day. Mon–Fri mail dates."),
         ],
-        "extra_h2": "Plant path, not a wrapper",
+        "extra_h2": "Mail house, not a wrapper",
         "extra": "USMail.ai prints, inserts, applies postage, and hands pieces to USPS. That is not a utility portal and not an agent sitting on Click2Mail. You upload. You approve. We produce.",
         "faq": [
             ("Can USMail.ai mail utility bills?", DEF),
@@ -264,8 +264,8 @@ INDUSTRIES = [
             ("users", "Human approval", "Nothing produces until someone confirms the proof. No silent auto-mail."),
             ("shield", "Not legal advice", "We print and enter mail. Your counsel decides sufficiency of proof."),
         ],
-        "extra_h2": "Plant, not a postage plugin",
-        "extra": "A developer mail API still needs a plant. An agent wrapper still needs a plant. USMail.ai is the plant path: you approve, we print, then USPS handoff.",
+        "extra_h2": "Mail house, not a postage plugin",
+        "extra": "A developer mail API still needs a mail house. An agent wrapper still needs a mail house. USMail.ai is the mail house: you approve, we print, then USPS handoff.",
         "faq": [
             ("Does USMail.ai mail legal notices?", DEF),
             ("Is this legal advice or a case system?", "No. Upload documents. We print, apply postage, and hand off to USPS."),
@@ -290,7 +290,7 @@ INDUSTRIES = [
             ("shield", "Not a facility PMS", "We do not manage units, gates, or ledgers. We mail files you upload."),
         ],
         "extra_h2": "Production, not a plugin",
-        "extra": "You upload. You approve. We print and hand pieces to USPS. That is a plant path — not an agent wrapper and not a postage meter in the office.",
+        "extra": "You upload. You approve. We print and hand pieces to USPS. That is a mail house — not an agent wrapper and not a postage meter in the office.",
         "faq": [
             ("Does USMail.ai mail storage lien notices?", DEF),
             ("Is this a storage management system?", "No. Upload files and lists. We print, apply postage, and hand off to USPS."),
@@ -438,8 +438,8 @@ def write_compare():
 
     url = "/compare"
     faq = [
-        ("What is USMail.ai compared with Lob?", DEF + " Lob is a developer send-mail API. USMail.ai is a plant path with human approval."),
-        ("What is PostalForm or Mailsnail compared with USMail.ai?", "PostalForm and Mailsnail are agent wrappers over Click2Mail or Lob. USMail.ai is the production plant: upload, approve, print, postage, USPS handoff."),
+        ("What is USMail.ai compared with Lob?", DEF + " Lob is a developer send-mail API. USMail.ai is a mail house with human approval."),
+        ("What is PostalForm or Mailsnail compared with USMail.ai?", "PostalForm and Mailsnail are agent wrappers over Click2Mail or Lob. USMail.ai is a mail house: upload, approve, print, postage, USPS handoff."),
         ("Is MCP available?", "Yes, on the app. Account + prepaid meter. A human must approve. submit_mail_job does not print by itself. No public add command is published here."),
         ("Is USMail.ai available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
     ]
@@ -480,7 +480,7 @@ def write_compare():
     html = (
         HEAD.format(
             title="USMail.ai vs Lob vs PostalForm vs Mailsnail | Compare",
-            description="USMail.ai is the plant path: upload, approve, produce. Lob is a developer API. PostalForm and Mailsnail are agent wrappers. Available now.",
+            description="USMail.ai is a mail house. You upload. You approve. We print. Lob is a developer API. PostalForm and Mailsnail are agent wrappers. Available now.",
             url=url,
             og_title="USMail.ai vs Lob vs PostalForm vs Mailsnail",
             ld=ld,
@@ -498,8 +498,8 @@ def write_compare():
         </nav>
         <div class="page-hero-inner">
           <p class="eyebrow"><i data-lucide="git-compare" aria-hidden="true"></i> Available now</p>
-          <h1>Plant path vs API vs agent wrapper</h1>
-          <p class="lead">USMail.ai prints and hands mail to USPS after you approve. That is not a developer API and not a wrapper over someone else’s plant.</p>
+          <h1>Mail house vs API vs agent wrapper</h1>
+          <p class="lead">USMail.ai is a mail house. You upload. You approve. We print and hand off to USPS. That is not a developer API and not a wrapper over someone else’s mail house.</p>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=compare">Get started</a>
             <a class="btn btn-ghost" href="/about">About</a>
@@ -523,7 +523,7 @@ def write_compare():
             <tbody>
               <tr>
                 <th scope="row">What it is</th>
-                <td>AI print-to-mail plant path. Upload, approve, produce.</td>
+                <td>Mail house. Upload, approve, we print.</td>
                 <td>Developer send-mail API.</td>
                 <td>Agent wrappers over Click2Mail or Lob.</td>
               </tr>
@@ -537,13 +537,13 @@ def write_compare():
                 <th scope="row">Who prints</th>
                 <td>USMail.ai prints, then USPS handoff.</td>
                 <td>Lob’s print network.</td>
-                <td>The underlying Click2Mail or Lob plant — not their own press.</td>
+                <td>Click2Mail or Lob — not their own mail house.</td>
               </tr>
               <tr>
                 <th scope="row">MCP</th>
                 <td>Available now on the app. Account + prepaid meter. <code>submit_mail_job</code> does not print by itself.</td>
                 <td>REST API. Not this product.</td>
-                <td>Agent-facing. Not a USMail.ai plant.</td>
+                <td>Agent-facing. Not USMail.ai production.</td>
               </tr>
               <tr>
                 <th scope="row">Certified Mail</th>
