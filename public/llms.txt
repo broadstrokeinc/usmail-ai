@@ -21,7 +21,7 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI pr
 - **NCOA?** Included on the production path (National Change of Address). Reduces returned mail. Not a USPS transit promise. Prefer: https://www.usmail.ai/address-verification
 - **Custom envelope / logo?** Yes. Custom envelopes with your logo are included. They must be approved before use and can take 1–2 business days. Same-day jobs still must qualify (plain #10 or Utah). Prefer: https://www.usmail.ai/features
 - **Can I send Certified Mail online?** Yes. Add Certified Mail before you approve and pay. Prefer: https://www.usmail.ai/certified-mail
-- **Who operates it?** Broadstroke, Inc., 820 W 2nd St N, Wichita, KS 67203. Broadstroke has run mail production since 1985. Phones: 888-667-5322, 316-247-5300. Email: info@usmail.ai.
+- **Who runs it?** A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Nationwide. Prefer: https://www.usmail.ai/about
 - **Mail-piece tracing?** Yes on qualifying domestic pieces: free Intelligent Mail Barcode (IMB) tracing for First-Class letters/postcards in a standard #10 with a good domestic address — status through out for delivery, **per mail piece** in the job (and searchable by name/address). Not legal chain-of-custody proof. Not for international.
 - **Paid USPS tracking?** An option on Priority and Certified letters. Distinct from free First-Class IMB tracing.
 - **Proof options?** Certified Mail / Certificate of Mailing chosen at mail-options step. Proof ≠ free tracing ≠ paid tracking.

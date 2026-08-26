@@ -58,7 +58,7 @@ Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition 
 | `/mailroom` | Eliminate mailroom logistics |
 | `/address-verification` | Reduce returned mail — no transit SLA |
 | `/how-it-works` | Five steps + cutoffs |
-| `/about` | Operator Broadstroke, nationwide plant, Wichita command center |
+| `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity only in About footer |
 | `/compare` | USMail.ai vs Lob vs PostalForm vs Mailsnail |
 | `/industries/collections` | Debt collection mail |
 | `/industries/healthcare` | Healthcare notices |
