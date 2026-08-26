@@ -34,7 +34,7 @@
 
 1. **Primary:** Get started → `https://app.usmail.ai/`
 2. **Secondary:** How it works / docs links (ghost)
-3. **Human path:** One phone `888-667-5322` (Talk to mail ops); `316` only as microcopy
+3. **Human path:** Phone in the footer. Home Get started may show `888-667-5322` once. Not on every CTA. `316` only About / legal.
 
 Nav: How it works · Print & mail · Certified Mail · Industries · Get started.
 

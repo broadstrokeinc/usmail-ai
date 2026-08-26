@@ -119,7 +119,6 @@ CHROME_BOT = '''  <footer class="site-footer">
   </footer>
   <div class="mobile-dock" role="navigation" aria-label="Quick actions">
     <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www{utm}">Get started</a>
-    <a class="btn btn-ghost" href="tel:+18886675322">Call</a>
   </div>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
   <script src="/js/site.js?v=20260731quiet" defer></script>
@@ -195,7 +194,7 @@ INDUSTRIES = [
             ("Does USMail.ai mail collection notices?", DEF),
             ("Is this a collections CRM?", "No. Upload the files your system already makes. We print, apply postage, and hand off to USPS. We do not manage debt accounts."),
             ("Can I add Certified Mail?", "Yes. Add Certified Mail before you approve and pay."),
-            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
+            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/."),
         ],
     },
     {
@@ -220,7 +219,7 @@ INDUSTRIES = [
             ("Does USMail.ai mail healthcare statements?", DEF),
             ("Is USMail.ai an EHR or billing system?", "No. Upload files and lists. We print, apply postage, and hand off to USPS."),
             ("Do you claim a HIPAA BAA here?", "No. Do not assume a BAA from this page. Ask mail ops in writing if you need one."),
-            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
+            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/."),
         ],
     },
     {
@@ -245,7 +244,7 @@ INDUSTRIES = [
             ("Can USMail.ai mail utility bills?", DEF),
             ("Do you replace the billing system?", "No. Upload the files and lists your CIS already exports."),
             ("Certified for shutoff notices?", "Yes, when you add Certified Mail before you approve and pay."),
-            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
+            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/."),
         ],
     },
     {
@@ -270,7 +269,7 @@ INDUSTRIES = [
             ("Does USMail.ai mail legal notices?", DEF),
             ("Is this legal advice or a case system?", "No. Upload documents. We print, apply postage, and hand off to USPS."),
             ("Certified Mail?", "Yes. Add Certified Mail or Certificate of Mailing before you approve and pay."),
-            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
+            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/."),
         ],
     },
     {
@@ -295,7 +294,7 @@ INDUSTRIES = [
             ("Does USMail.ai mail storage lien notices?", DEF),
             ("Is this a storage management system?", "No. Upload files and lists. We print, apply postage, and hand off to USPS."),
             ("Certified Mail?", "Yes. Add Certified Mail before you approve and pay."),
-            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
+            ("Is it available now?", "Yes. Get started at https://app.usmail.ai/."),
         ],
     },
 ]
@@ -378,7 +377,6 @@ def industry_html(p):
           <p class="lead">{p["lead"]}</p>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www{p["utm"]}">Get started</a>
-            <a class="btn btn-ghost" href="tel:+18886675322">888-667-5322</a>
           </div>
         </div>
       </div>
@@ -418,11 +416,10 @@ def industry_html(p):
         <div class="page-cta mt-section">
           <div>
             <h2>Get started</h2>
-            <p>Open the app. Prefer a person? Call 888-667-5322.</p>
+            <p>Open the app.</p>
           </div>
           <div class="page-cta-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www{p["utm"]}">Get started</a>
-            <a class="btn btn-ghost-light" href="tel:+18886675322">888-667-5322</a>
           </div>
         </div>
       </div>
@@ -441,7 +438,7 @@ def write_compare():
         ("What is USMail.ai compared with Lob?", DEF + " Lob is a developer send-mail API. USMail.ai is a mail house with human approval."),
         ("What is PostalForm or Mailsnail compared with USMail.ai?", "PostalForm and Mailsnail are agent wrappers over Click2Mail or Lob. USMail.ai is a mail house: upload, approve, print, postage, USPS handoff."),
         ("Is MCP available?", "Yes, on the app. Account + prepaid meter. A human must approve. submit_mail_job does not print by itself. No public add command is published here."),
-        ("Is USMail.ai available now?", "Yes. Get started at https://app.usmail.ai/ or call 888-667-5322."),
+        ("Is USMail.ai available now?", "Yes. Get started at https://app.usmail.ai/."),
     ]
     items = [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
@@ -572,11 +569,10 @@ def write_compare():
         <div class="page-cta mt-section">
           <div>
             <h2>Get started</h2>
-            <p>Open the app. Prefer a person? Call 888-667-5322.</p>
+            <p>Open the app.</p>
           </div>
           <div class="page-cta-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=compare">Get started</a>
-            <a class="btn btn-ghost-light" href="tel:+18886675322">888-667-5322</a>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@
 - **Mail-piece tracing?** Yes on qualifying domestic pieces: free Intelligent Mail Barcode (IMB) tracing for First-Class letters/postcards in a standard #10 with a good domestic address — status through out for delivery, **per mail piece** in the job (and searchable by name/address). Not legal chain-of-custody proof. Not for international.
 - **Paid USPS tracking?** An option on Priority and Certified letters. Distinct from free First-Class IMB tracing.
 - **Proof options?** Certified Mail / Certificate of Mailing chosen at mail-options step. Proof ≠ free tracing ≠ paid tracking.
-- **Available now?** Yes. Get started at https://app.usmail.ai/?utm_source=www or call 888-667-5322. Email info@usmail.ai.
+- **Available now?** Yes. Get started at https://app.usmail.ai/?utm_source=www. Email info@usmail.ai.
 - **Billing?** Register an account and fund a prepaid meter. Approve on the app debits the meter. submit_mail_job does not debit and does not print. Mail production is not free. Standalone API keys for agents: planned later.
 - **Certified Mail?** Yes. Certified Mail and Certificate of Mailing on the same production path as First-Class. Certified is not available for postcards. Certified is never same-day.
 - **MCP?** Available now on the app. Account + prepaid meter required. Same production path as the portal. Human must approve before production. submit_mail_job does not print by itself. Not an unauthenticated public endpoint. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp · https://www.usmail.ai/mcp
