@@ -1295,7 +1295,7 @@ a.btn-primary:visited {
   margin-right: auto;
 }
 
-/* How-it-works teaser steps — same center treatment */
+/* How-it-works teaser — process rail */
 #how .section-inner {
   display: flex;
   flex-direction: column;
@@ -1308,33 +1308,120 @@ a.btn-primary:visited {
   margin-right: auto !important;
 }
 
-#how .steps {
+#how .process-flow {
   width: 100%;
-  max-width: 56rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-#how .step {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#how .step h3 {
-  justify-content: center;
-  width: 100%;
-}
-
-#how .step p {
-  padding-left: 0 !important;
-  text-align: center !important;
 }
 
 #how .section-more {
   width: 100%;
   text-align: center;
+}
+
+.process-flow {
+  list-style: none;
+  margin: 0;
+  padding: 1.35rem 1.1rem 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.85rem;
+  background: var(--white);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.process-flow > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0.4rem;
+}
+
+.process-flow-mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.7rem;
+  background: var(--postal-light);
+  border: 2px solid var(--postal-primary);
+  color: var(--postal-primary);
+}
+
+.process-flow-mark svg,
+.process-flow-mark i {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.process-flow h3 {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+.process-flow p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  max-width: 14rem;
+}
+
+.process-flow > li:not(:last-child)::after {
+  content: "↓";
+  position: absolute;
+  left: 50%;
+  bottom: -1.45rem;
+  transform: translateX(-50%);
+  color: var(--postal-primary);
+  font-size: 1.05rem;
+  line-height: 1;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media (min-width: 800px) {
+  #how .process-flow {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 1.5rem 0.75rem 1.45rem;
+  }
+
+  #how .process-flow > li:not(:last-child)::after {
+    content: "→";
+    left: auto;
+    right: 0;
+    bottom: auto;
+    top: 1.05rem;
+    transform: translateX(50%);
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .process-flow.process-flow-5 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    padding: 1.5rem 0.6rem 1.45rem;
+  }
+
+  .process-flow.process-flow-5 > li:not(:last-child)::after {
+    content: "→";
+    left: auto;
+    right: 0;
+    bottom: auto;
+    top: 1.05rem;
+    transform: translateX(50%);
+    font-size: 1.2rem;
+  }
 }
 
 /* Media queries must never force .benefit-grid-3 / .pillars-grid into 4 columns */

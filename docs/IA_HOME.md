@@ -10,7 +10,7 @@
 |---|---------|---------|
 | 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead is the value, not a second title: files become real mail, delivered to USPS nationwide. No wordmark, no “platform,” no slogan echo. |
 | 2 | Why us | Tracing · tracking option · NCOA. Logo envelope lives on `/features`, not home. Approve stays in the lead and how-it-works. No MCP on home. |
-| 3 | How it works | **3** steps + link to full `/how-it-works` |
+| 3 | How it works | Process diagram (Upload → Approve → We produce → USPS) + **See the full process** → `/how-it-works`. Not a second card grid. |
 | 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. No 50-years heritage on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
 | 6 | Get started | Form + one primary phone + email; 316 as secondary line |
@@ -26,7 +26,7 @@
 | Mailroom automation | `/mailroom` |
 | Address verification | `/address-verification` |
 | Certified depth | `/certified-mail` |
-| Six steps + formats | `/how-it-works` |
+| Five-step process + cutoffs + tracing | `/how-it-works` |
 | MCP / meter / agents | `/docs/mcp` |
 | Industry grid | `/industries` |
 
