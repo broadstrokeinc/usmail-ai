@@ -11,7 +11,7 @@
 | 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names the nationwide AI print-to-mail platform and the job. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
 | 2 | Why us | Four USPs: tracing · tracking option · logo envelope · NCOA. Approve stays in the lead and how-it-works. No MCP on home. |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
-| 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. |
+| 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. No 50-years heritage on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
 | 6 | Get started | Form + one primary phone + email; 316 as secondary line |
 

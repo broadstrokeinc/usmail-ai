@@ -42,7 +42,7 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents. AI pr
 
 **Category definition (verbatim for “What is AI print to mail?” on home FAQ, `/ai-print-to-mail` FAQ, JSON-LD, DefinedTerm, and `llms.txt` Direct answers):** AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USMail.ai does that nationwide.
 
-**Heritage (About, home trust, `llms.txt` Who runs it):** A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI.
+**Heritage (About only, plus `llms.txt` Who runs it pointing at About):** A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Never on home.
 
 The noun is **nationwide AI print-to-mail platform**. Do not swap it for “mail house” as the identity. Mail house is only contrast language (we print) on `/compare`. Speakable `.lead` is the page’s answer. Official definition is home/About/`/ai-print-to-mail` FAQ + JSON-LD + `llms.txt` — not a cite dump in every lander lead.
 
