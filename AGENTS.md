@@ -1,133 +1,72 @@
 # AGENTS.md — USMail.ai
 
-This is **its own static microsite** (`~/dev/usmail-ai`). Do **not** generate it from `template-microsite` or `template-microsite-lighter`.
+Static microsite in `~/dev/usmail-ai`. Do **not** generate it from `template-microsite`. Do **not** name sibling production brands on www.
 
 ## Product
 
-Nationwide **AI print-to-mail** platform. Operated by **Broadstroke, Inc.** Upload → AI proposes → human approves → print / insert / postage → USPS handoff. **USMail.ai stands alone** — do not name other production brands on www.
+Nationwide AI print-to-mail. Broadstroke, Inc. operates it. Human approves, then print / insert / postage / deliver to USPS.
 
-**Not** the U.S. Postal Service. **Not** a Wichita shop. **Not** EDDM. **Not** a billing/core-banking statement generator.
+**Not** USPS. **Not** a Wichita shop. **Not** EDDM. **Not** a statement generator.
 
 ## Voice
 
 Sage + operator. Short sentences. Second person. Present tense.
 
-**Brand — three seats. Do not collapse them.** Docs pages use `Docs` under the logo.
+**Three seats. Do not collapse them.**
 
-| Job | Line | This quarter |
-|-----|------|----------------|
-| Category / lockup | `AI print to mail` | Wired under the logo |
-| Comprehension | `Print to mail, made easy` | Reserved. Never H1, OG, or footer. Optional support only if a surface needs “what is this?” |
-| Trust / slogan | `You upload. You approve. We produce.` | Wired on hero, footer, OG, schema |
+| Job | Line | Where |
+|-----|------|--------|
+| Lockup | `AI print to mail` | Under the logo |
+| Comprehension | `Print to mail, made easy` | Reserved. Never H1, OG, or footer |
+| Slogan | `You upload. You approve. We produce.` | Hero H1, footer, OG, schema |
 
-Occupancy is **trust-first** (same as the product app). Do not promote comprehension into the slogan seat. Do not delete it from the model. Do not ship two H1s.
+- Repeat a fact **twice** on a page max (owner section + FAQ). A third time is a link.
+- Hero lead is value, not a second title. Do not echo the slogan. Do not open with the wordmark.
+- No invented prices, hours saved, or USPS transit days.
+- Documents and postcards. “Letter” is a USPS size, or a named document type.
+- **Deliver** to USPS. Do not write “enter into the USPS network” or “plant path.”
+- CTA: **Get started** → `https://app.usmail.ai/` (never iframe). Phone `888-667-5322` in footer, About, home Get started, legal/security. `316` is About / legal only.
 
-**Repeat rule: two, not three.** A fact is visible on a page at most twice: once where that page owns it (lead or the section that teaches it), and once in FAQ if that question must be answered. JSON-LD matching the FAQ is not a third human dump. A third appearance is a link to the owner page (`/features`, `/how-it-works`, `/certified-mail`, `/about`). Do not reprint Features USPs, the official definition, or “not USPS” in a body section after the lead and FAQ already said it. Slogan may sit in H1 and footer only.
-- No invented prices, hours-saved numbers, or USPS transit promises.
-- Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
-- Do **not** say “plant path.”
-- Generic mail is **documents and postcards**. Letter is a USPS format (size), not the product noun. Keep “letter” only for size rules (First-Class letter, letter paper) or a named document type (demand letter).
-- We **deliver** pieces to USPS. Do not write “enter them into the USPS network.”
-- “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.
+## AEO
 
-## AEO / SEO (critical)
+One meaning across: visible FAQ, `FAQPage` JSON-LD on that page, `public/llms.txt`.
 
-Answer engines must be able to **cite one definition**. Keep these identical in meaning:
-
-1. Visible FAQ on a page
-2. `FAQPage` JSON-LD on that page
-3. `public/llms.txt` (“Canonical definition” + Direct answers)
-
-**Official definition** (same seven facts; no semicolons). Visible home/About FAQ uses bullets. JSON-LD, schema descriptions, and `llms.txt` Direct answers use period sentences. `llms.txt` Canonical definition uses the same bullets in Markdown.
+**Official definition** (home FAQ, About FAQ, those JSON-LDs, `llms.txt`). Visible FAQ: bullets. JSON-LD and Direct answers: periods.
 
 USMail.ai is a nationwide AI print-to-mail platform. You upload documents and postcards. AI proposes setup. You approve. We print, insert, apply postage, and deliver the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
-**Category definition (verbatim for “What is AI print to mail?” on home FAQ, `/ai-print-to-mail` FAQ, JSON-LD, DefinedTerm, and `llms.txt` Direct answers):** AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USMail.ai does that nationwide.
+**Category** (“What is AI print to mail?” — home FAQ, `/ai-print-to-mail`, JSON-LD, DefinedTerm, `llms.txt`): AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USMail.ai does that nationwide.
 
-**Heritage (About only, plus `llms.txt` Who runs it pointing at About):** A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Never on home.
+**Heritage** (About only; `llms.txt` Who runs it points at About): experienced print-to-mail experts with more than 50 years of combined expertise, innovation through AI. Never on home.
 
-Do **not** paste the official definition in a hero cite box on every lander. Other pages answer their own question in the lead and FAQ. Speakable is `.lead`.
+Do not paste the official definition in a hero cite box. Speakable is `.lead` (that page’s answer).
 
-### Required on every HTML page
+Every HTML page: title, meta, canonical, OG, Twitter, JSON-LD, sitemap (except 404). Discover `llms.txt` via `/llms.txt`, `robots.txt`, sitemap — **never** `<link rel="alternate" type="text/plain" href="/llms.txt">` on HTML.
 
-Title, meta description, canonical, Open Graph, Twitter, JSON-LD, sitemap entry (except 404).
+Wichita: About, privacy/terms, Organization `PostalAddress`, and the print-and-mail FAQ that **rejects** “mailing services Wichita.” Never home H1, title, or hero.
 
-`public/llms.txt` is discovered via `/llms.txt`, `robots.txt`, and the sitemap. **Do not** put `<link rel="alternate" type="text/plain" href="/llms.txt">` on HTML pages — crawlers that omit `Accept: text/html` then fetch `llms.txt` instead of the page (and miss `/compare`).
+Do not claim: see `public/llms.txt`. Platform is open. Do not write “coming soon.” MCP: account + prepaid meter; `submit_mail_job` does not print.
 
-### Commercial / AEO pages
+`/other-print` is noindex, Broadstroke handoff. Not in nav, sitemap, or `llms.txt` Direct answers.
 
-Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition is **not** a sitewide hero.
+Home: exactly 6 sections. Contract: `docs/IA_HOME.md`.
 
-| URL | Job |
-|-----|-----|
-| `/` | Category + 6-section IA |
-| `/ai-print-to-mail` | Definition of “AI print to mail” |
-| `/print-and-mail` | Commercial print-and-mail phrase |
-| `/features` | USPs and product features |
-| `/certified-mail` | Online Certified Mail (`/online-certified-mail` 301s here) |
-| `/statements-invoices` | Recurring uploaded statements/invoices |
-| `/mailroom` | Eliminate mailroom logistics |
-| `/address-verification` | Reduce returned mail — no transit SLA |
-| `/how-it-works` | Five steps + cutoffs |
-| `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity in About footer |
-| `/compare` | Platform vs online catalog vs walk-in shop vs USPS |
-| `/industries/collections` | Debt collection mail |
-| `/industries/healthcare` | Healthcare notices |
-| `/industries/utilities` | Utility bills / notices |
-| `/industries/legal` | Legal correspondence |
-| `/industries/storage` | Storage / facility notices |
+Nav: How it works · Features · Print & mail · Certified Mail · Industries · Get started. Footer includes Features and Compare.
 
-### Local / Wichita
-
-Only on **About**, privacy/terms address, Organization schema `PostalAddress`, and the print-and-mail FAQ that **rejects** “mailing services Wichita.” Never in home H1, title, or hero pills.
-
-### Do not claim
-
-See `public/llms.txt` § Do not claim. Highlights: free postage, EDDM, fixed hours saved, USPS delivery days, USMail.ai = USPS, unauthenticated public MCP, generating statements inside a bank/ERP, USMail.ai printing business cards or promo.
-
-`/other-print` is a noindex handoff to Broadstroke (broadstrokeinc.com). Not in nav, sitemap, or `llms.txt` Direct answers.
-
-Platform is **open**. Do not write “coming soon.” CTA: **Get started**. MCP requires an account + prepaid meter.
-
-## Homepage IA (exactly 6 sections)
-
-See `docs/IA_HOME.md`. Do not re-add dual hero dumps, 11-item FAQ, formats grid, or Wichita on home.
-
-Nav: How it works · Features · Print & mail · Certified Mail · Industries · Get started. Footer: Features and Compare.
-
-Primary CTA: Get started → `https://app.usmail.ai/` (redirect, never iframe). Phone `888-667-5322` lives in the footer, About contact, home Get started, and legal/security pages. Not on heroes, mobile docks, or every Get started band. `316` is About / legal only.
-
-Do not embed the product app on www. It sends `X-Frame-Options: DENY`.
-
-## Repo map
+## Repo
 
 | Path | Role |
 |------|------|
-| `public/*.html` | Pages (clean URLs via `server.mjs`) |
-| `public/llms.txt` | AI citation map — update when answers change |
-| `public/sitemap.xml` | Add every new indexable URL |
-| `public/robots.txt` | Allow search + major AI crawlers |
-| `public/tokens.css` / `styles.css` | Brand tokens (sync with product app) |
-| `server.mjs` | Clean routes, `.html` 301s, aliases |
-| `docs/IA_HOME.md` | Home IA contract |
+| `public/*.html` | Pages (clean URLs in `server.mjs`) |
+| `public/llms.txt` | AI citation map |
+| `public/sitemap.xml` | Indexable URLs |
+| `server.mjs` | Routes, `.html` 301s |
+| `docs/IA_HOME.md` | Home IA |
 
-New page checklist:
-
-1. Add `public/<slug>.html` with full AEO head + page-specific FAQ = JSON-LD (do not paste the company definition as a hero box)
-2. Register in `server.mjs` `CLEAN` + `HTML_TO_CLEAN`
-3. Add to `sitemap.xml` and `llms.txt`
-4. Link from nav/footer or a related cluster (don’t orphan)
-
-## Local / deploy
+New page: HTML with AEO head + FAQ = JSON-LD; register `CLEAN` / `HTML_TO_CLEAN`; sitemap; link it. Do not orphan.
 
 ```bash
-cd ~/dev/usmail-ai
-node server.mjs          # http://localhost:3000
-# PORT=3011 node server.mjs
+cd ~/dev/usmail-ai && node server.mjs
 ```
 
-Railway: `railway up`. Restart Node after route changes. Upload is this app (`public/` + `server.mjs`), not a `dist/` from the template generator.
-
-## File hygiene
-
-Do not edit generated sites in `template-microsite`. Reflections → `docs/` if needed. Do not invent a second stack for this brand. USMail.ai stands alone on www — do not name sibling production brands.
+Railway: `railway up --detach`, poll SUCCESS. This app is `public/` + `server.mjs`.
