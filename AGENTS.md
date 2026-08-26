@@ -24,6 +24,8 @@ Occupancy is **trust-first** (same as the product app). Do not promote comprehen
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
 - We are a **mail house**. Not a developer API. Not an agent wrapper over someone else’s mail house. Do **not** say “plant path.”
+- Generic mail is **documents and postcards**. Letter is a USPS format (size), not the product noun. Keep “letter” only for size rules (First-Class letter, letter paper) or a named document type (demand letter).
+- We **deliver** pieces to USPS. Do not write “enter them into the USPS network.”
 - “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.
 
 ## AEO / SEO (critical)
