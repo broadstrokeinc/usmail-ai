@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
-  <link rel="stylesheet" href="/styles.css?v=20260826flag" />
+  <link rel="stylesheet" href="/styles.css?v=20260826subs" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -243,42 +243,13 @@
     <section class="page-section" aria-labelledby="in-product">
       <div class="wrap">
         <h2 id="in-product">What’s in the product</h2>
+        <p class="section-lead">The job you run. The mail date. The account.</p>
+
+        <h3 class="in-sub" id="in-job">The job</h3>
         <ul class="steps steps-grid-2">
           <li class="step">
             <h3><i data-lucide="upload" aria-hidden="true"></i> Upload</h3>
             <p>PDF, Word, images, packages, CSV lists, and other formats the app accepts. Split or cut a document into mail pieces by page, by text, or by logo.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="sparkles" aria-hidden="true"></i> AI setup</h3>
-            <p>Addresses and print options proposed for the files you send. Chat with Posty AI at every step. You still approve.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="printer" aria-hidden="true"></i> Print options</h3>
-            <p>Black and white or color. Single or double sided. Photo finish or document finish. Custom envelopes with logo or brand colors (approved before use; 1–2 business days).</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="mail" aria-hidden="true"></i> Mail options</h3>
-            <p>First-Class, Priority, or Certified. Certificate of Mailing when you need a receipt that you mailed it. Tracking is an option on Priority and Certified Mail. Certified is not available for postcards. Certified is never same-day.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="clock" aria-hidden="true"></i> Cutoffs</h3>
-            <p>Same-day when the job qualifies (1:00 PM CT). Default next business day (10:00 PM CT). Schedule up to 60 days. Mon–Fri. <a href="/how-it-works#cutoffs">Rules →</a></p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="scan-line" aria-hidden="true"></i> Tracing vs proof</h3>
-            <p>Tracing included on First-Class. Tracking as an option on Priority and Certified Mail. Do not mix them. <a href="/how-it-works#tracing">Tracing →</a></p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="search" aria-hidden="true"></i> Address verification <span class="step-flag step-flag-included">Included</span></h3>
-            <p>CASS and NCOA. Change-of-address processing before print. Not a USPS transit promise. <a href="/address-verification">Address verification →</a></p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="repeat" aria-hidden="true"></i> Recurring jobs</h3>
-            <p>Statements and invoices as uploaded files and lists. You approve each job. <a href="/statements-invoices">Statements →</a></p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="wallet" aria-hidden="true"></i> Prepaid meter</h3>
-            <p>Account plus meter. Approve on the app debits it. Production mail is not free.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="map-pin" aria-hidden="true"></i> Addresses</h3>
@@ -289,12 +260,40 @@
             <p>You choose how to handle duplicate names and addresses before you approve.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="archive" aria-hidden="true"></i> Job storage</h3>
-            <p>Jobs are stored by default for 30 days at no extra storage charge.</p>
+            <h3><i data-lucide="sparkles" aria-hidden="true"></i> AI setup</h3>
+            <p>Addresses and print options proposed for the files you send. Chat with Posty AI at every step. You still approve.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="bot" aria-hidden="true"></i> Posty AI</h3>
-            <p>Chat with Posty AI at every step. It can propose setup. A human still approves before production.</p>
+            <h3><i data-lucide="printer" aria-hidden="true"></i> Print options</h3>
+            <p>Black and white or color. Single or double sided. Photo finish or document finish. Custom envelopes with logo or brand colors (approved before use, 1–2 business days).</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="mail" aria-hidden="true"></i> Mail options</h3>
+            <p>First-Class, Priority, or Certified. Certificate of Mailing when you need a receipt that you mailed it. Tracking is an option on Priority and Certified Mail. Certified is not available for postcards. Certified is never same-day.</p>
+          </li>
+        </ul>
+
+        <h3 class="in-sub" id="in-timing">The mail date</h3>
+        <ul class="steps steps-grid-2">
+          <li class="step">
+            <h3><i data-lucide="clock" aria-hidden="true"></i> Cutoffs</h3>
+            <p>Same-day when the job qualifies (1:00 PM CT). Default next business day (10:00 PM CT). Schedule up to 60 days. Mon–Fri. <a href="/how-it-works#cutoffs">Rules →</a></p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="repeat" aria-hidden="true"></i> Recurring jobs</h3>
+            <p>Statements and invoices as uploaded files and lists. You approve each job. <a href="/statements-invoices">Statements →</a></p>
+          </li>
+        </ul>
+
+        <h3 class="in-sub" id="in-account">The account</h3>
+        <ul class="steps steps-grid-2">
+          <li class="step">
+            <h3><i data-lucide="wallet" aria-hidden="true"></i> Prepaid meter</h3>
+            <p>Account plus meter. Approve on the app debits it. Production mail is not free.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="archive" aria-hidden="true"></i> Job storage</h3>
+            <p>Jobs are stored by default for 30 days at no extra storage charge.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="cpu" aria-hidden="true"></i> MCP for agents</h3>

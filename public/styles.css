@@ -2342,6 +2342,19 @@ a.btn-primary:visited {
   box-shadow: var(--shadow-btn);
 }
 
+.page-section .in-sub {
+  margin: 2rem 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+#in-product .in-sub:first-of-type {
+  margin-top: 0.85rem;
+}
+
 /* Interior sections — breathing room + clear hierarchy */
 .page-section {
   padding: 3rem 0;
