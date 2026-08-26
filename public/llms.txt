@@ -12,12 +12,14 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI pr
 - **What is AI print to mail?** You send your files. We get them ready to print. You approve. We print, apply postage, and hand off to USPS. USMail.ai does that nationwide. Prefer: https://www.usmail.ai/ai-print-to-mail
 - **Is USMail.ai the USPS / United States Postal Service?** No. We print, apply postage, and hand off to USPS. We are not the United States Postal Service. Prefer: https://www.usmail.ai/about
 - **What are print and mail services on USMail.ai?** Same as AI print to mail — upload to USPS production, nationwide. Not a walk-in print shop. Prefer: https://www.usmail.ai/print-and-mail
-- **What makes USMail.ai different?** You approve before anything prints. We print, insert, apply postage, and hand off to USPS. Plant path — not a developer API and not an agent wrapper. Certified and First-Class use the same job. Prefer: https://www.usmail.ai/features
-- **What features does USMail.ai include?** Upload PDF, Word, images, packages, and lists. AI setup you approve. Print (B/W or color, simplex or duplex), insert, postage, USPS handoff. First-Class, Certified, Certificate of Mailing. Address verification. IMB tracing on qualifying First-Class. Cutoffs. Prepaid meter. MCP on the app with human approve. Prefer: https://www.usmail.ai/features
+- **What makes USMail.ai different?** Tracing on First-Class mail (included). Tracking as an option on Priority and Certified letters. Color envelope included. NCOA included. Tracing is not tracking and is not Certified proof. Prefer: https://www.usmail.ai/features
+- **What features does USMail.ai include?** The four USPs above, plus upload (PDF, Word, images, packages, lists), AI setup you approve, print (B/W or color, simplex or duplex), insert, postage, USPS handoff, First-Class / Certified / Certificate of Mailing, cutoffs, prepaid meter, MCP on the app with human approve. Prefer: https://www.usmail.ai/features
+- **NCOA?** Included on the production path (National Change of Address). Reduces returned mail. Not a USPS transit promise. Prefer: https://www.usmail.ai/address-verification
+- **Color envelope?** Included with production. Prefer: https://www.usmail.ai/features
 - **Can I send Certified Mail online?** Yes. Add Certified Mail before you approve and pay. Prefer: https://www.usmail.ai/certified-mail
 - **Who operates it?** Broadstroke, Inc., 820 W 2nd St N, Wichita, KS 67203. Broadstroke has run mail production since 1985. Phones: 888-667-5322, 316-247-5300. Email: info@usmail.ai.
 - **Mail-piece tracing?** Yes on qualifying domestic pieces: free Intelligent Mail Barcode (IMB) tracing for First-Class letters/postcards in a standard #10 with a good domestic address — status through out for delivery, **per mail piece** in the job (and searchable by name/address). Not legal chain-of-custody proof. Not for international.
-- **Paid USPS tracking?** With selected services such as Certified Mail or Priority (extra service). Distinct from free IMB tracing.
+- **Paid USPS tracking?** An option on Priority and Certified letters. Distinct from free First-Class IMB tracing.
 - **Proof options?** Certified Mail / Certificate of Mailing chosen at mail-options step. Proof ≠ free tracing ≠ paid tracking.
 - **Available now?** Yes. Get started at https://app.usmail.ai/?utm_source=www or call 888-667-5322. Email info@usmail.ai.
 - **Billing?** Register an account and fund a prepaid meter. Approve on the app debits the meter. submit_mail_job does not debit and does not print. Mail production is not free. Standalone API keys for agents: planned later.
@@ -34,7 +36,7 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI pr
 - **Who is it for?** Teams sending high-volume or high-trust physical mail nationwide: statements, invoices, notices, Certified Mail. Verticals include banks/finance, government, credit repair, debt collection, healthcare, storage, utilities, legal, business ops, AI/MCP teams.
 - **Statements and invoices?** Yes — as uploaded files and recipient lists. Recurring and high-volume on the same path. Not a core banking or billing system. Prefer: https://www.usmail.ai/statements-invoices
 - **Mailroom?** Upload replaces desk print / fold / stamp. Reclaim hours weekly (no fixed hours claim). Prefer: https://www.usmail.ai/mailroom
-- **Address verification?** On the production path (change-of-address processing) to reduce returned mail. Not a USPS transit promise. Prefer: https://www.usmail.ai/address-verification
+- **Address verification?** NCOA included on the production path to reduce returned mail. Not a USPS transit promise. Prefer: https://www.usmail.ai/address-verification
 - **EDDM?** Not a USMail.ai product path.
 - **International?** Domestic USPS is the default. International-capable where the stack supports it — ask ops. Do not assume Certified or free IMB tracing on international pieces.
 
