@@ -36,7 +36,7 @@ body {
   padding-bottom: 5.25rem; /* space for mobile dock */
 }
 
-/* App display type — postalocity-ai Plus Jakarta Sans headings */
+/* App display type — Plus Jakarta Sans headings */
 h1,
 h2,
 h3,
@@ -439,7 +439,7 @@ summary:focus-visible,
   }
 }
 
-/* Buttons — postalocity-ai .postal-btn / outline / ghost */
+/* Buttons — primary / outline / ghost */
 .btn {
   display: inline-flex;
   align-items: center;

@@ -9,7 +9,7 @@
   <title>MCP Tools Reference | USMail.ai — Print-to-Mail Tools for Agents</title>
   <meta
     name="description"
-    content="USMail.ai MCP tools reference (planned): create mail jobs, upload documents, check status, meter balance. Account + prepaid meter required. Not a live API."
+    content="USMail.ai MCP tools: get_account_status, list_mail_products, upload_document, create_mail_job, get_mail_job, list_mail_jobs, submit_mail_job, cancel_mail_job. Account + meter. submit does not print."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="alternate" type="text/plain" title="LLM context" href="https://www.usmail.ai/llms.txt" />
@@ -18,13 +18,13 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:title" content="MCP Tools Reference | USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/docs/mcp/tools" />
-  <meta property="og:description" content="Planned MCP tools for print-to-mail. Account + meter." />
+  <meta property="og:description" content="Eight public MCP tools. Account + meter. submit_mail_job does not print." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MCP Tools Reference | USMail.ai" />
-  <meta name="twitter:description" content="Planned MCP tools for print-to-mail. Account + meter." />
+  <meta name="twitter:description" content="Eight public MCP tools. Account + meter. submit does not print." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,15 +53,16 @@
       },
       {
         "@type": "ItemList",
-        "name": "Planned USMail.ai MCP tools",
+        "name": "USMail.ai MCP tools",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "get_account_status", "description": "Return account and prepaid meter summary for the authenticated account." },
           { "@type": "ListItem", "position": 2, "name": "list_mail_products", "description": "List available mail options (e.g. First-Class, Certified Mail, Certificate of Mailing)." },
           { "@type": "ListItem", "position": 3, "name": "upload_document", "description": "Upload a document or package for a mailing job." },
           { "@type": "ListItem", "position": 4, "name": "create_mail_job", "description": "Create a print-to-mail job with recipients, options, and settings." },
           { "@type": "ListItem", "position": 5, "name": "get_mail_job", "description": "Get job status, cost estimate, and mail-piece tracing/status for pieces in the job; paid USPS tracking IDs when a tracked service (e.g. Certified) was selected." },
-          { "@type": "ListItem", "position": 6, "name": "submit_mail_job", "description": "Submit an approved job for production and USPS handoff; debits prepaid meter." },
-          { "@type": "ListItem", "position": 7, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
+          { "@type": "ListItem", "position": 6, "name": "list_mail_jobs", "description": "List jobs for the authenticated account." },
+          { "@type": "ListItem", "position": 7, "name": "submit_mail_job", "description": "Submit an approved job for production and USPS handoff; debits prepaid meter. Does not print by itself." },
+          { "@type": "ListItem", "position": 8, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
         ]
       }
     ]
@@ -135,8 +136,8 @@
 
         <div class="docs-answer">
           <p>
-            Planned tools for print-to-mail under an account + <strong>prepaid meter</strong>.
-            Names may change. Not a live endpoint list.
+            The eight public MCP tools. Account + <strong>prepaid meter</strong>.
+            A human must approve. <code>submit_mail_job</code> does not print by itself.
           </p>
         </div>
 
@@ -194,9 +195,15 @@
             <h3><code>submit_mail_job</code></h3>
             <span class="tool-badge">Debits meter</span>
           </div>
-          <p>Submit an approved job for production and USPS handoff.</p>
+          <p>Submit an approved job for production and USPS handoff. Does not print by itself. A human must have approved.</p>
           <p class="tool-line"><span>Inputs</span> job id · optional confirmation</p>
           <p class="tool-line"><span>Fails</span> insufficient meter · validation · missing approval</p>
+        </div>
+
+        <div class="docs-tool" id="list_mail_jobs">
+          <h3><code>list_mail_jobs</code></h3>
+          <p>List jobs for the authenticated account.</p>
+          <p class="tool-line"><span>Returns</span> job ids · statuses · timestamps</p>
         </div>
 
         <div class="docs-tool" id="cancel_mail_job">

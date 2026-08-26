@@ -9,7 +9,7 @@
   <title>About USMail.ai | Nationwide AI Print to Mail · Broadstroke</title>
   <meta
     name="description"
-    content="USMail.ai is a nationwide AI print-to-mail platform operated by Broadstroke, Inc. Production uses the Postalocity stack. Operator address: Wichita, KS. "
+    content="USMail.ai is a nationwide AI print-to-mail platform operated by Broadstroke, Inc. Wichita is the operator address. Nationwide production."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1a2b63" />
@@ -20,13 +20,13 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/about" />
   <meta property="og:title" content="About USMail.ai | Broadstroke, Inc." />
-  <meta property="og:description" content="Nationwide AI print-to-mail. Operated by Broadstroke, Inc. Postalocity production. " />
+  <meta property="og:description" content="Nationwide AI print-to-mail. Operated by Broadstroke, Inc." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About USMail.ai" />
-  <meta name="twitter:description" content="Nationwide AI print-to-mail. Broadstroke / Postalocity production. " />
+  <meta name="twitter:description" content="Nationwide AI print-to-mail. Operated by Broadstroke, Inc." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,12 +36,38 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About USMail.ai",
-    "url": "https://www.usmail.ai/about",
-    "description": "Nationwide AI print-to-mail platform operated by Broadstroke, Inc. Production uses the Postalocity stack. Wichita is the operator address. ",
-    "isPartOf": { "@id": "https://www.usmail.ai/#website" },
-    "mainEntity": { "@id": "https://www.usmail.ai/#organization" }
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "name": "About USMail.ai",
+        "url": "https://www.usmail.ai/about",
+        "description": "USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".aeo-answer"] },
+        "isPartOf": { "@id": "https://www.usmail.ai/#website" },
+        "mainEntity": { "@id": "https://www.usmail.ai/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is USMail.ai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is USMail.ai the same as US Global Mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. US Global Mail is a virtual mailbox. USMail.ai is a print-to-mail production platform."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <!-- Google tag (gtag.js) -->
@@ -101,14 +127,21 @@
       </div>
     </header>
     <div class="wrap legal-layout">
-    <h2>Who we are</h2>
-    <p>Nationwide AI print-to-mail for statements, invoices, notices, and Certified Mail.
+    <div class="aeo-answer" data-aeo="definition">
+      <p>
+        USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
       </p>
+    </div>
+    <h2>Who we are</h2>
     <p>
-      USMail.ai is operated by <strong>Broadstroke, Inc.</strong>. The operator address is
-      <strong>Wichita, Kansas</strong> — production is nationwide. Physical mail uses the
-      <a href="https://www.postalocity.com/" rel="noopener noreferrer">Postalocity</a>
-      print-to-mail stack — the same production path for print, insert, postage, and USPS handoff.
+      USMail.ai is a nationwide AI print-to-mail product operated by
+      <strong>Broadstroke, Inc.</strong> You upload. You approve. We print, insert,
+      apply postage, and hand off to USPS. That is a plant path — not a developer API
+      and not an agent wrapper over Click2Mail or Lob.
+    </p>
+    <p>
+      One command center in <strong>Wichita, Kansas</strong>. Service is nationwide.
+      Wichita is the operator address, not a walk-in shop.
     </p>
 
     <h2>What is live</h2>
@@ -139,6 +172,30 @@
       <strong>USMail.ai is not the U.S. Postal Service</strong> and is not affiliated with USPS.
       We prepare physical mail and hand off to USPS for delivery.
     </p>
+
+    <h2>Not US Global Mail</h2>
+    <p>
+      US Global Mail is a virtual mailbox. USMail.ai does not receive your inbound post.
+      We print outbound mail you upload and enter it with USPS.
+    </p>
+
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details class="faq-item" open>
+        <summary><span>What is USMail.ai?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body">
+          <p>USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Is USMail.ai the same as US Global Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body"><p>No. US Global Mail is a virtual mailbox. USMail.ai is print-to-mail production.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Is this a Wichita print shop?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body"><p>No. Wichita is the command center. Service is nationwide. Not a walk-in counter.</p></div>
+      </details>
+    </div>
 
     <h2>Contact</h2>
     <p>

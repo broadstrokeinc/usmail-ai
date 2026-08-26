@@ -11,7 +11,7 @@
 | 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). One factual lead. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
 | 2 | Pillars | **You approve** first · Print and mail · Proof (Certified). No MCP on home. |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
-| 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita, no Postalocity stack on home. |
+| 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
 | 6 | Get started | Form + one primary phone + email; 316 as secondary line |
 

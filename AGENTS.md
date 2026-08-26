@@ -4,7 +4,7 @@ This is **its own static microsite** (`~/dev/usmail-ai`). Do **not** generate it
 
 ## Product
 
-Nationwide **AI print-to-mail** platform. Operated by **Broadstroke, Inc.** Production uses the **Postalocity** stack. Upload → AI proposes → human approves → print / insert / postage → USPS handoff.
+Nationwide **AI print-to-mail** platform. Operated by **Broadstroke, Inc.** Upload → AI proposes → human approves → print / insert / postage → USPS handoff. **USMail.ai stands alone** — do not name other production brands on www.
 
 **Not** the U.S. Postal Service. **Not** a Wichita shop. **Not** EDDM. **Not** a billing/core-banking statement generator.
 
@@ -33,7 +33,7 @@ Answer engines must be able to **cite one definition**. Keep these identical in 
 2. `FAQPage` JSON-LD on that page
 3. `public/llms.txt` (“Canonical definition” + Direct answers)
 
-**Official definition:** USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, postage, and hand off to USPS. Online Certified Mail and statement/invoice jobs use the same path. USMail.ai is not the U.S. Postal Service.
+**Official definition (verbatim in FAQ, JSON-LD, llms.txt, cite boxes):** USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
 ### Required on every HTML page
 
@@ -53,7 +53,13 @@ Cite box: `<div class="aeo-answer">` (speakable). Question-shaped H2/FAQ. Breadc
 | `/mailroom` | Eliminate mailroom logistics |
 | `/address-verification` | Reduce returned mail — no transit SLA |
 | `/how-it-works` | Five steps + cutoffs |
-| `/about` | Operator, Postalocity, Wichita address |
+| `/about` | Operator Broadstroke, nationwide plant, Wichita command center |
+| `/compare` | USMail.ai vs Lob vs PostalForm vs Mailsnail |
+| `/industries/collections` | Debt collection mail |
+| `/industries/healthcare` | Healthcare notices |
+| `/industries/utilities` | Utility bills / notices |
+| `/industries/legal` | Legal correspondence |
+| `/industries/storage` | Storage / facility notices |
 
 ### Local / Wichita
 
@@ -106,4 +112,4 @@ Railway: `railway up`. Restart Node after route changes. Upload is this app (`pu
 
 ## File hygiene
 
-Do not edit generated Broadstroke/Postalocity sites in `template-microsite`. Reflections → `docs/` if needed. Do not invent a second stack for this brand.
+Do not edit generated sites in `template-microsite`. Reflections → `docs/` if needed. Do not invent a second stack for this brand. USMail.ai stands alone on www — do not name sibling production brands.

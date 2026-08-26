@@ -1,7 +1,7 @@
-# Design tokens — usmail.ai ← postalocity-ai
+# Design tokens — usmail.ai
 
-**Source of truth for product UI language:** `postalocity-ai`  
-(`tailwind.config.ts` `postal.*` + `src/index.css` components)
+**Source of truth for product UI language:** the product app  
+(`tailwind.config.ts` + `src/index.css` components)
 
 Marketing site (`usmail-ai`) **consumes the same tokens** via `public/tokens.css` + `public/styles.css`.
 
@@ -72,4 +72,4 @@ Legacy aliases: `--navy` → primary, `--navy-deep` → dark, `--sky` → light,
 
 ## Sync rule
 
-When changing product brand colors in `postalocity-ai/tailwind.config.ts` or `public/BRAND.md`, update **`usmail-ai/public/tokens.css`** in the same change set.
+When changing product brand colors in the app, update **`usmail-ai/public/tokens.css`** in the same change set.

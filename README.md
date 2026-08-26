@@ -6,7 +6,7 @@ Agent rules (voice, AEO, IA, do-not-claim): [`AGENTS.md`](AGENTS.md).
 
 ## Design
 
-Visual language is **retro-ported from the product app** (`postalocity-ai`):
+Visual language is **retro-ported from the product app**:
 
 | File | Role |
 |------|------|
