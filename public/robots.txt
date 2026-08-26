@@ -42,7 +42,7 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# AI / LLM crawl map
+# LLM crawl map lives only at this URL. HTML routes always return HTML.
 # https://www.usmail.ai/llms.txt
 
 Sitemap: https://www.usmail.ai/sitemap.xml

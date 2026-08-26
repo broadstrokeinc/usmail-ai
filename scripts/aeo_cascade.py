@@ -29,7 +29,6 @@ HEAD = '''<!DOCTYPE html>
   <meta name="description" content="{description}" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
-  <link rel="alternate" type="text/plain" title="LLM context" href="https://www.usmail.ai/llms.txt" />
   <link rel="canonical" href="https://www.usmail.ai{url}" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta property="og:type" content="website" />

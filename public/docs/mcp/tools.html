@@ -12,7 +12,6 @@
     content="USMail.ai MCP tools: get_account_status, list_mail_products, upload_document, create_mail_job, get_mail_job, list_mail_jobs, submit_mail_job, cancel_mail_job. Account + meter. submit does not print."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <link rel="alternate" type="text/plain" title="LLM context" href="https://www.usmail.ai/llms.txt" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp/tools" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="USMail.ai" />
@@ -48,7 +47,7 @@
         "headline": "USMail.ai MCP tools reference",
         "url": "https://www.usmail.ai/docs/mcp/tools",
         "dateModified": "2026-07-29",
-        "description": "Planned Model Context Protocol tools for USMail.ai print-to-mail: job create, upload, status, meter. Names may change before launch.",
+        "description": "USMail.ai MCP tools: get_account_status, list_mail_products, upload_document, create_mail_job, get_mail_job, list_mail_jobs, submit_mail_job, cancel_mail_job. Account + prepaid meter. submit_mail_job does not print. Approve on the app debits the meter.",
         "about": "MCP tools for physical mail production"
       },
       {
@@ -61,7 +60,7 @@
           { "@type": "ListItem", "position": 4, "name": "create_mail_job", "description": "Create a print-to-mail job with recipients, options, and settings." },
           { "@type": "ListItem", "position": 5, "name": "get_mail_job", "description": "Get job status, cost estimate, and mail-piece tracing/status for pieces in the job; paid USPS tracking IDs when a tracked service (e.g. Certified) was selected." },
           { "@type": "ListItem", "position": 6, "name": "list_mail_jobs", "description": "List jobs for the authenticated account." },
-          { "@type": "ListItem", "position": 7, "name": "submit_mail_job", "description": "Submit an approved job for production and USPS handoff; debits prepaid meter. Does not print by itself." },
+          { "@type": "ListItem", "position": 7, "name": "submit_mail_job", "description": "Submit a job for the human approval queue. Does not print. Does not debit the meter. Approve on the app debits the meter and starts production." },
           { "@type": "ListItem", "position": 8, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
         ]
       }
@@ -133,6 +132,9 @@
 
         <p class="eyebrow"><i data-lucide="wrench" aria-hidden="true"></i> Reference</p>
         <h1>MCP tools reference</h1>
+        <div class="aeo-answer" data-aeo="definition">
+          <p>USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.</p>
+        </div>
 
         <div class="docs-answer">
           <p>
@@ -142,7 +144,8 @@
         </div>
 
         <aside class="docs-callout">
-          <strong>Billing:</strong> <code>submit_mail_job</code> debits the meter.
+          <strong>Billing:</strong> Approve on the app debits the meter.
+          <code>submit_mail_job</code> does not print and does not debit.
           <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a>
         </aside>
 
@@ -193,11 +196,11 @@
         <div class="docs-tool" id="submit_mail_job">
           <div class="tool-head">
             <h3><code>submit_mail_job</code></h3>
-            <span class="tool-badge">Debits meter</span>
+            <span class="tool-badge">Does not print</span>
           </div>
-          <p>Submit an approved job for production and USPS handoff. Does not print by itself. A human must have approved.</p>
+          <p>Submit a job for the human approval queue. Does not print. Does not debit the meter. A human on the app still approves. Approve debits the meter and starts production.</p>
           <p class="tool-line"><span>Inputs</span> job id · optional confirmation</p>
-          <p class="tool-line"><span>Fails</span> insufficient meter · validation · missing approval</p>
+          <p class="tool-line"><span>Fails</span> validation · missing account</p>
         </div>
 
         <div class="docs-tool" id="list_mail_jobs">
@@ -233,15 +236,16 @@
 list_mail_products
 upload_document
 create_mail_job
-submit_mail_job      ← debits meter
+submit_mail_job      ← does not print; does not debit
+                     ← human approve on the app debits the meter
 get_mail_job</pre>
-        <p class="docs-muted">Conceptual only. Final schemas ship with access.</p>
+        <p class="docs-muted">Conceptual only. Do not invent hostnames or add commands.</p>
 
         <h2 id="not-included">Not included</h2>
         <ul class="docs-prose">
-          <li>Live base URL or install strings (issued with access)</li>
+          <li>Live base URL or install strings (issued with account access)</li>
           <li>Public OpenAPI / customer API keys (planned later)</li>
-          <li>Guaranteed name freeze before GA</li>
+          <li>Unauthenticated public MCP</li>
         </ul>
 
         <div class="docs-next">
@@ -252,7 +256,7 @@ get_mail_job</pre>
         <div class="page-cta docs-cta">
           <div>
             <h2>Get started</h2>
-            <p>Connection details when MCP is enabled for your account.</p>
+            <p>MCP is available now on the app. Account + prepaid meter.</p>
           </div>
           <div class="page-cta-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=mcp">Get started</a>

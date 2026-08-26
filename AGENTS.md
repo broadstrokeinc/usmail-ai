@@ -37,7 +37,9 @@ Answer engines must be able to **cite one definition**. Keep these identical in 
 
 ### Required on every HTML page
 
-Title, meta description, canonical, Open Graph, Twitter, JSON-LD, `llms.txt` alternate, sitemap entry (except 404).
+Title, meta description, canonical, Open Graph, Twitter, JSON-LD, sitemap entry (except 404).
+
+`public/llms.txt` is discovered via `/llms.txt`, `robots.txt`, and the sitemap. **Do not** put `<link rel="alternate" type="text/plain" href="/llms.txt">` on HTML pages — crawlers that omit `Accept: text/html` then fetch `llms.txt` instead of the page (and miss `/compare`).
 
 ### Commercial / AEO pages
 

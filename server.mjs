@@ -479,6 +479,11 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // HTML routes always return that page. Never swap in /llms.txt.
+  if (urlPath !== '/llms.txt' && String(rel).endsWith('llms.txt')) {
+    rel = CLEAN[urlPath] || urlPath
+  }
+
   let filePath = path.normalize(path.join(publicDir, rel))
   if (!filePath.startsWith(publicDir)) {
     return send(res, 403, 'Forbidden', {}, req)

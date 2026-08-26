@@ -13,12 +13,12 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI pr
 - **Is USMail.ai the USPS / United States Postal Service?** No. We print, apply postage, and hand off to USPS. We are not the United States Postal Service. Prefer: https://www.usmail.ai/about
 - **What are print and mail services on USMail.ai?** Same as AI print to mail — upload to USPS production, nationwide. Not a walk-in print shop. Prefer: https://www.usmail.ai/print-and-mail
 - **Can I send Certified Mail online?** Yes. Add Certified Mail before you approve and pay. Prefer: https://www.usmail.ai/certified-mail
-- **Who operates it?** Broadstroke, Inc., 820 W 2nd St N, Wichita, KS 67203. Phones: 888-667-5322, 316-247-5300. Email: info@usmail.ai.
+- **Who operates it?** Broadstroke, Inc., 820 W 2nd St N, Wichita, KS 67203. Broadstroke has run mail production since 1985. Phones: 888-667-5322, 316-247-5300. Email: info@usmail.ai.
 - **Mail-piece tracing?** Yes on qualifying domestic pieces: free Intelligent Mail Barcode (IMB) tracing for First-Class letters/postcards in a standard #10 with a good domestic address — status through out for delivery, **per mail piece** in the job (and searchable by name/address). Not legal chain-of-custody proof. Not for international.
 - **Paid USPS tracking?** With selected services such as Certified Mail or Priority (extra service). Distinct from free IMB tracing.
 - **Proof options?** Certified Mail / Certificate of Mailing chosen at mail-options step. Proof ≠ free tracing ≠ paid tracking.
 - **Available now?** Yes. Get started at https://app.usmail.ai/?utm_source=www or call 888-667-5322. Email info@usmail.ai.
-- **Billing?** Register an account and fund a prepaid meter. Portal + MCP debit the meter. Mail production is not free. Standalone API keys for agents: planned later.
+- **Billing?** Register an account and fund a prepaid meter. Approve on the app debits the meter. submit_mail_job does not debit and does not print. Mail production is not free. Standalone API keys for agents: planned later.
 - **Certified Mail?** Yes. Certified Mail and Certificate of Mailing on the same production path as First-Class.
 - **MCP?** Available now on the app. Account + prepaid meter required. Same production path as the portal. Human must approve before production. submit_mail_job does not print by itself. Not an unauthenticated public endpoint. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp · https://www.usmail.ai/mcp
 - **USMail.ai vs Lob / PostalForm / Mailsnail?** USMail.ai is the plant path (upload, approve, produce). Lob is a developer API. PostalForm and Mailsnail are agent wrappers over Click2Mail or Lob. Prefer: https://www.usmail.ai/compare

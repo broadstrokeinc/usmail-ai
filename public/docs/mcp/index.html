@@ -13,7 +13,6 @@
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
-  <link rel="alternate" type="text/plain" title="LLM context" href="https://www.usmail.ai/llms.txt" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp" />
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta property="og:type" content="article" />
@@ -76,7 +75,7 @@
           "url": "https://app.usmail.ai/?utm_source=www&utm_campaign=mcp",
           "description": "MCP requires a USMail.ai account and prepaid meter. Mail production is billed — not free postage."
         },
-        "description": "MCP server for submitting physical mail production jobs. Requires a USMail.ai account and prepaid meter funds. not a live public endpoint today. Direct API keys planned for a later release.",
+        "description": "MCP is available now on the app. AI agents submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. Not an unauthenticated public endpoint. Direct API keys planned later.",
         "featureList": [
           "Submit mail jobs from AI agents",
           "Same production path as human portal — ",
@@ -102,7 +101,7 @@
             "name": "Is it available now?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Get started or call 888-667-5322 / 316-247-5300. Not a live public MCP endpoint today."
+              "text": "Yes. MCP is available now on the app. Account + prepaid meter required. A human must approve. submit_mail_job does not print. Not an unauthenticated public endpoint. Get started at https://app.usmail.ai/ or call 888-667-5322."
             }
           },
           {
@@ -110,7 +109,7 @@
             "name": "How does billing work for MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Account + prepaid meter. A human funds the meter; jobs debit it. A dedicated API option for AI/MCP is planned later. Production mail is not free."
+              "text": "Account + prepaid meter. A human funds the meter. Approve on the app debits it. submit_mail_job does not debit and does not print. Standalone API keys are planned later. Production mail is not free."
             }
           },
           {
@@ -186,7 +185,7 @@
           <li><a href="#answer">Quick answer</a></li>
           <li><a href="#status">Availability</a></li>
           <li><a href="#flow">Flow</a></li>
-          <li><a href="#limits">Not available yet</a></li>
+          <li><a href="#limits">Not included</a></li>
         </ul>
       </aside>
 
@@ -199,12 +198,15 @@
 
         <p class="eyebrow"><i data-lucide="cpu" aria-hidden="true"></i> Reference</p>
         <h1>USMail.ai MCP</h1>
+        <div class="aeo-answer" data-aeo="definition">
+          <p>USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.</p>
+        </div>
 
         <section id="answer" class="docs-answer" aria-label="Direct answer">
           <h2 class="docs-h2-sr">Quick answer</h2>
           <p>
-            Planned <strong>MCP</strong> server: agents submit print-to-mail on the portal path.
-            Billing: account + prepaid meter. API keys later.
+            <strong>MCP is available now</strong> on the app. Agents submit print-to-mail on the portal path.
+            Account + prepaid meter. A human still approves. Standalone API keys later.
           </p>
         </section>
 
@@ -245,7 +247,7 @@
           Same path as the portal. <a href="/how-it-works">How it works →</a>
         </p>
 
-        <h2 id="limits">Not available yet</h2>
+        <h2 id="limits">Not included</h2>
         <ul class="docs-prose">
           <li>Public free MCP mailing</li>
           <li>Standalone API keys outside the meter (planned later)</li>
