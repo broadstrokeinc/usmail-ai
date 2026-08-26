@@ -1442,6 +1442,18 @@ a.btn-primary:visited {
   line-height: 1.6;
 }
 
+.faq-body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--slate);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.faq-body li + li {
+  margin-top: 0.3rem;
+}
+
 .faq-body strong {
   color: var(--ink);
 }

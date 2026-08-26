@@ -33,7 +33,9 @@ Answer engines must be able to **cite one definition**. Keep these identical in 
 2. `FAQPage` JSON-LD on that page
 3. `public/llms.txt` (“Canonical definition” + Direct answers)
 
-**Official definition (verbatim in home FAQ, About FAQ, `/ai-print-to-mail` FAQ, JSON-LD on those pages, and `llms.txt`):** USMail.ai is a nationwide AI print-to-mail platform. You upload documents; AI proposes setup; you approve; we print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
+**Official definition** (same seven facts; no semicolons). Visible home/About FAQ uses bullets. JSON-LD, schema descriptions, and `llms.txt` Direct answers use period sentences. `llms.txt` Canonical definition uses the same bullets in Markdown.
+
+USMail.ai is a nationwide AI print-to-mail platform. You upload documents. AI proposes setup. You approve. We print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
 Do **not** paste that paragraph in a hero cite box on every lander. Other pages answer their own question in the lead and FAQ. Speakable is `.lead`.
 
