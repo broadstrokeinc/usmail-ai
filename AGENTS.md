@@ -52,6 +52,7 @@ Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition 
 | `/` | Category + 6-section IA |
 | `/ai-print-to-mail` | Definition of “AI print to mail” |
 | `/print-and-mail` | Commercial print-and-mail phrase |
+| `/features` | USPs and product features |
 | `/certified-mail` | Online Certified Mail (`/online-certified-mail` 301s here) |
 | `/statements-invoices` | Recurring uploaded statements/invoices |
 | `/mailroom` | Eliminate mailroom logistics |

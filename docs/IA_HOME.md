@@ -21,6 +21,7 @@
 |---------|------|
 | AI print to mail (definition) | `/ai-print-to-mail` |
 | Print and mail (commercial) | `/print-and-mail` |
+| Features / why USMail.ai | `/features` |
 | Statements / invoices / recurring | `/statements-invoices` |
 | Mailroom automation | `/mailroom` |
 | Address verification | `/address-verification` |
