@@ -8,7 +8,7 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names the nationwide AI print-to-mail platform and the job. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
+| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Short lead: platform + upload documents and postcards + approve + print and deliver to USPS. Not-USPS lives in FAQ and footer, not the hero. Get started / How it works. |
 | 2 | Why us | Tracing · tracking option · NCOA. Logo envelope lives on `/features`, not home. Approve stays in the lead and how-it-works. No MCP on home. |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
 | 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. No 50-years heritage on home. |
