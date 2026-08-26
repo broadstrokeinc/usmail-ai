@@ -2945,8 +2945,16 @@ a.btn-primary:visited {
 }
 
 .page-hero .aeo-answer {
-  margin-top: 0.25rem;
-  margin-bottom: 1.15rem;
+  margin-top: 0.65rem;
+  margin-bottom: 0.85rem;
+  padding: 0.65rem 0.8rem;
+  max-width: 40rem;
+}
+
+.page-hero .aeo-answer p {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--slate);
 }
 
 .docs-h2-sr {
