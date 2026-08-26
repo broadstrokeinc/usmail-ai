@@ -6,11 +6,11 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const publicDir = path.join(__dirname, 'public')
 const dataDir = path.join(__dirname, 'data')
-const leadsFile = path.join(dataDir, 'early-access.jsonl')
+const leadsFile = path.join(dataDir, 'contact.jsonl')
 const port = Number(process.env.PORT) || 3000
 const CANONICAL_HOST = (process.env.CANONICAL_HOST || 'usmail.ai').toLowerCase()
 
-/** Simple per-IP rate limit for early-access (memory; resets on restart) */
+/** Simple per-IP rate limit for contact (memory; resets on restart) */
 const leadHits = new Map()
 const LEAD_WINDOW_MS = 60 * 60 * 1000
 const LEAD_MAX = 8
@@ -139,7 +139,7 @@ function sendJson(res, status, obj, req = null) {
   )
 }
 
-function readBody(req, limit = 12_000) {
+function readBody(req, limit = 20_000) {
   return new Promise((resolve, reject) => {
     const chunks = []
     let size = 0
@@ -164,6 +164,16 @@ function isValidEmail(email) {
 function sanitizeLine(s, max = 500) {
   return String(s || '')
     .replace(/[\r\n\t]+/g, ' ')
+    .trim()
+    .slice(0, max)
+}
+
+function sanitizeMultiline(s, max = 4000) {
+  return String(s || '')
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    .replace(/\t/g, ' ')
+    .replace(/\n{3,}/g, '\n\n')
     .trim()
     .slice(0, max)
 }
@@ -207,26 +217,29 @@ async function resendSend({ to, subject, text, replyTo }) {
 }
 
 async function notifyLead(row) {
-  const interest = row.interest || 'general'
+  const topic = row.topic || 'question'
   const utmLine = row.utm
     ? `UTM: source=${row.utm.source || '-'} medium=${row.utm.medium || '-'} campaign=${row.utm.campaign || '-'}`
     : 'UTM: —'
   const text = [
-    'New USMail.ai early-access request',
+    'New USMail.ai contact',
     '',
     `Email: ${row.email}`,
     `Name: ${row.name || '—'}`,
-    `Interest: ${interest}`,
+    `Topic: ${topic}`,
     `When: ${row.at}`,
     utmLine,
     `IP: ${row.ip || '—'}`,
     '',
-    'Reply to this message to contact the lead (Reply-To set).',
+    'Message:',
+    row.message || '—',
+    '',
+    'Reply to this message to contact them (Reply-To set).',
   ].join('\n')
 
   const alert = await resendSend({
     to: LEAD_NOTIFY_TO,
-    subject: `[USMail.ai] Get started · ${interest} · ${row.email}`,
+    subject: `[USMail.ai] Contact · ${topic} · ${row.email}`,
     text,
     replyTo: row.email,
   })
@@ -235,25 +248,26 @@ async function notifyLead(row) {
   if (LEAD_ACK) {
     ack = await resendSend({
       to: row.email,
-      subject: 'We received your USMail.ai early-access request',
+      subject: 'We received your message at USMail.ai',
       text: [
         row.name ? `Hi ${row.name},` : 'Hi,',
         '',
-        'Thanks for getting started with USMail.ai. We will follow up about your account and can schedule a demo if you asked for one.',
+        'We received your message and will reply.',
+        'To send mail yourself, get started at https://app.usmail.ai/',
         '',
-        'Questions now? Call 888-667-5322 or 316-247-5300, or reply to this email.',
+        'Questions now? Call 888-667-5322 or reply to this email.',
         '',
         '— USMail.ai',
-        'https://www.usmail.ai',
+        'https://www.usmail.ai/contact',
       ].join('\n'),
-      replyTo: LEAD_NOTIFY_TO[0] || 'Info@USMAIL.ai',
+      replyTo: LEAD_NOTIFY_TO[0] || 'info@usmail.ai',
     })
   }
 
   return { alert, ack }
 }
 
-async function handleEarlyAccess(req, res) {
+async function handleContact(req, res) {
   if (req.method === 'OPTIONS') {
     return send(
       res,
@@ -293,7 +307,8 @@ async function handleEarlyAccess(req, res) {
 
     const email = sanitizeLine(data.email, 200).toLowerCase()
     const name = sanitizeLine(data.name, 120)
-    const interest = sanitizeLine(data.interest || data.note || '', 400)
+    const topic = sanitizeLine(data.topic || data.interest || data.note || '', 80)
+    const message = sanitizeMultiline(data.message || '', 4000)
     const utm = {
       source: sanitizeLine(data.utm_source, 80) || null,
       medium: sanitizeLine(data.utm_medium, 80) || null,
@@ -309,24 +324,25 @@ async function handleEarlyAccess(req, res) {
       at: new Date().toISOString(),
       email,
       name: name || null,
-      interest: interest || null,
+      topic: topic || null,
+      message: message || null,
       utm: utm.source || utm.medium || utm.campaign ? utm : null,
       ip: ip === 'unknown' ? null : ip,
       ua: sanitizeLine(req.headers['user-agent'], 200) || null,
     }
     fs.appendFileSync(leadsFile, `${JSON.stringify(row)}\n`, 'utf8')
-    console.log('[early-access]', row.email, row.interest || '-')
+    console.log('[contact]', row.email, row.topic || '-')
 
     // Fire-and-continue: do not fail the form if mail provider is down
     try {
       const mail = await notifyLead(row)
       console.log(
-        '[early-access] mail',
+        '[contact] mail',
         mail.alert?.ok || mail.alert?.skipped ? 'alert-ok' : 'alert-fail',
         mail.ack?.ok || mail.ack?.skipped || !LEAD_ACK ? 'ack-ok' : 'ack-fail',
       )
     } catch (mailErr) {
-      console.error('[early-access] mail error', mailErr)
+      console.error('[contact] mail error', mailErr)
     }
 
     return sendJson(res, 200, { ok: true }, req)
@@ -334,7 +350,7 @@ async function handleEarlyAccess(req, res) {
     if (err && err.message === 'payload_too_large') {
       return sendJson(res, 413, { ok: false, error: 'payload_too_large' }, req)
     }
-    console.error('[early-access] error', err)
+    console.error('[contact] error', err)
     return sendJson(res, 400, { ok: false, error: 'bad_request' }, req)
   }
 }
@@ -362,8 +378,13 @@ const server = http.createServer(async (req, res) => {
     return sendJson(res, 200, { ok: true, service: 'usmail-ai' }, req)
   }
 
-  if (urlPath === '/api/early-access' || urlPath === '/api/early-access/') {
-    return handleEarlyAccess(req, res)
+  if (
+    urlPath === '/api/contact' ||
+    urlPath === '/api/contact/' ||
+    urlPath === '/api/early-access' ||
+    urlPath === '/api/early-access/'
+  ) {
+    return handleContact(req, res)
   }
 
   if (req.method !== 'GET' && req.method !== 'HEAD') {
@@ -388,6 +409,7 @@ const server = http.createServer(async (req, res) => {
     '/': '/index.html',
     '/privacy': '/privacy.html',
     '/about': '/about.html',
+    '/contact': '/contact.html',
     '/other-print': '/other-print.html',
     '/terms': '/terms.html',
     '/security': '/security.html',
@@ -426,6 +448,7 @@ const server = http.createServer(async (req, res) => {
     '/index.html': '/',
     '/privacy.html': '/privacy',
     '/about.html': '/about',
+    '/contact.html': '/contact',
     '/other-print.html': '/other-print',
     '/terms.html': '/terms',
     '/security.html': '/security',

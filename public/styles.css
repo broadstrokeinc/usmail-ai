@@ -1725,7 +1725,8 @@ a.btn-primary:visited {
 }
 
 .access-form input,
-.access-form select {
+.access-form select,
+.access-form textarea {
   width: 100%;
   min-height: 44px;
   border: 1px solid var(--postal-border);
@@ -1737,6 +1738,12 @@ a.btn-primary:visited {
   background: var(--white);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   appearance: none;
+}
+
+.access-form textarea {
+  min-height: 6.5rem;
+  resize: vertical;
+  line-height: 1.45;
 }
 
 .access-form select {
@@ -1751,20 +1758,23 @@ a.btn-primary:visited {
 }
 
 .access-form input:hover,
-.access-form select:hover {
+.access-form select:hover,
+.access-form textarea:hover {
   border-color: #cbd5e1;
   background: #fff;
 }
 
 .access-form input:focus,
-.access-form select:focus {
+.access-form select:focus,
+.access-form textarea:focus {
   outline: none;
   border-color: var(--postal-primary);
   background: #fff;
   box-shadow: 0 0 0 3px rgba(26, 43, 99, 0.15);
 }
 
-.access-form input[aria-invalid="true"] {
+.access-form input[aria-invalid="true"],
+.access-form textarea[aria-invalid="true"] {
   border-color: var(--flag-red);
   box-shadow: 0 0 0 3px rgba(225, 29, 46, 0.12);
 }

@@ -25,7 +25,8 @@ Sage + operator. Short sentences. Second person. Present tense.
 - No invented prices, hours saved, or USPS transit days.
 - Documents and postcards. “Letter” is a USPS size, or a named document type.
 - **Deliver** to USPS. Do not write “enter into the USPS network” or “plant path.”
-- CTA: **Get started** → `https://app.usmail.ai/` (never iframe). Phone `888-667-5322` in footer, About, home Get started, legal/security. `316` is About / legal only.
+- CTA: **Get started** → `https://app.usmail.ai/` (never iframe). Phone `888-667-5322` in footer, About, home Get started, `/contact`, legal/security. `316` is About / contact / legal only.
+- Contact form on home (Get started section) and `/contact`. Footer email stays. Do not plaster the form on landers.
 
 ## AEO
 
@@ -51,7 +52,7 @@ Do not claim: see `public/llms.txt`. Platform is open. Do not write “coming so
 
 Home: exactly 6 sections. Contract: `docs/IA_HOME.md`.
 
-Nav: How it works · Features · Print & mail · Certified Mail · Industries · Get started. Footer includes Features and Compare.
+Nav: How it works · Features · Print & mail · Certified Mail · Industries · Get started. Footer includes Features, Compare, and Contact.
 
 ## Repo
 

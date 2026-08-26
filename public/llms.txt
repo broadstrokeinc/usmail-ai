@@ -45,6 +45,7 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 - Compare: https://www.usmail.ai/compare
 - Industries: https://www.usmail.ai/industries
 - About: https://www.usmail.ai/about
+- Contact: https://www.usmail.ai/contact
 - MCP docs: https://www.usmail.ai/docs/mcp
 - Full index: https://www.usmail.ai/sitemap.xml
 
@@ -63,4 +64,5 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 
 - Broadstroke, Inc. · 820 W 2nd St N, Wichita, KS 67203
 - 888-667-5322 · 316-247-5300 · info@usmail.ai
+- Form: https://www.usmail.ai/contact
 - App: https://app.usmail.ai/?utm_source=llms

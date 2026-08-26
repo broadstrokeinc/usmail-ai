@@ -50,7 +50,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
-  <link rel="stylesheet" href="/styles.css?v=20260826flow" />
+  <link rel="stylesheet" href="/styles.css?v=20260826contact" />
   <link rel="preload" as="image" href="/logo.webp" type="image/webp" />
 
   <script type="application/ld+json">
@@ -482,7 +482,10 @@
             <p class="section-label">Get started</p>
             <h2 id="contact-title">Create an account</h2>
             <p class="contact-intro-lead">
-              Create an account and send a job yourself.
+              Create an account and send a job yourself. Prefer a person? Use the form.
+            </p>
+            <p>
+              <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=home">Get started</a>
             </p>
             <ul class="contact-channels">
               <li>
@@ -506,14 +509,59 @@
             </ul>
           </div>
 
-          <div id="early-access" class="form-card" aria-labelledby="early-access-title">
+          <div id="contact-form-card" class="form-card" aria-labelledby="contact-form-title">
             <div class="form-card-head">
-              <h3 id="early-access-title">Get started</h3>
-              <p>Send a job from the app.</p>
+              <h3 id="contact-form-title">Contact us</h3>
+              <p>We reply by email.</p>
             </div>
-            <p>
-              <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=home">Get started</a>
-            </p>
+            <form id="contact-form" class="access-form" action="/api/contact" method="post" novalidate>
+              <div class="access-form-row">
+                <label class="access-field">
+                  <span class="access-label">Work email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                    placeholder="you@company.com"
+                    maxlength="200"
+                  />
+                </label>
+                <label class="access-field">
+                  <span class="access-label">Name <span class="opt">optional</span></span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Jane Smith" maxlength="120" />
+                </label>
+              </div>
+              <label class="access-field">
+                <span class="access-label">Topic</span>
+                <select name="topic">
+                  <option value="question">Question</option>
+                  <option value="demo">Demo</option>
+                  <option value="volume">Volume or statements</option>
+                  <option value="certified">Certified Mail</option>
+                  <option value="mcp">MCP</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+              <label class="access-field">
+                <span class="access-label">Message</span>
+                <textarea name="message" required rows="4" maxlength="4000" placeholder="What do you need?"></textarea>
+              </label>
+              <div class="hp" aria-hidden="true">
+                <label for="company_website">Leave blank</label>
+                <input id="company_website" type="text" name="company_website" tabindex="-1" autocomplete="off" />
+              </div>
+              <input type="hidden" name="utm_source" id="utm_source" value="" />
+              <input type="hidden" name="utm_medium" id="utm_medium" value="" />
+              <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
+              <button type="submit" class="btn btn-primary access-submit" id="contact-submit">Send message</button>
+              <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+              <p class="access-fine">
+                We use this to reply.
+                <a href="/privacy">Privacy</a>
+              </p>
+            </form>
           </div>
         </div>
       </div>
@@ -538,6 +586,7 @@
         <a href="/industries">Industries</a>
         <a href="/docs">Docs</a>
         <a href="/about">About</a>
+        <a href="/contact">Contact</a>
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
         <a href="/security">Security</a>
       </nav>
@@ -562,6 +611,6 @@
     crossorigin="anonymous"
     defer
   ></script>
-  <script src="/js/site.js?v=20260731quiet" defer></script>
+  <script src="/js/site.js?v=20260826contact" defer></script>
 </body>
 </html>

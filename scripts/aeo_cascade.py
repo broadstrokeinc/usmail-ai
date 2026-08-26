@@ -106,6 +106,7 @@ CHROME_BOT = '''  <footer class="site-footer">
         <a href="/industries">Industries</a>
         <a href="/docs">Docs</a>
         <a href="/about">About</a>
+        <a href="/contact">Contact</a>
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
         <a href="/security">Security</a>
       </nav>
