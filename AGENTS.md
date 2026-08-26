@@ -63,8 +63,7 @@ Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition 
 | `/mailroom` | Eliminate mailroom logistics |
 | `/address-verification` | Reduce returned mail — no transit SLA |
 | `/how-it-works` | Five steps + cutoffs |
-| `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity in About footer. Closed FAQ may point to `/other-print` |
-| `/other-print` | Deep tuck. Broadstroke quotes business cards, brochures, flyers, signs, promo. Longer lead times. Not USMail.ai. Not the app. **noindex.** Not in primary or footer nav. Do not name sibling production brands. |
+| `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity in About footer |
 | `/compare` | USMail.ai vs Lob vs PostalForm vs Mailsnail |
 | `/industries/collections` | Debt collection mail |
 | `/industries/healthcare` | Healthcare notices |
@@ -78,7 +77,9 @@ Only on **About**, privacy/terms address, Organization schema `PostalAddress`, a
 
 ### Do not claim
 
-See `public/llms.txt` § Do not claim. Highlights: free postage, EDDM, fixed hours saved, USPS delivery days, USMail.ai = USPS, unauthenticated public MCP, generating statements inside a bank/ERP.
+See `public/llms.txt` § Do not claim. Highlights: free postage, EDDM, fixed hours saved, USPS delivery days, USMail.ai = USPS, unauthenticated public MCP, generating statements inside a bank/ERP, USMail.ai printing business cards or promo.
+
+`/other-print` is a noindex handoff to Broadstroke (broadstrokeinc.com). Not in nav, sitemap, or `llms.txt` Direct answers.
 
 Platform is **open**. Do not write “coming soon.” CTA: **Get started**. MCP requires an account + prepaid meter.
 
