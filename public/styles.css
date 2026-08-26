@@ -1031,6 +1031,7 @@ a.btn-primary:visited {
 }
 
 .step {
+  position: relative;
   background: var(--white);
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: var(--radius-card);
@@ -1039,6 +1040,10 @@ a.btn-primary:visited {
   gap: 0.25rem;
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.step:has(.step-flag) {
+  padding-right: 5.75rem;
 }
 
 .step:hover {
@@ -1052,8 +1057,36 @@ a.btn-primary:visited {
   font-size: 0.98rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.45rem;
   color: var(--ink);
+}
+
+.step-flag {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans, inherit);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.step-flag-included {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.step-flag-option {
+  background: #fef3c7;
+  color: #92400e;
 }
 
 .step h3 svg,
