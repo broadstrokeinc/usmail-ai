@@ -1376,22 +1376,56 @@ a.btn-primary:visited {
 }
 
 .process-flow-mark {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
   margin-bottom: 0.7rem;
-  background: var(--postal-light);
-  border: 2px solid var(--postal-primary);
-  color: var(--postal-primary);
+  border: 2px solid transparent;
 }
 
 .process-flow-mark svg,
 .process-flow-mark i {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke-width: 2.15;
 }
+
+/* You start light → we finish dark. Same ramp on the five-step rail. */
+.process-flow > li:nth-child(1) .process-flow-mark {
+  background: #e8ecf5;
+  border-color: #9aa8cc;
+  color: #1a2b63;
+}
+.process-flow > li:nth-child(2) .process-flow-mark {
+  background: #c5cee8;
+  border-color: #1a2b63;
+  color: #1a2b63;
+}
+.process-flow > li:nth-child(3) .process-flow-mark {
+  background: #3d4d8a;
+  border-color: #3d4d8a;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(26, 43, 99, 0.22);
+}
+.process-flow > li:nth-child(4) .process-flow-mark {
+  background: #1a2b63;
+  border-color: #1a2b63;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(26, 43, 99, 0.28);
+}
+.process-flow > li:nth-child(5) .process-flow-mark {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+}
+
+.process-flow > li:nth-child(1)::after { color: #9aa8cc; opacity: 1; }
+.process-flow > li:nth-child(2)::after { color: #3d4d8a; opacity: 1; }
+.process-flow > li:nth-child(3)::after { color: #1a2b63; opacity: 1; }
+.process-flow > li:nth-child(4)::after { color: #2563eb; opacity: 1; }
 
 .process-flow h3 {
   margin: 0 0 0.3rem;
@@ -1414,10 +1448,9 @@ a.btn-primary:visited {
   left: 50%;
   bottom: -1.45rem;
   transform: translateX(-50%);
-  color: var(--postal-primary);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1;
-  opacity: 0.55;
+  font-weight: 700;
   pointer-events: none;
 }
 
@@ -1433,9 +1466,9 @@ a.btn-primary:visited {
     left: auto;
     right: 0;
     bottom: auto;
-    top: 1.05rem;
+    top: 1.35rem;
     transform: translateX(50%);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1451,9 +1484,9 @@ a.btn-primary:visited {
     left: auto;
     right: 0;
     bottom: auto;
-    top: 1.05rem;
+    top: 1.35rem;
     transform: translateX(50%);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
