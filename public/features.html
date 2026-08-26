@@ -85,6 +85,38 @@
               "@type": "Answer",
               "text": "Yes. Custom envelopes with your logo are included. They must be approved before use and can take 1–2 business days. Same-day jobs still have to qualify on a plain #10 or Utah envelope."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included per mail piece?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CASS, NCOA, envelope, paper, tracing, and postage. Tracing is IMB on qualifying First-Class pieces and is not legal proof. The meter is debited when you approve."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I split one file into many pieces?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Split or cut a document into mail pieces by page, by text, or by logo. Scan addresses from the file, import a CSV, or add addresses by hand. You choose how duplicate names and addresses are handled."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Certified available on postcards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Certified is not available for postcards. Choose First-Class or Priority for a postcard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long is a job stored? What is Posty AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Jobs are stored by default for 30 days at no extra storage charge. Posty AI chats with you at every step and can propose setup. A human still approves before production."
+            }
           }
         ]
       }
@@ -176,25 +208,58 @@
       </div>
     </section>
 
-    <section class="page-section band" aria-labelledby="in-product">
+    <section class="page-section band" aria-labelledby="per-piece">
+      <div class="wrap">
+        <h2 id="per-piece">Included per piece</h2>
+        <p class="section-lead">On every mail piece, in addition to the four offers above. Tracing is not tracking. NCOA is not a delivery-day promise.</p>
+        <ul class="steps steps-grid-2">
+          <li class="step">
+            <h3><i data-lucide="check" aria-hidden="true"></i> CASS</h3>
+            <p>Address standardization before print.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="search" aria-hidden="true"></i> NCOA</h3>
+            <p>National Change of Address on the production path, on each piece. <a href="/address-verification">Address verification →</a></p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="mail" aria-hidden="true"></i> Envelope</h3>
+            <p>Envelope included. Custom logo or brand colors still need approval (1–2 business days).</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="file-text" aria-hidden="true"></i> Paper</h3>
+            <p>Paper stock included with production.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="scan-line" aria-hidden="true"></i> Tracing</h3>
+            <p>IMB tracing on qualifying First-Class pieces. Not legal proof.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="stamp" aria-hidden="true"></i> Postage</h3>
+            <p>Postage applied on our side. The prepaid meter is debited when you approve.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="in-product">
       <div class="wrap">
         <h2 id="in-product">What’s in the product</h2>
         <ul class="steps steps-grid-2">
           <li class="step">
             <h3><i data-lucide="upload" aria-hidden="true"></i> Upload</h3>
-            <p>PDF, Word (DOC/DOCX), PNG/JPG, packages, CSV lists.</p>
+            <p>PDF, Word, images, packages, CSV lists, and other formats the app accepts. Split or cut a document into mail pieces by page, by text, or by logo.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="sparkles" aria-hidden="true"></i> AI setup</h3>
-            <p>Addresses and print options proposed for the files you send. You still approve.</p>
+            <p>Addresses and print options proposed for the files you send. Chat with Posty AI at every step. You still approve.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="printer" aria-hidden="true"></i> Print options</h3>
-            <p>Black and white or color print. Simplex or duplex. Custom envelopes with your logo (approved before use; 1–2 business days). Insert, address, postage on our side.</p>
+            <p>Black and white or color. Single or double sided. Photo finish or document finish. Custom envelopes with logo or brand colors (approved before use; 1–2 business days).</p>
           </li>
           <li class="step">
             <h3><i data-lucide="mail" aria-hidden="true"></i> Mail options</h3>
-            <p>First-Class. Certified Mail. Certificate of Mailing. Certified is never same-day.</p>
+            <p>First-Class, Priority, or Certified. Certificate of Mailing when you need presentation proof. Tracking is an option on Priority and Certified letters. Certified is not available for postcards. Certified is never same-day.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="clock" aria-hidden="true"></i> Cutoffs</h3>
@@ -206,7 +271,7 @@
           </li>
           <li class="step">
             <h3><i data-lucide="search" aria-hidden="true"></i> Address verification</h3>
-            <p>NCOA included. Change-of-address processing before print. Not a USPS transit promise. <a href="/address-verification">Address verification →</a></p>
+            <p>CASS and NCOA included. Change-of-address processing before print. Not a USPS transit promise. <a href="/address-verification">Address verification →</a></p>
           </li>
           <li class="step">
             <h3><i data-lucide="repeat" aria-hidden="true"></i> Recurring jobs</h3>
@@ -215,6 +280,22 @@
           <li class="step">
             <h3><i data-lucide="wallet" aria-hidden="true"></i> Prepaid meter</h3>
             <p>Account plus meter. Approve on the app debits it. Production mail is not free.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="map-pin" aria-hidden="true"></i> Addresses</h3>
+            <p>Scan addresses from uploaded documents, import a CSV, or add them by hand.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="users" aria-hidden="true"></i> Duplicate names and addresses</h3>
+            <p>You choose how to handle duplicate names and addresses before you approve.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="archive" aria-hidden="true"></i> Job storage</h3>
+            <p>Jobs are stored by default for 30 days at no extra storage charge.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="bot" aria-hidden="true"></i> Posty AI</h3>
+            <p>Chat with Posty AI at every step. It can propose setup. A human still approves before production.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="cpu" aria-hidden="true"></i> MCP for agents</h3>
@@ -274,6 +355,30 @@
             <summary><span>Can I use a custom envelope with my logo?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
               <p>Yes. Custom envelopes with your logo are included. They must be approved before use and can take 1–2 business days. Same-day jobs still have to qualify on a plain #10 or Utah envelope.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>What is included per mail piece?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>CASS, NCOA, envelope, paper, tracing, and postage. Tracing is IMB on qualifying First-Class pieces and is not legal proof. The meter is debited when you approve.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Can I split one file into many pieces?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes. Split or cut a document into mail pieces by page, by text, or by logo. Scan addresses from the file, import a CSV, or add addresses by hand. You choose how duplicate names and addresses are handled.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is Certified available on postcards?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Certified is not available for postcards. Choose First-Class or Priority for a postcard. Tracking is an option on Priority and Certified letters.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>How long is a job stored? What is Posty AI?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Jobs are stored by default for 30 days at no extra storage charge. Posty AI chats with you at every step and can propose setup. A human still approves before production.</p>
             </div>
           </details>
         </div>
