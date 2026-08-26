@@ -1,6 +1,6 @@
 # Homepage information architecture
 
-**Goal:** One job, four USPs, one primary CTA — match product-app cognitive simplicity.
+**Goal:** One job, one primary CTA. Repeat a fact at most twice on a page. A third time is a link.
 
 **Positioning:** Nationwide AI print-to-mail + online Certified Mail. Three seats: lockup **AI print to mail** · slogan **You upload. You approve. We produce.** · comprehension **Print to mail, made easy** (reserved, never H1). Wichita only on About / footer / schema address.
 

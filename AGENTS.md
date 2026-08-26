@@ -21,6 +21,8 @@ Sage + operator. Short sentences. Second person. Present tense.
 | Trust / slogan | `You upload. You approve. We produce.` | Wired on hero, footer, OG, schema |
 
 Occupancy is **trust-first** (same as the product app). Do not promote comprehension into the slogan seat. Do not delete it from the model. Do not ship two H1s.
+
+**Repeat rule: two, not three.** A fact is visible on a page at most twice: once where that page owns it (lead or the section that teaches it), and once in FAQ if that question must be answered. JSON-LD matching the FAQ is not a third human dump. A third appearance is a link to the owner page (`/features`, `/how-it-works`, `/certified-mail`, `/about`). Do not reprint Features USPs, the official definition, or “not USPS” in a body section after the lead and FAQ already said it. Slogan may sit in H1 and footer only.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
 - Identity noun: **nationwide AI print-to-mail platform**. Compare may say we print (not a catalog, not a shop). Do **not** say “plant path.” Do not use “mail house” as the identity noun.
