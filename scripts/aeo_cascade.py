@@ -73,6 +73,7 @@ CHROME_TOP = '''<body>
       </button>
       <nav class="nav-links" id="primary-nav" aria-label="Primary">
         <a href="/how-it-works">How it works</a>
+        <a href="/features">Features</a>
         <a href="/print-and-mail">Print &amp; mail</a>
         <a href="/certified-mail">Certified Mail</a>
         <a href="/industries">Industries</a>
@@ -96,12 +97,13 @@ CHROME_BOT = '''  <footer class="site-footer">
       <p class="footer-slogan">You upload. You approve. We produce.</p>
       <nav class="footer-nav" aria-label="Footer">
         <a href="/how-it-works">How it works</a>
+        <a href="/features">Features</a>
+        <a href="/compare">Compare</a>
         <a href="/print-and-mail">Print &amp; mail</a>
         <a href="/certified-mail">Certified</a>
         <a href="/statements-invoices">Statements</a>
         <a href="/mcp">MCP</a>
         <a href="/industries">Industries</a>
-        <a href="/compare">Compare</a>
         <a href="/docs">Docs</a>
         <a href="/about">About</a>
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
@@ -495,8 +497,8 @@ def write_compare():
         </nav>
         <div class="page-hero-inner">
           <p class="eyebrow"><i data-lucide="git-compare" aria-hidden="true"></i> Compare</p>
-          <h1>Mail house vs catalog vs shop vs USPS</h1>
-          <p class="lead">USMail.ai is a mail house. You upload. You approve. We print and deliver to USPS. That is not an online catalog, not a walk-in shop, and not the Postal Service.</p>
+          <h1>USMail.ai vs catalog vs shop vs USPS</h1>
+          <p class="lead">USMail.ai is a nationwide AI print-to-mail platform. You upload. You approve. We print and deliver to USPS. That is not an online catalog, not a walk-in shop, and not the Postal Service.</p>
           <div class="page-hero-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=compare">Get started</a>
             <a class="btn btn-ghost" href="/about">About</a>

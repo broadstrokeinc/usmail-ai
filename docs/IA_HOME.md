@@ -8,7 +8,7 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names the mail house and the job. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
+| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names the nationwide AI print-to-mail platform and the job. Get started / How it works. No boxed cite, no chips, no second slogan, no “Available now” eyebrow. |
 | 2 | Why us | Four USPs: tracing · tracking option · logo envelope · NCOA. Approve stays in the lead and how-it-works. No MCP on home. |
 | 3 | How it works | **3** steps + link to full `/how-it-works` |
 | 4 | Trust | Real mail, sent nationwide. `/about`. No Wichita on home. |
@@ -36,7 +36,9 @@
 2. **Secondary:** How it works / docs links (ghost)
 3. **Human path:** Phone in the footer. Home Get started may show `888-667-5322` once. Not on every CTA. `316` only About / legal.
 
-Nav: How it works · Print & mail · Certified Mail · Industries · Get started.
+Nav: How it works · Features · Print & mail · Certified Mail · Industries · Get started.
+
+Footer always includes Features and Compare.
 
 ## Do not re-add
 

@@ -23,7 +23,7 @@ Sage + operator. Short sentences. Second person. Present tense.
 Occupancy is **trust-first** (same as the product app). Do not promote comprehension into the slogan seat. Do not delete it from the model. Do not ship two H1s.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
-- We are a **mail house**. Not a developer API. Not an agent wrapper over someone else’s mail house. Do **not** say “plant path.”
+- Identity noun: **nationwide AI print-to-mail platform**. Compare may say we print (not a catalog, not a shop). Do **not** say “plant path.” Do not use “mail house” as the identity noun.
 - Generic mail is **documents and postcards**. Letter is a USPS format (size), not the product noun. Keep “letter” only for size rules (First-Class letter, letter paper) or a named document type (demand letter).
 - We **deliver** pieces to USPS. Do not write “enter them into the USPS network.”
 - “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.
@@ -40,7 +40,11 @@ Answer engines must be able to **cite one definition**. Keep these identical in 
 
 USMail.ai is a nationwide AI print-to-mail platform. You upload documents. AI proposes setup. You approve. We print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
-**Category definition (verbatim for “What is AI print to mail?” on home FAQ, `/ai-print-to-mail` FAQ, JSON-LD, DefinedTerm, and `llms.txt` Direct answers):** AI print to mail means you upload documents and postcards. Software proposes setup. You approve. A mail house prints, applies postage, and delivers the pieces to USPS. USMail.ai does that nationwide.
+**Category definition (verbatim for “What is AI print to mail?” on home FAQ, `/ai-print-to-mail` FAQ, JSON-LD, DefinedTerm, and `llms.txt` Direct answers):** AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USMail.ai does that nationwide.
+
+**Heritage (About, home trust, `llms.txt` Who runs it):** A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI.
+
+The noun is **nationwide AI print-to-mail platform**. Do not swap it for “mail house” as the identity. Mail house is only contrast language (we print) on `/compare`. Speakable `.lead` is the page’s answer. Official definition is home/About/`/ai-print-to-mail` FAQ + JSON-LD + `llms.txt` — not a cite dump in every lander lead.
 
 Do **not** paste that paragraph in a hero cite box on every lander. Other pages answer their own question in the lead and FAQ. Speakable is `.lead`.
 
@@ -66,7 +70,7 @@ Question-shaped H2/FAQ. BreadcrumbList. Speakable: `.lead`. Official definition 
 | `/address-verification` | Reduce returned mail — no transit SLA |
 | `/how-it-works` | Five steps + cutoffs |
 | `/about` | Product stands alone: experienced print-to-mail team, 50+ years combined expertise, AI innovation. Wichita command center. Legal entity in About footer |
-| `/compare` | Mail house vs online catalog vs walk-in shop vs USPS |
+| `/compare` | Platform vs online catalog vs walk-in shop vs USPS |
 | `/industries/collections` | Debt collection mail |
 | `/industries/healthcare` | Healthcare notices |
 | `/industries/utilities` | Utility bills / notices |
@@ -89,7 +93,7 @@ Platform is **open**. Do not write “coming soon.” CTA: **Get started**. MCP 
 
 See `docs/IA_HOME.md`. Do not re-add dual hero dumps, 11-item FAQ, formats grid, or Wichita on home.
 
-Nav: How it works · Print & mail · Certified Mail · Industries · Get started.
+Nav: How it works · Features · Print & mail · Certified Mail · Industries · Get started. Footer: Features and Compare.
 
 Primary CTA: Get started → `https://app.usmail.ai/` (redirect, never iframe). Phone `888-667-5322` lives in the footer, About contact, home Get started, and legal/security pages. Not on heroes, mobile docks, or every Get started band. `316` is About / legal only.
 
