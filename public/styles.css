@@ -1382,45 +1382,36 @@ a.btn-primary:visited {
   display: grid;
   place-items: center;
   margin-bottom: 0.7rem;
-  border: 2px solid transparent;
+  background: #fff;
+  border: 2.5px solid currentColor;
 }
 
 .process-flow-mark svg,
 .process-flow-mark i {
-  width: 1.35rem;
-  height: 1.35rem;
-  stroke-width: 2.15;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-/* Meaning, not position: you start, spark (approve), we make, USPS blue. */
+.process-flow-mark svg,
+.process-flow-mark svg * {
+  stroke-width: 2.65 !important;
+}
+
+/* Color lives in the icon. White face. */
 .process-flow > .is-upload .process-flow-mark {
-  background: #e8ecf5;
-  border-color: #9aa8cc;
-  color: #1a2b63;
+  color: #5b6a9a;
 }
 .process-flow > .is-spark .process-flow-mark {
-  background: #f5c400;
-  border-color: #d4a017;
-  color: #1a2b63;
-  box-shadow: 0 4px 12px rgba(212, 160, 23, 0.35);
+  color: #c9a227;
 }
 .process-flow > .is-pick .process-flow-mark {
-  background: #3d4d8a;
-  border-color: #3d4d8a;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(26, 43, 99, 0.22);
+  color: #3d4d8a;
 }
 .process-flow > .is-make .process-flow-mark {
-  background: #1a2b63;
-  border-color: #1a2b63;
-  color: #fff;
-  box-shadow: 0 6px 16px rgba(26, 43, 99, 0.28);
+  color: #1a2b63;
 }
 .process-flow > .is-usps .process-flow-mark {
-  background: #004b87;
-  border-color: #004b87;
-  color: #fff;
-  box-shadow: 0 6px 16px rgba(0, 75, 135, 0.32);
+  color: #004b87;
 }
 
 .process-flow > .is-upload::after { color: #9aa8cc; }
