@@ -6,8 +6,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 
 DEF = (
-    "USMail.ai is a nationwide AI print-to-mail platform. You upload documents. "
-    "AI proposes setup. You approve. We print, insert, apply postage, and hand the pieces to USPS. "
+    "USMail.ai is a nationwide AI print-to-mail platform. You upload documents and postcards. "
+    "AI proposes setup. You approve. We print, insert, apply postage, and deliver the pieces to USPS. "
     "Online Certified Mail and statement or invoice jobs use the same path. "
     "USMail.ai is not the United States Postal Service."
 )

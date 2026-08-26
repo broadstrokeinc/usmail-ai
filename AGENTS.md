@@ -40,7 +40,7 @@ Answer engines must be able to **cite one definition**. Keep these identical in 
 
 **Official definition** (same seven facts; no semicolons). Visible home/About FAQ uses bullets. JSON-LD, schema descriptions, and `llms.txt` Direct answers use period sentences. `llms.txt` Canonical definition uses the same bullets in Markdown.
 
-USMail.ai is a nationwide AI print-to-mail platform. You upload documents. AI proposes setup. You approve. We print, insert, apply postage, and hand the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
+USMail.ai is a nationwide AI print-to-mail platform. You upload documents and postcards. AI proposes setup. You approve. We print, insert, apply postage, and deliver the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
 **Category definition (verbatim for “What is AI print to mail?” on home FAQ, `/ai-print-to-mail` FAQ, JSON-LD, DefinedTerm, and `llms.txt` Direct answers):** AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USMail.ai does that nationwide.
 
