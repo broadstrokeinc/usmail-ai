@@ -25,7 +25,7 @@ Occupancy is **trust-first** (same as the product app). Do not promote comprehen
 **Repeat rule: two, not three.** A fact is visible on a page at most twice: once where that page owns it (lead or the section that teaches it), and once in FAQ if that question must be answered. JSON-LD matching the FAQ is not a third human dump. A third appearance is a link to the owner page (`/features`, `/how-it-works`, `/certified-mail`, `/about`). Do not reprint Features USPs, the official definition, or “not USPS” in a body section after the lead and FAQ already said it. Slogan may sit in H1 and footer only.
 - No invented prices, hours-saved numbers, or USPS transit promises.
 - Contrast pairs: production not a tool; upload not author; proof ≠ tracing; IMB ≠ Certified.
-- Identity noun: **nationwide AI print-to-mail platform**. Compare may say we print (not a catalog, not a shop). Do **not** say “plant path.” Do not use “mail house” as the identity noun.
+- Do **not** say “plant path.”
 - Generic mail is **documents and postcards**. Letter is a USPS format (size), not the product noun. Keep “letter” only for size rules (First-Class letter, letter paper) or a named document type (demand letter).
 - We **deliver** pieces to USPS. Do not write “enter them into the USPS network.”
 - “Reclaim hours weekly” / “eliminate mailroom” — benefit language only.
@@ -46,9 +46,7 @@ USMail.ai is a nationwide AI print-to-mail platform. You upload documents and po
 
 **Heritage (About only, plus `llms.txt` Who runs it pointing at About):** A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Never on home.
 
-The noun is **nationwide AI print-to-mail platform**. Do not swap it for “mail house” as the identity. Mail house is only contrast language (we print) on `/compare`. Speakable `.lead` is the page’s answer. Official definition is home/About/`/ai-print-to-mail` FAQ + JSON-LD + `llms.txt` — not a cite dump in every lander lead.
-
-Do **not** paste that paragraph in a hero cite box on every lander. Other pages answer their own question in the lead and FAQ. Speakable is `.lead`.
+Do **not** paste the official definition in a hero cite box on every lander. Other pages answer their own question in the lead and FAQ. Speakable is `.lead`.
 
 ### Required on every HTML page
 
