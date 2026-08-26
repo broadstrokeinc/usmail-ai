@@ -31,7 +31,7 @@ Legacy aliases: `--navy` → primary, `--navy-deep` → dark, `--sky` → light,
 | Role | Family |
 |------|--------|
 | Body / UI | **Inter** |
-| Headings (h1–h6, display) | **Plus Jakarta Sans** |
+| Headings (h1–h6, display) | **Inter** |
 
 ## Radius
 
