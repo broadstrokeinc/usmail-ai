@@ -8,9 +8,9 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names print, then handoff: we print your documents and postcards; we deliver them to USPS; USPS delivers nationwide. No wordmark, no “platform,” no slogan echo. AI lives in lockup + How it works Approve. |
-| 2 | What you get | Print · Mail Piece(s) · USPS. No Included flags (this is the job, not extras). USPS body: prepaid postage applied; delivered to USPS on mail date. One line: tracing included on qualifying First-Class, tracking is an option → `/features`. No MCP on home. |
-| 3 | How it works | Process diagram (Upload → Approve → We produce → USPS). Approve: AI proposes setup. **See the full process** → `/how-it-works`. Not a second card grid. |
+| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead: we print your documents and postcards; AI proposes setup; we deliver them to USPS; USPS delivers nationwide. No wordmark, no “platform,” no slogan echo. |
+| 2 | What you get | Print · Mail Piece(s) · To USPS (destination, not identity). You pay postage from a prepaid meter. Tracing = scan status on qualifying First-Class letters and postcards; not tracking; not Certified proof. Tracking is an option on Priority and Certified → `/features`. No MCP on home. |
+| 3 | How it works | Process diagram (Upload → Approve → We produce → USPS). Approve: AI proposes setup. Produce: print; stuffed envelope or postcard (do not say insert as if postcards are stuffed). **See the full process** → `/how-it-works`. Not a second card grid. |
 | 4 | Trust | Real mail. USPS delivers nationwide. Visible: we deliver to USPS; USPS delivers nationwide; USMail.ai is not the United States Postal Service. `/about`. No Wichita on home. No 50-years heritage on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
 | 6 | Get started | App **Get started**. Lead: account + prepaid meter (production mail is billed). Contact us form + one primary phone + email. 316 lives on `/contact` / About / legal. |
