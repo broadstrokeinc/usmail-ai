@@ -1376,48 +1376,22 @@ a.btn-primary:visited {
 }
 
 .process-flow-mark {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
   margin-bottom: 0.7rem;
   background: #fff;
-  border: 2.5px solid currentColor;
+  border: 2px solid var(--postal-primary);
+  color: var(--postal-primary);
 }
 
 .process-flow-mark svg,
 .process-flow-mark i {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
-
-.process-flow-mark svg,
-.process-flow-mark svg * {
-  stroke-width: 2.65 !important;
-}
-
-/* Color lives in the icon. White face. */
-.process-flow > .is-upload .process-flow-mark {
-  color: #5b6a9a;
-}
-.process-flow > .is-spark .process-flow-mark {
-  color: #c9a227;
-}
-.process-flow > .is-pick .process-flow-mark {
-  color: #3d4d8a;
-}
-.process-flow > .is-make .process-flow-mark {
-  color: #1a2b63;
-}
-.process-flow > .is-usps .process-flow-mark {
-  color: #004b87;
-}
-
-.process-flow > .is-upload::after { color: #9aa8cc; }
-.process-flow > .is-spark::after { color: #d4a017; }
-.process-flow > .is-pick::after { color: #3d4d8a; }
-.process-flow > .is-make::after { color: #004b87; }
 
 .process-flow h3 {
   margin: 0 0 0.3rem;
@@ -1440,9 +1414,10 @@ a.btn-primary:visited {
   left: 50%;
   bottom: -1.45rem;
   transform: translateX(-50%);
-  font-size: 1.15rem;
+  color: var(--postal-primary);
+  font-size: 1.05rem;
   line-height: 1;
-  font-weight: 700;
+  opacity: 0.55;
   pointer-events: none;
 }
 
@@ -1458,9 +1433,9 @@ a.btn-primary:visited {
     left: auto;
     right: 0;
     bottom: auto;
-    top: 1.35rem;
+    top: 1.05rem;
     transform: translateX(50%);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1476,9 +1451,9 @@ a.btn-primary:visited {
     left: auto;
     right: 0;
     bottom: auto;
-    top: 1.35rem;
+    top: 1.05rem;
     transform: translateX(50%);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
