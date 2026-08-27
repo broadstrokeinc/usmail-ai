@@ -870,8 +870,9 @@ a.btn-primary:visited {
   margin: 0 0 1rem;
 }
 
-/* Inline Lucide — no chip (file types, tight lists). Heading marks use the process chip. */
+/* Inline Lucide — glyph only. Circles stay on the process rail. */
 .inline-ico,
+.step h3 svg,
 .format-title svg,
 .benefit-card h3 svg,
 .panel h3 svg,
@@ -1051,8 +1052,8 @@ a.btn-primary:visited {
   font-family: var(--font-display);
   font-size: 0.98rem;
   display: grid;
-  grid-template-columns: 2.75rem minmax(0, 1fr);
-  column-gap: 0.65rem;
+  grid-template-columns: 1.15rem minmax(0, 1fr);
+  column-gap: 0.45rem;
   align-items: center;
   color: var(--ink);
   text-align: left;
@@ -1095,17 +1096,11 @@ a.btn-primary:visited {
 .ops-card-top h3 svg,
 .ops-card-top h3 i,
 .industry-card h3 svg {
-  width: 2.75rem;
-  height: 2.75rem;
-  padding: 0.7rem;
-  box-sizing: border-box;
+  width: 1.15rem;
+  height: 1.15rem;
   flex-shrink: 0;
-  background: #f3f4f6;
-  border: 1px solid #c5cad3;
-  border-radius: 50%;
   color: var(--postal-primary);
   stroke-width: 2;
-  overflow: visible;
 }
 
 .step p {
@@ -1113,7 +1108,7 @@ a.btn-primary:visited {
   color: var(--slate);
   font-size: 0.88rem;
   line-height: 1.4;
-  padding-left: 3.2rem;
+  padding-left: 1.6rem;
 }
 
 .step p a {
@@ -2451,7 +2446,7 @@ a.btn-primary:visited {
   color: var(--slate);
   font-size: 0.92rem;
   line-height: 1.5;
-  padding-left: 3.2rem;
+  padding-left: 1.6rem;
 }
 
 .prose {
@@ -2658,10 +2653,9 @@ a.btn-primary:visited {
   margin: 0;
   font-size: 1.02rem;
   color: var(--ink);
-  display: grid;
-  grid-template-columns: 2.75rem minmax(0, 1fr);
-  column-gap: 0.65rem;
+  display: flex;
   align-items: center;
+  gap: 0.45rem;
 }
 
 .industry-card p {
@@ -4507,12 +4501,19 @@ label[for="company_website"] {
   line-height: 1.25 !important;
   color: var(--ink, #0f172a) !important;
   max-width: 100%;
-  display: grid;
-  grid-template-columns: 2.75rem minmax(0, 1fr);
-  column-gap: 0.65rem;
+  display: flex;
   align-items: center;
+  gap: 0.45rem;
 }
 
+.ops-card-top h3 svg,
+.ops-card-top h3 i {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  color: var(--postal-primary);
+  stroke-width: 2;
+}
 .ops-card-top h3 svg[data-lucide="badge-check"] {
   color: #3d4d8a;
 }
