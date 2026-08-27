@@ -9,7 +9,7 @@
 | # | Section | Content |
 |---|---------|---------|
 | 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names print, then handoff: we print your documents and postcards; we deliver them to USPS; USPS delivers nationwide. No wordmark, no “platform,” no slogan echo. AI lives in lockup + How it works Approve. |
-| 2 | What you get | Print · Mail Piece(s) · USPS. No Included flags (this is the job, not extras). USPS body: postage from prepaid meter. One line: tracing included on qualifying First-Class, tracking is an option → `/features`. No MCP on home. |
+| 2 | What you get | Print · Mail Piece(s) · USPS. No Included flags (this is the job, not extras). USPS body: prepaid postage applied; delivered to USPS on mail date. One line: tracing included on qualifying First-Class, tracking is an option → `/features`. No MCP on home. |
 | 3 | How it works | Process diagram (Upload → Approve → We produce → USPS). Approve: AI proposes setup. **See the full process** → `/how-it-works`. Not a second card grid. |
 | 4 | Trust | Real mail. USPS delivers nationwide. Visible: we deliver to USPS; USPS delivers nationwide; USMail.ai is not the United States Postal Service. `/about`. No Wichita on home. No 50-years heritage on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
