@@ -1383,7 +1383,7 @@ a.btn-primary:visited {
   place-items: center;
   margin-bottom: 0.7rem;
   background: #f3f4f6;
-  border: 2px solid var(--postal-primary);
+  border: 1px solid #c5cad3;
   color: var(--postal-primary);
 }
 
@@ -1393,12 +1393,12 @@ a.btn-primary:visited {
   height: 1.2rem;
 }
 
-/* Glyph only. Chip fill and ring stay the first-diagram navy. */
+/* Glyph carries the color. Ring is a light steel so it does not compete. */
 .process-flow > .is-upload .process-flow-mark { color: #1a2b63; }
 .process-flow > .is-spark .process-flow-mark { color: #c9a227; }
 .process-flow > .is-pick .process-flow-mark { color: #3d4d8a; }
 .process-flow > .is-make .process-flow-mark { color: #1a2b63; }
-.process-flow > .is-usps .process-flow-mark { color: #004b87; }
+.process-flow > .is-usps .process-flow-mark { color: #0068bb; }
 
 .process-flow h3 {
   margin: 0 0 0.3rem;
@@ -1421,10 +1421,10 @@ a.btn-primary:visited {
   left: 50%;
   bottom: -1.45rem;
   transform: translateX(-50%);
-  color: var(--postal-primary);
+  color: #94a3b8;
   font-size: 1.05rem;
   line-height: 1;
-  opacity: 0.55;
+  opacity: 1;
   pointer-events: none;
 }
 
