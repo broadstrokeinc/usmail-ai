@@ -24,7 +24,7 @@ Sage + operator. Short sentences. Second person. Present tense.
 - Hero lead is value, not a second title. Do not echo the slogan. Do not open with the wordmark.
 - No invented prices, hours saved, or USPS transit days.
 - Documents and postcards. “Letter” is a USPS size, or a named document type.
-- **Deliver** to USPS. Do not write “enter into the USPS network” or “plant path.”
+- **Deliver** to USPS. USPS delivers nationwide. Do not write “to USPS nationwide,” or collapse the two jobs. Do not write “enter into the USPS network” or “plant path.”
 - CTA: **Get started** → `https://app.usmail.ai/` (never iframe). Phone `888-667-5322` in footer, About, home Get started, `/contact`, legal/security. `316` is About / contact / legal only.
 - Contact form on home (Get started section) and `/contact`. Footer email stays. Do not plaster the form on landers.
 
@@ -36,7 +36,7 @@ One meaning across: visible FAQ, `FAQPage` JSON-LD on that page, `public/llms.tx
 
 USMail.ai is a nationwide AI print-to-mail platform. You upload documents and postcards. AI proposes setup. You approve. We print, insert, apply postage, and deliver the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.
 
-**Category** (“What is AI print to mail?” — home FAQ, `/ai-print-to-mail`, JSON-LD, DefinedTerm, `llms.txt`): AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USMail.ai does that nationwide.
+**Category** (“What is AI print to mail?” — home FAQ, `/ai-print-to-mail`, JSON-LD, DefinedTerm, `llms.txt`): AI print to mail means you upload documents and postcards. Software proposes setup. You approve. We print, apply postage, and deliver the pieces to USPS. USPS delivers nationwide.
 
 **Heritage** (About only; `llms.txt` Who runs it points at About): experienced print-to-mail experts with more than 50 years of combined expertise, innovation through AI. Never on home.
 
