@@ -4484,10 +4484,10 @@ label[for="company_website"] {
   flex-direction: column !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: #ffffff !important;
-  border: 1px solid #cbd5e1 !important;
-  border-radius: 16px !important;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+  background: var(--white) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-sm) !important;
   overflow: hidden !important;
   min-height: 100%;
 }
@@ -4498,18 +4498,37 @@ label[for="company_website"] {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem 0.75rem;
-  padding: 0.9rem 1.1rem !important;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 0.95rem 1rem 0.75rem !important;
+  background: var(--white) !important;
+  border-bottom: 1px solid var(--line);
 }
 
 .ops-card-top h3 {
   margin: 0 !important;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 1.02rem !important;
+  font-size: 0.98rem !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
   color: var(--ink, #0f172a) !important;
   max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ops-card-top h3 svg,
+.ops-card-top h3 i {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  color: var(--postal-primary);
+  stroke-width: 2;
+}
+.ops-card-top h3 svg[data-lucide="badge-check"] {
+  color: #3d4d8a;
+}
+.ops-card-top h3 svg[data-lucide="truck"] {
+  color: #0068bb;
 }
 
 .ops-badge {
@@ -4527,36 +4546,27 @@ label[for="company_website"] {
   color: #334155;
 }
 
-.ops-tone-green {
-  background: linear-gradient(180deg, #ecfdf5 0%, #f8fafc 100%) !important;
+.ops-tone-green,
+.ops-tone-amber,
+.ops-tone-blue,
+.ops-tone-navy {
+  background: var(--white) !important;
 }
 .ops-tone-green .ops-badge {
   background: #dcfce7 !important;
   color: #166534 !important;
 }
-
-.ops-tone-amber {
-  background: linear-gradient(180deg, #fffbeb 0%, #f8fafc 100%) !important;
-}
 .ops-tone-amber .ops-badge {
   background: #fef3c7 !important;
   color: #92400e !important;
-}
-
-.ops-tone-blue {
-  background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%) !important;
 }
 .ops-tone-blue .ops-badge {
   background: #dbeafe !important;
   color: #1e40af !important;
 }
-
-.ops-tone-navy {
-  background: linear-gradient(180deg, #e8ecf5 0%, #f8fafc 100%) !important;
-}
 .ops-tone-navy .ops-badge {
-  background: #1a2b63 !important;
-  color: #ffffff !important;
+  background: #e8ecf5 !important;
+  color: #1a2b63 !important;
 }
 
 .ops-card-body {
