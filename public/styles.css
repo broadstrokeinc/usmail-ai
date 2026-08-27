@@ -1055,17 +1055,19 @@ a.btn-primary:visited {
   column-gap: 0.65rem;
   align-items: center;
   color: var(--ink);
+  text-align: left;
 }
 
-.step h3:has(.step-flag) {
-  grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+.step:has(.step-flag) {
+  padding-right: 5.75rem;
 }
 
 .step-flag {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
   display: inline-flex;
   align-items: center;
-  justify-self: end;
-  align-self: start;
   padding: 0.22rem 0.55rem;
   border-radius: var(--radius-pill);
   font-family: var(--font-sans, inherit);
@@ -1309,7 +1311,7 @@ a.btn-primary:visited {
 
 #pillars .pillars-grid,
 #pillars .benefit-grid-3 {
-  text-align: center;
+  text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
