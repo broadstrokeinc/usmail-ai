@@ -1382,7 +1382,7 @@ a.btn-primary:visited {
   display: grid;
   place-items: center;
   margin-bottom: 0.7rem;
-  background: var(--postal-light);
+  background: #f3f4f6;
   border: 2px solid var(--postal-primary);
   color: var(--postal-primary);
 }
