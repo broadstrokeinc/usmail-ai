@@ -58,7 +58,7 @@
           { "@type": "ListItem", "position": 2, "name": "list_mail_products", "description": "List available mail options (e.g. First-Class, Certified Mail, Certificate of Mailing)." },
           { "@type": "ListItem", "position": 3, "name": "upload_document", "description": "Upload a document or package for a mailing job." },
           { "@type": "ListItem", "position": 4, "name": "create_mail_job", "description": "Create a print-to-mail job with recipients, options, and settings." },
-          { "@type": "ListItem", "position": 5, "name": "get_mail_job", "description": "Get job status, cost estimate, and mail-piece tracing/status for pieces in the job; paid USPS tracking IDs when a tracked service (e.g. Certified) was selected." },
+          { "@type": "ListItem", "position": 5, "name": "get_mail_job", "description": "Get job status, cost estimate, and mail-piece tracing for pieces in the job. Paid USPS tracking IDs only when tracking was selected on Priority or Certified Mail. Tracing is not tracking." },
           { "@type": "ListItem", "position": 6, "name": "list_mail_jobs", "description": "List jobs for the authenticated account." },
           { "@type": "ListItem", "position": 7, "name": "submit_mail_job", "description": "Submit a job for the human approval queue. Does not print. Does not debit the meter. Approve on the app debits the meter and starts production." },
           { "@type": "ListItem", "position": 8, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
@@ -184,7 +184,7 @@
 
         <div class="docs-tool" id="get_mail_job">
           <h3><code>get_mail_job</code></h3>
-          <p>Job status, costs, production state, piece tracing; paid USPS tracking when selected.</p>
+          <p>Job status, costs, production state, piece tracing. Paid USPS tracking only when tracking was selected on Priority or Certified Mail.</p>
           <p class="tool-line"><span>Inputs</span> job id</p>
           <p class="tool-line"><span>Returns</span> status · timestamps · piece/IMB status · tracking id if any</p>
         </div>
