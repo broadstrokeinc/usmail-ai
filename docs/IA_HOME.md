@@ -8,12 +8,12 @@
 
 | # | Section | Content |
 |---|---------|---------|
-| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead is the value, not a second title: files become real mail. We deliver them to USPS. USPS delivers nationwide. No wordmark, no “platform,” no slogan echo. |
-| 2 | What you get | Print (we help you split documents into mail pieces and print them) · Mail Piece(s) (stuffed envelope(s) or postcard(s), addressed) · USPS (postage applied, delivered to USPS on mail date). Tracing, logo envelope, NCOA, tracking live on `/features`. Approve stays in the lead and how-it-works. No MCP on home. |
-| 3 | How it works | Process diagram (Upload → Approve → We produce → USPS) + **See the full process** → `/how-it-works`. Not a second card grid. |
-| 4 | Trust | Real mail. USPS delivers nationwide. `/about`. No Wichita on home. No 50-years heritage on home. |
+| 1 | Hero | H1 = trust slogan (`You upload. You approve. We produce.`). Lead names print, then handoff: we print your documents and postcards; we deliver them to USPS; USPS delivers nationwide. No wordmark, no “platform,” no slogan echo. AI lives in lockup + How it works Approve. |
+| 2 | What you get | Print · Mail Piece(s) · USPS. No Included flags (this is the job, not extras). USPS body: postage from prepaid meter. One line: tracing included on qualifying First-Class, tracking is an option → `/features`. No MCP on home. |
+| 3 | How it works | Process diagram (Upload → Approve → We produce → USPS). Approve: AI proposes setup. **See the full process** → `/how-it-works`. Not a second card grid. |
+| 4 | Trust | Real mail. USPS delivers nationwide. Visible: we deliver to USPS; USPS delivers nationwide; USMail.ai is not the United States Postal Service. `/about`. No Wichita on home. No 50-years heritage on home. |
 | 5 | FAQ | **6** questions max (what / available / upload / Certified / statements / billing); all closed |
-| 6 | Get started | App **Get started** + Contact us form + one primary phone + email. 316 lives on `/contact` / About / legal. |
+| 6 | Get started | App **Get started**. Lead: account + prepaid meter (production mail is billed). Contact us form + one primary phone + email. 316 lives on `/contact` / About / legal. |
 
 ## Use-case landers (not on home)
 
