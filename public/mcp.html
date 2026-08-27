@@ -72,9 +72,9 @@
         "description": "MCP is available now on the app. AI agents upload documents and submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. Not an unauthenticated public endpoint.",
         "featureList": [
           "Agent upload and job setup",
-          "Same production path as human portal — ",
-          "Certified Mail options when configured — ",
-          "USPS handoff after production — "
+          "Same production path as the human portal",
+          "Certified Mail options when configured",
+          "Deliver to USPS after production"
         ],
         "provider": { "@id": "https://www.usmail.ai/#organization" }
       },
@@ -86,7 +86,7 @@
             "name": "What is the USMail.ai MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MCP (Model Context Protocol) is how AI agents and automation call mailing as a tool. Same production path as the portal — upload, setup, submit — without a human mailroom in the middle."
+              "text": "MCP (Model Context Protocol) is how AI agents submit print-to-mail jobs on the same production path as the portal. Account plus prepaid meter. A human must approve. submit_mail_job does not print. Docs: https://www.usmail.ai/docs/mcp"
             }
           },
           {
@@ -110,7 +110,7 @@
             "name": "Do agents use a different mail pipeline than humans?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Agents and people hit the same production backend: print, insert, postage, USPS handoff — including Certified options when selected."
+              "text": "No. Agents and people use the same production path: print, insert, postage, and we deliver the pieces to USPS. Certified options when selected. A human still approves."
             }
           }
         ]
@@ -204,6 +204,38 @@
           Billing: account + prepaid meter.
           <a href="/docs/mcp">Full MCP reference →</a>
         </p>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="mcp-faq">
+      <div class="wrap">
+        <h2 id="mcp-faq">FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>What is the USMail.ai MCP?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>MCP (Model Context Protocol) is how AI agents submit print-to-mail jobs on the same production path as the portal. Account plus prepaid meter. A human must approve. submit_mail_job does not print. <a href="/docs/mcp">MCP docs →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is the MCP available now?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes. MCP is available now on the app. Account plus prepaid meter. A human must approve. submit_mail_job does not print. Not an unauthenticated public endpoint. <a href="/docs/mcp">MCP docs →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>How do I pay for MCP mail jobs?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Register an account and fund a prepaid meter. Approve on the app debits the meter. submit_mail_job does not debit and does not print. Standalone API keys for agents are planned later.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do agents use a different mail pipeline than humans?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Agents and people use the same production path: print, insert, postage, and we deliver the pieces to USPS. Certified options when selected. A human still approves.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 

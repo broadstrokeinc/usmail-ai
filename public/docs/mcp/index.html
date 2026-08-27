@@ -78,10 +78,10 @@
         "description": "MCP is available now on the app. AI agents submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. Not an unauthenticated public endpoint. Direct API keys planned later.",
         "featureList": [
           "Submit mail jobs from AI agents",
-          "Same production path as human portal — ",
-          "Account authentication — ",
-          "Prepaid meter billing — ",
-          "Certified Mail and Certificate of Mailing options when selected — "
+          "Same production path as the human portal",
+          "Account authentication",
+          "Prepaid meter billing",
+          "Certified Mail and Certificate of Mailing when selected"
         ],
         "provider": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" }
       },
@@ -93,7 +93,7 @@
             "name": "What is the USMail.ai MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Model Context Protocol integration so AI agents can submit print-to-mail jobs on the same production path as the human portal — print, insert, postage, USPS."
+              "text": "A Model Context Protocol integration so AI agents can submit print-to-mail jobs on the same production path as the human portal. Account plus prepaid meter. A human must approve. submit_mail_job does not print."
             }
           },
           {
@@ -114,10 +114,10 @@
           },
           {
             "@type": "Question",
-            "name": "Different pipeline for agents?",
+            "name": "Do agents use a different mail pipeline than humans?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. One production backend for portal and MCP, including Certified options when selected ."
+              "text": "No. One production path for portal and MCP. We print, insert, apply postage, and deliver the pieces to USPS. Certified options when selected. A human still approves."
             }
           }
         ]
@@ -186,6 +186,7 @@
           <li><a href="#status">Availability</a></li>
           <li><a href="#flow">Flow</a></li>
           <li><a href="#limits">Not included</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </aside>
 
@@ -252,7 +253,33 @@
           <li>Live hostnames / install strings (issued with access)</li>
         </ul>
 
-        
+        <h2 id="faq">FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>What is the USMail.ai MCP?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>A Model Context Protocol integration so AI agents can submit print-to-mail jobs on the same production path as the human portal. Account plus prepaid meter. A human must approve. submit_mail_job does not print.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is it available now?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes. MCP is available now on the app. Account plus prepaid meter. A human must approve. submit_mail_job does not print. Not an unauthenticated public endpoint. <a href="https://app.usmail.ai/">Get started</a>.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>How does billing work for MCP?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Account plus prepaid meter. A human funds the meter. Approve on the app debits it. submit_mail_job does not debit and does not print. Standalone API keys are planned later. Production mail is not free. <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do agents use a different mail pipeline than humans?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. One production path for portal and MCP. We print, insert, apply postage, and deliver the pieces to USPS. Certified options when selected. A human still approves.</p>
+            </div>
+          </details>
+        </div>
 
         <div class="docs-next">
           <a href="/docs/mcp/getting-started">Getting started →</a>
