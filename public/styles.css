@@ -1376,26 +1376,21 @@ a.btn-primary:visited {
 }
 
 .process-flow-mark {
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
   margin-bottom: 0.7rem;
-  background: #fff;
+  background: var(--postal-light);
   border: 2px solid var(--postal-primary);
   color: var(--postal-primary);
-  flex-shrink: 0;
-  overflow: visible;
 }
 
-/* Original Lucide step icons (d5e121b): 22px, stroke 2 */
 .process-flow-mark svg,
 .process-flow-mark i {
-  width: 22px;
-  height: 22px;
-  stroke-width: 2;
-  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .process-flow h3 {
