@@ -1376,8 +1376,8 @@ a.btn-primary:visited {
 }
 
 .process-flow-mark {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1385,12 +1385,17 @@ a.btn-primary:visited {
   background: #fff;
   border: 2px solid var(--postal-primary);
   color: var(--postal-primary);
+  flex-shrink: 0;
+  overflow: visible;
 }
 
+/* Original Lucide step icons (d5e121b): 22px, stroke 2 */
 .process-flow-mark svg,
 .process-flow-mark i {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+  display: block;
 }
 
 .process-flow h3 {
