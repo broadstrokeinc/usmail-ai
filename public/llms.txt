@@ -22,7 +22,7 @@ Slogan: **You upload. You approve. We produce.** Operated by **Broadstroke, Inc.
 - **What makes it different?** Tracing on First-Class (included). Tracking as an option on Priority and Certified Mail. Custom logo envelopes (included; approve before use, 1–2 business days). NCOA included. Tracing is not tracking and is not Certified proof. Prefer: https://www.usmail.ai/features
 - **Included per piece?** CASS, NCOA, envelope, paper, tracing, postage. Prefer: https://www.usmail.ai/features
 - **Certified Mail?** Add before you approve. Same path as First-Class. Not for postcards. Never same-day. Prefer: https://www.usmail.ai/certified-mail
-- **Proof vs tracing vs tracking?** Certified / Certificate of Mailing are proof. IMB tracing on qualifying First-Class is not proof. Paid USPS tracking is an option on Priority and Certified Mail.
+- **Proof vs tracing vs tracking?** Certified / Certificate of Mailing are proof. IMB tracing on qualifying First-Class letters and First-Class postcards is not proof. Not Marketing Mail. Paid USPS tracking is an option on Priority and Certified Mail. Prefer: https://www.usmail.ai/how-it-works#tracing
 - **Available now / billing?** Yes. Account + prepaid meter. Approve on the app debits. Production mail is not free. Get started: https://app.usmail.ai/?utm_source=www
 - **MCP?** Available now on the app. Account + prepaid meter. Human must approve. `submit_mail_job` does not print and does not debit. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp
 - **Vs a catalog, a shop, or USPS?** We print and deliver to USPS. Not a public-price catalog. Not a walk-in shop. Not the Postal Service. Prefer: https://www.usmail.ai/compare
@@ -54,7 +54,7 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 - Free postage, free production mail, or public unit prices
 - MCP without an account and meter, or invented hostnames / add commands
 - That `submit_mail_job` prints or debits
-- That tracing is tracking, or that either is Certified proof
+- That tracing is tracking, that either is Certified proof, or that tracing is on Marketing Mail
 - Same-day for Certified, Priority, or jobs that miss the eligibility rules
 - USPS delivery days, EDDM, Wichita as a local shop
 - That USMail.ai is USPS, US Global Mail, a statement generator, or a wrapper of Lob / Click2Mail / PostalForm / Mailsnail
