@@ -1393,6 +1393,13 @@ a.btn-primary:visited {
   height: 1.2rem;
 }
 
+/* Glyph only. Chip fill and ring stay the first-diagram navy. */
+.process-flow > .is-upload .process-flow-mark { color: #1a2b63; }
+.process-flow > .is-spark .process-flow-mark { color: #c9a227; }
+.process-flow > .is-pick .process-flow-mark { color: #3d4d8a; }
+.process-flow > .is-make .process-flow-mark { color: #1a2b63; }
+.process-flow > .is-usps .process-flow-mark { color: #004b87; }
+
 .process-flow h3 {
   margin: 0 0 0.3rem;
   font-family: var(--font-display);
