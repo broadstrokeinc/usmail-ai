@@ -870,9 +870,8 @@ a.btn-primary:visited {
   margin: 0 0 1rem;
 }
 
-/* Inline Lucide icons — no tile backgrounds (mobile-first) */
+/* Inline Lucide — no chip (file types, tight lists). Heading marks use the process chip. */
 .inline-ico,
-.step h3 svg,
 .format-title svg,
 .benefit-card h3 svg,
 .panel h3 svg,
@@ -1090,12 +1089,22 @@ a.btn-primary:visited {
 }
 
 .step h3 svg,
-.step h3 i {
-  width: 1.15rem;
-  height: 1.15rem;
+.step h3 i,
+.page-section .step h3 svg,
+.ops-card-top h3 svg,
+.ops-card-top h3 i,
+.industry-card h3 svg {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.7rem;
+  box-sizing: border-box;
   flex-shrink: 0;
+  background: #f3f4f6;
+  border: 1px solid #c5cad3;
+  border-radius: 50%;
   color: var(--postal-primary);
   stroke-width: 2;
+  overflow: visible;
 }
 
 .step p {
@@ -1103,7 +1112,7 @@ a.btn-primary:visited {
   color: var(--slate);
   font-size: 0.88rem;
   line-height: 1.4;
-  padding-left: 1.6rem;
+  padding-left: 3.2rem;
 }
 
 .step p a {
@@ -2437,19 +2446,12 @@ a.btn-primary:visited {
   gap: 0.5rem;
 }
 
-.page-section .step h3 svg {
-  width: 1.15rem;
-  height: 1.15rem;
-  flex-shrink: 0;
-  color: var(--postal-primary);
-  stroke-width: 2;
-}
-
 .page-section .step p {
   margin: 0;
   color: var(--slate);
   font-size: 0.92rem;
   line-height: 1.5;
+  padding-left: 3.2rem;
 }
 
 .prose {
@@ -2659,13 +2661,6 @@ a.btn-primary:visited {
   display: flex;
   align-items: center;
   gap: 0.45rem;
-}
-
-.industry-card h3 svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  color: var(--postal-primary);
-  stroke-width: 2;
 }
 
 .industry-card p {
@@ -4516,14 +4511,6 @@ label[for="company_website"] {
   gap: 0.45rem;
 }
 
-.ops-card-top h3 svg,
-.ops-card-top h3 i {
-  width: 1.15rem;
-  height: 1.15rem;
-  flex-shrink: 0;
-  color: var(--postal-primary);
-  stroke-width: 2;
-}
 .ops-card-top h3 svg[data-lucide="badge-check"] {
   color: #3d4d8a;
 }
