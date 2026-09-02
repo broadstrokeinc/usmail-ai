@@ -63,6 +63,6 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 ## Contact
 
 - Broadstroke, Inc. · 820 W 2nd St N, Wichita, KS 67203
-- 888-667-5322 · 316-247-5300 · info@usmail.ai
+- 888-667-5322 · 316-247-5322 · info@usmail.ai
 - Form: https://www.usmail.ai/contact
 - App: https://app.usmail.ai/?utm_source=llms
