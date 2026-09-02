@@ -9,7 +9,7 @@
   <title>USMail.ai MCP Documentation — Model Context Protocol for Print-to-Mail</title>
   <meta
     name="description"
-    content="USMail.ai MCP docs: AI agents submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. API keys planned later."
+    content="USMail.ai MCP: human account + prepaid meter. Agent logs in with env credentials, passes a short session token. Human approves on the app."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
@@ -52,7 +52,7 @@
         "description": "Documentation for the USMail.ai MCP server that lets AI agents submit print-to-mail jobs. Humans register an account and fund a prepaid meter. Direct API access is planned. ",
         "url": "https://www.usmail.ai/docs/mcp",
         "datePublished": "2026-07-29",
-        "dateModified": "2026-07-29",
+        "dateModified": "2026-09-02",
         "author": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "publisher": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "about": [
@@ -75,12 +75,12 @@
           "url": "https://app.usmail.ai/?utm_source=www&utm_campaign=mcp",
           "description": "MCP requires a USMail.ai account and prepaid meter. Mail production is billed — not free postage."
         },
-        "description": "MCP is available now on the app. AI agents submit print-to-mail jobs on the same production path as the portal. Account + prepaid meter required. Not an unauthenticated public endpoint. Direct API keys planned later.",
+        "description": "MCP is available now on the app. Agents log in with the human account and a short session token. Account + prepaid meter required. A human on the app approves. Direct API keys planned later.",
         "featureList": [
-          "Submit mail jobs from AI agents",
+          "Login with the human account",
+          "Short-lived session token on later calls",
           "Same production path as the human portal",
-          "Account authentication",
-          "Prepaid meter billing",
+          "Prepaid meter billed when the human approves",
           "Certified Mail and Certificate of Mailing when selected"
         ],
         "provider": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" }
@@ -93,7 +93,7 @@
             "name": "What is the USMail.ai MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Model Context Protocol integration so AI agents can submit print-to-mail jobs on the same production path as the human portal. Account plus prepaid meter. A human must approve. submit_mail_job does not print."
+              "text": "A Model Context Protocol integration so AI agents can prepare print-to-mail jobs on the same production path as the portal. Account plus prepaid meter. Login returns a short session token. A human on the app approves."
             }
           },
           {
@@ -101,7 +101,7 @@
             "name": "Is it available now?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. MCP is available now on the app. Account + prepaid meter required. A human must approve. submit_mail_job does not print. Not an unauthenticated public endpoint. Get started at https://app.usmail.ai/."
+              "text": "Yes. MCP is available now on the app. Account + prepaid meter required. Agent uses env login and a short session token. A human on the app approves. Not an unauthenticated public endpoint. Get started at https://app.usmail.ai/."
             }
           },
           {
@@ -109,7 +109,7 @@
             "name": "How does billing work for MCP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Account + prepaid meter. A human funds the meter. Approve on the app debits it. submit_mail_job does not debit and does not print. Standalone API keys are planned later. Production mail is not free."
+              "text": "Account + prepaid meter. A human funds the meter in the app. Approve on the app debits it. Agents do not run card deposits. Standalone API keys are planned later. Production mail is not free."
             }
           },
           {
@@ -202,7 +202,7 @@
 <section id="answer" class="docs-answer" aria-label="Direct answer">
           <h2 class="docs-h2-sr">Quick answer</h2>
           <p>
-            <strong>MCP is available now</strong> on the app. Agents submit print-to-mail on the portal path.
+            <strong>MCP is available now</strong> on the app. Agents use the human account (env login + short session token).
             Account + prepaid meter. A human still approves. Standalone API keys later.
           </p>
         </section>
@@ -240,8 +240,8 @@
 
         <h2 id="flow">Flow</h2>
         <p class="docs-prose">
-          Account, fund meter, connect MCP, call tools, then a human approves on the app.
-          Approve debits the meter and starts production. submit_mail_job does not print and does not debit.
+          Account, fund meter, put credentials in env, login for a session token, call tools, then a human approves on the app.
+          Approve debits the meter and starts production.
           Then we produce and hand off to USPS. Same path as the portal.
           <a href="/how-it-works">How it works →</a>
         </p>
@@ -258,19 +258,19 @@
           <details class="faq-item">
             <summary><span>What is the USMail.ai MCP?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>A Model Context Protocol integration so AI agents can submit print-to-mail jobs on the same production path as the human portal. Account plus prepaid meter. A human must approve. submit_mail_job does not print.</p>
+              <p>A Model Context Protocol integration so AI agents can prepare print-to-mail jobs on the same production path as the portal. Account plus prepaid meter. Login returns a short session token. A human on the app approves.</p>
             </div>
           </details>
           <details class="faq-item">
             <summary><span>Is it available now?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Yes. MCP is available now on the app. Account plus prepaid meter. A human must approve. submit_mail_job does not print. Not an unauthenticated public endpoint. <a href="https://app.usmail.ai/">Get started</a>.</p>
+              <p>Yes. MCP is available now on the app. Account plus prepaid meter. Agent uses env login and a short session token. A human on the app approves. Not an unauthenticated public endpoint. <a href="https://app.usmail.ai/">Get started</a>.</p>
             </div>
           </details>
           <details class="faq-item">
             <summary><span>How does billing work for MCP?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Account plus prepaid meter. A human funds the meter. Approve on the app debits it. submit_mail_job does not debit and does not print. Standalone API keys are planned later. Production mail is not free. <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a></p>
+              <p>Account plus prepaid meter. A human funds the meter in the app. Approve on the app debits it. Agents do not run card deposits. Standalone API keys are planned later. Production mail is not free. <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a></p>
             </div>
           </details>
           <details class="faq-item">

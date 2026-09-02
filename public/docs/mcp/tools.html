@@ -9,7 +9,7 @@
   <title>MCP Tools Reference | USMail.ai — Print-to-Mail Tools for Agents</title>
   <meta
     name="description"
-    content="USMail.ai MCP tools: get_account_status, list_mail_products, upload_document, create_mail_job, get_mail_job, list_mail_jobs, submit_mail_job, cancel_mail_job. Account + meter. submit does not print."
+    content="USMail.ai MCP: login with the account, pass a short session token, create jobs and proofs. Human funds the meter and approves on the app."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp/tools" />
@@ -17,13 +17,13 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:title" content="MCP Tools Reference | USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/docs/mcp/tools" />
-  <meta property="og:description" content="Eight public MCP tools. Account + meter. submit_mail_job does not print." />
+  <meta property="og:description" content="Login, session token, mail jobs. Human approves on the app." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MCP Tools Reference | USMail.ai" />
-  <meta name="twitter:description" content="Eight public MCP tools. Account + meter. submit does not print." />
+  <meta name="twitter:description" content="Login, session token, mail jobs. Human approves on the app." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,22 +46,18 @@
         "@type": "TechArticle",
         "headline": "USMail.ai MCP tools reference",
         "url": "https://www.usmail.ai/docs/mcp/tools",
-        "dateModified": "2026-07-29",
-        "description": "USMail.ai MCP tools: get_account_status, list_mail_products, upload_document, create_mail_job, get_mail_job, list_mail_jobs, submit_mail_job, cancel_mail_job. Account + prepaid meter. submit_mail_job does not print. Approve on the app debits the meter.",
+        "dateModified": "2026-09-02",
+        "description": "USMail.ai MCP: login with the human account, pass a short session token on later calls, create jobs and proofs. Approve on the app debits the prepaid meter.",
         "about": "MCP tools for physical mail production"
       },
       {
         "@type": "ItemList",
-        "name": "USMail.ai MCP tools",
+        "name": "USMail.ai MCP capabilities",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "get_account_status", "description": "Return account and prepaid meter summary for the authenticated account." },
-          { "@type": "ListItem", "position": 2, "name": "list_mail_products", "description": "List available mail options (e.g. First-Class, Certified Mail, Certificate of Mailing)." },
-          { "@type": "ListItem", "position": 3, "name": "upload_document", "description": "Upload a document or package for a mailing job." },
-          { "@type": "ListItem", "position": 4, "name": "create_mail_job", "description": "Create a print-to-mail job with recipients, options, and settings." },
-          { "@type": "ListItem", "position": 5, "name": "get_mail_job", "description": "Get job status, cost estimate, and mail-piece tracing for pieces in the job. Paid USPS tracking IDs only when tracking was selected on Priority or Certified Mail. Tracing is not tracking." },
-          { "@type": "ListItem", "position": 6, "name": "list_mail_jobs", "description": "List jobs for the authenticated account." },
-          { "@type": "ListItem", "position": 7, "name": "submit_mail_job", "description": "Submit a job for the human approval queue. Does not print. Does not debit the meter. Approve on the app debits the meter and starts production." },
-          { "@type": "ListItem", "position": 8, "name": "cancel_mail_job", "description": "Cancel a job if still cancelable before production." }
+          { "@type": "ListItem", "position": 1, "name": "Login", "description": "Account email and password from the environment. Returns a short-lived session token." },
+          { "@type": "ListItem", "position": 2, "name": "Create and upload", "description": "Create a mail job, upload documents and lists, set print and mail options." },
+          { "@type": "ListItem", "position": 3, "name": "Proof and status", "description": "Generate proof, list and get jobs, read meter balance." },
+          { "@type": "ListItem", "position": 4, "name": "Approve on the app", "description": "A human on the app approves. That debit starts production. Agents do not run card deposits." }
         ]
       }
     ]
@@ -134,114 +130,52 @@
         <h1>MCP tools reference</h1>
 <div class="docs-answer">
           <p>
-            The eight public MCP tools. Account + <strong>prepaid meter</strong>.
-            A human must approve. <code>submit_mail_job</code> does not print by itself.
+            Login with the human account. Pass the short session token on later calls.
+            Create jobs and proofs. <strong>Approve on the app</strong> to spend the meter.
+            Ask the live MCP server for the tool list. Do not invent names.
           </p>
         </div>
 
         <aside class="docs-callout">
-          <strong>Billing:</strong> Approve on the app debits the meter.
-          <code>submit_mail_job</code> does not print and does not debit.
-          <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a>
+          <strong>Auth:</strong> email + password in env. Login returns a session token (minutes).
+          Pass it on every later call. <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a>
         </aside>
 
-        <details class="docs-toc">
-          <summary>On this page</summary>
-          <ul>
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#errors">Errors</a></li>
-            <li><a href="#sequence">Sequence</a></li>
-          </ul>
-        </details>
+        <h2 id="tools">What agents can do</h2>
 
-        <h2 id="tools">Tools</h2>
-
-        <div class="docs-tool" id="get_account_status">
-          <h3><code>get_account_status</code></h3>
-          <p>Account summary and meter balance for the authenticated session.</p>
-          <p class="tool-line"><span>Returns</span> account id · meter balance · MCP enabled</p>
+        <div class="docs-tool" id="login">
+          <h3>Login</h3>
+          <p>Account email and password from the environment. Returns a short-lived session token. Pass that token on later mail tools. On auth failure, log in again.</p>
         </div>
 
-        <div class="docs-tool" id="list_mail_products">
-          <h3><code>list_mail_products</code></h3>
-          <p>Mail options available to the account (First-Class, Certified, Certificate of Mailing, …).</p>
-          <p class="tool-line"><span>Returns</span> option codes · names · short descriptions</p>
+        <div class="docs-tool" id="create-upload">
+          <h3>Create, upload, configure</h3>
+          <p>Create a job. Upload documents and lists. Set First-Class, Certified, print options. Same production path as the portal.</p>
         </div>
 
-        <div class="docs-tool" id="upload_document">
-          <h3><code>upload_document</code></h3>
-          <p>Upload a document or package (PDF, Word, images, lists as supported).</p>
-          <p class="tool-line"><span>Inputs</span> file · filename · content type · optional job id</p>
-          <p class="tool-line"><span>Returns</span> document id</p>
+        <div class="docs-tool" id="proof-status">
+          <h3>Proof and status</h3>
+          <p>Generate proof. List and get jobs. Read meter balance. Tracing on qualifying First-Class pieces is not tracking.</p>
         </div>
 
-        <div class="docs-tool" id="create_mail_job">
-          <h3><code>create_mail_job</code></h3>
-          <p>Create a job: documents, recipients/list, print options, mail options.</p>
-          <p class="tool-line"><span>Inputs</span> document ids · recipients/list · options · approval flags</p>
-          <p class="tool-line"><span>Returns</span> job id · draft status · estimate when available</p>
+        <div class="docs-tool" id="approve">
+          <h3>Approve (postage)</h3>
+          <p>A human on the app approves. That debit starts production. Agents do not run card deposits. Do not invent a submit-mail-job tool.</p>
         </div>
 
-        <div class="docs-tool" id="get_mail_job">
-          <h3><code>get_mail_job</code></h3>
-          <p>Job status, costs, production state, piece tracing. Paid USPS tracking only when tracking was selected on Priority or Certified Mail.</p>
-          <p class="tool-line"><span>Inputs</span> job id</p>
-          <p class="tool-line"><span>Returns</span> status · timestamps · piece/IMB status · tracking id if any</p>
-        </div>
-
-        <div class="docs-tool" id="submit_mail_job">
-          <div class="tool-head">
-            <h3><code>submit_mail_job</code></h3>
-            <span class="tool-badge">Does not print</span>
-          </div>
-          <p>Submit a job for the human approval queue. Does not print. Does not debit the meter. A human on the app still approves. Approve debits the meter and starts production.</p>
-          <p class="tool-line"><span>Inputs</span> job id · optional confirmation</p>
-          <p class="tool-line"><span>Fails</span> validation · missing account</p>
-        </div>
-
-        <div class="docs-tool" id="list_mail_jobs">
-          <h3><code>list_mail_jobs</code></h3>
-          <p>List jobs for the authenticated account.</p>
-          <p class="tool-line"><span>Returns</span> job ids · statuses · timestamps</p>
-        </div>
-
-        <div class="docs-tool" id="cancel_mail_job">
-          <h3><code>cancel_mail_job</code></h3>
-          <p>Cancel if still cancelable (before irreversible production).</p>
-          <p class="tool-line"><span>Inputs</span> job id</p>
-        </div>
-
-        <h2 id="errors">Errors</h2>
-        <div class="content-table-wrap">
-          <table class="docs-table">
-            <thead>
-              <tr><th>Code</th><th>Meaning</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><code>unauthenticated</code></td><td>No valid session / credentials</td></tr>
-              <tr><td><code>insufficient_meter</code></td><td>Fund the prepaid meter</td></tr>
-              <tr><td><code>validation_error</code></td><td>Address, file, or cutoff rules</td></tr>
-              <tr><td><code>not_cancelable</code></td><td>Already in production</td></tr>
-              <tr><td><code>not_available</code></td><td>MCP/platform not enabled</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2 id="sequence">Illustrative sequence</h2>
-        <pre class="docs-code" tabindex="0">get_account_status
-list_mail_products
-upload_document
-create_mail_job
-submit_mail_job      ← does not print; does not debit
-                     ← human approve on the app debits the meter
-get_mail_job</pre>
-        <p class="docs-muted">Conceptual only. Do not invent hostnames or add commands.</p>
+        <h2 id="sequence">Sequence</h2>
+        <pre class="docs-code" tabindex="0">human: register + fund meter in the app
+env: account email + password (never in the prompt)
+MCP: login → session token
+MCP: create / upload / proof
+app: human approves → meter debit → we produce</pre>
+        <p class="docs-muted">Live names come from the MCP server tool list. Do not invent hostnames or add commands.</p>
 
         <h2 id="not-included">Not included</h2>
         <ul class="docs-prose">
-          <li>Live base URL or install strings (issued with account access)</li>
-          <li>Public OpenAPI / customer API keys (planned later)</li>
+          <li>Standalone API keys (planned later)</li>
           <li>Unauthenticated public MCP</li>
+          <li>Agent card deposits</li>
         </ul>
 
         <div class="docs-next">

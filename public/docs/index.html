@@ -59,15 +59,15 @@
             "name": "Is MCP available?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, on the app. Account plus prepaid meter. A human must approve. submit_mail_job does not print and does not debit. Approve on the app debits the meter. Do not invent an add command."
+              "text": "Yes, on the app. Account plus prepaid meter. Agent logs in from env with a short session token. A human must approve on the app. Approve debits the meter. Do not invent an add command."
             }
           },
           {
             "@type": "Question",
-            "name": "Does submit_mail_job print?",
+            "name": "Do agents approve and spend postage?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. submit_mail_job does not print and does not debit. A human on the app still approves. Approve starts production and debits the meter."
+              "text": "No. A human on the app approves. That debit starts production. Agents prepare jobs. They do not run card deposits."
             }
           }
         ]
@@ -142,8 +142,8 @@
           <p>
             Public reference. Prefer
             <a href="/docs/mcp">/docs/mcp</a> for agents.
-            MCP is available now on the app. Account plus prepaid meter. A human must approve.
-            submit_mail_job does not print and does not debit. Approve on the app debits the meter.
+            MCP is available now on the app. Account plus prepaid meter. Agent logs in from env with a short session token.
+            A human must approve on the app. Approve debits the meter.
             Standalone API keys are planned later.
           </p>
         </div>
@@ -164,7 +164,7 @@
           </li>
           <li class="step">
             <h3><i data-lucide="wrench" aria-hidden="true"></i> <a href="/docs/mcp/tools">Tools reference</a></h3>
-            <p>Eight public tools. submit does not print.</p>
+            <p>Login, session token, jobs. Human approves.</p>
           </li>
         </ul>
 
@@ -179,13 +179,13 @@
           <details class="faq-item">
             <summary><span>Is MCP available?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Yes, on the app. Account plus prepaid meter. A human must approve. submit_mail_job does not print and does not debit. Approve on the app debits the meter. Do not invent an add command. <a href="/docs/mcp">MCP docs →</a></p>
+              <p>Yes, on the app. Account plus prepaid meter. Agent logs in from env with a short session token. A human must approve on the app. Approve debits the meter. Do not invent an add command. <a href="/docs/mcp">MCP docs →</a></p>
             </div>
           </details>
           <details class="faq-item">
-            <summary><span>Does submit_mail_job print?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <summary><span>Do agents approve and spend postage?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>No. submit_mail_job does not print and does not debit. A human on the app still approves. Approve starts production and debits the meter.</p>
+              <p>No. A human on the app approves. That debit starts production. Agents prepare jobs. They do not run card deposits.</p>
             </div>
           </details>
         </div>

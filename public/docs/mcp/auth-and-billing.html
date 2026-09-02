@@ -46,8 +46,8 @@
         "@type": "TechArticle",
         "headline": "USMail.ai MCP authentication and billing",
         "url": "https://www.usmail.ai/docs/mcp/auth-and-billing",
-        "dateModified": "2026-07-29",
-        "description": "Human account registration and prepaid meter funding for USMail.ai. API keys for agents planned later."
+        "dateModified": "2026-09-02",
+        "description": "USMail.ai MCP uses the human account login and a short-lived session token. Prepaid meter. API keys planned later."
       }
     ]
   }
@@ -119,28 +119,32 @@
         <h1>Authentication &amp; billing</h1>
 <div class="docs-answer">
           <p>
-            <strong>Human account + prepaid meter</strong>. Approve on the app debits the same meter for portal and MCP.
-            No free anonymous MCP. API keys planned later — do not invent endpoints.
+            <strong>Same account as the app.</strong> Email and password in the agent environment.
+            Login returns a short-lived session token. Pass it on later tool calls.
+            Fund the meter in the app. Approve on the app spends it. API keys later.
           </p>
         </div>
 
         <h2>Account</h2>
         <ul class="docs-prose">
-          <li>Human registers; owns portal and MCP enablement</li>
-          <li>Signup requirements published with the account flow</li>
+          <li>A human registers at the app. Agents do not self-register.</li>
+          <li>One account owns the portal and MCP.</li>
         </ul>
 
         <h2>Prepaid meter</h2>
         <ul class="docs-prose">
-          <li>Fund in advance. Approve on the app debits the balance</li>
-          <li>Shared by portal and MCP</li>
-          <li>Insufficient balance blocks production (no silent overdraft)</li>
+          <li>Fund in the app. Agents do not run card deposits.</li>
+          <li>Approve on the app debits the same meter as the portal.</li>
+          <li>Insufficient balance blocks production. No silent overdraft.</li>
         </ul>
 
-        <h2>MCP auth</h2>
-        <p class="docs-prose">
-          Credentials issued with access for that account. Not published on this site.
-        </p>
+        <h2>MCP auth (now)</h2>
+        <ul class="docs-prose">
+          <li>Not an API key. After login you get a short-lived session token (minutes, then refresh or log in again).</li>
+          <li>Call the MCP login tool with the account email and password. Ask it to return the token.</li>
+          <li>Pass that token on every later mail tool. On auth failure, log in again.</li>
+          <li>Never put the password in the prompt or a public repo.</li>
+        </ul>
 
         <h2>Roadmap</h2>
         <div class="content-table-wrap"><table class="docs-table">
@@ -150,22 +154,21 @@
           <tbody>
             <tr>
               <td><strong>Now</strong></td>
-              <td>Human account; MCP tied to account</td>
-              <td>Prepaid meter funded by human</td>
+              <td>Human account. Login → session token on each tool</td>
+              <td>Prepaid meter funded in the app</td>
             </tr>
             <tr>
               <td><strong>Later (planned)</strong></td>
-              <td>API keys / programmatic credentials for agents</td>
-              <td>API-oriented billing options (details TBD)</td>
+              <td>Revocable agent API keys that mint those session tokens</td>
+              <td>Same meter; crypto funding when it exists</td>
             </tr>
           </tbody>
         </table></div>
-        <p class="docs-muted">Until API keys ship, account + meter is the only model.</p>
 
         <h2>Security</h2>
         <ul class="docs-prose">
-          <li>Never put funding credentials in prompts or public repos</li>
-          <li>A human must approve every job, including Certified</li>
+          <li>Password in env only</li>
+          <li>A human approves production mail, including Certified</li>
           <li>Recipient data is production mail data — handle under your policies</li>
         </ul>
 

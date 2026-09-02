@@ -9,7 +9,7 @@
   <title>Getting Started with USMail.ai MCP — Account &amp; Meter</title>
   <meta
     name="description"
-    content="Get started with USMail.ai MCP: register an account, add funds to the prepaid meter, then connect an MCP client. "
+    content="Get started with USMail.ai MCP: register, fund the meter, put credentials in env, login for a session token, human approves."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp/getting-started" />
@@ -47,19 +47,20 @@
         "name": "Get started with USMail.ai MCP",
         "description": "Register an account, fund the prepaid meter, and prepare to connect an MCP client. ",
         "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Get started", "text": "Open https://app.usmail.ai/." },
-          { "@type": "HowToStep", "position": 2, "name": "Register an account", "text": "Create a USMail.ai account. One account owns portal and MCP." },
-          { "@type": "HowToStep", "position": 3, "name": "Add funds to the meter", "text": "Fund the prepaid meter. Approve on the app debits this balance." },
-          { "@type": "HowToStep", "position": 4, "name": "Use portal or MCP", "text": "Send mail via the human portal and, with an account, connect an MCP client under the same account." },
-          { "@type": "HowToStep", "position": 5, "name": "API later", "text": "A dedicated API option for AI agents is planned; it is not required for the account+meter path and is not available yet." }
+          { "@type": "HowToStep", "position": 1, "name": "Register", "text": "A human creates an account at https://app.usmail.ai/." },
+          { "@type": "HowToStep", "position": 2, "name": "Fund the meter", "text": "Add prepaid balance in the app. Agents do not run card deposits." },
+          { "@type": "HowToStep", "position": 3, "name": "Give the agent env credentials", "text": "Put the account email and password in the agent environment. Never in the prompt." },
+          { "@type": "HowToStep", "position": 4, "name": "Login for a session token", "text": "Call the MCP login tool with those credentials and ask it to return the session token." },
+          { "@type": "HowToStep", "position": 5, "name": "Pass the token on later calls", "text": "Pass the session token on every later mail tool. The token is short-lived. On auth failure, log in again." },
+          { "@type": "HowToStep", "position": 6, "name": "Human approves", "text": "Approve on the app to spend the meter and start production." }
         ]
       },
       {
         "@type": "TechArticle",
         "headline": "Getting started with USMail.ai MCP",
         "url": "https://www.usmail.ai/docs/mcp/getting-started",
-        "dateModified": "2026-07-29",
-        "description": "Account registration and prepaid meter funding for USMail.ai MCP and portal use."
+        "dateModified": "2026-09-02",
+        "description": "Register, fund the meter, put account credentials in env, login for a short session token, human approves on the app."
       }
     ]
   }
@@ -130,41 +131,41 @@
         <p class="eyebrow"><i data-lucide="rocket" aria-hidden="true"></i> Reference</p>
         <h1>Getting started</h1>
 <div class="docs-answer">
-          <p>Create an account, fund the meter, then use the portal or MCP. MCP is available now. A human still approves. submit_mail_job does not print and does not debit. Standalone API keys are planned later.</p>
+          <p>A human registers and funds the meter in the app. The agent logs in with that account from environment variables, keeps a short session token, and passes it on later tool calls. Approve on the app spends postage. Standalone API keys are planned later.</p>
         </div>
 
         <h2>Steps</h2>
         <ol class="steps steps-grid-2" aria-label="Getting started steps">
           <li class="step">
-            <h3><i data-lucide="mail" aria-hidden="true"></i> Get started</h3>
-            <p><a href="https://app.usmail.ai/?utm_source=www&utm_campaign=mcp">Get started</a>.</p>
-          </li>
-          <li class="step">
             <h3><i data-lucide="user-plus" aria-hidden="true"></i> Register</h3>
-            <p>Create an account. One account owns portal + MCP.</p>
+            <p>A human creates an account at <a href="https://app.usmail.ai/?utm_source=www&utm_campaign=mcp">app.usmail.ai</a>. One account owns the portal and MCP.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="wallet" aria-hidden="true"></i> Fund the meter</h3>
-            <p>Add prepaid balance. Approve on the app debits the meter — required for agent mail too.</p>
+            <p>Add prepaid balance in the app. Agents do not run card deposits.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="monitor" aria-hidden="true"></i> Portal first (optional)</h3>
-            <p>Optional: run one portal job first (upload → approve → produce → USPS).</p>
+            <h3><i data-lucide="key" aria-hidden="true"></i> Env credentials</h3>
+            <p>Put the account email and password in the agent environment. Never in the prompt.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="cpu" aria-hidden="true"></i> Connect MCP</h3>
-            <p>MCP is available now. Connect with details we issue for your account (not published here). Do not invent an add command.</p>
+            <h3><i data-lucide="log-in" aria-hidden="true"></i> Login</h3>
+            <p>Call the MCP login tool with those credentials. Ask it to return the session token.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="wrench" aria-hidden="true"></i> Call tools</h3>
-            <p>Call tools — see <a href="/docs/mcp/tools">Tools reference</a>.</p>
+            <h3><i data-lucide="cpu" aria-hidden="true"></i> Pass the token</h3>
+            <p>Pass that token on every later mail tool. It is short-lived. On auth failure, log in again.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Human approves</h3>
+            <p>Approve on the app to debit the meter and start production. See <a href="/docs/mcp/tools">tools</a>.</p>
           </li>
         </ol>
 
         <h2>Example intent</h2>
         <pre class="docs-code" tabindex="0">Upload notice.pdf + list.csv as First-Class.
-Add Certified. Hold if cost &gt; $50. Submit only if meter covers it.</pre>
-        <p class="docs-muted">Illustrative — not a live protocol.</p>
+Add Certified. Hold if cost &gt; $50. Do not approve until the meter covers it.</pre>
+        <p class="docs-muted">Intent only. Live tool names come from the MCP server list.</p>
 
         <div class="docs-next">
           <a href="/docs/mcp">← Overview</a>
@@ -174,7 +175,7 @@ Add Certified. Hold if cost &gt; $50. Submit only if meter covers it.</pre>
         <div class="page-cta docs-cta">
           <div>
             <h2>Get started</h2>
-            <p>MCP is available now. Register, fund the meter, connect.</p>
+            <p>Register, fund the meter, put credentials in env, login.</p>
           </div>
           <div class="page-cta-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=mcp">Get started</a>

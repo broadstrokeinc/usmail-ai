@@ -46,7 +46,7 @@ Every HTML page: title, meta, canonical, OG, Twitter, JSON-LD, sitemap (except 4
 
 Wichita: About, privacy/terms, Organization `PostalAddress`, and the print-and-mail FAQ that **rejects** “mailing services Wichita.” Never home H1, title, or hero.
 
-Do not claim: see `public/llms.txt`. Platform is open. Do not write “coming soon.” MCP: account + prepaid meter; `submit_mail_job` does not print.
+Do not claim: see `public/llms.txt`. Platform is open. Do not write “coming soon.” MCP: account + prepaid meter; env login + short session token; human approves on the app.
 
 `/other-print` is noindex, Broadstroke handoff. Not in nav, sitemap, or `llms.txt` Direct answers.
 
