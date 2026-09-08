@@ -86,7 +86,7 @@ const SECURITY = {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com data:",
     "img-src 'self' data: https:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+    "connect-src 'self' https://unpkg.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
     "frame-src https://www.google.com https://www.recaptcha.net",
     "frame-ancestors 'self'",
     "base-uri 'self'",
