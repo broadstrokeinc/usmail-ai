@@ -13,7 +13,7 @@ const CANONICAL_HOST = (process.env.CANONICAL_HOST || 'usmail.ai').toLowerCase()
 /** Simple per-IP rate limit for contact (memory; resets on restart) */
 const leadHits = new Map()
 const LEAD_WINDOW_MS = 60 * 60 * 1000
-const LEAD_MAX = 8
+const LEAD_MAX = 3
 
 function clientIp(req) {
   return (
@@ -82,11 +82,12 @@ const SECURITY = {
   // Allow self + Google Fonts + Lucide CDN (icons only)
   'Content-Security-Policy': [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' https://unpkg.com https://www.googletagmanager.com",
+    "script-src 'self' 'unsafe-inline' https://unpkg.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com data:",
     "img-src 'self' data: https:",
     "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+    "frame-src https://www.google.com https://www.recaptcha.net",
     "frame-ancestors 'self'",
     "base-uri 'self'",
     "form-action 'self' mailto:",
@@ -185,7 +186,35 @@ const LEAD_NOTIFY_TO = (process.env.LEAD_NOTIFY_TO || 'Info@USMAIL.ai')
   .filter(Boolean)
 const LEAD_FROM =
   (process.env.LEAD_FROM || 'USMail.ai <onboarding@resend.dev>').trim()
-const LEAD_ACK = (process.env.LEAD_ACK || '1') !== '0'
+/** Auto-ack is off — bots were using the form as a mail cannon (same IP, rotating languages). */
+const LEAD_ACK = (process.env.LEAD_ACK || '0') === '1'
+const RECAPTCHA_SECRET = (process.env.RECAPTCHA_SECRET || process.env.RECAPTCHA_SECRET_KEY || '').trim()
+
+async function verifyRecaptcha(token, ip) {
+  if (!RECAPTCHA_SECRET) {
+    console.error('[contact] RECAPTCHA_SECRET is not set — rejecting')
+    return false
+  }
+  const response = String(token || '').trim()
+  if (!response) return false
+  const body = new URLSearchParams({
+    secret: RECAPTCHA_SECRET,
+    response,
+  })
+  if (ip && ip !== 'unknown') body.set('remoteip', ip)
+  try {
+    const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    })
+    const data = await res.json()
+    return data.success === true
+  } catch (err) {
+    console.error('[contact] recaptcha verify failed', err)
+    return false
+  }
+}
 
 async function resendSend({ to, subject, text, replyTo }) {
   if (!RESEND_API_KEY) {
@@ -305,6 +334,14 @@ async function handleContact(req, res) {
       return sendJson(res, 200, { ok: true }, req)
     }
 
+    const captchaOk = await verifyRecaptcha(
+      data.gRecaptchaResponse || data['g-recaptcha-response'],
+      ip,
+    )
+    if (!captchaOk) {
+      return sendJson(res, 400, { ok: false, error: 'captcha_failed' }, req)
+    }
+
     const email = sanitizeLine(data.email, 200).toLowerCase()
     const name = sanitizeLine(data.name, 120)
     const topic = sanitizeLine(data.topic || data.interest || data.note || '', 80)
@@ -317,6 +354,9 @@ async function handleContact(req, res) {
 
     if (!isValidEmail(email)) {
       return sendJson(res, 400, { ok: false, error: 'invalid_email' }, req)
+    }
+    if (!message || message.length < 8) {
+      return sendJson(res, 400, { ok: false, error: 'invalid_message' }, req)
     }
 
     fs.mkdirSync(dataDir, { recursive: true })

@@ -37,3 +37,16 @@ railway up --detach
 ```
 
 Uses `PORT` from Railway. Health check: `/`.
+
+### Contact form (Resend + reCAPTCHA)
+
+| Env | Role |
+|-----|------|
+| `RESEND_API_KEY` | Send alerts to `LEAD_NOTIFY_TO` |
+| `LEAD_NOTIFY_TO` | Inbox for new contacts (default `Info@USMAIL.ai`) |
+| `LEAD_FROM` | From address (must be a verified Resend domain) |
+| `LEAD_ACK` | Set `1` to auto-ack the submitter (default **off** — stops spam relays) |
+| `RECAPTCHA_SECRET` | Google reCAPTCHA **secret** (required or `/api/contact` rejects) |
+| `RECAPTCHA_SITE_KEY` | Optional; HTML defaults to the mill v2 site key. Add `www.usmail.ai` on that key. |
+
+Contact is capped at **3 posts per IP per hour**. Honeypot + captcha required.

@@ -4423,6 +4423,11 @@ a.btn-primary:visited {
   border-top: 1px solid var(--line);
 }
 
+.contact-recaptcha {
+  margin: 0.25rem 0 0.75rem;
+  min-height: 78px;
+}
+
 /* Honeypot must never paint in layout */
 .access-form .hp,
 .hp,

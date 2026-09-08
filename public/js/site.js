@@ -102,6 +102,27 @@
   const statusEl = document.getElementById('contact-status') || document.getElementById('early-access-status')
   const submitBtn = document.getElementById('contact-submit') || document.getElementById('early-access-submit')
   if (form && statusEl && submitBtn) {
+    const recaptchaHost = form.querySelector('#contact-recaptcha')
+    if (recaptchaHost && recaptchaHost.getAttribute('data-widget-id') == null) {
+      const sitekey = recaptchaHost.getAttribute('data-sitekey') || ''
+      const boot = () => {
+        if (!window.grecaptcha || !window.grecaptcha.render || recaptchaHost.getAttribute('data-widget-id')) return
+        const id = window.grecaptcha.render(recaptchaHost, { sitekey })
+        recaptchaHost.setAttribute('data-widget-id', String(id))
+      }
+      if (window.grecaptcha && window.grecaptcha.render) {
+        boot()
+      } else {
+        window.__usmailRecaptchaOnload = boot
+        if (!document.querySelector('script[src*="google.com/recaptcha/api.js"]')) {
+          const s = document.createElement('script')
+          s.src = 'https://www.google.com/recaptcha/api.js?onload=__usmailRecaptchaOnload&render=explicit'
+          s.async = true
+          s.defer = true
+          document.head.appendChild(s)
+        }
+      }
+    }
     const emailInput = form.querySelector('input[name="email"]')
     const messageInput = form.querySelector('textarea[name="message"]')
     const defaultSubmit = submitBtn.textContent || 'Send message'
@@ -138,6 +159,16 @@
         messageInput.focus()
         return
       }
+      const recaptchaEl = form.querySelector('#contact-recaptcha')
+      const captchaToken =
+        (window.grecaptcha && recaptchaEl && recaptchaEl.getAttribute('data-widget-id') != null
+          ? window.grecaptcha.getResponse(Number(recaptchaEl.getAttribute('data-widget-id')))
+          : '') || String(fd.get('g-recaptcha-response') || '')
+      if (!captchaToken) {
+        statusEl.textContent = 'Complete the check before sending.'
+        statusEl.classList.add('is-error')
+        return
+      }
       submitBtn.disabled = true
       submitBtn.textContent = 'Sending…'
       try {
@@ -153,6 +184,7 @@
             utm_source: String(fd.get('utm_source') || '').trim(),
             utm_medium: String(fd.get('utm_medium') || '').trim(),
             utm_campaign: String(fd.get('utm_campaign') || '').trim(),
+            gRecaptchaResponse: captchaToken,
           }),
         })
         const data = await res.json().catch(() => ({}))
@@ -161,10 +193,16 @@
         statusEl.classList.add('is-success')
         form.reset()
         setTopic((params.get('topic') || params.get('interest') || '').toLowerCase())
+        if (window.grecaptcha && recaptchaEl && recaptchaEl.getAttribute('data-widget-id') != null) {
+          window.grecaptcha.reset(Number(recaptchaEl.getAttribute('data-widget-id')))
+        }
       } catch {
         statusEl.innerHTML =
           'Couldn’t submit — email <a href="mailto:info@usmail.ai">info@usmail.ai</a> or call 888-667-5322.'
         statusEl.classList.add('is-error')
+        if (window.grecaptcha && recaptchaEl && recaptchaEl.getAttribute('data-widget-id') != null) {
+          window.grecaptcha.reset(Number(recaptchaEl.getAttribute('data-widget-id')))
+        }
       } finally {
         submitBtn.disabled = false
         submitBtn.textContent = defaultSubmit
