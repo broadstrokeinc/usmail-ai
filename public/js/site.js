@@ -105,10 +105,10 @@
     const recaptchaHost = form.querySelector('#contact-recaptcha')
     const recaptchaSiteKey =
       (recaptchaHost && recaptchaHost.getAttribute('data-sitekey')) ||
-      '6Lcbd7AtAAAAANESQXGNksreB9eRBIq4-gDdkPNV'
-    if (recaptchaHost && !document.querySelector('script[src*="recaptcha/enterprise.js"]')) {
+      '6Lc3irAtAAAAAOqE-zATudWdsHanM6go8zm0U17k'
+    if (recaptchaHost && !document.querySelector('script[src*="google.com/recaptcha/api.js"]')) {
       const s = document.createElement('script')
-      s.src = `https://www.google.com/recaptcha/enterprise.js?render=${encodeURIComponent(recaptchaSiteKey)}`
+      s.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(recaptchaSiteKey)}`
       s.async = true
       document.head.appendChild(s)
     }
@@ -154,7 +154,7 @@
         const captchaToken = await new Promise((resolve, reject) => {
           const started = Date.now()
           const tick = () => {
-            const g = window.grecaptcha && window.grecaptcha.enterprise
+            const g = window.grecaptcha
             if (g && g.execute) {
               const run = () =>
                 g.execute(recaptchaSiteKey, { action: 'submit' }).then(resolve).catch(reject)
