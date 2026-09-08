@@ -38,9 +38,11 @@ railway up --detach
 
 Uses `PORT` from Railway. Health check: `/`.
 
-### Contact form (Resend + reCAPTCHA)
+### Contact form (Resend + reCAPTCHA Enterprise)
 
-**Contact form only** (`/` and `/contact` on www.usmail.ai). App signup/registration keeps mill’s own recaptcha — do not reuse mill’s secret here.
+**Contact form only** (`/` and `/contact` on www.usmail.ai). App signup/registration keeps mill’s own recaptcha.
+
+This key is **Enterprise score-based** (`enterprise.js` + assessments). It is not classic v2. `API_KEY` in Google’s snippet is a Cloud API key (`AIza…`), created at APIs & Services → Credentials — not the site key and not mill’s secret.
 
 | Env | Role |
 |-----|------|
@@ -48,6 +50,8 @@ Uses `PORT` from Railway. Health check: `/`.
 | `LEAD_NOTIFY_TO` | Inbox for new contacts (default `Info@USMAIL.ai`) |
 | `LEAD_FROM` | From address (must be a verified Resend domain) |
 | `LEAD_ACK` | Set `1` to auto-ack the submitter (default **off** — stops spam relays) |
-| `RECAPTCHA_SECRET` | Secret for this form’s key (required; Railway only) |
+| `RECAPTCHA_API_KEY` | Google Cloud API key for `assessments?key=API_KEY` (required) |
+| `RECAPTCHA_PROJECT` | GCP project id (default `postalocityrecaptcha`) |
+| `RECAPTCHA_SITE_KEY` | Enterprise site key (default `6Lc3irAtAAAAAOqE-zATudWdsHanM6go8zm0U17k`) |
 
-Contact is capped at **3 posts per IP per hour**. Honeypot + captcha required. The public site key lives in the HTML.
+Contact is capped at **3 posts per IP per hour**. Honeypot + captcha required.

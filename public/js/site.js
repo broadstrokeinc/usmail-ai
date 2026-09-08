@@ -106,28 +106,11 @@
     const recaptchaSiteKey =
       (recaptchaHost && recaptchaHost.getAttribute('data-sitekey')) ||
       '6Lc3irAtAAAAAOqE-zATudWdsHanM6go8zm0U17k'
-    const recaptchaWidget = () => {
-      if (!recaptchaHost) return null
-      const raw = recaptchaHost.getAttribute('data-widget-id')
-      return raw == null ? null : Number(raw)
-    }
-    const bootRecaptcha = () => {
-      if (!recaptchaHost || !window.grecaptcha || !window.grecaptcha.render) return
-      if (recaptchaWidget() != null) return
-      const id = window.grecaptcha.render(recaptchaHost, { sitekey: recaptchaSiteKey })
-      recaptchaHost.setAttribute('data-widget-id', String(id))
-    }
-    if (recaptchaHost) {
-      window.__usmailRecaptchaOnload = bootRecaptcha
-      if (window.grecaptcha && window.grecaptcha.render) {
-        bootRecaptcha()
-      } else if (!document.querySelector('script[src*="google.com/recaptcha/api.js"]')) {
-        const s = document.createElement('script')
-        s.src = 'https://www.google.com/recaptcha/api.js?onload=__usmailRecaptchaOnload&render=explicit'
-        s.async = true
-        s.defer = true
-        document.head.appendChild(s)
-      }
+    if (recaptchaHost && !document.querySelector('script[src*="recaptcha/enterprise.js"]')) {
+      const s = document.createElement('script')
+      s.src = `https://www.google.com/recaptcha/enterprise.js?render=${encodeURIComponent(recaptchaSiteKey)}`
+      s.async = true
+      document.head.appendChild(s)
     }
     const emailInput = form.querySelector('input[name="email"]')
     const messageInput = form.querySelector('textarea[name="message"]')
@@ -165,18 +148,29 @@
         messageInput.focus()
         return
       }
-      const widgetId = recaptchaWidget()
-      const captchaToken =
-        (window.grecaptcha && widgetId != null ? window.grecaptcha.getResponse(widgetId) : '') ||
-        String(fd.get('g-recaptcha-response') || '')
-      if (!captchaToken) {
-        statusEl.textContent = 'Complete the check before sending.'
-        statusEl.classList.add('is-error')
-        return
-      }
       submitBtn.disabled = true
       submitBtn.textContent = 'Sending…'
       try {
+        const captchaToken = await new Promise((resolve, reject) => {
+          const started = Date.now()
+          const tick = () => {
+            const g = window.grecaptcha && window.grecaptcha.enterprise
+            if (g && g.execute) {
+              const run = () =>
+                g.execute(recaptchaSiteKey, { action: 'submit' }).then(resolve).catch(reject)
+              if (g.ready) g.ready(run)
+              else run()
+              return
+            }
+            if (Date.now() - started > 8000) {
+              reject(new Error('captcha_unavailable'))
+              return
+            }
+            setTimeout(tick, 50)
+          }
+          tick()
+        })
+        if (!captchaToken) throw new Error('captcha_failed')
         const res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -198,12 +192,10 @@
         statusEl.classList.add('is-success')
         form.reset()
         setTopic((params.get('topic') || params.get('interest') || '').toLowerCase())
-        if (window.grecaptcha && widgetId != null) window.grecaptcha.reset(widgetId)
       } catch {
         statusEl.innerHTML =
           'Couldn’t submit — email <a href="mailto:info@usmail.ai">info@usmail.ai</a> or call 888-667-5322.'
         statusEl.classList.add('is-error')
-        if (window.grecaptcha && widgetId != null) window.grecaptcha.reset(widgetId)
       } finally {
         submitBtn.disabled = false
         submitBtn.textContent = defaultSubmit
