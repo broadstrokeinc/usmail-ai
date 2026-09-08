@@ -4424,8 +4424,7 @@ a.btn-primary:visited {
 }
 
 .contact-recaptcha {
-  margin: 0.25rem 0 0.75rem;
-  min-height: 78px;
+  display: none;
 }
 
 /* Honeypot must never paint in layout */

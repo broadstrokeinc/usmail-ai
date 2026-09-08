@@ -188,28 +188,54 @@ const LEAD_FROM =
   (process.env.LEAD_FROM || 'USMail.ai <onboarding@resend.dev>').trim()
 /** Auto-ack is off — bots were using the form as a mail cannon (same IP, rotating languages). */
 const LEAD_ACK = (process.env.LEAD_ACK || '0') === '1'
-const RECAPTCHA_SECRET = (process.env.RECAPTCHA_SECRET || process.env.RECAPTCHA_SECRET_KEY || '').trim()
+/** Contact form only (www.usmail.ai). Mill signup uses a different key. */
+const RECAPTCHA_SITE_KEY = (
+  process.env.RECAPTCHA_SITE_KEY || '6Lcbd7AtAAAAANESQXGNksreB9eRBIq4-gDdkPNV'
+).trim()
+const RECAPTCHA_PROJECT = (process.env.RECAPTCHA_PROJECT || 'postalocityrecaptcha').trim()
+const RECAPTCHA_API_KEY = (process.env.RECAPTCHA_API_KEY || '').trim()
+const RECAPTCHA_MIN_SCORE = Number(process.env.RECAPTCHA_MIN_SCORE || 0.5)
 
 async function verifyRecaptcha(token, ip) {
-  if (!RECAPTCHA_SECRET) {
-    console.error('[contact] RECAPTCHA_SECRET is not set — rejecting')
+  if (!RECAPTCHA_API_KEY) {
+    console.error('[contact] RECAPTCHA_API_KEY is not set — rejecting')
     return false
   }
   const response = String(token || '').trim()
   if (!response) return false
-  const body = new URLSearchParams({
-    secret: RECAPTCHA_SECRET,
-    response,
-  })
-  if (ip && ip !== 'unknown') body.set('remoteip', ip)
+  const url = `https://recaptchaenterprise.googleapis.com/v1/projects/${encodeURIComponent(RECAPTCHA_PROJECT)}/assessments?key=${encodeURIComponent(RECAPTCHA_API_KEY)}`
   try {
-    const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    const res = await fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event: {
+          token: response,
+          expectedAction: 'submit',
+          siteKey: RECAPTCHA_SITE_KEY,
+          userIpAddress: ip && ip !== 'unknown' ? ip : undefined,
+        },
+      }),
     })
-    const data = await res.json()
-    return data.success === true
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok || data?.error) {
+      console.error('[contact] recaptcha assessment error', res.status, data?.error || data)
+      return false
+    }
+    const valid = data?.tokenProperties?.valid === true
+    const actionOk =
+      !data?.tokenProperties?.action || data.tokenProperties.action === 'submit'
+    const score = Number(data?.riskAnalysis?.score)
+    const scoreOk = !Number.isFinite(score) || score >= RECAPTCHA_MIN_SCORE
+    if (!valid || !actionOk || !scoreOk) {
+      console.warn('[contact] recaptcha denied', {
+        valid,
+        action: data?.tokenProperties?.action,
+        score,
+      })
+      return false
+    }
+    return true
   } catch (err) {
     console.error('[contact] recaptcha verify failed', err)
     return false
