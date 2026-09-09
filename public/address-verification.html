@@ -6,10 +6,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <title>Address Verification | Reduce Returned Mail · USMail.ai</title>
+  <title>Address Verification | CASS and NCOA · USMail.ai</title>
   <meta
     name="description"
-    content="NCOA included on the USMail.ai production path. Change-of-address processing before print. Fewer returned pieces. No delivery-time promises."
+    content="CASS and NCOA are included on every piece. Addresses are standardized and change-of-address runs before print. Fewer returns. Not a delivery promise."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
@@ -18,12 +18,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/address-verification" />
-  <meta property="og:title" content="Address Verification | USMail.ai" />
-  <meta property="og:description" content="Reduce returned mail with production-path address verification. " />
+  <meta property="og:title" content="Address Verification | CASS and NCOA · USMail.ai" />
+  <meta property="og:description" content="CASS and NCOA are included on every piece. Addresses are standardized and change-of-address runs before print. Fewer returns. Not a delivery promise." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Address Verification | USMail.ai" />
-  <meta name="twitter:description" content="Change-of-address processing before print. Reduce returned mail. No transit promises." />
+  <meta name="twitter:title" content="Address Verification | CASS and NCOA · USMail.ai" />
+  <meta name="twitter:description" content="CASS and NCOA are included on every piece. Addresses are standardized and change-of-address runs before print. Fewer returns. Not a delivery promise." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,17 +47,17 @@
       {
         "@type": "WebPage",
         "url": "https://www.usmail.ai/address-verification",
-        "name": "Address verification | USMail.ai",
-        "description": "Address verification and change-of-address processing on the print-to-mail production path to reduce returned mail. ",
+        "name": "Address verification | CASS and NCOA · USMail.ai",
+        "description": "CASS and NCOA are included on every piece. Addresses are standardized and change-of-address runs before print. Fewer returns. Not a delivery promise.",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] }
       },
       {
         "@type": "Service",
         "name": "Address verification for print-to-mail",
-        "serviceType": "Address verification / reduce returned mail",
+        "serviceType": "CASS and NCOA address verification",
         "provider": { "@id": "https://www.usmail.ai/#organization" },
         "areaServed": { "@type": "Country", "name": "United States" },
-        "description": "Production-path address verification, including change-of-address processing, before print and USPS handoff. Reduces undeliverable pieces. Does not promise delivery times."
+        "description": "CASS and NCOA are included on every piece. Addresses are standardized and change-of-address runs before print. Fewer returns. Not a USPS delivery-time promise."
       },
       {
         "@type": "FAQPage",
@@ -65,7 +67,23 @@
             "name": "Does USMail.ai verify addresses?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. NCOA is included. Address verification runs on the production path, including change-of-address processing, before print and USPS handoff. The goal is fewer returned pieces. It is not a guarantee that every piece will deliver."
+              "text": "Yes. CASS and NCOA are included on every piece. You review flagged pieces, then you approve. It is not a guarantee that every piece will deliver."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is CASS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CASS is the USPS Coding Accuracy Support System. It checks the address against USPS files and standardizes it so the piece can be mailed. Street, city, state, and ZIP become a mail-ready address. CASS is not change-of-address, not tracing, and not Certified proof."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is NCOA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NCOA is National Change of Address. It checks USPS move files before we print. Not every move is in the file. We do not rewrite the document you uploaded."
             }
           },
           {
@@ -74,6 +92,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Verification reduces undeliverable mail. It does not change USPS transit time. USMail.ai does not publish delivery-day promises."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I mail a flagged address on Certified Mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. On Certified Mail a flagged address must be fixed or taken off the job. You cannot mail it anyway. On First-Class you can still mail a flagged piece. Delivery is not guaranteed. Details: https://www.usmail.ai/certified-mail"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is address verification the same as tracing or Certified Mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. CASS and NCOA clean and update the address on the production path. Tracing is scan status on qualifying First-Class letters and postcards. Certified Mail is proof of delivery. They are three different jobs. Tracing: https://www.usmail.ai/how-it-works#tracing Certified: https://www.usmail.ai/certified-mail"
             }
           }
         ]
@@ -131,52 +165,216 @@
         <div class="page-hero-inner">
           <h1>Address verification that reduces returned mail</h1>
           <p class="lead">
-            NCOA included. Change-of-address processing before print. Fewer returns.
-            Not a USPS delivery-time promise.
+            CASS and NCOA are included on every piece. Addresses are standardized and change-of-address runs before print. Fewer returns. Not a USPS delivery-time promise.
           </p>
           <div class="page-hero-actions">
-            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=demo">Get started</a>
-            <a class="btn btn-ghost" href="/print-and-mail">Print &amp; mail</a>
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=address-verification">Get started</a>
+            <a class="btn btn-ghost" href="/features">Features</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="page-section" aria-labelledby="av-what">
+    <section class="page-section" aria-labelledby="cass-ncoa">
       <div class="wrap">
-        <h2 id="av-what">What we claim — and do not</h2>
+        <h2 id="cass-ncoa">CASS vs NCOA</h2>
+        <p class="section-lead">Two USPS programs. Two jobs. They run on the production path.</p>
+        <div class="content-table-wrap">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th scope="col">Program</th>
+                <th scope="col">What it does</th>
+                <th scope="col">What it is not</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">CASS</th>
+                <td>Checks the address against USPS files so the piece can be mailed.</td>
+                <td>Not change-of-address. Not a list you download and keep.</td>
+              </tr>
+              <tr>
+                <th scope="row">NCOA</th>
+                <td>Checks USPS move files for a new address of record.</td>
+                <td>Not a rewrite of the document you uploaded. Not every move.</td>
+              </tr>
+              <tr>
+                <th scope="row">Tracing</th>
+                <td>Scan status on qualifying First-Class letters and postcards.</td>
+                <td>Not address cleanup. Not legal proof. <a href="/how-it-works#tracing">How tracing works →</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Certified Mail</th>
+                <td>Proof the piece was delivered.</td>
+                <td>Not CASS. Not NCOA. <a href="/certified-mail">Certified Mail →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-lead">CASS and NCOA are USPS programs for domestic addresses. Do not assume them on international pieces.</p>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="what-cass">
+      <div class="wrap">
+        <h2 id="what-cass">What CASS does on a job</h2>
+        <div class="prose">
+          <p>
+            CASS is the USPS Coding Accuracy Support System. It is how a street, city, state, and ZIP become a mail-ready address.
+            The check runs after you have addresses on the job.
+          </p>
+          <p>
+            A scanned letter, a CSV row, and a hand-typed line all go through the same check.
+            CASS does not invent a recipient. It does not guess a missing apartment if USPS cannot match the line.
+            When the address does not match, the piece is flagged for you.
+          </p>
+          <p>
+            Scan addresses from the file, import a CSV, or add them by hand.
+            You choose how duplicate names and addresses are handled.
+            <a href="/features#in-job">What’s in the product →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="what-ncoa">
+      <div class="wrap">
+        <h2 id="what-ncoa">What NCOA does on a job</h2>
+        <div class="prose">
+          <p>
+            NCOA is National Change of Address. People and businesses file moves with USPS.
+            The production path checks those files before print so fewer pieces leave for a street the recipient has left.
+          </p>
+          <p>
+            Not every move is in the file. A recipient who never filed, filed late, or moved without USPS notice can still generate a return.
+            We do not publish a match rate. We do not promise zero returns.
+          </p>
+          <p>
+            We do not rewrite the PDF, Word file, or image you uploaded.
+            The document stays yours. Change-of-address processing is on the mail piece, not inside your billing system.
+            <a href="/statements-invoices">Statements &amp; invoices →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="on-the-job">
+      <div class="wrap">
+        <h2 id="on-the-job">Where verification sits on a job</h2>
+        <p class="section-lead">After addresses. After proof. Then a human confirms.</p>
+        <ol class="process-flow process-flow-5" aria-label="Address verification on a job">
+          <li class="is-upload">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="upload"></i></span>
+            <h3>Addresses in</h3>
+            <p>From the document, a list, or by hand.</p>
+          </li>
+          <li class="is-spark">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="sparkles"></i></span>
+            <h3>Proof</h3>
+            <p>AI proposes setup. CASS and NCOA run on the production path.</p>
+          </li>
+          <li class="is-pick">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="map-pin"></i></span>
+            <h3>Quality</h3>
+            <p>Flagged pieces show in address quality. You review them.</p>
+          </li>
+          <li class="is-make">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="badge-check"></i></span>
+            <h3>You approve</h3>
+            <p>Nothing prints until a human confirms.</p>
+          </li>
+          <li class="is-usps">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="printer"></i></span>
+            <h3>We produce</h3>
+            <p>Print, postage, deliver to USPS on your mail date.</p>
+          </li>
+        </ol>
+        <p class="section-more"><a class="text-link" href="/how-it-works">The five production steps →</a></p>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="flagged">
+      <div class="wrap">
+        <h2 id="flagged">Flagged addresses</h2>
+        <p class="section-lead">A flag is a review, not an auto-send.</p>
+        <div class="ops-grid" role="list">
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-navy">
+              <h3><i data-lucide="pencil" aria-hidden="true"></i> Fix</h3>
+              <span class="ops-badge">Preferred</span>
+            </div>
+            <div class="ops-card-body">
+              <p>Correct the line. Re-check. A good address is the default path for First-Class and for Certified.</p>
+            </div>
+          </article>
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-amber">
+              <h3><i data-lucide="mail" aria-hidden="true"></i> Still mail</h3>
+              <span class="ops-badge">First-Class only</span>
+            </div>
+            <div class="ops-card-body">
+              <p>On First-Class you can still mail a flagged piece. Delivery is not guaranteed. Tracing still needs a good address.</p>
+            </div>
+          </article>
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-blue">
+              <h3><i data-lucide="badge-check" aria-hidden="true"></i> Certified</h3>
+              <span class="ops-badge">No still-mail</span>
+            </div>
+            <div class="ops-card-body">
+              <p>On Certified Mail a flagged address must be fixed or taken off the job. You cannot mail it anyway.</p>
+              <p class="ops-foot"><a href="/certified-mail">Certified details →</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="av-not">
+      <div class="wrap">
+        <h2 id="av-not">What this is not</h2>
         <ul class="steps steps-grid-2">
           <li class="step">
-            <h3><i data-lucide="check" aria-hidden="true"></i> CASS and NCOA <span class="step-flag step-flag-included">Included</span></h3>
-            <p>CASS standardizes the address. NCOA (National Change of Address) runs with production before USPS handoff.</p>
+            <h3><i data-lucide="scan-line" aria-hidden="true"></i> Not tracing</h3>
+            <p>Scan status is a different job. <a href="/how-it-works#tracing">Tracing vs tracking →</a></p>
           </li>
           <li class="step">
-            <h3><i data-lucide="mail" aria-hidden="true"></i> Fewer returns</h3>
-            <p>Updated addresses reduce wasted postage and returned pieces. Not zero returns.</p>
+            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Not Certified proof</h3>
+            <p>Proof of mailing is a mail option you add. <a href="/certified-mail">Certified Mail →</a></p>
           </li>
           <li class="step">
-            <h3><i data-lucide="x" aria-hidden="true"></i> Not a delivery SLA</h3>
-            <p>We do not promise USPS days-in-transit. Verification is not tracking.</p>
+            <h3><i data-lucide="sheet" aria-hidden="true"></i> Not a list-cleaning product</h3>
+            <p>Verification runs on the job you send. We do not sell a standalone NCOA file.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Not Certified</h3>
-            <p>
-              Proof of mailing is a mail option.
-              <a href="/certified-mail">Certified Mail →</a>
-            </p>
+            <h3><i data-lucide="file-text" aria-hidden="true"></i> Not document rewrite</h3>
+            <p>You own the file. We do not edit statement or notice copy inside your system.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="page-section band" aria-labelledby="av-faq">
+    <section class="page-section" aria-labelledby="av-faq">
       <div class="wrap">
-        <h2 id="av-faq">FAQ</h2>
+        <h2 id="av-faq">Address verification FAQ</h2>
         <div class="faq">
           <details class="faq-item">
             <summary><span>Does USMail.ai verify addresses?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Yes. NCOA is included. Address verification runs on the production path, including change-of-address processing, before print. The goal is fewer returned pieces. It is not a guarantee that every piece will deliver.</p>
+              <p>Yes. CASS and NCOA are included on every piece. You review flagged pieces, then you approve. It is not a guarantee that every piece will deliver.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>What is CASS?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>CASS is the USPS Coding Accuracy Support System. It checks the address against USPS files and standardizes it so the piece can be mailed. Street, city, state, and ZIP become a mail-ready address. CASS is not change-of-address, not tracing, and not Certified proof.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>What is NCOA?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>NCOA is National Change of Address. It checks USPS move files before we print. Not every move is in the file. We do not rewrite the document you uploaded.</p>
             </div>
           </details>
           <details class="faq-item">
@@ -185,19 +383,48 @@
               <p>No. Verification reduces undeliverable mail. It does not change USPS transit time. USMail.ai does not publish delivery-day promises.</p>
             </div>
           </details>
+          <details class="faq-item">
+            <summary><span>Can I mail a flagged address on Certified Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. On Certified Mail a flagged address must be fixed or taken off the job. You cannot mail it anyway. On First-Class you can still mail a flagged piece. Delivery is not guaranteed. <a href="/certified-mail">Certified Mail →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is address verification the same as tracing or Certified Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. CASS and NCOA clean and update the address on the production path. Tracing is scan status on qualifying First-Class letters and postcards. Certified Mail is proof of delivery. They are three different jobs. <a href="/how-it-works#tracing">Tracing →</a> · <a href="/certified-mail">Certified →</a></p>
+            </div>
+          </details>
         </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="wrap">
-        <div class="page-cta">
+        <div class="related-grid mt-section">
+          <a class="related-card" href="/features">
+            <strong>Features</strong>
+            <span>CASS, NCOA, tracing, logo envelope — what comes with the job.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/how-it-works">
+            <strong>How it works</strong>
+            <span>Five steps, cutoffs, tracing vs tracking.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/certified-mail">
+            <strong>Certified Mail</strong>
+            <span>Proof options. Flagged addresses cannot still-mail.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/statements-invoices">
+            <strong>Statements &amp; invoices</strong>
+            <span>Recurring files and lists. Same production path.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="page-cta mt-section">
           <div>
             <h2>Get started</h2>
-            <p>Ask mail ops how verification runs on your lists.</p>
+            <p>Open the app. Addresses are checked on the job you send.</p>
           </div>
           <div class="page-cta-actions">
-            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www">Get started</a>
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=address-verification">Get started</a>
           </div>
         </div>
       </div>
@@ -214,15 +441,17 @@
       </a>
       <p class="footer-slogan">You upload. You approve. We produce.</p>
       <nav class="footer-nav" aria-label="Footer">
+        <a href="/how-it-works">How it works</a>
         <a href="/features">Features</a>
         <a href="/compare">Compare</a>
         <a href="/print-and-mail">Print &amp; mail</a>
-        <a href="/statements-invoices">Statements</a>
-        <a href="/mailroom">Mailroom</a>
         <a href="/certified-mail">Certified</a>
+        <a href="/industries">Industries</a>
+        <a href="/docs">Docs</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
+        <a href="/security">Security</a>
       </nav>
       <p class="footer-meta">
         © <span id="y"></span>
@@ -235,7 +464,7 @@
     </div>
   </footer>
   <div class="mobile-dock" role="navigation" aria-label="Quick actions">
-    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www">Get started</a>
+    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=address-verification">Get started</a>
   </div>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
   <script src="/js/site.js?v=20260731quiet" defer></script>

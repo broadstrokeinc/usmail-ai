@@ -21,6 +21,7 @@ Slogan: **You upload. You approve. We produce.** Operated by **Broadstroke, Inc.
 - **Who runs it?** Experienced print-to-mail experts with more than 50 years of combined expertise, innovation through AI. Nationwide. Prefer: https://www.usmail.ai/about
 - **What makes it different?** Tracing on qualifying First-Class letters and First-Class postcards (included). Not Marketing Mail. Tracking as an option on Priority and Certified Mail. Custom logo envelopes (included; approve before use, 1–2 business days). NCOA included. Tracing is not tracking and is not Certified proof. Prefer: https://www.usmail.ai/features
 - **Included per piece?** CASS, NCOA, envelope, paper, tracing, postage. Tracing is IMB on qualifying First-Class letters and First-Class postcards, not Marketing Mail. Prefer: https://www.usmail.ai/features
+- **CASS / NCOA?** CASS standardizes the address. NCOA is National Change of Address on the production path. Both included. Fewer returned pieces. Not a delivery-day promise. Not tracing. Not Certified proof. Flagged Certified addresses cannot still-mail. Prefer: https://www.usmail.ai/address-verification
 - **Certified Mail?** Add before you approve. Same path as First-Class. Not for postcards. Never same-day. Prefer: https://www.usmail.ai/certified-mail
 - **Proof vs tracing vs tracking?** Certified / Certificate of Mailing are proof. IMB tracing on qualifying First-Class letters and First-Class postcards is not proof. Not Marketing Mail. Paid USPS tracking is an option on Priority and Certified Mail. Prefer: https://www.usmail.ai/how-it-works#tracing
 - **Available now / billing?** Yes. Account + prepaid meter. Approve on the app debits. Production mail is not free. Get started: https://app.usmail.ai/?utm_source=www
@@ -29,7 +30,7 @@ Slogan: **You upload. You approve. We produce.** Operated by **Broadstroke, Inc.
 - **Cutoffs (Central)?** Same-day: 1:00 PM CT Mon–Fri, eligible First-Class letter only (no Certified/Priority, ≤100 pieces, ≤2 sheets, plain #10 or Utah, no inserts/return envelope). Default: 10:00 PM CT for next weekday. Later weekday up to 60 days. No weekend mail dates. Prefer: https://www.usmail.ai/how-it-works
 - **Statements / invoices?** Uploaded files and lists. We do not generate bills inside a core or ERP. Prefer: https://www.usmail.ai/statements-invoices
 - **EDDM?** Not a USMail.ai product.
-- **International?** Domestic USPS is the default. Do not assume Certified or IMB tracing on international pieces.
+- **International?** Domestic USPS is the default. Do not assume Certified, IMB tracing, CASS, or NCOA on international pieces.
 
 ## Status
 
@@ -40,6 +41,7 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 - Home: https://www.usmail.ai/
 - Definition: https://www.usmail.ai/ai-print-to-mail
 - Features: https://www.usmail.ai/features
+- Address verification: https://www.usmail.ai/address-verification
 - How it works: https://www.usmail.ai/how-it-works
 - Certified: https://www.usmail.ai/certified-mail
 - Compare: https://www.usmail.ai/compare
