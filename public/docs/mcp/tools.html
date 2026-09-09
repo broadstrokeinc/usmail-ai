@@ -12,7 +12,9 @@
     content="USMail.ai MCP: login with the account, pass a short session token, create jobs and proofs. Human funds the meter and approves on the app."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#1a2b63" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp/tools" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:title" content="MCP Tools Reference | USMail.ai" />
@@ -46,7 +48,7 @@
         "@type": "TechArticle",
         "headline": "USMail.ai MCP tools reference",
         "url": "https://www.usmail.ai/docs/mcp/tools",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-09-09",
         "description": "USMail.ai MCP: login with the human account, pass a short session token on later calls, create jobs and proofs. Approve on the app debits the prepaid meter.",
         "about": "MCP tools for physical mail production"
       },
@@ -58,6 +60,35 @@
           { "@type": "ListItem", "position": 2, "name": "Create and upload", "description": "Create a mail job, upload documents and lists, set print and mail options." },
           { "@type": "ListItem", "position": 3, "name": "Proof and status", "description": "Generate proof, list and get jobs, read meter balance." },
           { "@type": "ListItem", "position": 4, "name": "Approve on the app", "description": "A human on the app approves. That debit starts production. Agents do not run card deposits." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are the MCP tool names?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do not invent tool names. The live list is on the MCP server after login. This page describes capabilities in English: login, create job, upload, proof, status, cancel draft."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does submit print the job?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. If the server exposes a submit or persist step, it stores the job. It does not print. A human approves on the app. That debit starts production."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the agent approve production mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Agents do not approve production mail. A human must approve on the app. Agents do not run card deposits."
+            }
+          }
         ]
       }
     ]
@@ -117,6 +148,15 @@
           <li><a href="/mcp">MCP marketing</a></li>
           <li><a href="/how-it-works">How it works</a></li>
         </ul>
+        <p class="docs-nav-label">On this page</p>
+        <ul>
+          <li><a href="#tools">What agents can do</a></li>
+          <li><a href="#submit">Submit does not print</a></li>
+          <li><a href="#sequence">Sequence</a></li>
+          <li><a href="#live-names">Live names</a></li>
+          <li><a href="#not-included">Not included</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </aside>
 
       <article class="docs-article">
@@ -128,7 +168,7 @@
 
         <p class="eyebrow"><i data-lucide="wrench" aria-hidden="true"></i> Reference</p>
         <h1>MCP tools reference</h1>
-<div class="docs-answer">
+        <div class="docs-answer">
           <p>
             Login with the human account. Pass the short session token on later calls.
             Create jobs and proofs. <strong>Approve on the app</strong> to spend the meter.
@@ -142,41 +182,113 @@
         </aside>
 
         <h2 id="tools">What agents can do</h2>
+        <p class="docs-prose">
+          This page is English capabilities, not a schema dump. The live list is on the MCP
+          server after login. Names change. The jobs below do not.
+        </p>
 
         <div class="docs-tool" id="login">
           <h3>Login</h3>
           <p>Account email and password from the environment. Returns a short-lived session token. Pass that token on later mail tools. On auth failure, log in again.</p>
+          <p>If login fails, check env, then retry login. Do not paste the password into chat to recover.</p>
         </div>
 
         <div class="docs-tool" id="create-upload">
           <h3>Create, upload, configure</h3>
           <p>Create a job. Upload documents and lists. Set First-Class, Certified, print options. Same production path as the portal.</p>
+          <p>Documents and postcards. Statement or invoice jobs are uploaded files and lists, not bills we generate inside a core. Certified is not for postcards. Add proof options before you approve. A list is recipient data. Handle it under your policies. Do not paste the file into a public prompt.</p>
         </div>
 
         <div class="docs-tool" id="proof-status">
           <h3>Proof and status</h3>
           <p>Generate proof. List and get jobs. Read meter balance. Tracing on qualifying First-Class pieces is not tracking.</p>
+          <p>Proof is the review surface. If it looks wrong, fix the job before you approve. We do not rewrite the document you uploaded. Status is where the draft sits. Meter balance tells you whether approve on the app can cover the job. It is not a public price list.</p>
+        </div>
+
+        <div class="docs-tool" id="cancel-draft">
+          <h3>Cancel draft</h3>
+          <p>Cancel a draft before a human approves. After approve, production has started. Do not treat cancel as a recall of printed mail. If you need to stop a draft the agent assembled, cancel it on the tools the server lists, or discard it on the app before you confirm.</p>
         </div>
 
         <div class="docs-tool" id="approve">
           <h3>Approve (postage)</h3>
-          <p>A human on the app approves. That debit starts production. Agents do not run card deposits. Do not invent a submit-mail-job tool.</p>
+          <p>A human on the app approves. That debit starts production. Agents do not run card deposits. Agents do not approve production mail.</p>
         </div>
+
+        <h2 id="submit">Submit does not print</h2>
+        <p class="docs-prose">
+          If the server exposes a submit or persist step, it stores the job. It does not print.
+          It does not debit the meter. A human still approves on the app. That debit starts
+          production. We then print, insert, apply postage, and deliver the pieces to USPS.
+        </p>
+        <p class="docs-prose">
+          Until that confirm, the job is a draft. You can still change options, replace a file,
+          or cancel. After confirm, the factory has the job. Physical mail cannot be unsent.
+        </p>
 
         <h2 id="sequence">Sequence</h2>
         <pre class="docs-code" tabindex="0">human: register + fund meter in the app
 env: account email + password (never in the prompt)
 MCP: login → session token
 MCP: create / upload / proof
+MCP: persist stores a draft
 app: human approves → meter debit → we produce</pre>
         <p class="docs-muted">Live names come from the MCP server tool list. Do not invent hostnames or add commands.</p>
+        <p class="docs-prose">
+          Operator walkthrough: <a href="/docs/mcp/getting-started">Getting started</a>.
+          Why the human gate exists: <a href="/docs/mcp">MCP overview</a>.
+        </p>
+
+        <h2 id="live-names">Live names after login</h2>
+        <p class="docs-prose">
+          Ask the connected MCP server for its tool list. Use those names. Do not copy names
+          from a gist, a screenshot, or an old chat. Do not invent public aliases on www.
+        </p>
+        <p class="docs-prose">
+          This site will not publish mill tool names. This site will not publish an eight-name
+          alias set. English is the contract here: login, create job, upload, proof, status,
+          cancel draft.
+        </p>
+        <p class="docs-prose">
+          Connection details come with access on the app.
+        </p>
 
         <h2 id="not-included">Not included</h2>
         <ul class="docs-prose">
           <li>Standalone API keys (planned later)</li>
           <li>Unauthenticated public MCP</li>
           <li>Agent card deposits</li>
+          <li>Agent approve of production mail</li>
+          <li>A hostname or add command on this page</li>
+          <li>A public schema of mill tool names</li>
         </ul>
+        <p class="docs-prose">
+          Same production path as the portal. Cutoffs and tracing live on
+          <a href="/how-it-works">How it works</a>.
+          Certified options: <a href="/certified-mail">Certified Mail</a>.
+        </p>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>What are the MCP tool names?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Do not invent tool names. The live list is on the MCP server after login. This page describes capabilities in English: login, create job, upload, proof, status, cancel draft.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Does submit print the job?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. If the server exposes a submit or persist step, it stores the job. It does not print. A human approves on the app. That debit starts production.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Can the agent approve production mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Agents do not approve production mail. A human must approve on the app. Agents do not run card deposits.</p>
+            </div>
+          </details>
+        </div>
 
         <div class="docs-next">
           <a href="/docs/mcp/auth-and-billing">← Auth &amp; billing</a>

@@ -26,19 +26,61 @@
   <meta name="twitter:description" content="How USMail.ai protects accounts, jobs, and recipient data. No fake compliance badges." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
-  <link rel="stylesheet" href="/styles.css?v=20260827glyph2" />
+  <link rel="stylesheet" href="/styles.css?v=20260909shot" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Security | USMail.ai",
-    "url": "https://www.usmail.ai/security",
-    "description": "How USMail.ai protects accounts, jobs, and recipient data. No invented SOC 2 or compliance seals.",
-    "dateModified": "2026-08-19",
-    "isPartOf": { "@id": "https://www.usmail.ai/#website" }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Security | USMail.ai",
+        "url": "https://www.usmail.ai/security",
+        "description": "How USMail.ai protects accounts, jobs, and recipient data. No invented SOC 2 or compliance seals.",
+        "dateModified": "2026-09-09",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] },
+        "isPartOf": { "@id": "https://www.usmail.ai/#website" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does USMail.ai have SOC 2?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We do not publish a SOC 2 Type II report for USMail.ai on this page. Do not assume a seal from this copy. Qualified buyers can request a security questionnaire under NDA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you sign a HIPAA BAA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We do not publish a HIPAA BAA on this page. Do not assume a BAA from this copy. If your process needs a signed BAA, ask mail ops in writing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who can approve a mail job?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A human on the app. Agents can prepare a job. They cannot approve production mail or run card deposits. Approve debits the prepaid meter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long are jobs stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Jobs are stored by default for 30 days at no extra storage charge. Files and lists are used to produce the job you approved. Details: https://www.usmail.ai/features"
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <!-- Google tag (gtag.js) -->
@@ -90,7 +132,10 @@
         <div class="page-hero-inner">
           <p class="eyebrow">Trust</p>
           <h1>Security overview</h1>
-          <p class="lead">Last updated: August 19, 2026 · www.usmail.ai and app.usmail.ai</p>
+          <p class="lead">
+            Accounts, jobs, and lists are used to produce the mail you approve.
+            No invented SOC 2 or HIPAA seals. Last updated September 9, 2026.
+          </p>
         </div>
       </div>
     </header>
@@ -130,6 +175,23 @@
       environment detail is available under NDA / security questionnaire for qualified buyers.
     </p>
 
+    <h2>What stays on the job</h2>
+    <p>
+      You upload documents and lists. AI proposes setup. A human on the app approves.
+      We print, insert, apply postage, and deliver the pieces to USPS.
+      We do not routinely screen your content. Approving a job is not an endorsement of the words.
+    </p>
+    <p>
+      Jobs are stored by default for 30 days at no extra storage charge.
+      Restrict portal access to people who should send mail. Remove access when someone leaves.
+      <a href="/features">Features →</a>
+    </p>
+    <p>
+      MCP is the same account and the same meter. No anonymous mailing.
+      Agents prepare jobs. They do not approve. They do not run card deposits.
+      <a href="/docs/mcp">MCP docs →</a>
+    </p>
+
     <h2>What we will not claim</h2>
     <ul class="status-list">
       <li><span class="chip chip-not">Not claimed</span><div>Live SOC 2 Type II (or other) certification for USMail.ai unless we publish a real report.</div></li>
@@ -137,6 +199,34 @@
       <li><span class="chip chip-not">Not claimed</span><div>That we read every mail piece, or that approving a job means we endorse the content.</div></li>
       <li><span class="chip chip-not">Not claimed</span><div>That USMail.ai is the U.S. Postal Service, or that we control USPS delivery after handoff.</div></li>
     </ul>
+
+    <h2>Security FAQ</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary><span>Does USMail.ai have SOC 2?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body">
+          <p>We do not publish a SOC 2 Type II report for USMail.ai on this page. Do not assume a seal from this copy. Qualified buyers can request a security questionnaire under NDA.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Do you sign a HIPAA BAA?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body">
+          <p>We do not publish a HIPAA BAA on this page. Do not assume a BAA from this copy. If your process needs a signed BAA, ask mail ops in writing.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Who can approve a mail job?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body">
+          <p>A human on the app. Agents can prepare a job. They cannot approve production mail or run card deposits. Approve debits the prepaid meter.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary><span>How long are jobs stored?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+        <div class="faq-body">
+          <p>Jobs are stored by default for 30 days at no extra storage charge. Files and lists are used to produce the job you approved. <a href="/features">Features →</a></p>
+        </div>
+      </details>
+    </div>
 
     <h2>Request a security conversation</h2>
     <p>

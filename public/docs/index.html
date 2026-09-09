@@ -19,14 +19,14 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/docs" />
   <meta property="og:title" content="Documentation | USMail.ai" />
-  <meta property="og:description" content="MCP docs and platform reference for USMail.ai. " />
+  <meta property="og:description" content="MCP docs and platform reference for USMail.ai." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="USMail.ai logo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Documentation | USMail.ai" />
-  <meta name="twitter:description" content="MCP docs and platform reference for USMail.ai. " />
+  <meta name="twitter:description" content="MCP docs and platform reference for USMail.ai." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,6 +43,7 @@
         "name": "USMail.ai Documentation",
         "url": "https://www.usmail.ai/docs",
         "description": "Documentation hub for USMail.ai MCP and platform reference. Account + prepaid meter.",
+        "dateModified": "2026-09-09",
         "isPartOf": { "@id": "https://www.usmail.ai/#website" },
         "hasPart": [
           { "@type": "WebPage", "name": "MCP overview", "url": "https://www.usmail.ai/docs/mcp" },
@@ -68,6 +69,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. A human on the app approves. That debit starts production. Agents prepare jobs. They do not run card deposits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between /docs and /mcp?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "/docs is the operator reference. /mcp is the marketing lander. Use docs for login, tokens, and tools. Use the lander when you explain MCP to someone who has not connected yet. Operator home: https://www.usmail.ai/docs/mcp Lander: https://www.usmail.ai/mcp"
             }
           }
         ]
@@ -133,6 +142,15 @@
           <li><a href="/print-and-mail">Print and mail</a></li>
           <li><a href="/statements-invoices">Statements &amp; invoices</a></li>
         </ul>
+        <p class="docs-nav-label">On this page</p>
+        <ul>
+          <li><a href="#what">What these docs are</a></li>
+          <li><a href="#vs">Docs vs product pages</a></li>
+          <li><a href="#start">Start here</a></li>
+          <li><a href="#approve">Human approve</a></li>
+          <li><a href="#will-not">Will not publish</a></li>
+          <li><a href="#docs-faq">FAQ</a></li>
+        </ul>
       </aside>
 
       <article class="docs-article">
@@ -140,36 +158,123 @@
         <h1>USMail.ai documentation</h1>
         <div class="docs-answer" data-aeo="docs-hub">
           <p>
-            Public reference. Prefer
-            <a href="/docs/mcp">/docs/mcp</a> for agents.
-            MCP is available now on the app. Account plus prepaid meter. Agent logs in from env with a short session token.
+            These docs are the operator reference for USMail.ai MCP.
+            You use them when an agent prepares print-to-mail on the same production path as the app.
+            MCP is available now on the app. Account plus prepaid meter.
+            The agent logs in from env with a short session token.
             A human must approve on the app. Approve debits the meter.
-            Standalone API keys are planned later.
+            Standalone API keys are planned.
           </p>
         </div>
 
-        <h2>Start here</h2>
+        <h2 id="what">What these docs are</h2>
+        <p class="docs-prose">
+          This set is how you connect. It is not a brochure. It is not a public API catalog.
+          It is not a list of hostnames.
+        </p>
+        <p class="docs-prose">
+          You read these pages when you already want print-to-mail and you are ready to put
+          the account in an agent environment. The pages tell you what is live, what is planned,
+          and what we will not publish on www.
+        </p>
+        <p class="docs-prose">
+          Product pages tell you what production does. Docs tell you how an agent prepares a job
+          and how you still spend the meter. MCP does not create a second factory.
+          Portal jobs and agent jobs share print, insert, postage, and the handoff to USPS.
+        </p>
+        <p class="docs-prose">
+          Two seats stay separate. You own the account. You fund the meter. You approve.
+          The agent logs in from env, prepares the job, and stops. Do not collapse those seats.
+        </p>
+        <p class="docs-prose">
+          You may be the person who configures the agent. You may be the person who owns the
+          USMail.ai account. You may be both. The account holder still approves on the app.
+          The person who writes the agent still puts credentials in env, not in the prompt.
+        </p>
+
+        <h2 id="vs">Docs vs product pages</h2>
+        <p class="docs-prose">
+          Two kinds of pages. Do not mix them.
+        </p>
+        <ul class="docs-prose">
+          <li><a href="/docs">/docs</a> and the four MCP pages under it are operator docs. Chrome is the docs shell. Tone is how, not why.</li>
+          <li><a href="/mcp">/mcp</a> is the marketing lander. Use it when you explain MCP to a person who has not connected yet.</li>
+          <li><a href="/how-it-works">How it works</a>, <a href="/features">Features</a>, <a href="/print-and-mail">Print &amp; mail</a>, and <a href="/certified-mail">Certified Mail</a> describe production. Cutoffs, tracing, and proof options live there.</li>
+        </ul>
+        <p class="docs-prose">
+          When the question is login, meter, session token, or tools, stay in docs.
+          When the question is the factory, leave docs. Docs link the product pages.
+          They do not restate them.
+        </p>
+        <p class="docs-prose">
+          Recurring files and lists still use the same path. You still approve each job.
+          We do not auto-mail next month because last month ran.
+          <a href="/statements-invoices">Statements &amp; invoices →</a>
+        </p>
+
+        <h2 id="start">Start here</h2>
         <ul class="steps steps-grid-2" aria-label="Doc sections">
           <li class="step">
             <h3><i data-lucide="cpu" aria-hidden="true"></i> <a href="/docs/mcp">MCP overview</a></h3>
-            <p>Status, flow, and limits.</p>
+            <p>Status, flow, and limits. Why a human still confirms.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="rocket" aria-hidden="true"></i> <a href="/docs/mcp/getting-started">Getting started</a></h3>
-            <p>Account → meter → connect.</p>
+            <p>Six operator steps. What empty meter and auth fail look like.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="wallet" aria-hidden="true"></i> <a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a></h3>
-            <p>Meter now. API keys later.</p>
+            <p>Account, meter, session token. Planned keys. Link to Security.</p>
           </li>
           <li class="step">
             <h3><i data-lucide="wrench" aria-hidden="true"></i> <a href="/docs/mcp/tools">Tools reference</a></h3>
-            <p>Login, session token, jobs. Human approves.</p>
+            <p>English capabilities. Live names after login. Persist does not print.</p>
           </li>
         </ul>
-
         <p class="docs-prose">
-          Also: <a href="/mcp">MCP</a> · <a href="/how-it-works">How it works</a> ·
+          Read them in that order the first time. After that, jump. Overview is status.
+          Getting started is the path. Auth is the secret and the spend. Tools is what the
+          agent can call in English.
+        </p>
+
+        <h2 id="approve">Human approve</h2>
+        <p class="docs-prose">
+          Physical mail cannot be unsent once we produce it. The meter spends real postage.
+          Certified Mail is proof when you select it. An agent can assemble files, options, and a proof
+          and still be wrong about the recipient, the class, or the date.
+        </p>
+        <p class="docs-prose">
+          Until you confirm on the app, the job is a draft. After you confirm, we print, insert,
+          apply postage, and deliver the pieces to USPS. That confirm is the spend.
+        </p>
+        <p class="docs-prose">
+          Agents prepare jobs. They do not run card deposits. They do not approve production mail.
+          Why that gate exists: <a href="/docs/mcp">MCP overview</a>.
+        </p>
+
+        <h2 id="will-not">What these pages will not publish</h2>
+        <p class="docs-prose">
+          We do not publish MCP hostnames here. We do not publish add commands.
+          Do not invent hostnames or add commands. Connection details come with access on the app.
+        </p>
+        <p class="docs-prose">
+          We do not list mill tool names. We do not invent public aliases for tools.
+          English capabilities live on <a href="/docs/mcp/tools">Tools reference</a>.
+          The live list is on the MCP server after login.
+        </p>
+        <p class="docs-prose">
+          We do not publish unit prices. Production mail is not free. Billing is the prepaid meter.
+          <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a>
+        </p>
+        <p class="docs-prose">
+          Keep the password in env. Never in the prompt. Never in a public repo.
+          If login fails, log in again. If the meter cannot cover the job, fund it in the app, then approve.
+          Those failures are on <a href="/docs/mcp/getting-started">Getting started</a>.
+        </p>
+        <p class="docs-prose">
+          Account practices: <a href="/security">Security</a>.
+          Stuck: <a href="/contact">Contact</a>.
+          Also: <a href="/mcp">MCP lander</a> · <a href="/how-it-works">How it works</a> ·
           <a href="/print-and-mail">Print &amp; mail</a> ·
           <a href="/certified-mail">Certified</a>
         </p>
@@ -188,12 +293,18 @@
               <p>No. A human on the app approves. That debit starts production. Agents prepare jobs. They do not run card deposits.</p>
             </div>
           </details>
+          <details class="faq-item">
+            <summary><span>What is the difference between /docs and /mcp?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>/docs is the operator reference. /mcp is the marketing lander. Use docs for login, tokens, and tools. Use the lander when you explain MCP to someone who has not connected yet. <a href="/docs/mcp">Operator home →</a> · <a href="/mcp">Lander →</a></p>
+            </div>
+          </details>
         </div>
 
         <div class="page-cta docs-cta">
           <div>
             <h2>Get started</h2>
-            <p>Get started for portal + MCP access </p>
+            <p>Register on the app. Fund the meter. Then connect.</p>
           </div>
           <div class="page-cta-actions">
             <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=mcp">Get started</a>

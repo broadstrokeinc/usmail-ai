@@ -1,102 +1,45 @@
-# USMail.ai microsite — Growth + UI/UX review
+# USMail.ai microsite — current snapshot
 
-**Date:** 2026-07-29  
-**URL:** https://usmail-ai-production.up.railway.app  
-**Skills applied:** growth-strategist, ui-ux-design
+**Date:** 2026-09-09  
+**URL:** https://www.usmail.ai  
+**Supersedes:** 2026-07-29 review (retired slogans **Automated print-to-mail** and **Upload. Print. Mail.**)
 
----
+Do not treat the July 29 copy as live voice.
 
-## Growth strategist — executive summary
+## Voice (live)
 
-### Positioning
-**Category:** Automated print-to-mail (not “generic print shop”).  
-**Primary taglines (live on site):**
-- H1: **Automated print-to-mail**
-- Kicker: **Upload. Print. Mail.**
-- Header/footer under logo: **Automated print-to-mail**
-- **Retired as lead message:** “Smarter Presort. Stronger Delivery.” (legacy logo art; too jargon-heavy for broad market)
+Sage + operator. Short sentences. Second person. Present tense.
 
-**UVP hierarchy:**
-1. Upload documents → we print / insert / postage / mail
-2. Multi-format upload (real files — not document authoring)
-3. AI setup + **MCP for agents**
-4. USPS Certified / Certificate of Mailing
-5. 20+ years automated mail ops + human support
-6. Individuals → corporations (not office-only)
+Three seats — do not collapse:
 
-### Messaging (3-second scan)
-- H1 answers *what*: physical mail from your desk, AI + USPS  
-- Trust row answers *why trust*: formats, Certified, MCP, cutoff  
-- USP card answers *why us*: four differentiated bullets  
+| Job | Line | Where |
+|-----|------|--------|
+| Lockup | `AI print to mail` | Under the logo |
+| Slogan | `You upload. You approve. We produce.` | Home H1, footer, OG |
+| Comprehension | `Print to mail, made easy` | Reserved. Never H1, OG, or www footer |
 
-### Conversion path
-| Stage | Element |
-|--------|---------|
-| Attention | Logo + readable text tagline (not baked into image) |
-| Interest | How it works (6 steps), formats, AI/MCP |
-| Desire | USP grid, Certified band, social-proof-via-experience (20+ yrs) |
-| Action | Sticky phone CTA + contact panel (call / email) |
+CTA: **Get started** → `https://app.usmail.ai/`. Mill brand off www. No invented prices, hours saved, or USPS transit days. Human still approves.
 
-### Channel recommendations (next)
-1. **AEO:** FAQ + JSON-LD already answer “What is USMail.ai / Certified / MCP?” for AI answers  
-2. **SEO:** Title/description/keywords/sitemap/robots + canonical usmail.ai  
-3. **Sales enablement:** Demo CTA → calendar or CRM form (not only tel:)  
-4. **Partnerships:** Utility/muni associations; AI agent marketplaces (MCP)  
-5. **Content:** 2–3 case briefs (“invoice mail without a mailroom”)  
+SSOT: [`AGENTS.md`](../AGENTS.md), [`public/llms.txt`](../public/llms.txt).
 
-### KPIs
-- Demo requests / calls from site  
-- Scroll depth to `#ai-mcp` and `#usps`  
-- FAQ expand rate (intent signals)  
-- Bounce on mobile hero  
+## Depth (live)
 
----
+Commercial landers are operator-length (typically 800–980 visible words). Home stays six sections (`docs/IA_HOME.md`). Features, How it works, Certified, Address verification, statements, mailroom, compare, About, MCP, and the eight industry pages are unique — not a cloned NCOA FAQ.
 
-## UI/UX design — checklist
+Named customers are **not** published. About says so. Do not invent case briefs.
 
-### Mobile-first
-- [x] Single-column default; progressive enhancement ≥720 / ≥980  
-- [x] Touch targets ≥44–48px on CTAs and FAQ summaries  
-- [x] Base 16px body; no horizontal scroll intent  
-- [x] Sticky header; primary phone CTA always visible  
+## Product screenshot
 
-### Visual hierarchy
-- [x] One H1; clear H2 section ladder  
-- [x] One primary CTA style (filled navy); ghost secondary  
-- [x] Logo without micro-tagline image; tagline as real text under logo  
+Live app capture on How it works and Features: `/img/app-upload.png` (app.usmail.ai, cropped). Do not put generated mock UI on www.
 
-### Accessibility
-- [x] Skip link  
-- [x] Focus-visible outlines on buttons  
-- [x] Navy/white contrast for primary actions  
-- [x] Decorative logo images use empty alt where brand name is adjacent  
-- [x] FAQ uses native `<details>` (keyboard accessible)  
+## Open (not content clones)
 
-### Cognitive load
-- [x] Nav limited; secondary topics in footer  
-- [x] Benefits vs features separated (USP card vs benefit grid)  
-- [x] FAQ for objections without a long form  
+- Named proof only if ops will name a customer in writing
+- MCP public tool facade vs mill `tools/list` is an **app** job — www must not publish mill tool names or an add command
+- App still shows “Print to mail, made easy” in its own chrome; keep that off www H1/OG/footer
 
-### Gaps / next UX polish
-- [ ] Mobile hamburger if nav grows further  
-- [ ] Sticky bottom bar CTA on small screens (optional)  
-- [ ] Live product screenshots once portal brand is final  
-- [ ] Form capture for demos (reduce phone friction)  
+## UX still true
 
----
-
-## AEO / SEO implemented
-
-| Layer | Implementation |
-|--------|----------------|
-| Title / meta description | Benefit + AI + Certified + MCP |
-| Canonical / OG / Twitter | usmail.ai absolute URLs |
-| robots.txt + sitemap.xml | Present |
-| JSON-LD | Organization, WebSite, SoftwareApplication, Service, FAQPage |
-| FAQ content | Visible + schema-aligned answers |
-| Semantic HTML | main, sections, headings, lists |
-
----
-
-## Recommendation
-Ship current page for launch; instrument calls/emails; add demo form + case proof as v1.1.
+- Mobile-first, skip link, native FAQ `<details>`
+- Contact form on home Get started and `/contact` only (recaptcha, 3/hour IP, auto-ack off)
+- `316` on About / contact / legal / security only

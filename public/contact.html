@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
-  <link rel="stylesheet" href="/styles.css?v=20260908v2b" />
+  <link rel="stylesheet" href="/styles.css?v=20260909shot" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,6 +61,35 @@
           "postalCode": "67203",
           "addressCountry": "US"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this form how I send mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. This form writes to the same inbox as email. We reply. Sending mail is Get started in the app at https://app.usmail.ai/"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you send an automatic confirmation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The form does not send an automatic confirmation. We reply by email or phone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this a Wichita print shop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Wichita is the operator address, not a walk-in counter. Service is nationwide. See https://www.usmail.ai/about"
+            }
+          }
+        ]
       }
     ]
   }
@@ -227,6 +256,32 @@
               </p>
             </form>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="contact-faq">
+      <div class="wrap">
+        <h2 id="contact-faq">Contact FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>Is this form how I send mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. This form writes to the same inbox as email. We reply. Sending mail is Get started in the app. <a href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=contact">Get started</a>.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do you send an automatic confirmation?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. The form does not send an automatic confirmation. We reply by email or phone.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is this a Wichita print shop?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Wichita is the operator address, not a walk-in counter. Service is nationwide. <a href="/about">About →</a></p>
+            </div>
+          </details>
         </div>
       </div>
     </section>

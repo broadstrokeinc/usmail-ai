@@ -9,10 +9,12 @@
   <title>Auth &amp; Billing | USMail.ai MCP Docs — Account + Prepaid Meter</title>
   <meta
     name="description"
-    content="USMail.ai MCP auth and billing: register an account, fund a prepaid meter. Direct API keys for AI agents planned later. "
+    content="USMail.ai MCP auth and billing: register an account, fund a prepaid meter. Direct API keys for AI agents planned later."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#1a2b63" />
   <link rel="canonical" href="https://www.usmail.ai/docs/mcp/auth-and-billing" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:title" content="Auth &amp; Billing | USMail.ai MCP" />
@@ -46,8 +48,37 @@
         "@type": "TechArticle",
         "headline": "USMail.ai MCP authentication and billing",
         "url": "https://www.usmail.ai/docs/mcp/auth-and-billing",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-09-09",
         "description": "USMail.ai MCP uses the human account login and a short-lived session token. Prepaid meter. API keys planned later."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is MCP auth an API key now?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. After login you get a short-lived session token. Pass it on later tool calls. Standalone API keys are planned later. They are not the path now."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if the meter cannot cover the job?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Insufficient balance blocks production. There is no silent overdraft. Fund the meter in the app, then approve. Production mail is not free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do agents run card deposits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. A human funds the prepaid meter in the app. Agents do not run card deposits. Approve on the app debits the same meter as the portal."
+            }
+          }
+        ]
       }
     ]
   }
@@ -106,6 +137,16 @@
           <li><a href="/mcp">MCP marketing</a></li>
           <li><a href="/how-it-works">How it works</a></li>
         </ul>
+        <p class="docs-nav-label">On this page</p>
+        <ul>
+          <li><a href="#account">Account</a></li>
+          <li><a href="#meter">Prepaid meter</a></li>
+          <li><a href="#auth-now">MCP auth now</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#balance">Insufficient balance</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </aside>
 
       <article class="docs-article">
@@ -117,7 +158,7 @@
 
         <p class="eyebrow"><i data-lucide="wallet" aria-hidden="true"></i> Reference</p>
         <h1>Authentication &amp; billing</h1>
-<div class="docs-answer">
+        <div class="docs-answer">
           <p>
             <strong>Same account as the app.</strong> Email and password in the agent environment.
             Login returns a short-lived session token. Pass it on later tool calls.
@@ -125,28 +166,68 @@
           </p>
         </div>
 
-        <h2>Account</h2>
+        <h2 id="account">Account</h2>
+        <p class="docs-prose">
+          A human registers at the app. Agents do not self-register. There is no MCP-only user.
+          The email you create is the login the agent uses from env.
+        </p>
         <ul class="docs-prose">
-          <li>A human registers at the app. Agents do not self-register.</li>
           <li>One account owns the portal and MCP.</li>
+          <li>Jobs the agent prepares show on the app for you to review.</li>
+          <li>You do not get a second meter or a second queue.</li>
         </ul>
+        <p class="docs-prose">
+          Register first if you do not have an account.
+          <a href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=mcp">Get started</a>.
+          Operator steps: <a href="/docs/mcp/getting-started">Getting started</a>.
+        </p>
 
-        <h2>Prepaid meter</h2>
+        <h2 id="meter">Prepaid meter</h2>
+        <p class="docs-prose">
+          The meter is prepaid balance on the account. You fund it in the app. Portal jobs and
+          agent jobs spend the same meter. There is no MCP-only purse.
+        </p>
         <ul class="docs-prose">
           <li>Fund in the app. Agents do not run card deposits.</li>
           <li>Approve on the app debits the same meter as the portal.</li>
-          <li>Insufficient balance blocks production. No silent overdraft.</li>
         </ul>
+        <p class="docs-prose">
+          Production mail is not free. We do not publish unit prices on www.
+          Paper, envelope, and postage are on the job you approve.
+          <a href="/features">What is included →</a>
+        </p>
+        <p class="docs-prose">
+          Login does not spend. Proof does not spend. Persist does not spend.
+          Approve on the app is the debit that starts production. The debit is the job you
+          approved. It is not a monthly subscription.
+        </p>
 
-        <h2>MCP auth (now)</h2>
+        <h2 id="auth-now">MCP auth (now)</h2>
+        <p class="docs-prose">
+          This is not an API key. After login you get a short-lived session token.
+          Minutes, then refresh or log in again. The token is a session, not a long-lived secret.
+        </p>
         <ul class="docs-prose">
-          <li>Not an API key. After login you get a short-lived session token (minutes, then refresh or log in again).</li>
           <li>Call the MCP login tool with the account email and password. Ask it to return the token.</li>
           <li>Pass that token on every later mail tool. On auth failure, log in again.</li>
           <li>Never put the password in the prompt or a public repo.</li>
         </ul>
+        <p class="docs-prose">
+          Put credentials in env. The agent reads env and calls login. If a later tool returns
+          an auth error, the token died or was omitted. Log in again. Pass the new token.
+        </p>
+        <p class="docs-prose">
+          Do not invent hostnames or add commands. Connection details come with access on the app.
+          Live tool names come from the MCP server after login.
+          <a href="/docs/mcp/tools">Tools reference</a> stays in English.
+        </p>
 
-        <h2>Roadmap</h2>
+        <h2 id="roadmap">Roadmap</h2>
+        <p class="docs-prose">
+          Standalone API keys are planned. They are not the path now. Do not invent endpoints.
+          When keys exist, they mint the same kind of short session token. The meter stays the meter.
+          A human still approves on the app.
+        </p>
         <div class="content-table-wrap"><table class="docs-table">
           <thead>
             <tr><th>Phase</th><th>Auth</th><th>Billing</th></tr>
@@ -164,13 +245,65 @@
             </tr>
           </tbody>
         </table></div>
+        <p class="docs-prose">
+          The later row is a direction, not a date. Do not build against a key you were not issued.
+        </p>
 
-        <h2>Security</h2>
+        <h2 id="balance">Insufficient balance</h2>
+        <p class="docs-prose">
+          If the meter cannot cover the job, production does not start. The job stays a draft.
+          There is no silent overdraft. There is no invoice-after-print for that debit.
+        </p>
+        <p class="docs-prose">
+          Fund the meter in the app. Then approve. Empty meter is a production stop, not always
+          a login stop. The agent can still prepare. You still have to cover the job before
+          we print, insert, apply postage, and deliver the pieces to USPS.
+        </p>
+        <p class="docs-prose">
+          Read meter balance from the tools the server lists after login. Do not guess a cost
+          from www. We do not publish a public price list.
+        </p>
+
+        <h2 id="security">Security</h2>
         <ul class="docs-prose">
-          <li>Password in env only</li>
           <li>A human approves production mail, including Certified</li>
           <li>Recipient data is production mail data — handle under your policies</li>
         </ul>
+        <p class="docs-prose">
+          Password-protected accounts. We will not ask for your password in an unsolicited call
+          or email. Sign out on a shared computer. MCP is account-tied. No anonymous mailing.
+        </p>
+        <p class="docs-prose">
+          Lists and documents exist to produce the mail you approve. Treat them as production
+          data. Do not paste recipient files into a public prompt.
+          Full account practices: <a href="/security">Security</a>.
+        </p>
+        <p class="docs-prose">
+          Certified Mail is proof when you select it. Add it before you approve. Not for postcards.
+          Never same-day. <a href="/certified-mail">Certified Mail →</a>
+        </p>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>Is MCP auth an API key now?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. After login you get a short-lived session token. Pass it on later tool calls. Standalone API keys are planned later. They are not the path now.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>What happens if the meter cannot cover the job?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Insufficient balance blocks production. There is no silent overdraft. Fund the meter in the app, then approve. Production mail is not free.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do agents run card deposits?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. A human funds the prepaid meter in the app. Agents do not run card deposits. Approve on the app debits the same meter as the portal.</p>
+            </div>
+          </details>
+        </div>
 
         <div class="docs-next">
           <a href="/docs/mcp/getting-started">← Getting started</a>

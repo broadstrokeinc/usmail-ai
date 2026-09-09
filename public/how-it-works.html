@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
-  <link rel="stylesheet" href="/styles.css?v=20260827glyph2" />
+  <link rel="stylesheet" href="/styles.css?v=20260909shot" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -108,6 +108,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "After proof, on the production path. CASS and NCOA are included. You review flagged pieces before you approve. On Certified Mail you cannot still-mail a flagged address. Details: https://www.usmail.ai/address-verification"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you auto-mail next month because this job ran?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recurring statements and invoices use the same path. You approve the job in front of you. Last month does not mail this month. Details: https://www.usmail.ai/statements-invoices"
             }
           }
         ]
@@ -212,6 +220,51 @@
             </p>
           </li>
         </ol>
+        <figure class="product-shot">
+          <img
+            src="/img/app-upload.png"
+            width="1440"
+            height="792"
+            alt="The USMail.ai app. Chat or Guided. Drop a file or ask Posty. Sign in to generate proof."
+            decoding="async"
+          />
+          <figcaption>
+            The app. Drop a file. Sign in. Generate proof. Nothing prints until you approve.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="approve-title" id="approve">
+      <div class="wrap">
+        <h2 id="approve-title">What you approve</h2>
+        <p class="section-lead">AI proposes. A human confirms. Production waits on that click.</p>
+        <div class="prose">
+          <p>
+            Setup, print options, mail class, and the mail date sit in front of you.
+            Flagged addresses sit there too. You can change the job. You can take pieces off.
+            You can stop.
+          </p>
+          <p>
+            Approve on the app debits the prepaid meter. That is when we produce.
+            Agents can prepare a job. They cannot skip this step.
+            <a href="/mcp">MCP →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="each-job" id="each-job">
+      <div class="wrap">
+        <h2 id="each-job">Each job is its own job</h2>
+        <div class="prose">
+          <p>
+            Recurring statements and invoices use the same five steps.
+            We do not auto-mail next month because last month ran.
+            You export the file. You upload it. You approve the job in front of you.
+            <a href="/statements-invoices">Statements &amp; invoices →</a>
+          </p>
+        </div>
       </div>
     </section>
 
@@ -403,6 +456,12 @@
             <summary><span>When do addresses get checked?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
               <p>After proof, on the production path. CASS and NCOA are included. You review flagged pieces before you approve. On Certified Mail you cannot still-mail a flagged address. <a href="/address-verification">Address verification →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do you auto-mail next month because this job ran?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Recurring statements and invoices use the same path. You approve the job in front of you. Last month does not mail this month. <a href="/statements-invoices">Statements &amp; invoices →</a></p>
             </div>
           </details>
         </div>

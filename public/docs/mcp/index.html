@@ -19,13 +19,13 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/docs/mcp" />
   <meta property="og:title" content="USMail.ai MCP Documentation" />
-  <meta property="og:description" content="Model Context Protocol for physical mail via USPS production. Account + meter. " />
+  <meta property="og:description" content="Model Context Protocol for physical mail via USPS production. Account + meter." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="USMail.ai MCP Docs" />
-  <meta name="twitter:description" content="MCP for print-to-mail. Account + meter. API later. " />
+  <meta name="twitter:description" content="MCP for print-to-mail. Account + meter. API later." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,10 +49,10 @@
         "@id": "https://www.usmail.ai/docs/mcp#article",
         "headline": "USMail.ai MCP Documentation",
         "name": "USMail.ai Model Context Protocol (MCP)",
-        "description": "Documentation for the USMail.ai MCP server that lets AI agents submit print-to-mail jobs. Humans register an account and fund a prepaid meter. Direct API access is planned. ",
+        "description": "Documentation for the USMail.ai MCP server that lets AI agents prepare print-to-mail jobs. Humans register an account and fund a prepaid meter. Direct API access is planned.",
         "url": "https://www.usmail.ai/docs/mcp",
         "datePublished": "2026-07-29",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-09-09",
         "author": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "publisher": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "about": [
@@ -119,6 +119,22 @@
               "@type": "Answer",
               "text": "No. One production path for portal and MCP. We print, insert, apply postage, and deliver the pieces to USPS. Certified options when selected. A human still approves."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does a human still approve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Physical mail cannot be unsent once we produce it. The meter spends real postage. Certified Mail is proof when selected. An agent can assemble a clean job and still be wrong about the recipient, the class, or the date. Approve on the app is the last check and the spend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this a public unauthenticated mail API?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. MCP is not a public unauthenticated endpoint. The agent uses the human account from environment variables and a short session token. Do not invent hostnames or add commands."
+            }
           }
         ]
       }
@@ -184,6 +200,9 @@
         <ul>
           <li><a href="#answer">Quick answer</a></li>
           <li><a href="#status">Availability</a></li>
+          <li><a href="#why-approve">Why human approve</a></li>
+          <li><a href="#same-path">Same production path</a></li>
+          <li><a href="#not-public">Not a public API</a></li>
           <li><a href="#flow">Flow</a></li>
           <li><a href="#limits">Not included</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -199,7 +218,7 @@
 
         <p class="eyebrow"><i data-lucide="cpu" aria-hidden="true"></i> Reference</p>
         <h1>USMail.ai MCP</h1>
-<section id="answer" class="docs-answer" aria-label="Direct answer">
+        <section id="answer" class="docs-answer" aria-label="Direct answer">
           <h2 class="docs-h2-sr">Quick answer</h2>
           <p>
             <strong>MCP is available now</strong> on the app. Agents use the human account (env login + short session token).
@@ -208,6 +227,10 @@
         </section>
 
         <h2 id="status">Availability</h2>
+        <p class="docs-prose">
+          Live means you can use it on the app after you register and fund. It does not mean
+          an open server on the public internet. Planned means do not invent it yet.
+        </p>
         <div class="content-table-wrap">
         <table class="docs-table">
           <thead>
@@ -238,20 +261,94 @@
         </table>
         </div>
 
+        <h2 id="what">What this is</h2>
+        <p class="docs-prose">
+          MCP is Model Context Protocol for this platform. An agent prepares print-to-mail
+          jobs on the same production path as the portal. It is not a second product.
+          It is not USPS.
+        </p>
+        <p class="docs-prose">
+          The agent can upload documents and lists, set options, request proof, read status,
+          and leave a draft. It stops there. You still open the app. English capabilities:
+          <a href="/docs/mcp/tools">Tools reference</a>.
+        </p>
+
+        <h2 id="why-approve">Why a human still approves</h2>
+        <p class="docs-prose">
+          Physical mail cannot be unsent once we produce it. Certified Mail is proof when you
+          select it. The meter spends real postage. An agent can assemble a clean job and still
+          be wrong about the recipient, the class, or the date.
+        </p>
+        <p class="docs-prose">
+          You are the last check. Approve on the app is the spend. Until you confirm, the job
+          is a draft. After you confirm, production starts. That gate is the product, not a
+          temporary limit.
+        </p>
+        <p class="docs-prose">
+          Agents prepare. They do not run card deposits. They do not approve production mail,
+          including Certified. If you wait for the agent to press produce, the job stays a draft.
+        </p>
+
+        <h2 id="same-path">Same production path</h2>
+        <p class="docs-prose">
+          One backend. Portal jobs and agent jobs share it. We print, insert, apply postage,
+          and deliver the pieces to USPS. Cutoffs and tracing match the portal.
+          <a href="/how-it-works">How it works →</a>
+        </p>
+        <p class="docs-prose">
+          Certified Mail and Certificate of Mailing when you configure them on the job.
+          Not for postcards. Never same-day. Flagged Certified addresses cannot still-mail.
+          <a href="/certified-mail">Certified →</a>
+        </p>
+        <p class="docs-prose">
+          CASS and NCOA run on the production path. Tracing on qualifying First-Class letters
+          and postcards is not tracking and is not Certified proof.
+          <a href="/address-verification">Address verification →</a>
+        </p>
+        <p class="docs-prose">
+          Documents and postcards. Statement or invoice jobs use uploaded files and lists.
+          We do not generate bills inside a core or ERP. You still approve each job.
+        </p>
+
+        <h2 id="not-public">Not a public mail API</h2>
+        <p class="docs-prose">
+          There is no open server for anonymous tool calls. There is no free public mailbox
+          for agents. The agent uses the human account from environment variables.
+          Credentials stay in env. Never in the prompt. Never in a public repo.
+        </p>
+        <p class="docs-prose">
+          A session token is not a standalone API key. Standalone API keys are planned.
+          They are not the path now. Do not invent endpoints. Do not invent hostnames or add
+          commands. Do not paste an install string from a blog.
+        </p>
+        <p class="docs-prose">
+          Auth and the meter: <a href="/docs/mcp/auth-and-billing">Auth &amp; billing</a>.
+          Account practices: <a href="/security">Security</a>.
+        </p>
+
         <h2 id="flow">Flow</h2>
         <p class="docs-prose">
-          Account, fund meter, put credentials in env, login for a session token, call tools, then a human approves on the app.
-          Approve debits the meter and starts production.
-          Then we produce and hand off to USPS. Same path as the portal.
-          <a href="/how-it-works">How it works →</a>
+          A human registers. A human funds the meter in the app. You put credentials in env.
+          The agent logs in for a session token and calls tools. Then you approve on the app.
+          Approve debits the meter and starts production. Then we produce and hand off to USPS.
+        </p>
+        <p class="docs-prose">
+          Six steps, with failure notes: <a href="/docs/mcp/getting-started">Getting started →</a>
         </p>
 
         <h2 id="limits">Not included</h2>
         <ul class="docs-prose">
           <li>Public free MCP mailing</li>
+          <li>Unauthenticated public MCP</li>
           <li>Standalone API keys outside the meter (planned later)</li>
           <li>Live hostnames / install strings (issued with access)</li>
+          <li>Agent card deposits</li>
+          <li>Agent approve of production mail</li>
         </ul>
+        <p class="docs-prose">
+          Production mail is not free. Insufficient balance blocks production.
+          There is no silent overdraft.
+        </p>
 
         <h2 id="faq">FAQ</h2>
         <div class="faq">
@@ -264,19 +361,31 @@
           <details class="faq-item">
             <summary><span>Is it available now?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Yes. MCP is available now on the app. Account plus prepaid meter. Agent uses env login and a short session token. A human on the app approves. Not an unauthenticated public endpoint. <a href="https://app.usmail.ai/">Get started</a>.</p>
+              <p>Yes. MCP is available now on the app. Account + prepaid meter required. Agent uses env login and a short session token. A human on the app approves. Not an unauthenticated public endpoint. <a href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=mcp">Get started</a>.</p>
             </div>
           </details>
           <details class="faq-item">
             <summary><span>How does billing work for MCP?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Account plus prepaid meter. A human funds the meter in the app. Approve on the app debits it. Agents do not run card deposits. Standalone API keys are planned later. Production mail is not free. <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a></p>
+              <p>Account + prepaid meter. A human funds the meter in the app. Approve on the app debits it. Agents do not run card deposits. Standalone API keys are planned later. Production mail is not free. <a href="/docs/mcp/auth-and-billing">Auth &amp; billing →</a></p>
             </div>
           </details>
           <details class="faq-item">
             <summary><span>Do agents use a different mail pipeline than humans?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
               <p>No. One production path for portal and MCP. We print, insert, apply postage, and deliver the pieces to USPS. Certified options when selected. A human still approves.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Why does a human still approve?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Physical mail cannot be unsent once we produce it. The meter spends real postage. Certified Mail is proof when selected. An agent can assemble a clean job and still be wrong about the recipient, the class, or the date. Approve on the app is the last check and the spend.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is this a public unauthenticated mail API?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. MCP is not a public unauthenticated endpoint. The agent uses the human account from environment variables and a short session token. Do not invent hostnames or add commands.</p>
             </div>
           </details>
         </div>
