@@ -6,8 +6,11 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <title>Healthcare Print to Mail | Patient Notices · USMail.ai</title>
-  <meta name="description" content="Patient statements and notices as uploaded files. You approve. We print, apply postage, and hand off to USPS. Not an EHR. Ask mail ops in writing if you need a BAA." />
+  <title>Healthcare Notices and Statements, Mailed · USMail.ai</title>
+  <meta
+    name="description"
+    content="Patient statements and notices as files billing already generates. A person approves. Agents cannot skip that step. Not an EHR. We do not publish a HIPAA BAA on this page."
+  />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
   <link rel="canonical" href="https://www.usmail.ai/industries/healthcare" />
@@ -15,14 +18,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/industries/healthcare" />
-  <meta property="og:title" content="Healthcare Mail | USMail.ai" />
-  <meta property="og:description" content="Patient statements and notices as uploaded files. You approve. We print, apply postage, and hand off to USPS. Not an EHR. Ask mail ops in writing if you need a BAA." />
+  <meta property="og:title" content="Healthcare Notices and Statements, Mailed · USMail.ai" />
+  <meta property="og:description" content="Patient statements and notices as files billing already generates. Not an EHR. We do not publish a HIPAA BAA on this page." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Healthcare Mail | USMail.ai" />
-  <meta name="twitter:description" content="Patient statements and notices as uploaded files. You approve. We print, apply postage, and hand off to USPS. Not an EHR. Ask mail ops in writing if you need a BAA." />
+  <meta name="twitter:title" content="Healthcare Notices and Statements, Mailed · USMail.ai" />
+  <meta name="twitter:description" content="Patient statements and notices as files billing already generates. Not an EHR. We do not publish a HIPAA BAA on this page." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,87 +34,73 @@
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
   <link rel="stylesheet" href="/styles.css?v=20260827glyph2" />
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.usmail.ai/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Industries",
-          "item": "https://www.usmail.ai/industries"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Healthcare",
-          "item": "https://www.usmail.ai/industries/healthcare"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://www.usmail.ai/industries/healthcare",
-      "name": "Healthcare Mail | USMail.ai",
-      "description": "Patient statements and notices as uploaded files. NCOA and custom envelopes included. Not an EHR. Do not assume a HIPAA BAA from this page.",
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [
-          ".lead"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.usmail.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.usmail.ai/industries" },
+          { "@type": "ListItem", "position": 3, "name": "Healthcare", "item": "https://www.usmail.ai/industries/healthcare" }
         ]
       },
-      "isPartOf": {
-        "@id": "https://www.usmail.ai/#website"
+      {
+        "@type": "WebPage",
+        "url": "https://www.usmail.ai/industries/healthcare",
+        "name": "Healthcare notices and statements, mailed · USMail.ai",
+        "description": "Patient statements and notices as files billing already generates. A person approves. Agents cannot skip that step. Not an EHR. We do not publish a HIPAA BAA on this page.",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] }
+      },
+      {
+        "@type": "Service",
+        "name": "Healthcare notice and statement mail production",
+        "serviceType": "Print-to-mail for patient statements and notices",
+        "provider": { "@id": "https://www.usmail.ai/#organization" },
+        "areaServed": { "@type": "Country", "name": "United States" },
+        "description": "Upload patient statements and notices as files billing already generates. A person approves. We print, insert, apply postage, and deliver the pieces to USPS. Not an EHR, not a clearinghouse, not a billing system. We do not publish a HIPAA BAA on this page."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does USMail.ai mail healthcare statements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Patient statements and notices as files your billing system already makes, plus a list if you need one. A person on the app approves. We print, insert, apply postage, and deliver the pieces to USPS. We are not an EHR."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is USMail.ai an EHR, a clearinghouse, or a billing system?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We do not generate charts, claims, or statements inside an EHR. We do not clear claims. We do not replace billing. Upload the PDFs and lists billing already exports. Recurring statement jobs: https://www.usmail.ai/statements-invoices"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you publish a HIPAA BAA on this page?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We do not publish a HIPAA BAA on this page. Do not assume a BAA from this copy. If your process needs a signed BAA, ask mail ops in writing. Security: https://www.usmail.ai/security"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does every patient document need Certified Mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Most patient statements travel First-Class. Add Certified Mail only when that document needs proof of delivery. Certified is never same-day and is not available for postcards. Details: https://www.usmail.ai/certified-mail"
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does USMail.ai mail healthcare statements?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Upload patient statements and notices as files your billing system already makes. You approve. We print, apply postage, and hand off to USPS. We are not an EHR. We do not publish a HIPAA BAA on this page."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is USMail.ai an EHR or billing system?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Upload files and lists. We print, apply postage, and hand off to USPS."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you claim a HIPAA BAA here?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Do not assume a BAA from this page. Ask mail ops in writing if you need one."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are NCOA and logo envelopes included?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. NCOA and custom logo envelopes are included. We do not publish a HIPAA BAA on this page. Details: https://www.usmail.ai/features"
-          }
-        }
-      ]
-    }
-  ]
-}
+    ]
+  }
   </script>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCT0CVV4BW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -143,10 +132,11 @@
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-primary btn-nav-cta" href="https://app.usmail.ai/?utm_source=www&utm_campaign=healthcare">Get started</a>
+        <a class="btn btn-primary btn-nav-cta" href="https://app.usmail.ai/?utm_source=www">Get started</a>
       </div>
     </div>
   </header>
+
   <main id="main" class="page-main">
     <header class="page-hero">
       <div class="wrap">
@@ -161,89 +151,167 @@
         </nav>
         <div class="page-hero-inner">
           <h1>Healthcare notices and statements, mailed</h1>
-          <p class="lead">Statements and notices you already generate. Production mail. Not an EHR.</p>
+          <p class="lead">
+            Patient statements and notices as files billing already generates. A person approves. Agents cannot skip that step. Not an EHR.
+          </p>
           <div class="page-hero-actions">
-            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=healthcare">Get started</a>
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=healthcare">Get started</a>
+            <a class="btn btn-ghost" href="/security">Security</a>
           </div>
         </div>
       </div>
     </header>
+
     <section class="page-section" aria-labelledby="types">
       <div class="wrap">
         <h2 id="types">What healthcare teams still put in the mail</h2>
+        <p class="section-lead">Billing already made the file. The patient still gets paper.</p>
         <ul class="steps steps-grid-2">
           <li class="step">
-            <h3><i data-lucide="file-text" aria-hidden="true"></i> Statements and invoices</h3>
-            <p>Upload PDFs and lists from billing. Recurring jobs on the same path.</p>
+            <h3><i data-lucide="receipt" aria-hidden="true"></i> Patient statements</h3>
+            <p>PDFs billing already generates, plus a list. Recurring cycles use the same path. We do not calculate the balance. <a href="/statements-invoices">Statements &amp; invoices →</a></p>
           </li>
           <li class="step">
             <h3><i data-lucide="megaphone" aria-hidden="true"></i> Patient notices</h3>
-            <p>Appointment, coverage, and general correspondence as files you own.</p>
+            <p>Appointment, coverage, and general correspondence as documents you already have. We do not write clinical copy.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Certified when required</h3>
-            <p>Add Certified Mail before you approve. Not every healthcare document needs it.</p>
+            <h3><i data-lucide="calendar" aria-hidden="true"></i> Recurring billing files</h3>
+            <p>The same export, the next cycle. You still approve each job. Nothing prints on a silent schedule.</p>
           </li>
           <li class="step">
-            <h3><i data-lucide="shield" aria-hidden="true"></i> Not an EHR</h3>
-            <p>We do not generate charts or replace your billing system. We mail what you upload.</p>
+            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Proof mail you choose</h3>
+            <p>Add Certified Mail when that document actually needs it. Not every healthcare file does.</p>
           </li>
         </ul>
       </div>
     </section>
-    <section class="page-section band">
+
+    <section class="page-section band" aria-labelledby="billing-path">
       <div class="wrap">
-        <h2>Statements you already generate</h2>
-        <p>Patient statements and invoices leave billing as PDFs and lists. Upload those. Recurring jobs use the same path. We do not replace the billing system or the EHR. We mail the file.</p>
-        <p><a href="/statements-invoices">Statements &amp; invoices →</a></p>
+        <h2 id="billing-path">Billing already made the file. A person still approves.</h2>
+        <div class="prose">
+          <p>
+            Patient statements leave billing as PDFs and recipient lists. That is the file we take. We do not open the EHR. We do not post charges. We do not clear a claim. Recurring jobs use the same production path as a one-off notice. You still confirm each run.
+          </p>
+          <p>
+            Software can propose addresses and print options. An agent can set a job up. A human on the app still approves before anything prints. Agents cannot skip approve. That is the control for a file that has a patient name on it. Volume is not an excuse to skip the click.
+          </p>
+          <p>
+            Keep cycle statements and one-off patient notices on separate jobs when the documents differ. A monthly statement file is not an appointment notice. A coverage letter is not an invoice. Billing already split those exports. Do not recombine them here.
+          </p>
+          <p>
+            We do not publish a HIPAA BAA on this page. Do not assume one from this copy. If your process needs a signed BAA, ask mail ops in writing.
+            <a href="/security">Security →</a>
+          </p>
+          <p>
+            Most patient statements travel First-Class. Certified Mail is an option on the same job when that document needs proof of delivery. It is not the default on every statement. Never same-day. Not a postcard.
+            <a href="/certified-mail">Certified Mail →</a>
+            Scan status on a qualifying First-Class piece is not that proof.
+            <a href="/how-it-works#tracing">Tracing →</a>
+            Returned statements still cost a cycle. Addresses are checked before print.
+            <a href="/address-verification">Address verification →</a>
+          </p>
+          <p>
+            Practice or group marks on the envelope are included. Approve the artwork before a cycle needs it — that can take 1–2 business days.
+            <a href="/features">Features →</a>
+            Fund a prepaid meter in the app. This page does not list a price per statement.
+          </p>
+          <p>
+            A billing cycle is a list. An appointment notice is often a handful of files. Do not run them as one job. Do not let an agent debit the meter. The person who owns the patient file still clicks yes. That is slower than silent auto-mail. It is the product. Charts stay in the EHR. Claims stay in the clearinghouse. Paper leaves after a person confirms the job.
+          </p>
+        </div>
       </div>
     </section>
-    <section class="page-section">
+
+    <section class="page-section" aria-labelledby="hc-not">
       <div class="wrap">
-        <h2>Approval before anything is printed</h2>
-        <p>A human on the app approves the job. That is the trust loop: you see the setup, then we print, apply postage, and hand off to USPS. Agents can propose a job. They cannot skip approve.</p>
+        <h2 id="hc-not">What this is not</h2>
+        <ul class="steps steps-grid-2">
+          <li class="step">
+            <h3><i data-lucide="file-text" aria-hidden="true"></i> Not an EHR</h3>
+            <p>We do not generate charts or clinical notes. We mail the file billing already made.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="scan-line" aria-hidden="true"></i> Not a clearinghouse</h3>
+            <p>We do not send claims. We do not sit between you and a payer.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="receipt" aria-hidden="true"></i> Not a billing system</h3>
+            <p>Balances, adjustments, and statement generation stay in billing.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="shield" aria-hidden="true"></i> Not a skip-approve agent</h3>
+            <p>Agents can propose a job. They cannot skip approve or debit the meter. A person still clicks yes.</p>
+          </li>
+        </ul>
       </div>
     </section>
-    <section class="page-section band">
+
+    <section class="page-section band" aria-labelledby="hc-faq">
       <div class="wrap">
-        <h2>What we will not claim</h2>
-        <p>We do not publish a HIPAA BAA on this page. If your process needs a signed BAA, ask mail ops in writing. <a href="/security">Security →</a></p>
-        <p>We are not an EHR, not a clearinghouse, and not a developer mail API wrapping someone else’s mail house. <a href="/compare">Compare →</a></p>
-      </div>
-    </section>
-    <section class="page-section band">
-      <div class="wrap">
-        <h2>FAQ</h2>
+        <h2 id="hc-faq">Healthcare mail FAQ</h2>
         <div class="faq">
           <details class="faq-item">
             <summary><span>Does USMail.ai mail healthcare statements?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-            <div class="faq-body"><p>Yes. Upload patient statements and notices as files your billing system already makes. You approve. We print, apply postage, and hand off to USPS. We are not an EHR. We do not publish a HIPAA BAA on this page.</p></div>
+            <div class="faq-body">
+              <p>Yes. Patient statements and notices as files your billing system already makes, plus a list if you need one. A person on the app approves. We print, insert, apply postage, and deliver the pieces to USPS. We are not an EHR.</p>
+            </div>
           </details>
           <details class="faq-item">
-            <summary><span>Is USMail.ai an EHR or billing system?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-            <div class="faq-body"><p>No. We do not generate charts, claims, or statements inside an EHR. Upload the PDFs and lists your billing system already makes. A human on the app still approves before anything prints.</p></div>
+            <summary><span>Is USMail.ai an EHR, a clearinghouse, or a billing system?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. We do not generate charts, claims, or statements inside an EHR. We do not clear claims. We do not replace billing. Upload the PDFs and lists billing already exports. <a href="/statements-invoices">Recurring statement jobs →</a></p>
+            </div>
           </details>
           <details class="faq-item">
-            <summary><span>Do you claim a HIPAA BAA here?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-            <div class="faq-body"><p>No. Do not assume a BAA from this page. Ask mail ops in writing if you need one.</p></div>
+            <summary><span>Do you publish a HIPAA BAA on this page?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. We do not publish a HIPAA BAA on this page. Do not assume a BAA from this copy. If your process needs a signed BAA, ask mail ops in writing. <a href="/security">Security →</a></p>
+            </div>
           </details>
           <details class="faq-item">
-            <summary><span>Are NCOA and logo envelopes included?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-            <div class="faq-body"><p>Yes. NCOA and custom logo envelopes are included. We do not publish a HIPAA BAA on this page. <a href="/features">Features →</a></p></div>
+            <summary><span>Does every patient document need Certified Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Most patient statements travel First-Class. Add Certified Mail only when that document needs proof of delivery. Certified is never same-day and is not available for postcards. <a href="/certified-mail">Certified Mail →</a></p>
+            </div>
           </details>
+        </div>
+        <div class="related-grid mt-section">
+          <a class="related-card" href="/statements-invoices">
+            <strong>Statements &amp; invoices</strong>
+            <span>Recurring files from billing. Same path.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/security">
+            <strong>Security</strong>
+            <span>Ask mail ops in writing if you need a BAA.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/certified-mail">
+            <strong>Certified Mail</strong>
+            <span>Optional. Not the default on every statement.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/compare">
+            <strong>Compare</strong>
+            <span>Production mail, not a catalog or a shop.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
         </div>
         <div class="page-cta mt-section">
           <div>
             <h2>Get started</h2>
-            <p>Open the app.</p>
+            <p>Open the app. Export the statement file billing already makes.</p>
           </div>
           <div class="page-cta-actions">
-            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=healthcare">Get started</a>
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=healthcare">Get started</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <a class="footer-logo" href="/" aria-label="USMail.ai home">
@@ -256,12 +324,10 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="/how-it-works">How it works</a>
         <a href="/features">Features</a>
+        <a href="/compare">Compare</a>
         <a href="/print-and-mail">Print &amp; mail</a>
         <a href="/certified-mail">Certified</a>
-        <a href="/statements-invoices">Statements</a>
-        <a href="/mcp">MCP</a>
         <a href="/industries">Industries</a>
-        <a href="/compare">Compare</a>
         <a href="/docs">Docs</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
@@ -279,7 +345,7 @@
     </div>
   </footer>
   <div class="mobile-dock" role="navigation" aria-label="Quick actions">
-    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=healthcare">Get started</a>
+    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=healthcare">Get started</a>
   </div>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
   <script src="/js/site.js?v=20260731quiet" defer></script>

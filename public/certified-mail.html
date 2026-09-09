@@ -9,7 +9,7 @@
   <title>Certified Mail Online | USMail.ai</title>
   <meta
     name="description"
-    content="Send Certified Mail and Certificate of Mailing online with USMail.ai. Upload documents; we print, postage, and hand off to USPS. Same stack as First-Class. "
+    content="Send Certified Mail from files you upload. Proof of delivery, or Certificate of Mailing, on the same path as First-Class. Flagged addresses cannot still-mail. Never same-day."
   />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
@@ -21,7 +21,7 @@
   <meta property="og:title" content="Certified Mail Online | USMail.ai" />
   <meta
     property="og:description"
-    content=" Certified Mail and Certificate of Mailing with upload-to-USPS production. No second vendor. "
+    content="Certified Mail and Certificate of Mailing from files you upload. Same path as First-Class. Flagged addresses cannot still-mail."
   />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -31,7 +31,7 @@
   <meta name="twitter:title" content="Certified Mail Online | USMail.ai" />
   <meta
     name="twitter:description"
-    content="Formal proof mail without a second vendor. Upload, we produce, USPS Certified options ."
+    content="Send Certified Mail from files you upload. Same path as First-Class. Never same-day. Flagged addresses cannot still-mail."
   />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +56,7 @@
         "@id": "https://www.usmail.ai/certified-mail#webpage",
         "url": "https://www.usmail.ai/certified-mail",
         "name": "Certified Mail Online | USMail.ai",
-        "description": "Certified Mail and Certificate of Mailing via USMail.ai production print and USPS handoff. ",
+        "description": "Send Certified Mail from files you upload. Proof of delivery, or Certificate of Mailing, on the same path as First-Class. Flagged addresses cannot still-mail. Never same-day.",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] },
         "isPartOf": { "@id": "https://www.usmail.ai/#website" },
         "about": { "@id": "https://www.usmail.ai/certified-mail#service" }
@@ -68,7 +68,7 @@
         "serviceType": "USPS Certified Mail and Certificate of Mailing",
         "provider": { "@id": "https://www.usmail.ai/#organization" },
         "areaServed": { "@type": "Country", "name": "United States" },
-        "description": "Upload documents;  USMail.ai prints and prepares Certified Mail or Certificate of Mailing for USPS handoff. Get started."
+        "description": "Upload documents. Add Certified Mail or Certificate of Mailing before you approve. We print, apply postage, and deliver the pieces to USPS. Same path as First-Class. Flagged addresses cannot still-mail."
       },
       {
         "@type": "FAQPage",
@@ -94,7 +94,7 @@
             "name": "What is the production cutoff?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Never same-day. Approve by 10:00 PM CT for next business day."
+              "text": "Never same-day. Approve by 10:00 PM CT for next business day. Cutoffs: https://www.usmail.ai/how-it-works#cutoffs"
             }
           },
           {
@@ -111,6 +111,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Certified is not available for postcards."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I mail a flagged address on Certified Mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. On Certified Mail a flagged address must be fixed or taken off the job. You cannot mail it anyway. On First-Class you can still mail a flagged piece. Delivery is not guaranteed. Address verification: https://www.usmail.ai/address-verification"
             }
           }
         ]
@@ -145,7 +153,7 @@
         <a href="/how-it-works">How it works</a>
         <a href="/features">Features</a>
         <a href="/print-and-mail">Print &amp; mail</a>
-        <a href="/certified-mail">Certified Mail</a>
+        <a href="/certified-mail" aria-current="page">Certified Mail</a>
         <a href="/industries">Industries</a>
         <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
       </nav>
@@ -168,57 +176,21 @@
         <div class="page-hero-inner">
           <h1>Send Certified Mail from files you upload</h1>
           <p class="lead">
-            Upload the document. Choose Certified Mail or Certificate of Mailing.
-            We print, apply postage, and deliver to USPS — same path as First-Class.
+            Upload the document. Add Certified Mail or Certificate of Mailing before you approve.
+            We print, apply postage, and deliver the pieces to USPS. Same path as First-Class.
           </p>
           <div class="page-hero-actions">
-            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=certified">Get started</a>
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=certified">Get started</a>
             <a class="btn btn-ghost" href="/how-it-works">How it works</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="page-section" aria-labelledby="who-needs">
-      <div class="wrap">
-        <h2 id="who-needs">Who needs formal proof mail</h2>
-        <p class="section-lead">Legal, credit repair, banks, government, and other proof-heavy mail.</p>
-        <ul class="steps steps-grid-2" aria-label="Who needs proof">
-          <li class="step">
-            <h3><i data-lucide="scale" aria-hidden="true"></i> Legal &amp; compliance</h3>
-            <p>Notices and formal documents when you need proof it was mailed or delivered.</p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Credit repair</h3>
-            <p>
-              Dispute and bureau correspondence with optional Certified / Certificate of Mailing.
-              <a href="/industries/credit-repair">Credit repair mailing →</a>
-            </p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="landmark" aria-hidden="true"></i> Banks &amp; finance</h3>
-            <p>
-              Customer and ops notices with production cutoffs and proof options.
-              <a href="/industries/banks">Banks mailing →</a>
-            </p>
-          </li>
-          <li class="step">
-            <h3><i data-lucide="building-2" aria-hidden="true"></i> Cities &amp; counties</h3>
-            <p>
-              Municipal and county formal mail with predictable handoff windows.
-              <a href="/industries/government">Government mailing →</a>
-            </p>
-          </li>
-</ul>
-      </div>
-    </section>
-
-    <section class="page-section band" aria-labelledby="compare-services">
+    <section class="page-section" aria-labelledby="compare-services">
       <div class="wrap">
         <h2 id="compare-services">Certified vs Certificate of Mailing vs First-Class</h2>
-        <p class="section-lead">
-          You pick the service. You approve the proof.
-        </p>
+        <p class="section-lead">You pick the service. You approve the proof. Tracing on First-Class is not proof.</p>
         <div class="content-table-wrap">
           <table class="content-table">
             <thead>
@@ -231,18 +203,18 @@
             <tbody>
               <tr>
                 <th scope="row">First-Class</th>
-                <td>Everyday documents and notices when ordinary delivery is enough. IMB tracing on qualifying letters and postcards is not tracking.</td>
+                <td>Everyday documents and notices when ordinary delivery is enough. IMB tracing on qualifying letters and postcards is not tracking and is not proof.</td>
                 <td>Default production path. Tracing included on qualifying First-Class letters and postcards. Tracking is not included.</td>
               </tr>
               <tr>
                 <th scope="row">Certified Mail</th>
                 <td>Proof the piece was delivered.</td>
-                <td>Selectable option on the same upload → produce flow.</td>
+                <td>Selectable option on the same upload → produce flow. Not for postcards.</td>
               </tr>
               <tr>
                 <th scope="row">Certificate of Mailing</th>
                 <td>A receipt that you handed the piece to USPS.</td>
-                <td>Selectable when you need that receipt.</td>
+                <td>Selectable when you need that receipt. Not proof of delivery.</td>
               </tr>
             </tbody>
           </table>
@@ -251,28 +223,136 @@
       </div>
     </section>
 
-    <section class="page-section" aria-labelledby="how-cert">
+    <section class="page-section band" aria-labelledby="how-cert">
       <div class="wrap">
         <h2 id="how-cert">How a Certified job runs</h2>
-        <div class="prose panel-card">
-          <ul>
-            <li>Same <strong>five steps</strong> as all USMail.ai mail.</li>
-            <li>Pick Certified or Certificate of Mailing at mail options.</li>
-            <li><strong>Certified is never same-day.</strong> Approve by 10:00 PM CT for next business day.</li>
-            <li>Certified is not available for postcards.</li>
-            <li><a href="/how-it-works">How it works →</a></li>
-            <li><a href="/how-it-works#tracing">Tracing vs tracking →</a></li>
-          </ul>
+        <p class="section-lead">Five production steps. Certified is an option on the job.</p>
+        <ol class="process-flow process-flow-5" aria-label="Certified Mail on a job">
+          <li class="is-upload">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="upload"></i></span>
+            <h3>Upload</h3>
+            <p>The document you already have.</p>
+          </li>
+          <li class="is-spark">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="sparkles"></i></span>
+            <h3>Options</h3>
+            <p>Mail class, paper, finish, and the proof option.</p>
+          </li>
+          <li class="is-pick">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="map-pin"></i></span>
+            <h3>Addresses</h3>
+            <p>CASS and NCOA run. Flagged pieces wait for you.</p>
+          </li>
+          <li class="is-make">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="badge-check"></i></span>
+            <h3>You approve</h3>
+            <p>Nothing prints until a human confirms.</p>
+          </li>
+          <li class="is-usps">
+            <span class="process-flow-mark" aria-hidden="true"><i data-lucide="printer"></i></span>
+            <h3>We produce</h3>
+            <p>Print, postage, deliver the pieces to USPS on your mail date.</p>
+          </li>
+        </ol>
+        <div class="prose">
+          <p>
+            You do not open a second vendor. You do not print at your desk and drive to the window.
+            Paper, duplex, color, and finish are still your choices on that job.
+          </p>
+          <p>
+            Certified never uses the 1:00 PM CT same-day window. That window is a narrow First-Class letter only.
+            Approve by 10:00 PM CT for the next weekday mail date, or pick a later weekday up to 60 days.
+            No weekend mail dates. After we deliver the pieces to USPS, USPS delivers. We do not publish delivery-day promises.
+            <a href="/how-it-works#cutoffs">Production cutoffs →</a>
+          </p>
         </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="flagged-cert">
+      <div class="wrap">
+        <h2 id="flagged-cert">Flagged addresses on Certified</h2>
+        <p class="section-lead">On Certified, a flag is a stop. Fix it or take the piece off the job.</p>
+        <div class="prose">
+          <p>
+            CASS and NCOA run on the production path before you approve.
+            When an address does not match, the piece is flagged for you.
+          </p>
+          <p>
+            On Certified Mail a flagged address must be fixed or taken off the job.
+            You cannot still-mail it. You cannot send it anyway.
+            Proof mail does not leave with a line USPS could not match.
+          </p>
+          <p>
+            You review flagged pieces in address quality. Correct the line and re-check, or remove the piece.
+            There is no still-mail control on Certified. That control exists on First-Class only.
+          </p>
+          <p>
+            First-Class is a different rule. There you can still mail a flagged piece.
+            Delivery is not guaranteed. Tracing still needs a good address.
+            Do not assume CASS or NCOA on international pieces. Domestic USPS is the default.
+            <a href="/address-verification">Address verification →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="trace-track">
+      <div class="wrap">
+        <h2 id="trace-track">Tracking is not tracing, and neither is proof</h2>
+        <div class="prose">
+          <p>
+            USPS tracking is an option on Certified Mail and Priority.
+            You add it before you approve when you need that scan product.
+            It is not First-Class IMB tracing.
+          </p>
+          <p>
+            Tracing is included on qualifying First-Class letters and postcards.
+            It is scan status. It is not legal proof. It is not Certified Mail.
+          </p>
+          <p>
+            Pick the proof the job needs. Do not treat tracing as a substitute.
+            <a href="/how-it-works#tracing">Tracing vs tracking →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="who-needs">
+      <div class="wrap">
+        <h2 id="who-needs">Who needs formal proof</h2>
+        <p class="section-lead">Proof-heavy mail, not a marketing drop. Industry pages own the rest. This page owns the proof options and the Certified address rule.</p>
+        <ul class="steps steps-grid-2" aria-label="Who needs proof">
+          <li class="step">
+            <h3><i data-lucide="scale" aria-hidden="true"></i> Legal</h3>
+            <p>Notices and correspondence when you need proof it was mailed or delivered. <a href="/industries/legal">Legal mailing →</a></p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="badge-check" aria-hidden="true"></i> Credit repair</h3>
+            <p>Dispute and bureau files with optional Certified or Certificate of Mailing. <a href="/industries/credit-repair">Credit repair mailing →</a></p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="landmark" aria-hidden="true"></i> Banks</h3>
+            <p>Customer and ops notices on the same production path. <a href="/industries/banks">Banks mailing →</a></p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="building-2" aria-hidden="true"></i> Government</h3>
+            <p>Municipal and county formal mail. Predictable cutoffs. <a href="/industries/government">Government mailing →</a></p>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="page-section band" aria-labelledby="billing-cert">
       <div class="wrap">
         <h2 id="billing-cert">Billing</h2>
-        <p class="section-lead">
-          No public unit prices. Account plus prepaid meter.
-        </p>
+        <div class="prose">
+          <p>
+            No public unit prices. Account plus prepaid meter.
+            Approve on the app debits the meter. Production mail is not free.
+            Certified and Certificate of Mailing are options on that meter, not a separate public catalog.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -283,7 +363,7 @@
           <details class="faq-item">
             <summary><span>Can I send Certified Mail online?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p>Yes. Upload the document. Add Certified Mail or Certificate of Mailing before you approve and pay. We print, apply postage, and deliver to USPS. Same path as First-Class. Certified is never same-day.</p>
+              <p>Yes. Upload the document, add Certified Mail or Certificate of Mailing before you approve and pay. We print, apply postage, and deliver to USPS. Same path as First-Class. Certified is never same-day.</p>
             </div>
           </details>
           <details class="faq-item">
@@ -295,7 +375,7 @@
           <details class="faq-item">
             <summary><span>What is the production cutoff?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
-              <p><strong>Never same-day.</strong> Approve by 10:00 PM CT for next business day. <a href="/how-it-works#cutoffs">Rules →</a></p>
+              <p>Never same-day. Approve by 10:00 PM CT for next business day. <a href="/how-it-works#cutoffs">Cutoffs →</a></p>
             </div>
           </details>
           <details class="faq-item">
@@ -310,27 +390,32 @@
               <p>No. Certified is not available for postcards.</p>
             </div>
           </details>
+          <details class="faq-item">
+            <summary><span>Can I mail a flagged address on Certified Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. On Certified Mail a flagged address must be fixed or taken off the job. You cannot mail it anyway. On First-Class you can still mail a flagged piece. Delivery is not guaranteed. <a href="/address-verification">Address verification →</a></p>
+            </div>
+          </details>
         </div>
-      </div>
-    </section>
-
-    <section class="page-section band" aria-labelledby="related-cert">
-      <div class="wrap">
-        <h2 id="related-cert">Related</h2>
-        <div class="related-grid">
+        <div class="related-grid mt-section">
+          <a class="related-card" href="/address-verification">
+            <strong>Address verification</strong>
+            <span>CASS and NCOA. Flagged Certified cannot still-mail.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/how-it-works">
+            <strong>How it works</strong>
+            <span>Five steps, cutoffs, tracing vs tracking.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
           <a class="related-card" href="/print-and-mail">
             <strong>Print and mail</strong>
             <span>Nationwide AI print-to-mail. Same production path.</span>
             <span class="more" aria-hidden="true"></span>
           </a>
-          <a class="related-card" href="/statements-invoices">
-            <strong>Statements &amp; invoices</strong>
-            <span>Recurring correspondence. Optional Certified.</span>
-            <span class="more" aria-hidden="true"></span>
-          </a>
-          <a class="related-card" href="/how-it-works">
-            <strong>How it works</strong>
-            <span>Five steps, cutoffs, tracing vs proof.</span>
+          <a class="related-card" href="/industries">
+            <strong>Industries</strong>
+            <span>Legal, banks, credit repair, government, and more.</span>
             <span class="more" aria-hidden="true"></span>
           </a>
         </div>
@@ -340,7 +425,7 @@
             <p>Open the app. Add Certified Mail before you approve.</p>
           </div>
           <div class="page-cta-actions">
-            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=certified">Get started</a>
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=certified">Get started</a>
           </div>
         </div>
       </div>
@@ -362,7 +447,6 @@
         <a href="/compare">Compare</a>
         <a href="/print-and-mail">Print &amp; mail</a>
         <a href="/certified-mail">Certified</a>
-        <a href="/mcp">MCP</a>
         <a href="/industries">Industries</a>
         <a href="/docs">Docs</a>
         <a href="/about">About</a>
@@ -382,7 +466,7 @@
   </footer>
 
   <div class="mobile-dock" role="navigation" aria-label="Quick actions">
-    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&utm_campaign=certified">Get started</a>
+    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=certified">Get started</a>
   </div>
 
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>

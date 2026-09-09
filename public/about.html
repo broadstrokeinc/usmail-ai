@@ -9,9 +9,9 @@
   <title>About USMail.ai | Nationwide AI Print to Mail</title>
   <meta
     name="description"
-    content="USMail.ai is a nationwide AI print-to-mail platform run by experienced print-to-mail experts with more than 50 years of combined expertise, now using AI to produce physical mail."
+    content="USMail.ai is AI print-to-mail operated by Broadstroke, Inc. Outbound documents and postcards. Experienced print-to-mail experts. Wichita is the command center, not a shop."
   />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#1a2b63" />
   <link rel="canonical" href="https://www.usmail.ai/about" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -19,16 +19,17 @@
   <meta property="og:site_name" content="USMail.ai" />
   <meta property="og:url" content="https://www.usmail.ai/about" />
   <meta property="og:title" content="About USMail.ai" />
-  <meta property="og:description" content="Nationwide AI print-to-mail. Run by experienced print-to-mail experts. Innovation via AI." />
+  <meta property="og:description" content="AI print-to-mail operated by Broadstroke, Inc. Outbound documents and postcards. Wichita is the command center, not a walk-in shop." />
   <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About USMail.ai" />
-  <meta name="twitter:description" content="Nationwide AI print-to-mail. Run by experienced print-to-mail experts. Innovation via AI." />
+  <meta name="twitter:description" content="AI print-to-mail operated by Broadstroke, Inc. Outbound documents and postcards. Wichita is the command center, not a walk-in shop." />
   <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
   <link rel="stylesheet" href="/styles.css?v=20260827glyph2" />
@@ -37,13 +38,37 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.usmail.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.usmail.ai/about" }
+        ]
+      },
+      {
         "@type": "AboutPage",
-        "name": "About USMail.ai",
         "url": "https://www.usmail.ai/about",
-        "description": "USMail.ai is a nationwide AI print-to-mail platform. You upload documents and postcards. AI proposes setup. You approve. We print, insert, apply postage, and deliver the pieces to USPS. Online Certified Mail and statement or invoice jobs use the same path. USMail.ai is not the United States Postal Service.",
+        "name": "About USMail.ai",
+        "description": "USMail.ai is AI print-to-mail operated by Broadstroke, Inc. Outbound documents and postcards. Experienced print-to-mail experts. Wichita is the command center, not a shop.",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] },
         "isPartOf": { "@id": "https://www.usmail.ai/#website" },
         "mainEntity": { "@id": "https://www.usmail.ai/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.usmail.ai/#organization",
+        "name": "USMail.ai",
+        "legalName": "Broadstroke, Inc.",
+        "url": "https://www.usmail.ai",
+        "email": "info@usmail.ai",
+        "telephone": ["+1-888-667-5322", "+1-316-247-5322"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "820 W 2nd St N",
+          "addressLocality": "Wichita",
+          "addressRegion": "KS",
+          "postalCode": "67203",
+          "addressCountry": "US"
+        }
       },
       {
         "@type": "FAQPage",
@@ -61,7 +86,7 @@
             "name": "Is USMail.ai the same as US Global Mail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. US Global Mail is a virtual mailbox. USMail.ai is a print-to-mail production platform."
+              "text": "No. US Global Mail is a virtual mailbox. USMail.ai is a print-to-mail production platform. We do not receive inbound post."
             }
           },
           {
@@ -69,7 +94,7 @@
             "name": "Who runs USMail.ai?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "USMail.ai is run by a team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Service is nationwide. USMail.ai is not the United States Postal Service."
+              "text": "USMail.ai is run by experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Broadstroke, Inc. operates the product. Service is nationwide."
             }
           },
           {
@@ -102,7 +127,7 @@
     gtag('config', 'G-KCT0CVV4BW');
   </script>
 </head>
-<body class="legal-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
@@ -129,6 +154,7 @@
       </div>
     </div>
   </header>
+
   <main id="main" class="page-main">
     <header class="page-hero">
       <div class="wrap">
@@ -140,123 +166,301 @@
           </ol>
         </nav>
         <div class="page-hero-inner">
-          <p class="eyebrow">Product</p>
           <h1>About USMail.ai</h1>
           <p class="lead">
-            USMail.ai is a nationwide AI print-to-mail platform. Run by experienced print-to-mail experts
-            with more than 50 years of combined expertise.
+            Outbound print-to-mail for documents and postcards. We print, apply postage, and deliver the pieces to USPS.
+            You send the files you already have.
           </p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=about">Get started</a>
+            <a class="btn btn-ghost" href="/contact">Contact</a>
+          </div>
         </div>
       </div>
     </header>
-    <div class="wrap legal-layout">
-    <h2>Who we are</h2>
-    <p>
-      USMail.ai is a nationwide AI print-to-mail product. It is run by a team of
-      experienced print-to-mail experts with more than <strong>50 years</strong> of
-      combined expertise, now providing print-to-mail innovation through AI.
-    </p>
-    <p>
-      You upload. You approve. We print, insert, apply postage, and deliver to USPS.
-      Not an online catalog and not a walk-in shop.
-    </p>
-    <p>
-      Service is nationwide. Wichita, Kansas is the command center, not a walk-in shop.
-    </p>
-    <p>
-      We do not publish customer names on this page. Talk to mail ops if you need
-      references.
-    </p>
 
-    <h2>What is live</h2>
-    <div class="split-cards">
-      <div class="split-card">
-        <h3>Self-serve</h3>
-        <ul>
-          <li>Portal: upload, approve, produce, USPS</li>
-          <li>Account + prepaid meter; AI setup you approve</li>
-          <li>Certified Mail / CoM on the same path as First-Class</li>
-        </ul>
-      </div>
-      <div class="split-card">
-        <h3>People + agents</h3>
-        <ul>
-          <li>Mail ops by phone and email</li>
-          <li>MCP for agents on the same production path (account required)</li>
-          <li>Cutoffs and included First-Class tracing — <a href="/how-it-works">How it works</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>Not the U.S. Postal Service</h2>
-    <p>
-      <strong>USMail.ai is not the U.S. Postal Service</strong> and is not affiliated with USPS.
-      We prepare physical mail and hand off to USPS for delivery.
-    </p>
-
-    <h2>Not US Global Mail</h2>
-    <p>
-      US Global Mail is a virtual mailbox. USMail.ai does not receive your inbound post.
-      We print outbound mail you upload and deliver it to USPS.
-    </p>
-
-    <h2>FAQ</h2>
-    <div class="faq">
-      <details class="faq-item" open>
-        <summary><span>What is USMail.ai?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-        <div class="faq-body">
-          <ul>
-            <li>USMail.ai is a nationwide AI print-to-mail platform.</li>
-            <li>You upload documents and postcards.</li>
-            <li>AI proposes setup.</li>
-            <li>You approve.</li>
-            <li>We print, insert, apply postage, and deliver the pieces to USPS.</li>
-            <li>Online Certified Mail and statement or invoice jobs use the same path.</li>
-            <li>USMail.ai is not the United States Postal Service.</li>
-          </ul>
+    <section class="page-section" aria-labelledby="who-runs">
+      <div class="wrap">
+        <h2 id="who-runs">Who runs it</h2>
+        <div class="prose">
+          <p>
+            USMail.ai is run by experienced print-to-mail experts with more than 50 years of combined expertise,
+            now providing print-to-mail innovation through AI. Broadstroke, Inc. operates the product.
+            Service is nationwide.
+          </p>
+          <p>
+            The work is production mail. Files. Proofs. Postage. A delivery to USPS.
+            AI proposes setup. A person still confirms before anything prints.
+            The discipline is the file you send, the proof you accept, and the mail date you pick.
+          </p>
+          <p>
+            We are not a wrapper of another mail API. The portal, the meter, and the production path are this product.
+          </p>
+          <p>
+            We do not publish customer names on this page. If you need references, talk to mail ops.
+            Mail ops will talk through a job. They will not approve it for you. Approval stays in the app, on your account.
+          </p>
         </div>
-      </details>
-      <details class="faq-item">
-        <summary><span>Is USMail.ai the same as US Global Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-        <div class="faq-body"><p>No. US Global Mail is a virtual mailbox. USMail.ai is print-to-mail production.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span>Who runs USMail.ai?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-        <div class="faq-body"><p>A team of experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Service is nationwide.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span>Is this a Wichita print shop?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-        <div class="faq-body"><p>No. Wichita is the command center. Service is nationwide. Not a walk-in counter.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span>Do you print business cards, brochures, flyers, or signs?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
-        <div class="faq-body"><p>No. USMail.ai is print-to-mail. Broadstroke does those jobs. <a href="/other-print">Other print →</a></p></div>
-      </details>
-    </div>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>
-      USMail.ai<br />
-      820 W 2nd St N<br />
-      Wichita, KS 67203<br />
-      <a href="tel:+18886675322">888-667-5322</a> ·
-      <a href="tel:+13162475322">316-247-5322</a><br />
-      <a href="mailto:info@usmail.ai">info@usmail.ai</a>
-    </p>
-    <p><a href="/contact">Contact us →</a></p>
-    <p class="btn-row">
-      <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www">Get started</a>
-      <a class="btn btn-ghost" href="/how-it-works">How it works</a>
-    </p>
-    <nav class="legal-suite-nav" aria-label="Related">
-      <span>Related:</span>
-      <a href="/other-print">Other print</a>
-      <a href="/security">Security</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-    </nav>
-    </div>
+    <section class="page-section band" aria-labelledby="outbound">
+      <div class="wrap">
+        <h2 id="outbound">Outbound print-to-mail only</h2>
+        <p class="section-lead">We send the mail you approve. We do not receive inbound post.</p>
+        <div class="prose">
+          <p>
+            You send documents and postcards. The file stays yours. PDF, Word, images, or a recipient list.
+            We do not generate bills inside a core or ERP. We do not rewrite statement copy.
+            You own the document. We own production.
+          </p>
+          <p>
+            A letter here is a USPS size, or a named document type you already use.
+            Correspondence, notices, statements, and invoices are files you upload.
+            We do not author them inside your system.
+          </p>
+          <p>
+            After you approve, we print. If the piece needs an envelope, we insert it.
+            A postcard is printed as a card. We do not stuff a postcard.
+            Postage comes from your prepaid meter. We deliver the pieces to USPS. USPS carries the mail.
+          </p>
+          <p>
+            Mail dates are weekdays. You pick the date when you approve.
+            We do not publish USPS transit days after we deliver the pieces to USPS.
+          </p>
+          <p>
+            This is not a mailbox. We do not hold inbound post.
+            If you need a virtual mailbox, that is a different product, from a different company.
+          </p>
+          <p>
+            Statement and invoice jobs run here. So does Certified Mail when you add it.
+            One production stack. Not a second vendor. EDDM is not this product.
+            <a href="/statements-invoices">Statements &amp; invoices →</a>
+            ·
+            <a href="/certified-mail">Certified Mail →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="what-live">
+      <div class="wrap">
+        <h2 id="what-live">What is live</h2>
+        <p class="section-lead">The platform is open. Account plus prepaid meter. Production mail is billed.</p>
+        <div class="ops-grid" role="list">
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-navy">
+              <h3><i data-lucide="upload" aria-hidden="true"></i> Portal</h3>
+              <span class="ops-badge">Open</span>
+            </div>
+            <div class="ops-card-body">
+              <p>Files go in the app. We produce the pieces and deliver them to USPS.</p>
+            </div>
+          </article>
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-blue">
+              <h3><i data-lucide="wallet" aria-hidden="true"></i> Meter</h3>
+              <span class="ops-badge">Prepaid</span>
+            </div>
+            <div class="ops-card-body">
+              <p>Account plus prepaid meter. Production mail is not free. We do not publish unit prices.</p>
+            </div>
+          </article>
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-green">
+              <h3><i data-lucide="badge-check" aria-hidden="true"></i> Certified</h3>
+              <span class="ops-badge">Same path</span>
+            </div>
+            <div class="ops-card-body">
+              <p>Certified Mail and Certificate of Mailing are options you add before you approve. Never same-day.</p>
+              <p class="ops-foot"><a href="/certified-mail">Certified details →</a></p>
+            </div>
+          </article>
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-amber">
+              <h3><i data-lucide="bot" aria-hidden="true"></i> MCP</h3>
+              <span class="ops-badge">Account required</span>
+            </div>
+            <div class="ops-card-body">
+              <p>Agents prepare jobs. Login from env. Short session token. A human still approves on the app. Not a public unauthenticated endpoint.</p>
+              <p class="ops-foot"><a href="/mcp">MCP →</a> · <a href="/docs/mcp">Docs →</a></p>
+            </div>
+          </article>
+          <article class="ops-card" role="listitem">
+            <div class="ops-card-top ops-tone-navy">
+              <h3><i data-lucide="phone" aria-hidden="true"></i> Mail ops</h3>
+              <span class="ops-badge">Phone and email</span>
+            </div>
+            <div class="ops-card-body">
+              <p>
+                <a href="tel:+18886675322">888-667-5322</a>
+                ·
+                <a href="tel:+13162475322">316-247-5322</a>
+                ·
+                <a href="mailto:info@usmail.ai">info@usmail.ai</a>
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="section-more"><a class="text-link" href="/how-it-works">Five steps and cutoffs →</a></p>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="command">
+      <div class="wrap">
+        <h2 id="command">Wichita is the command center</h2>
+        <div class="prose">
+          <p>
+            Wichita, Kansas is the command center. It is not a walk-in shop.
+            You do not drop a box at the door. You do not pick up a proof at the counter.
+            You send the job in the app.
+          </p>
+          <p>
+            The street address is the operator address. It is not a storefront.
+            Mail ops sits here. Production for your job does not start at a retail counter.
+          </p>
+          <p>
+            People searching “mailing services Wichita” want a local counter. That is not this product.
+            <a href="/print-and-mail">Print and mail →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="about-not">
+      <div class="wrap">
+        <h2 id="about-not">What this is not</h2>
+        <ul class="steps steps-grid-2">
+          <li class="step">
+            <h3><i data-lucide="shield-off" aria-hidden="true"></i> Not the Postal Service</h3>
+            <p>USMail.ai is not the United States Postal Service and is not affiliated with USPS. We prepare physical mail and deliver it to USPS.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="inbox" aria-hidden="true"></i> Not US Global Mail</h3>
+            <p>US Global Mail is a virtual mailbox. We do not receive your inbound post.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="store" aria-hidden="true"></i> Not a walk-in shop</h3>
+            <p>No retail counter. No local drop-off. Production starts when you approve in the app.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="id-card" aria-hidden="true"></i> Not promo print</h3>
+            <p>Not business cards, brochures, flyers, or signs. Broadstroke does those jobs. <a href="/other-print">Other print →</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="about-faq">
+      <div class="wrap">
+        <h2 id="about-faq">About FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>What is USMail.ai?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <ul>
+                <li>USMail.ai is a nationwide AI print-to-mail platform.</li>
+                <li>You upload documents and postcards.</li>
+                <li>AI proposes setup.</li>
+                <li>You approve.</li>
+                <li>We print, insert, apply postage, and deliver the pieces to USPS.</li>
+                <li>Online Certified Mail and statement or invoice jobs use the same path.</li>
+                <li>USMail.ai is not the United States Postal Service.</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is USMail.ai the same as US Global Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. US Global Mail is a virtual mailbox. USMail.ai is a print-to-mail production platform. We do not receive inbound post.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Who runs USMail.ai?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>USMail.ai is run by experienced print-to-mail experts with more than 50 years of combined expertise, now providing print-to-mail innovation through AI. Broadstroke, Inc. operates the product. Service is nationwide.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is this a Wichita print shop?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Wichita is the command center. Service is nationwide. Not a walk-in counter.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do you print business cards, brochures, flyers, or signs?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. USMail.ai is print-to-mail. Broadstroke prints business cards, brochures, flyers, signs, and promo. <a href="/other-print">Other print →</a></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="about-contact">
+      <div class="wrap">
+        <h2 id="about-contact">Contact</h2>
+        <p class="section-lead">Mail ops by phone and email. Sending mail is Get started in the app.</p>
+        <div class="prose">
+          <p>
+            Call or email for references, volume, or a stuck job.
+            Opening a job is the app, not this form.
+          </p>
+          <p>
+            USMail.ai<br />
+            820 W 2nd St N<br />
+            Wichita, KS 67203
+          </p>
+          <p>
+            <a href="tel:+18886675322">888-667-5322</a>
+            ·
+            <a href="tel:+13162475322">316-247-5322</a><br />
+            <a href="mailto:info@usmail.ai">info@usmail.ai</a>
+          </p>
+          <p><a href="/contact">Contact us →</a></p>
+        </div>
+        <nav class="legal-suite-nav" aria-label="Related">
+          <span>Related:</span>
+          <a href="/other-print">Other print</a>
+          <a href="/security">Security</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+        </nav>
+        <div class="related-grid mt-section">
+          <a class="related-card" href="/how-it-works">
+            <strong>How it works</strong>
+            <span>Five steps, cutoffs, tracing vs tracking.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/compare">
+            <strong>Compare</strong>
+            <span>Platform vs catalog vs shop vs USPS.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/security">
+            <strong>Security</strong>
+            <span>What we claim, and what we will not.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/contact">
+            <strong>Contact</strong>
+            <span>Form, phone, and email.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="page-cta mt-section">
+          <div>
+            <h2>Get started</h2>
+            <p>Open the app. Account plus prepaid meter.</p>
+          </div>
+          <div class="page-cta-actions">
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=about">Get started</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <a class="footer-logo" href="/" aria-label="USMail.ai home">
@@ -272,8 +476,6 @@
         <a href="/compare">Compare</a>
         <a href="/print-and-mail">Print &amp; mail</a>
         <a href="/certified-mail">Certified</a>
-        <a href="/statements-invoices">Statements</a>
-        <a href="/mcp">MCP</a>
         <a href="/industries">Industries</a>
         <a href="/docs">Docs</a>
         <a href="/about">About</a>
@@ -288,14 +490,12 @@
         · <a href="/privacy">Privacy</a>
         · <a href="/terms">Terms</a>
       </p>
-      <p class="footer-disclaimer">Not the U.S. Postal Service. USMail.ai is a product of Broadstroke, Inc.</p>
+      <p class="footer-disclaimer">Not the U.S. Postal Service.</p>
     </div>
   </footer>
-
   <div class="mobile-dock" role="navigation" aria-label="Quick actions">
-    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www">Get started</a>
+    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=about">Get started</a>
   </div>
-
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
   <script src="/js/site.js?v=20260731quiet" defer></script>
 </body>

@@ -28,7 +28,8 @@ Slogan: **You upload. You approve. We produce.** Operated by **Broadstroke, Inc.
 - **MCP?** Available now on the app. Account + prepaid meter. Human registers and funds. Agent logs in from env and passes a short session token. Human must approve on the app. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp
 - **Vs a catalog, a shop, or USPS?** We print and deliver to USPS. Not a public-price catalog. Not a walk-in shop. Not the Postal Service. Prefer: https://www.usmail.ai/compare
 - **Cutoffs (Central)?** Same-day: 1:00 PM CT Mon–Fri, eligible First-Class letter only (no Certified/Priority, ≤100 pieces, ≤2 sheets, plain #10 or Utah, no inserts/return envelope). Default: 10:00 PM CT for next weekday. Later weekday up to 60 days. No weekend mail dates. Prefer: https://www.usmail.ai/how-it-works
-- **Statements / invoices?** Uploaded files and lists. We do not generate bills inside a core or ERP. Prefer: https://www.usmail.ai/statements-invoices
+- **Statements / invoices?** Uploaded files and lists. We do not generate bills inside a core or ERP. You approve each job. We do not auto-mail next month because last month ran. Prefer: https://www.usmail.ai/statements-invoices
+- **Mailroom?** For documents and postcards, yes. You skip desk print, fold, insert, postage, and the post-office run. We do not staff your office. Prefer: https://www.usmail.ai/mailroom
 - **EDDM?** Not a USMail.ai product.
 - **International?** Domestic USPS is the default. Do not assume Certified, IMB tracing, CASS, or NCOA on international pieces.
 
@@ -44,6 +45,9 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 - Address verification: https://www.usmail.ai/address-verification
 - How it works: https://www.usmail.ai/how-it-works
 - Certified: https://www.usmail.ai/certified-mail
+- Print and mail: https://www.usmail.ai/print-and-mail
+- Statements: https://www.usmail.ai/statements-invoices
+- Mailroom: https://www.usmail.ai/mailroom
 - Compare: https://www.usmail.ai/compare
 - Industries: https://www.usmail.ai/industries
 - About: https://www.usmail.ai/about
