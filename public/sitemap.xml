@@ -15,7 +15,7 @@
   <url><loc>https://www.usmail.ai/docs/mcp</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.usmail.ai/docs/mcp/getting-started</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
   <url><loc>https://www.usmail.ai/docs/mcp/auth-and-billing</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://www.usmail.ai/docs/mcp/tools</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.usmail.ai/docs/mcp/tools</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
   <url><loc>https://www.usmail.ai/industries</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.usmail.ai/industries/credit-repair</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.usmail.ai/industries/banks</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -30,5 +30,7 @@
   <url><loc>https://www.usmail.ai/privacy</loc><lastmod>2026-08-19</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.usmail.ai/terms</loc><lastmod>2026-08-19</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://www.usmail.ai/security</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
-  <url><loc>https://www.usmail.ai/llms.txt</loc><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.usmail.ai/llms.txt</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.usmail.ai/AGENTS.md</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.usmail.ai/skills.md</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.65</priority></url>
 </urlset>

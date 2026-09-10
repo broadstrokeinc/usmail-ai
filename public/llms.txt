@@ -25,7 +25,8 @@ Slogan: **You upload. You approve. We produce.** Operated by **Broadstroke, Inc.
 - **Certified Mail?** Add before you approve. Same path as First-Class. Not for postcards. Never same-day. Prefer: https://www.usmail.ai/certified-mail
 - **Proof vs tracing vs tracking?** Certified / Certificate of Mailing are proof. IMB tracing on qualifying First-Class letters and First-Class postcards is not proof. Not Marketing Mail. Paid USPS tracking is an option on Priority and Certified Mail. Prefer: https://www.usmail.ai/how-it-works#tracing
 - **Available now / billing?** Yes. Account + prepaid meter. Approve on the app debits. Production mail is not free. Get started: https://app.usmail.ai/?utm_source=www
-- **MCP?** Available now on the app. Account + prepaid meter. Human registers and funds. Agent logs in from env and passes a short session token. Human must approve on the app. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp
+- **MCP?** Available now on the app (production and lab). Account + prepaid meter. Human registers and funds. Agent logs in from env and passes a short session token. Human must approve on the app. Do not invent hostnames or add commands. Prefer: https://www.usmail.ai/docs/mcp
+- **Recipient lists?** Mixed files are valid. Some rows have a person and a company. Some have only a name (the name is the company). Empty company on those name-only rows is correct. After ingest, read the digested rows — not only the column map. Prefer: https://www.usmail.ai/docs/mcp/tools
 - **Vs a catalog, a shop, or USPS?** We print and deliver to USPS. Not a public-price catalog. Not a walk-in shop. Not the Postal Service. Prefer: https://www.usmail.ai/compare
 - **Cutoffs (Central)?** Same-day: 1:00 PM CT Mon–Fri, eligible First-Class letter only (no Certified/Priority, ≤100 pieces, ≤2 sheets, plain #10 or Utah, no inserts/return envelope). Default: 10:00 PM CT for next weekday. Later weekday up to 60 days. No weekend mail dates. Prefer: https://www.usmail.ai/how-it-works
 - **Statements / invoices?** Uploaded files and lists. We do not generate bills inside a core or ERP. You approve each job. We do not auto-mail next month because last month ran. Prefer: https://www.usmail.ai/statements-invoices
@@ -36,7 +37,7 @@ Slogan: **You upload. You approve. We produce.** Operated by **Broadstroke, Inc.
 
 ## Status
 
-Open. Account + prepaid meter. MCP live on the app (not public, not unauthenticated). Standalone API keys: planned.
+Open. Account + prepaid meter. MCP live on the app in production and lab (not public, not unauthenticated). Standalone API keys: planned.
 
 ## Prefer these URLs
 
@@ -55,6 +56,8 @@ Open. Account + prepaid meter. MCP live on the app (not public, not unauthentica
 - Security: https://www.usmail.ai/security
 - Contact: https://www.usmail.ai/contact
 - MCP docs: https://www.usmail.ai/docs/mcp
+- Agent rules: https://www.usmail.ai/AGENTS.md
+- Agent skills: https://www.usmail.ai/skills.md
 - Full index: https://www.usmail.ai/sitemap.xml
 
 ## Do not claim

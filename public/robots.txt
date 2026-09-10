@@ -44,5 +44,7 @@ Allow: /
 
 # LLM crawl map lives only at this URL. HTML routes always return HTML.
 # https://www.usmail.ai/llms.txt
+# Mail-agent rules: https://www.usmail.ai/AGENTS.md
+# Mail-agent skills: https://www.usmail.ai/skills.md
 
 Sitemap: https://www.usmail.ai/sitemap.xml

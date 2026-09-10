@@ -30,7 +30,7 @@ Sage + operator. Short sentences. Second person. Present tense.
 
 ## AEO
 
-One meaning across: visible FAQ, `FAQPage` JSON-LD on that page, `public/llms.txt`.
+One meaning across: visible FAQ, `FAQPage` JSON-LD on that page, `public/llms.txt`. Public mail-agent files: `public/llms.txt`, `public/AGENTS.md`, `public/skills.md` — keep them in lockstep with live MCP.
 
 **Official definition** (home FAQ, About FAQ, those JSON-LDs, `llms.txt`). Visible FAQ: bullets. JSON-LD and Direct answers: periods.
 
@@ -46,7 +46,7 @@ Every HTML page: title, meta, canonical, OG, Twitter, JSON-LD, sitemap (except 4
 
 Wichita: About, privacy/terms, Organization `PostalAddress`, and the print-and-mail FAQ that **rejects** “mailing services Wichita.” Never home H1, title, or hero.
 
-Do not claim: see `public/llms.txt`. Platform is open. Do not write “coming soon.” MCP: account + prepaid meter; env login + short session token; human approves on the app.
+Do not claim: see `public/llms.txt`. Platform is open. Do not write “coming soon.” MCP: account + prepaid meter; env login + short session token; human approves on the app. Production and lab MCP are live. Recipient lists may mix person+company and name-only (company-as-name) rows; digested rows are SSOT, not the column map alone. Do not list mill `postalocity_*` names on www.
 
 `/other-print` is noindex, Broadstroke handoff. Not in nav, sitemap, or `llms.txt` Direct answers.
 
@@ -59,7 +59,9 @@ Nav: How it works · Features · Print & mail · Certified Mail · Industries ·
 | Path | Role |
 |------|------|
 | `public/*.html` | Pages (clean URLs in `server.mjs`) |
-| `public/llms.txt` | AI citation map |
+| `public/llms.txt` | AI citation map (`/llm.txt` 301s here) |
+| `public/AGENTS.md` | Public mail/MCP agent rules |
+| `public/skills.md` | Public mail/MCP agent skills |
 | `public/sitemap.xml` | Indexable URLs |
 | `server.mjs` | Routes, `.html` 301s |
 | `docs/IA_HOME.md` | Home IA |

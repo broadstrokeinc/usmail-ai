@@ -68,6 +68,7 @@ const MIME = {
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.txt': 'text/plain; charset=utf-8',
+  '.md': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
 }
 
@@ -448,6 +449,10 @@ const server = http.createServer(async (req, res) => {
   const ALIAS = {
     '/online-certified-mail': '/certified-mail',
     '/online-certified-mail/': '/certified-mail',
+    '/llm.txt': '/llms.txt',
+    '/llm.txt/': '/llms.txt',
+    '/agents.md': '/AGENTS.md',
+    '/SKILLS.md': '/skills.md',
   }
   if (ALIAS[urlPath]) {
     return send(
@@ -495,6 +500,8 @@ const server = http.createServer(async (req, res) => {
     '/docs/mcp/auth-and-billing': '/docs/mcp/auth-and-billing.html',
     '/docs/mcp/tools': '/docs/mcp/tools.html',
     '/llms.txt': '/llms.txt',
+    '/AGENTS.md': '/AGENTS.md',
+    '/skills.md': '/skills.md',
   }
 
   // Canonical clean URLs only — 301 bare .html away from duplicate surface
@@ -560,8 +567,14 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
-  // HTML routes always return that page. Never swap in /llms.txt.
+  // HTML routes always return that page. Never swap in agent text files.
   if (urlPath !== '/llms.txt' && String(rel).endsWith('llms.txt')) {
+    rel = CLEAN[urlPath] || urlPath
+  }
+  if (urlPath !== '/AGENTS.md' && /AGENTS\.md$/i.test(String(rel))) {
+    rel = CLEAN[urlPath] || urlPath
+  }
+  if (urlPath !== '/skills.md' && /skills\.md$/i.test(String(rel))) {
     rel = CLEAN[urlPath] || urlPath
   }
 

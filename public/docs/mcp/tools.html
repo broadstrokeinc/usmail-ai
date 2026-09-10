@@ -48,7 +48,7 @@
         "@type": "TechArticle",
         "headline": "USMail.ai MCP tools reference",
         "url": "https://www.usmail.ai/docs/mcp/tools",
-        "dateModified": "2026-09-09",
+        "dateModified": "2026-09-10",
         "description": "USMail.ai MCP: login with the human account, pass a short session token on later calls, create jobs and proofs. Approve on the app debits the prepaid meter.",
         "about": "MCP tools for physical mail production"
       },
@@ -197,6 +197,7 @@
           <h3>Create, upload, configure</h3>
           <p>Create a job. Upload documents and lists. Set First-Class, Certified, print options. Same production path as the portal.</p>
           <p>Documents and postcards. Statement or invoice jobs are uploaded files and lists, not bills we generate inside a core. Certified is not for postcards. Add proof options before you approve. A list is recipient data. Handle it under your policies. Do not paste the file into a public prompt.</p>
+          <p>Mixed lists are valid: some rows have a person and a company; some have only a name (the name is the company). Empty company on those name-only rows is correct. After ingest, read the digested rows. Column maps alone are not proof the company values arrived.</p>
         </div>
 
         <div class="docs-tool" id="proof-status">
