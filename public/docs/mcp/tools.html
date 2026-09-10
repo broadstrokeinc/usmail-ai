@@ -83,6 +83,14 @@
           },
           {
             "@type": "Question",
+            "name": "Are mixed Name and Company lists valid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Mixed files are valid. Some rows have a person and a company. Some have only a name (the name is the company). Empty company on those name-only rows is correct. After ingest, read the digested rows. Column maps alone are not proof the company values arrived."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Can the agent approve production mail?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -281,6 +289,12 @@ app: human approves → meter debit → we produce</pre>
             <summary><span>Does submit print the job?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
               <p>No. If the server exposes a submit or persist step, it stores the job. It does not print. A human approves on the app. That debit starts production.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Are mixed Name and Company lists valid?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes. Mixed files are valid. Some rows have a person and a company. Some have only a name (the name is the company). Empty company on those name-only rows is correct. After ingest, read the digested rows. Column maps alone are not proof the company values arrived.</p>
             </div>
           </details>
           <details class="faq-item">

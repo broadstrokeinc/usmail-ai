@@ -52,7 +52,7 @@
         "description": "Documentation for the USMail.ai MCP server that lets AI agents prepare print-to-mail jobs. Humans register an account and fund a prepaid meter. Direct API access is planned.",
         "url": "https://www.usmail.ai/docs/mcp",
         "datePublished": "2026-07-29",
-        "dateModified": "2026-09-09",
+        "dateModified": "2026-09-10",
         "author": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "publisher": { "@type": "Organization", "name": "USMail.ai", "url": "https://www.usmail.ai" },
         "about": [
@@ -126,6 +126,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Physical mail cannot be unsent once we produce it. The meter spends real postage. Certified Mail is proof when selected. An agent can assemble a clean job and still be wrong about the recipient, the class, or the date. Approve on the app is the last check and the spend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are mixed Name and Company lists valid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Mixed files are valid. Some rows have a person and a company. Some have only a name (the name is the company). Empty company on those name-only rows is correct. After ingest, read the digested rows. Column maps alone are not proof the company values arrived. Tools: https://www.usmail.ai/docs/mcp/tools"
             }
           },
           {
@@ -250,7 +258,7 @@
             <tr>
               <td>MCP server for agents</td>
               <td><span class="docs-badge docs-badge-yes">Live</span></td>
-              <td>Same production as portal</td>
+              <td>Production and lab. Same path as the portal</td>
             </tr>
             <tr>
               <td>Standalone REST/API keys for AI</td>
@@ -271,6 +279,10 @@
           The agent can upload documents and lists, set options, request proof, read status,
           and leave a draft. It stops there. You still open the app. English capabilities:
           <a href="/docs/mcp/tools">Tools reference</a>.
+        </p>
+        <p class="docs-prose">
+          Mixed Name and Company lists are valid. After ingest, read the digested rows — not only
+          the column map. Details: <a href="/docs/mcp/tools">Tools reference</a>.
         </p>
 
         <h2 id="why-approve">Why a human still approves</h2>
@@ -380,6 +392,12 @@
             <summary><span>Why does a human still approve?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
             <div class="faq-body">
               <p>Physical mail cannot be unsent once we produce it. The meter spends real postage. Certified Mail is proof when selected. An agent can assemble a clean job and still be wrong about the recipient, the class, or the date. Approve on the app is the last check and the spend.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Are mixed Name and Company lists valid?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes. Mixed files are valid. Some rows have a person and a company. Some have only a name (the name is the company). Empty company on those name-only rows is correct. After ingest, read the digested rows. Column maps alone are not proof the company values arrived. <a href="/docs/mcp/tools">Tools reference →</a></p>
             </div>
           </details>
           <details class="faq-item">
