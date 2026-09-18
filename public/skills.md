@@ -29,6 +29,15 @@ Live MCP is on the app (production and lab). Account + prepaid meter. Not a publ
 - Flagged Certified addresses cannot still-mail
 - Do not still-mail around a Certified CASS block
 
+## Progress
+
+Keep the human updated. After `configure_zone` or `generate_proof`, **do not go silent**.
+
+- Poll `get_mail_job`. If live `tools/list` also returns split, zone, or job-progress tools, poll those too. Do not invent mill names.
+- After each poll, or at least every 5–10 seconds, tell the human a short status with the **percentage** when the tool returns one (for example: “Split 62%…”, “Process 40%…”).
+- `get_mail_job` exposes `job.progress` (percent), plus `ready`, `processing`, and `importing`.
+- Done = `ready` and a signed proof URL. Paste the proof markdown. `importing` false alone is not complete. Do not wait for a fake 100% if the job is already ready.
+
 ## Not skills
 
 - Approve production mail (human on the app)
