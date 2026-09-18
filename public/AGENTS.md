@@ -19,7 +19,7 @@ Nationwide AI print-to-mail. You upload documents and postcards. AI proposes set
 - Agents do not approve production mail. Agents do not run card deposits.
 - Do not invent hostnames or add commands. Connection details come with access on the app.
 - Ask the live MCP server for tool names after login. Do not invent names. Do not publish mill tool names.
-- While waiting on proof or extract, surface processing percent to the human. Details: https://www.usmail.ai/skills.md
+- While waiting on proof or extract, surface processing percent. Do not paste proof until percent is 100% and the job is ready. Details: https://www.usmail.ai/skills.md
 
 Docs: https://www.usmail.ai/docs/mcp
 
