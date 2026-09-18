@@ -33,11 +33,11 @@ Live MCP is on the app (production and lab). Account + prepaid meter. Not a publ
 
 Keep the human updated. After `configure_zone` or `generate_proof`, **do not go silent**.
 
-- Poll `get_mail_job`. Prefer `progress.millPercent` when present. If live `tools/list` also returns split, zone, or job-progress tools, poll those too. Do not invent mill names.
+- Poll `get_mail_job`. Prefer `progress.millPercent` **when present**. If live `tools/list` also returns split, zone, or job-progress tools, poll those too. Do not invent mill names or a percent field.
 - After each poll, or at least every 5–10 seconds, tell the human a short status with the **percentage** when the tool returns one (for example: “Split 62%…”, “Process 40%…”).
-- `get_mail_job` exposes `job.progress.millPercent`, plus `ready`, `processing`, and `importing`.
-- **Do not** paste `proofMarkdown` or `proofUrl` (or any stub proof link) until `progress.millPercent` is **100%** **and** the job is `ready`. Early or stub proof links while percent is 0 or still running are a **skills FAIL**.
-- When percent is 100% and `ready`, say so plainly and paste the proof markdown.
+- Use the percent the live tool actually returns. Prefer `progress.millPercent` **when present**. Also note `ready`, `processing`, and `importing` when those fields appear.
+- **Do not** paste `proofMarkdown` or `proofUrl` (or any stub proof link) until that live percent is **100%** **and** the job is `ready`. Early or stub proof links while percent is 0 or still running are a **skills FAIL**.
+- When the live percent is 100% and `ready`, say so plainly and paste the proof markdown.
 
 ## Not skills
 
