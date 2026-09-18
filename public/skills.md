@@ -29,6 +29,15 @@ Live MCP is on the app (production and lab). Account + prepaid meter. Not a publ
 - Flagged Certified addresses cannot still-mail
 - Do not still-mail around a Certified CASS block
 
+## Progress
+
+Keep the human updated. After `configure_zone` or `generate_proof`, **do not go silent**.
+
+- Poll **`get_mail_job` only**. Prefer `progress.millPercent` **when present**. Also note `progress.message` / `progress.importing` / `ready`. Do not invent mill names, extra progress tools, or a percent field.
+- After each poll, a short status. Include the **percentage** only when the tool returned one (for example: “Process 40%…”). Do not flood the thread.
+- **Do not** paste `proofMarkdown` or `proofUrl` (or any stub) until `proofUrl` is a **signed** HTTPS URL and the job is `ready` (or Process is complete: `importing=false` with a signed URL). If `progress.millPercent` **is present**, also wait until it is **100**. If millPercent is omitted, do **not** wait for millPercent. Do not wait for import `message` to hit 100.
+- Early or stub proof links are a **skills FAIL**. When the gate holds, paste the proof markdown. 100% is mill Process complete, not Approve.
+
 ## Not skills
 
 - Approve production mail (human on the app)
