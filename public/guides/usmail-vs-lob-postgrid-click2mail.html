@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <title>USMail.ai vs Lob vs PostGrid vs Click2Mail | USMail.ai</title>
+  <meta
+    name="description"
+    content="A fair comparison of USMail.ai, Lob, PostGrid, and Click2Mail. AI upload-and-approve print-to-mail vs API automation vs catalog self-serve. No invented prices."
+  />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#1a2b63" />
+  <link rel="canonical" href="https://www.usmail.ai/guides/usmail-vs-lob-postgrid-click2mail" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="USMail.ai" />
+  <meta property="og:url" content="https://www.usmail.ai/guides/usmail-vs-lob-postgrid-click2mail" />
+  <meta property="og:title" content="USMail.ai vs Lob vs PostGrid vs Click2Mail | USMail.ai" />
+  <meta property="og:description" content="A fair comparison of USMail.ai, Lob, PostGrid, and Click2Mail. AI upload-and-approve vs API automation vs catalog self-serve." />
+  <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="USMail.ai vs Lob vs PostGrid vs Click2Mail | USMail.ai" />
+  <meta name="twitter:description" content="A fair comparison of four print-to-mail platforms. No invented prices." />
+  <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
+  <link rel="stylesheet" href="/styles.css?v=20260827glyph2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.usmail.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "USMail.ai vs Lob, PostGrid, Click2Mail", "item": "https://www.usmail.ai/guides/usmail-vs-lob-postgrid-click2mail" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "url": "https://www.usmail.ai/guides/usmail-vs-lob-postgrid-click2mail",
+        "name": "USMail.ai vs Lob vs PostGrid vs Click2Mail",
+        "description": "A fair comparison of USMail.ai, Lob, PostGrid, and Click2Mail. AI upload-and-approve print-to-mail vs API automation vs catalog self-serve. No invented prices.",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the real difference between USMail.ai and Lob?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Lob is primarily programmatic direct mail infrastructure. Developers trigger mail from systems using APIs, templates, and webhooks. USMail.ai is primarily AI print-to-mail with a human approve gate. You upload documents and postcards, AI proposes setup, you approve, then production and USPS handoff follow. You can build integrations around either philosophy, but the default buyer and default interface differ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PostGrid just another Lob?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They compete in the Print and Mail API category, so shortlists overlap. PostGrid’s public story often pairs print and mail with address verification and checks, plus CRM integration guides. Lob’s public story emphasizes developer automation, a print delivery network, and platform embedding. Evaluate both on your formats, compliance needs, and who will maintain the integration, not on blog roundup titles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does USMail.ai replace Click2Mail for Certified Mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not as a smear, and not as a universal swap. Click2Mail has a long-standing Certified catalog and portal experience many clerks already know. USMail.ai offers online Certified Mail and Certificate of Mailing on the same upload-approve path as other jobs, with clear never-same-day guidance. Choose Click2Mail when catalog shopping wins. Choose USMail.ai when AI setup, approve-before-produce, and optional agent prepare matter more."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can AI agents send mail on USMail.ai without a person?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Agents can prepare jobs via MCP on the app. Account plus prepaid meter. Env login. Short session token. A human must approve on the app before production. Approve is what debits the meter. That is intentional: physical mail cannot be unsent, and Certified is proof. There is no unauthenticated public MCP endpoint for anonymous spend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which should I shortlist if I only have time for two demos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engineering-owned, API-triggered mail: Lob and PostGrid. Human-owned document jobs with approve, Certified option, and possible agents: USMail.ai and Click2Mail, then decide with the AI-setup vs catalog friend-test."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCT0CVV4BW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KCT0CVV4BW');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="USMail.ai home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.ai" width="200" height="51" class="brand-logo" decoding="async" />
+        </picture>
+        <span class="brand-tagline">AI print to mail</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span> Menu
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="/how-it-works">How it works</a>
+        <a href="/features">Features</a>
+        <a href="/print-and-mail">Print &amp; mail</a>
+        <a href="/certified-mail">Certified Mail</a>
+        <a href="/industries">Industries</a>
+        <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-nav-cta" href="https://app.usmail.ai/?utm_source=www">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <header class="page-hero">
+      <div class="wrap">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li><span>Guides</span></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li><span aria-current="page">Vs Lob, PostGrid, Click2Mail</span></li>
+          </ol>
+        </nav>
+        <div class="page-hero-inner">
+          <h1>USMail.ai vs Lob vs PostGrid vs Click2Mail</h1>
+          <p class="lead">
+            If you are shopping for print-to-mail—turning files into physical letters or postcards that we deliver to USPS—you will keep seeing the same four names.
+            They all turn digital files into physical mail. They are not interchangeable.
+            This is a friend-test comparison: clear about strengths, honest about trade-offs, and free of invented pricing, traffic, or “#1” claims.
+          </p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=guide-lob">Get started</a>
+            <a class="btn btn-ghost" href="/compare">Compare hub</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-section" aria-labelledby="noun-check">
+      <div class="wrap">
+        <div class="prose">
+          <p>
+            Print-to-mail means a provider prints your documents or postcards, prepares the pieces, applies postage, and delivers them to a postal carrier.
+            For US destinations, that carrier is typically USPS. None of these vendors is the Postal Service.
+            For platform vs catalog vs shop vs USPS, start at <a href="/compare">Compare</a>
+            or the <a href="/guides/ai-print-to-mail-vs-catalog-shop-usps">four-model guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="one-question">
+      <div class="wrap">
+        <h2 id="one-question">The one question that sorts the field</h2>
+        <p class="section-lead">Do we need an engineer to call an API every time we mail—or do we need a human to upload files, review setup, and approve before anything prints?</p>
+        <div class="content-table-wrap">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th scope="col">If your answer is…</th>
+                <th scope="col">Start here</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Engineering owns mail as a product feature or workflow trigger.</th>
+                <td>Lob or PostGrid</td>
+              </tr>
+              <tr>
+                <th scope="row">Ops, legal, finance, or office staff own the mail job in a browser.</th>
+                <td>Click2Mail or USMail.ai</td>
+              </tr>
+              <tr>
+                <th scope="row">We want AI to propose setup, but a person must approve spend and content.</th>
+                <td>USMail.ai</td>
+              </tr>
+              <tr>
+                <th scope="row">We want agents / MCP to prepare jobs on the same path as people.</th>
+                <td>USMail.ai (product intent + live MCP on the app)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose">
+          <p>
+            Lob and PostGrid win when mail is infrastructure. Click2Mail wins when you want a broad, catalog-style self-serve shop.
+            USMail.ai wins when the product story is upload → AI proposes setup → you approve → we produce → USPS.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="snapshot">
+      <div class="wrap">
+        <h2 id="snapshot">Snapshot: four products, four jobs</h2>
+
+        <h3>USMail.ai — AI print-to-mail with human approve</h3>
+        <div class="prose">
+          <p>
+            Public positioning is the brand slogan in the footer. USMail.ai is a nationwide AI print-to-mail platform.
+            You upload documents and postcards (PDF, Word, images, lists). Software proposes setup. You approve before production.
+            Then USMail.ai prints, inserts where needed, applies postage from a prepaid meter, and delivers pieces to USPS on your mail date.
+          </p>
+          <p>Standout differentiators, qualitative and site-aligned:</p>
+          <ul>
+            <li>AI-proposed setup plus human approve as the hero flow—not an afterthought buried in settings.</li>
+            <li>Online Certified Mail and Certificate of Mailing on the same job path as First-Class—not a separate product island. Certified is never same-day. Tracking is an option on Certified or Priority and is not the same as First-Class tracing.</li>
+            <li>Agent / MCP path available now on the app: agents prepare jobs with account + prepaid meter; a human still approves on the app before anything prints. Not an unauthenticated public endpoint. Standalone API keys for agents are planned, not the current default. <a href="/mcp">MCP →</a></li>
+            <li>Honest language on tracing vs tracking vs proof—useful for regulated or formal senders who hate fuzzy “tracking” marketing.</li>
+          </ul>
+          <p>
+            <strong>Who it is for:</strong> teams that already have statement PDFs, notices, invoices, or letter packs; want AI help splitting and setup; insist on a human gate before postage; and may want agents to prepare work without letting agents spend the meter.
+          </p>
+          <p>
+            <strong>Who it is not for:</strong> buyers who need a mature, public REST Print &amp; Mail API with SDKs as the primary interface today; or teams that want mail to fire fully unattended with no approve step.
+            USMail.ai is not the United States Postal Service.
+          </p>
+        </div>
+
+        <h3>Lob — Developer-first direct mail infrastructure</h3>
+        <div class="prose">
+          <p>
+            Public positioning: cloud Print &amp; Mail plus address capabilities, built so companies can trigger postcards, letters, checks, and related formats from CRMs and internal systems.
+            Strong story around a Print Delivery Network, templates, webhooks, analytics, and compliance-minded enterprise use (finance, insurance, healthcare appear often in Lob’s own materials).
+          </p>
+          <ul>
+            <li>API-first automation—mail as a programmable side effect of product events.</li>
+            <li>Template + merge workflows for personalized campaigns and operational mail at scale.</li>
+            <li>Network / routing narrative for production without you managing printers.</li>
+            <li>Address verification / data quality as a first-class companion product line.</li>
+          </ul>
+          <p>
+            <strong>Who it is for:</strong> product and engineering teams embedding offline communications into SaaS platforms, CRMs, or lifecycle systems; marketers who already live in event-triggered campaigns; enterprises that evaluate vendors on API maturity, webhooks, and network reliability language.
+          </p>
+          <p>
+            <strong>Who it is not for:</strong> non-technical users who mainly want to drop a multi-file PDF package, get an AI-proposed setup, and click approve—without writing integration code.
+          </p>
+        </div>
+
+        <h3>PostGrid — Print &amp; Mail API + address platform</h3>
+        <div class="prose">
+          <p>
+            Public positioning: offline communications platform. Print &amp; Mail API (letters, postcards, checks, self-mailers) plus address verification and autocomplete, with dashboard and CRM-friendly integrations (Salesforce and similar flows show up heavily in PostGrid’s guides).
+            Supports mailing classes including certified-style options via API parameters, and emphasizes US/Canada (and broader international) reach in marketing.
+          </p>
+          <ul>
+            <li>API + dashboard combination for teams that want both builders and operators.</li>
+            <li>Checks and transactional formats alongside letters and postcards—useful for finance-heavy workflows.</li>
+            <li>Address verification as a core platform pillar, not only a side feature.</li>
+            <li>Integration playbooks for CRM-triggered mail.</li>
+          </ul>
+          <p>
+            <strong>Who it is for:</strong> developers and ops teams automating letters, checks, and postcards; companies comparing “Lob alternatives” who want Print &amp; Mail plus address verification under one roof; orgs that like sandbox/test keys and OpenAPI-style docs.
+          </p>
+          <p>
+            <strong>Who it is not for:</strong> buyers whose primary need is “AI proposes how my uploaded Word/PDF job should be set up, then I approve.” That is a different product hero than PostGrid’s API/template center of gravity.
+          </p>
+        </div>
+
+        <h3>Click2Mail — Catalog-first cloud print-to-mail</h3>
+        <div class="prose">
+          <p>
+            Public positioning: browser-based mailing online. Create or upload documents, manage lists, proof, choose mail class, and have Click2Mail produce and deliver to USPS.
+            Broad product catalog historically includes letters, postcards, Certified Mail options (including return-receipt variants), and other USPS-oriented formats such as EDDM in the wider lineup.
+            Self-serve UI first. A developer API also exists for automation.
+          </p>
+          <ul>
+            <li>Wide format catalog for people who shop by product type (certified letter, postcard size, and so on).</li>
+            <li>Strong Certified Mail self-serve story for legal notices and formal correspondence without a post office trip.</li>
+            <li>Familiar upload → configure → submit portal path for office and SMB users.</li>
+            <li>USPS-oriented product language that resonates with mailrooms and compliance clerks.</li>
+          </ul>
+          <p>
+            <strong>Who it is for:</strong> small and mid-size teams, legal/admin staff, and anyone who wants a known catalog of mail products in a web UI—especially Certified Mail without building an integration.
+          </p>
+          <p>
+            <strong>Who it is not for:</strong> teams whose north star is agent-prepared jobs with MCP, or AI-proposed multi-document setup as the brand promise.
+            Click2Mail is excellent at catalog self-serve. It is not pitching the same AI-approve narrative as USMail.ai.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="side-by-side">
+      <div class="wrap">
+        <h2 id="side-by-side">Side-by-side: qualitative differentiators</h2>
+        <p class="section-lead">No invented prices. Use this table as a map, not a scoreboard.</p>
+        <div class="content-table-wrap">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th scope="col">Dimension</th>
+                <th scope="col">USMail.ai</th>
+                <th scope="col">Lob</th>
+                <th scope="col">PostGrid</th>
+                <th scope="col">Click2Mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Primary interface</th>
+                <td>Portal + AI setup; MCP for agents</td>
+                <td>REST API / SDKs + dashboards</td>
+                <td>REST API + dashboard / CRM hooks</td>
+                <td>Portal catalog (+ API available)</td>
+              </tr>
+              <tr>
+                <th scope="row">Setup model</th>
+                <td>AI proposes; human approves</td>
+                <td>Templates, merge vars, API payloads</td>
+                <td>Templates, API payloads, integrations</td>
+                <td>Manual/config in UI (or API)</td>
+              </tr>
+              <tr>
+                <th scope="row">Agent / MCP</th>
+                <td>Yes on the app: prepare only; human approve; prepaid meter</td>
+                <td>Classic API automation (not MCP-as-product hero)</td>
+                <td>Classic API / CRM automation</td>
+                <td>Classic UI + API</td>
+              </tr>
+              <tr>
+                <th scope="row">Certified Mail</th>
+                <td>Online Certified / CoM on the same path; never same-day</td>
+                <td>Available in a broader mail product set via platform</td>
+                <td>Certified / return-receipt style classes via API</td>
+                <td>Strong Certified catalog + portal tracking story</td>
+              </tr>
+              <tr>
+                <th scope="row">Billing mental model</th>
+                <td>Prepaid meter; approve debits</td>
+                <td>Platform / API usage (vendor terms)</td>
+                <td>Platform / API usage (vendor terms)</td>
+                <td>Per-order / catalog checkout style</td>
+              </tr>
+              <tr>
+                <th scope="row">Best-fit metaphor</th>
+                <td>Upload the files we already have</td>
+                <td>Trigger mail from our systems</td>
+                <td>Automate letters and checks from CRM/API</td>
+                <td>Pick a mail product and submit</td>
+              </tr>
+              <tr>
+                <th scope="row">Trust gate before print</th>
+                <td>Explicit approve-before-produce</td>
+                <td>Programmatic controls / cancel windows (implementation-dependent)</td>
+                <td>Programmatic + dashboard controls</td>
+                <td>Preview/confirm in order flow</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose">
+          <p>“Best” depends on whether mail is a feature in your software or a job your people run.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="when-win">
+      <div class="wrap">
+        <h2 id="when-win">When each platform earns the win</h2>
+        <div class="prose">
+          <p>
+            <strong>Choose Lob when mail is product infrastructure.</strong>
+            If your roadmap says “when a customer hits stage X, mail a postcard” or “our platform must offer letters as a white-label capability,” Lob is built for that world.
+            You will invest engineering time up front. In return you get the mental model of mail as another API resource: create, track via webhooks, iterate on templates, and scale production through Lob’s network story.
+            Friend-test: would we hire a contractor to build the Lob integration before we mail our first batch? If yes, Lob or PostGrid is probably the shortlist.
+          </p>
+          <p>
+            <strong>Choose PostGrid when you want API mail plus address plus checks.</strong>
+            PostGrid often lands in the same RFP as Lob: Print &amp; Mail API buyers who also care about address verification and, frequently, checks.
+            If your finance or insurance workflows need letters and payments artifacts from one offline-comms vendor—and your team is comfortable with REST keys, templates, and CRM flows—PostGrid is a coherent fit.
+            Friend-test: is “send a check by API” on the same whiteboard as “send a letter by API”? If yes, PostGrid deserves a serious demo.
+          </p>
+          <p>
+            <strong>Choose Click2Mail when the catalog is the product.</strong>
+            Click2Mail shines when a real person opens a browser, picks a product (including Certified formats), uploads a document and list, proofs, and submits.
+            That is still the everyday reality for many law offices, HOAs, clinics, and small businesses.
+            You get a USPS-flavored menu without standing up an integration project.
+            Friend-test: will the person who mails also be the person who would never open Postman? If yes, Click2Mail’s UI-first catalog is often kinder than an API platform.
+          </p>
+          <p>
+            <strong>Choose USMail.ai when AI setup plus approve is the requirement.</strong>
+            USMail.ai is for teams whose files already exist—billing exports, notice PDFs, Word letters, mixed packages—and who want software to propose how those files become mailpieces, then insist on a human approve before production.
+            Online Certified Mail rides the same path. Statements and invoices are “upload what your system already made,” not “become our billing system.”
+          </p>
+          <p>
+            The agent angle is deliberate product intent. MCP is available now on the app so assistants can prepare jobs on the same production path as the portal.
+            Humans still fund the prepaid meter and approve. Agents do not silently spend postage.
+            That design is a feature for anyone who likes AI help but does not want AI with a blank check.
+            Friend-test: do we want agents to assemble the job—but still click Approve ourselves? If that sentence feels right, USMail.ai is speaking your language.
+            <a href="/mcp">MCP overview →</a>
+            ·
+            <a href="/docs/mcp">MCP docs →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="shared-truths">
+      <div class="wrap">
+        <h2 id="shared-truths">Shared truths</h2>
+        <div class="prose">
+          <ol>
+            <li>USPS delivers the mail for typical U.S. letter and postcard work. Vendors prepare and induct. They are not the Postal Service.</li>
+            <li>Certified Mail is not “faster First-Class.” It is a proof service with its own handling. On USMail.ai, Certified is never same-day. Say that out loud in procurement meetings.</li>
+            <li>Automation is not approval. API platforms automate submission. USMail.ai’s hero claim automates setup proposals while keeping approval human. Both are valid. They solve different fears.</li>
+            <li>No pricing theater here. Unit rates, volume discounts, and SLAs change and belong on each vendor’s live quote or public pricing page—not in a comparison article that pretends to know your deal.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="by-scenario">
+      <div class="wrap">
+        <h2 id="by-scenario">Decision table: pick by scenario</h2>
+        <div class="content-table-wrap">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th scope="col">Your scenario</th>
+                <th scope="col">Lean toward</th>
+                <th scope="col">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Embed mail into a SaaS product feature</th>
+                <td>Lob</td>
+                <td>API-first, network + template maturity for platforms</td>
+              </tr>
+              <tr>
+                <th scope="row">Automate letters/checks from CRM with address verification</th>
+                <td>PostGrid</td>
+                <td>Print &amp; Mail + address + checks narrative</td>
+              </tr>
+              <tr>
+                <th scope="row">Office staff send Certified notices in a browser</th>
+                <td>Click2Mail</td>
+                <td>Catalog + Certified self-serve strength</td>
+              </tr>
+              <tr>
+                <th scope="row">Upload statements/PDFs; AI proposes setup; human approves</th>
+                <td>USMail.ai</td>
+                <td>Core upload → approve → produce promise</td>
+              </tr>
+              <tr>
+                <th scope="row">Agents prepare jobs; humans approve spend</th>
+                <td>USMail.ai</td>
+                <td>MCP on app; same path; meter debit on approve</td>
+              </tr>
+              <tr>
+                <th scope="row">Formal proof on same workflow as First-Class jobs</th>
+                <td>USMail.ai or Click2Mail</td>
+                <td>USMail.ai: same path + AI setup. Click2Mail: Certified catalog depth</td>
+              </tr>
+              <tr>
+                <th scope="row">Need mature public REST SDKs as day-one interface</th>
+                <td>Lob or PostGrid</td>
+                <td>That is their center of gravity</td>
+              </tr>
+              <tr>
+                <th scope="row">Prefer prepaid meter mental model</th>
+                <td>USMail.ai</td>
+                <td>Fund meter; approve debits; production mail is not free</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose">
+          <p>
+            Still torn between USMail.ai and Click2Mail? Ask whether you care more about AI-proposed setup / agent prepare (USMail.ai) or shopping a Certified/format catalog (Click2Mail).
+            Still torn between Lob and PostGrid? Ask whether checks + address verification + CRM playbooks (PostGrid) or platform/network direct-mail infrastructure (Lob) matches the RFP language your stakeholders already use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="lob-faq">
+      <div class="wrap">
+        <h2 id="lob-faq">Vendor compare FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>What is the real difference between USMail.ai and Lob?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Lob is primarily programmatic direct mail infrastructure. Developers trigger mail from systems using APIs, templates, and webhooks. USMail.ai is primarily AI print-to-mail with a human approve gate. You upload documents and postcards, AI proposes setup, you approve, then production and USPS handoff follow. You can build integrations around either philosophy, but the default buyer and default interface differ.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is PostGrid just another Lob?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>They compete in the Print and Mail API category, so shortlists overlap. PostGrid’s public story often pairs print and mail with address verification and checks, plus CRM integration guides. Lob’s public story emphasizes developer automation, a print delivery network, and platform embedding. Evaluate both on your formats, compliance needs, and who will maintain the integration, not on blog roundup titles.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Does USMail.ai replace Click2Mail for Certified Mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Not as a smear, and not as a universal swap. Click2Mail has a long-standing Certified catalog and portal experience many clerks already know. USMail.ai offers online Certified Mail and Certificate of Mailing on the same upload-approve path as other jobs, with clear never-same-day guidance. Choose Click2Mail when catalog shopping wins. Choose USMail.ai when AI setup, approve-before-produce, and optional agent prepare matter more. <a href="/guides/online-certified-mail">Certified guide →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Can AI agents send mail on USMail.ai without a person?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Agents can prepare jobs via MCP on the app. Account plus prepaid meter. Env login. Short session token. A human must approve on the app before production. Approve is what debits the meter. That is intentional: physical mail cannot be unsent, and Certified is proof. There is no unauthenticated public MCP endpoint for anonymous spend. <a href="/mcp">MCP →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Which should I shortlist if I only have time for two demos?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Engineering-owned, API-triggered mail: Lob and PostGrid. Human-owned document jobs with approve, Certified option, and possible agents: USMail.ai and Click2Mail, then decide with the AI-setup vs catalog friend-test.</p>
+            </div>
+          </details>
+        </div>
+        <div class="prose">
+          <p>
+            Lob and PostGrid are the right conversation when mail is software infrastructure.
+            Click2Mail is the right conversation when mail is a catalog you submit in a browser.
+            USMail.ai is the right conversation when you want print-to-mail defined as: upload what you already have, let AI propose the setup, keep a human on the approve button, optionally let agents prepare on MCP, and run Online Certified Mail on the same path—then hand finished pieces to USPS.
+          </p>
+          <p>
+            Pick the model that matches how your team works on a busy Tuesday—not the vendor with the loudest “API” or “AI” headline.
+            USMail.ai is not the United States Postal Service. We prepare mail and deliver pieces to USPS. USPS delivers nationwide.
+          </p>
+          <p>
+            Verify live product options and commercial terms with each vendor before purchase.
+            Public starting points: <a href="https://www.lob.com/">Lob</a>,
+            <a href="https://www.postgrid.com/print-mail-api/">PostGrid Print &amp; Mail</a>,
+            <a href="https://click2mail.com/">Click2Mail</a>,
+            <a href="/mcp">USMail.ai MCP</a>.
+          </p>
+        </div>
+        <div class="related-grid mt-section">
+          <a class="related-card" href="/compare">
+            <strong>Compare hub</strong>
+            <span>Platform vs catalog vs shop vs USPS.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/guides/ai-print-to-mail-vs-catalog-shop-usps">
+            <strong>Four-model guide</strong>
+            <span>Catalog, shop, and USPS walk-in in more depth.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/mcp">
+            <strong>MCP</strong>
+            <span>Agents prepare. A human still approves.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/guides/what-is-ai-print-to-mail">
+            <strong>What is AI print-to-mail?</strong>
+            <span>Category guide for the upload → approve loop.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="page-cta mt-section">
+          <div>
+            <h2>Get started</h2>
+            <p>Open the app. Upload the files you already have. A human still approves.</p>
+          </div>
+          <div class="page-cta-actions">
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=guide-lob">Get started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-logo" href="/" aria-label="USMail.ai home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.ai" width="120" height="30" decoding="async" />
+        </picture>
+      </a>
+      <p class="footer-slogan">You upload. You approve. We produce.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/how-it-works">How it works</a>
+        <a href="/features">Features</a>
+        <a href="/compare">Compare</a>
+        <a href="/print-and-mail">Print &amp; mail</a>
+        <a href="/certified-mail">Certified</a>
+        <a href="/industries">Industries</a>
+        <a href="/docs">Docs</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
+        <a href="/security">Security</a>
+      </nav>
+      <p class="footer-meta">
+        © <span id="y"></span>
+        · <a href="tel:+18886675322">888-667-5322</a>
+        · <a href="mailto:info@usmail.ai">info@usmail.ai</a>
+        · <a href="/privacy">Privacy</a>
+        · <a href="/terms">Terms</a>
+      </p>
+      <p class="footer-disclaimer">Not the U.S. Postal Service.</p>
+    </div>
+  </footer>
+  <div class="mobile-dock" role="navigation" aria-label="Quick actions">
+    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=guide-lob">Get started</a>
+  </div>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
+  <script src="/js/site.js?v=20260731quiet" defer></script>
+</body>
+</html>

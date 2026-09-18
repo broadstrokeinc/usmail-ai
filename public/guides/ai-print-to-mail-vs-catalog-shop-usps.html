@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <title>AI Print-to-Mail vs Catalog vs Shop vs USPS | USMail.ai</title>
+  <meta
+    name="description"
+    content="Four models for getting paper into the mail: an AI print-to-mail platform, a catalog, a local shop, and a USPS walk-in. They are not the same product."
+  />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#1a2b63" />
+  <link rel="canonical" href="https://www.usmail.ai/guides/ai-print-to-mail-vs-catalog-shop-usps" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="USMail.ai" />
+  <meta property="og:url" content="https://www.usmail.ai/guides/ai-print-to-mail-vs-catalog-shop-usps" />
+  <meta property="og:title" content="AI Print-to-Mail vs Catalog vs Shop vs USPS | USMail.ai" />
+  <meta property="og:description" content="Four models for getting paper into the mail: an AI print-to-mail platform, a catalog, a local shop, and a USPS walk-in. They are not the same product." />
+  <meta property="og:image" content="https://www.usmail.ai/logo-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Print-to-Mail vs Catalog vs Shop vs USPS | USMail.ai" />
+  <meta name="twitter:description" content="Four models for getting paper into the mail: an AI print-to-mail platform, a catalog, a local shop, and a USPS walk-in." />
+  <meta name="twitter:image" content="https://www.usmail.ai/logo-og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/tokens.css?v=20260731quiet" />
+  <link rel="stylesheet" href="/styles.css?v=20260827glyph2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.usmail.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Compare catalog, shop, and USPS", "item": "https://www.usmail.ai/guides/ai-print-to-mail-vs-catalog-shop-usps" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "url": "https://www.usmail.ai/guides/ai-print-to-mail-vs-catalog-shop-usps",
+        "name": "AI print-to-mail vs catalog vs shop vs USPS",
+        "description": "Four models for getting paper into the mail: an AI print-to-mail platform, a catalog, a local shop, and a USPS walk-in. They are not the same product.",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".lead"] }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are you USPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. USMail.ai is a private nationwide AI print-to-mail platform. We prepare mail and deliver finished pieces to the United States Postal Service. USPS delivers the mail. This is not a USPS website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is postage free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Production mail uses a prepaid meter. Account access and funding the meter are part of how sending works. This is less DIY mailroom work, not free postage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can AI or agents approve and send mail for me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Assistants prepare jobs and then ask you to approve a postage grant. If you set a capped or uncapped grant, the agent can mill-approve against the prepaid meter—no Pay & Approve click. If you decline the grant, you Pay & Approve on the app. The meter still needs funds. Physical mail cannot be unsent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When should I pick a catalog instead of AI print-to-mail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When kit-style browsing and published offerings matter more than producing a PDF you already have. Catalogs shine for package shopping. AI print-to-mail shines when the file exists and you need upload, approve, and produce with meter spend and proofs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is a local shop the better fit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When specialty finishing, in-person relationship, or neighborhood handoff matter more than a standardized remote loop across many offices. Shops vary by location. AI print-to-mail is built for nationwide consistency after approve."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When should I just walk into USPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When you are producing the piece yourself and only need induction or retail postal products under Postal Service rules. If you want someone else to print, insert, meter, and hand off after you approve, that is print-to-mail, not a walk-in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Certified Mail available on the same path as ordinary letters?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, on USMail.ai. Add Certified Mail or Certificate of Mailing when that option fits before you approve. Same upload, approve, and produce path. Certified is never same-day, is not for postcards, and is not the same as First-Class tracing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you a virtual mailbox?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. USMail.ai is outbound print-to-mail for documents and postcards. It does not receive or scan your inbound mail."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCT0CVV4BW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KCT0CVV4BW');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="USMail.ai home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.ai" width="200" height="51" class="brand-logo" decoding="async" />
+        </picture>
+        <span class="brand-tagline">AI print to mail</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span> Menu
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="/how-it-works">How it works</a>
+        <a href="/features">Features</a>
+        <a href="/print-and-mail">Print &amp; mail</a>
+        <a href="/certified-mail">Certified Mail</a>
+        <a href="/industries">Industries</a>
+        <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-nav-cta" href="https://app.usmail.ai/?utm_source=www">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <header class="page-hero">
+      <div class="wrap">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li><span>Guides</span></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li><span aria-current="page">Vs catalog, shop, USPS</span></li>
+          </ol>
+        </nav>
+        <div class="page-hero-inner">
+          <h1>AI print-to-mail vs catalog vs shop vs USPS</h1>
+          <p class="lead">
+            Buyers comparing how to get paper into the mail usually weigh four models:
+            an AI print-to-mail platform, a catalog with published kits, a local shop, and a USPS walk-in.
+            They are not the same product. Confusing them creates bad RFPs and worse expectations.
+          </p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=guide-catalog">Get started</a>
+            <a class="btn btn-ghost" href="/compare">Compare hub</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-section" aria-labelledby="glance">
+      <div class="wrap">
+        <h2 id="glance">The four models at a glance</h2>
+        <p class="section-lead">Use this with the live table on <a href="/compare">Compare</a>. Soft framing only: each model solves a different job.</p>
+        <div class="content-table-wrap">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th scope="col">Model</th>
+                <th scope="col">Who does production?</th>
+                <th scope="col">How you buy</th>
+                <th scope="col">Best when…</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AI print-to-mail</th>
+                <td>Platform after you approve</td>
+                <td>Account + prepaid meter</td>
+                <td>Files already exist; you need a repeatable remote loop</td>
+              </tr>
+              <tr>
+                <th scope="row">Catalog</th>
+                <td>Vendor kits / published SKUs</td>
+                <td>Browse published offerings</td>
+                <td>Kit-style shopping matters more than your PDF</td>
+              </tr>
+              <tr>
+                <th scope="row">Local shop</th>
+                <td>Counter / local production</td>
+                <td>In person or local order</td>
+                <td>Specialty finishing, relationship, or same-neighborhood handoff</td>
+              </tr>
+              <tr>
+                <th scope="row">USPS walk-in</th>
+                <td>You, or retail postal products</td>
+                <td>Counter / USPS rules</td>
+                <td>You produce the piece yourself and only need induction or retail service</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose">
+          <p>
+            USMail.ai is a nationwide AI print-to-mail platform. We print, insert, apply postage from a prepaid meter, and deliver finished pieces to USPS.
+            We are not USPS. We are not a walk-in counter. We are not a public-price catalog. We are not a virtual mailbox.
+            None of these models is free postage. None replaces USPS delivery for the others.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="model-ai">
+      <div class="wrap">
+        <h2 id="model-ai">Model 1: AI print-to-mail</h2>
+        <div class="prose">
+          <p>
+            AI print-to-mail is a remote production path for documents and postcards you already create.
+            You upload files and recipient data. Software proposes setup—addresses, proofs, starting points for mail class, paper, duplex, color, and finish.
+            A human on your team reviews and approves on the app. Only then does production run: print, insert when needed, postage from a prepaid meter, handoff to USPS on your mail date.
+          </p>
+          <p>
+            Built for operational document mailing: notices, correspondence, and statement or invoice pages billing already generates.
+            First-Class letter and postcard work, Priority when the job calls for it, and Online Certified Mail on the same upload → approve → produce path.
+            Teams that need nationwide consistency from branch laptops without standing up a mailroom in every office.
+          </p>
+          <p>
+            What it is not: not USPS, and not a USPS website. Not free postage. Not a virtual mailbox. Not EDDM, business cards, flyers, or promotional merch.
+            Not “AI sends mail without you.” Assistants can help prepare. They do not replace approve.
+          </p>
+          <p>
+            The human gate is intentional. Physical mail cannot be unsent. Prepare can be fast. Approve stays human.
+            For the category definition, see <a href="/ai-print-to-mail">AI print to mail</a>.
+            For letter-specific workflow, see <a href="/guides/mail-a-letter-online">mail a letter online</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="model-catalog">
+      <div class="wrap">
+        <h2 id="model-catalog">Model 2: Catalog</h2>
+        <div class="prose">
+          <p>
+            Catalog models emphasize published offerings, kits, and piece-oriented shopping.
+            You browse what is listed—formats, quantities, sometimes public unit prices—and order from that menu.
+            That is useful when the shopping experience itself is the product: you want to pick a kit, see a published price face, and buy something close to a ready-made package.
+          </p>
+          <p>
+            Catalogs are less useful when your PDF already exists and the job is “produce this file,” not “pick a kit.”
+            They are less useful when you need an approve gate tied to meter spend and job-level proofs.
+            They are less useful when statement, invoice, or Certified work needs the same path as ordinary letters.
+          </p>
+          <p>
+            USMail.ai does not publish public unit prices as the product face.
+            Positioning is platform + account + prepaid meter: create an account, fund the meter, send a job.
+            If published kit browsing is the buying criterion that matters most, evaluate catalog vendors on their own terms—and know that USMail.ai is a different model.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="model-shop">
+      <div class="wrap">
+        <h2 id="model-shop">Model 3: Local shop</h2>
+        <div class="prose">
+          <p>
+            Local shops are tactile and relationship-driven. You can walk in, talk through specialty finishing, and hand off work to people who know your neighborhood.
+            For some rush jobs, unusual stocks, or craft that needs eyes-on the counter, a shop is the right call.
+          </p>
+          <p>
+            Tradeoffs to weigh honestly: capacity, hours, and process vary by location.
+            It is harder to standardize nationwide ops from every branch laptop.
+            You may still print yourself, then mail—or wait on local production queues.
+            Certified, meter funding, and multi-office repeatability are rarely one shared remote path.
+          </p>
+          <p>
+            Choose a shop when local craft and handoff matter more than remote standardization.
+            Choose AI print-to-mail when the same approve-and-produce loop needs to work the same way for teams in many places.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="model-usps">
+      <div class="wrap">
+        <h2 id="model-usps">Model 4: USPS walk-in</h2>
+        <div class="prose">
+          <p>
+            USPS is the delivery network. Walking into a Post Office means you—or a retail product under Postal Service rules—still own print, finish, stamp or postage purchase, and the line.
+            USPS.com tools can help you buy postage or schedule pickups for mail you prepare yourself.
+            That is not the same as uploading a PDF and having a platform print, insert, meter, and hand off the piece.
+          </p>
+          <p>
+            USMail.ai delivers to USPS after production. That is not the same as being USPS.
+            Soft claim: we prepare and hand off; USPS delivers.
+            Cutoffs, retail products, and Postal Service rules belong to USPS—not to a private print-to-mail platform.
+          </p>
+          <p>
+            Choose USPS walk-in when you are doing the production yourself and only need induction or retail postal products.
+            Choose AI print-to-mail when you want remote production after a human approve.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="how-choose">
+      <div class="wrap">
+        <h2 id="how-choose">How to choose</h2>
+        <div class="prose">
+          <ol>
+            <li><strong>Do the files already exist?</strong> If yes, and the job is produce-this-PDF, lean AI print-to-mail or a shop that will take your file. If you want to shop kits, lean catalog.</li>
+            <li><strong>Who must approve before anything physical leaves?</strong> If a human gate on an app matters, ask every vendor who can click approve—and whether agents can. On USMail.ai, the agent asks you to approve a postage grant. If you set one, it can mill-approve. If you decline, you Pay & Approve on the app.</li>
+            <li><strong>Where is postage spent?</strong> Prepaid meter, retail stamps, or published catalog postage face? USMail.ai uses a prepaid meter—not free postage.</li>
+            <li><strong>What does “delivered to USPS” mean?</strong> Platform handoff after production vs. you standing at the counter. Ask for the plain sentence in writing.</li>
+            <li><strong>Do you need First-Class, Priority, and Certified on one path?</strong> If yes, prefer a single upload → approve → produce workflow over juggling three vendors.</li>
+            <li><strong>Is the team multi-office?</strong> Remote standardization favors AI print-to-mail. Single-site specialty finishing may favor a shop.</li>
+            <li><strong>What proof looks like before spend?</strong> Proofs and address flags before approve beat marketing speed claims after the piece is in the mailstream.</li>
+          </ol>
+          <p><strong>Choose AI print-to-mail</strong> when files already exist and teams need a repeatable upload → approve → produce loop nationwide, with meter-funded production. Agents ask you to approve a postage grant; if you decline, you Pay & Approve on the app.</p>
+          <p><strong>Choose a catalog</strong> when shopping published packages and public price faces matters more than producing your existing PDF on a platform path.</p>
+          <p><strong>Choose a shop</strong> when local craft, specialty finishing, or in-person handoff matter more than remote standardization.</p>
+          <p><strong>Choose USPS walk-in</strong> when you produce the piece yourself and only need induction or retail postal products.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="mistakes">
+      <div class="wrap">
+        <h2 id="mistakes">Messaging mistakes to avoid</h2>
+        <ul class="steps steps-grid-2">
+          <li class="step">
+            <h3><i data-lucide="building" aria-hidden="true"></i> Calling a platform “USPS”</h3>
+            <p>Platforms prepare and hand off. USPS delivers. USMail.ai is not the United States Postal Service.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="banknote" aria-hidden="true"></i> Marketing free postage</h3>
+            <p>Production mail is funded. On USMail.ai that is a prepaid meter.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="scan" aria-hidden="true"></i> Collapsing tracing and proof</h3>
+            <p>Tracing is not tracking. First-Class tracing is not Certified proof. Certified is never same-day and is not for postcards.</p>
+          </li>
+          <li class="step">
+            <h3><i data-lucide="inbox" aria-hidden="true"></i> Virtual mailbox as outbound mail</h3>
+            <p>Inbound scan-and-receive is a different product class. USMail.ai is not a virtual mailbox.</p>
+          </li>
+        </ul>
+        <div class="prose">
+          <p>
+            Do not invent seals, customer counts, SLAs, or “#1” claims. Soft claims only.
+            Prefer live product pages over roundup blogs when you publish education.
+            Do not skip the approve wall in the story. Physical mail cannot be unsent. The approve step is the product, not a temporary limit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section band" aria-labelledby="ops-check">
+      <div class="wrap">
+        <h2 id="ops-check">Operational checklist</h2>
+        <div class="prose">
+          <ul>
+            <li>Confirm the PDF (or Word/image package) is final before upload.</li>
+            <li>Confirm recipient columns after ingest by reading digested rows.</li>
+            <li>Confirm Certified is added before approve when required.</li>
+            <li>Confirm flagged Certified addresses are not casually still-mailed.</li>
+            <li>Confirm a human clicks Pay &amp; Approve on the app before production.</li>
+            <li>Confirm meter balance can cover the job.</li>
+            <li>Confirm mail class, paper, duplex, color, finish, envelope, and mail date match the need.</li>
+            <li>Remember: tracing ≠ tracking ≠ Certified proof.</li>
+          </ul>
+          <p>Soft claim: clearer review before USPS handoff—not a promise of perfect delivery on every piece.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="catalog-faq">
+      <div class="wrap">
+        <h2 id="catalog-faq">Compare FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary><span>Are you USPS?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. USMail.ai is a private nationwide AI print-to-mail platform. We prepare mail and deliver finished pieces to the United States Postal Service. USPS delivers the mail. This is not a USPS website.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is postage free?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. Production mail uses a prepaid meter. Account access and funding the meter are part of how sending works. This is less DIY mailroom work, not free postage.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Can AI or agents approve and send mail for me?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Assistants prepare jobs and then ask you to approve a postage grant. If you set a capped or uncapped grant, the agent can mill-approve against the prepaid meter—no Pay & Approve click. If you decline the grant, you Pay & Approve on the app. The meter still needs funds. Physical mail cannot be unsent. <a href="/mcp">MCP →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>When should I pick a catalog instead of AI print-to-mail?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>When kit-style browsing and published offerings matter more than producing a PDF you already have. Catalogs shine for package shopping. AI print-to-mail shines when the file exists and you need upload, approve, and produce with meter spend and proofs.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>When is a local shop the better fit?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>When specialty finishing, in-person relationship, or neighborhood handoff matter more than a standardized remote loop across many offices. Shops vary by location. AI print-to-mail is built for nationwide consistency after approve.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>When should I just walk into USPS?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>When you are producing the piece yourself and only need induction or retail postal products under Postal Service rules. If you want someone else to print, insert, meter, and hand off after you approve, that is print-to-mail, not a walk-in.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Is Certified Mail available on the same path as ordinary letters?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>Yes, on USMail.ai. Add Certified Mail or Certificate of Mailing when that option fits before you approve. Same upload, approve, and produce path. Certified is never same-day, is not for postcards, and is not the same as First-Class tracing. <a href="/guides/online-certified-mail">Certified guide →</a></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary><span>Are you a virtual mailbox?</span><i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i></summary>
+            <div class="faq-body">
+              <p>No. USMail.ai is outbound print-to-mail for documents and postcards. It does not receive or scan your inbound mail.</p>
+            </div>
+          </details>
+        </div>
+        <div class="related-grid mt-section">
+          <a class="related-card" href="/compare">
+            <strong>Compare hub</strong>
+            <span>Short side-by-side. Platform vs catalog vs shop vs USPS.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/guides/what-is-ai-print-to-mail">
+            <strong>What is AI print-to-mail?</strong>
+            <span>Category guide. Upload, approve, produce.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/guides/usmail-vs-lob-postgrid-click2mail">
+            <strong>Vs Lob, PostGrid, Click2Mail</strong>
+            <span>Who each print-to-mail platform is for.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+          <a class="related-card" href="/guides/mail-a-letter-online">
+            <strong>Mail a letter online</strong>
+            <span>Letter-size jobs on the same path.</span>
+            <span class="more" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="page-cta mt-section">
+          <div>
+            <h2>Get started</h2>
+            <p>Open the app. Account plus prepaid meter.</p>
+          </div>
+          <div class="page-cta-actions">
+            <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=guide-catalog">Get started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-logo" href="/" aria-label="USMail.ai home">
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img src="/logo-400.png" alt="USMail.ai" width="120" height="30" decoding="async" />
+        </picture>
+      </a>
+      <p class="footer-slogan">You upload. You approve. We produce.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/how-it-works">How it works</a>
+        <a href="/features">Features</a>
+        <a href="/compare">Compare</a>
+        <a href="/print-and-mail">Print &amp; mail</a>
+        <a href="/certified-mail">Certified</a>
+        <a href="/industries">Industries</a>
+        <a href="/docs">Docs</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="https://app.usmail.ai/?utm_source=www">Get started</a>
+        <a href="/security">Security</a>
+      </nav>
+      <p class="footer-meta">
+        © <span id="y"></span>
+        · <a href="tel:+18886675322">888-667-5322</a>
+        · <a href="mailto:info@usmail.ai">info@usmail.ai</a>
+        · <a href="/privacy">Privacy</a>
+        · <a href="/terms">Terms</a>
+      </p>
+      <p class="footer-disclaimer">Not the U.S. Postal Service.</p>
+    </div>
+  </footer>
+  <div class="mobile-dock" role="navigation" aria-label="Quick actions">
+    <a class="btn btn-primary" href="https://app.usmail.ai/?utm_source=www&amp;utm_campaign=guide-catalog">Get started</a>
+  </div>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM" crossorigin="anonymous" defer></script>
+  <script src="/js/site.js?v=20260731quiet" defer></script>
+</body>
+</html>
